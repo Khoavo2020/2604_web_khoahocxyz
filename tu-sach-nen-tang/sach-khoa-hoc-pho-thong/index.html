@@ -1,0 +1,316 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Sách khoa học phổ thông - Khoahoc.xyz</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<style>
+			:root {
+				--ink-900: #1e1e1e;
+				--ink-700: #4a4a4a;
+				--ink-500: #7a7a7a;
+				--paper-0: #ffffff;
+				--paper-1: #f7f7f7;
+				--line-200: #e8e8e8;
+				--accent-600: #1f6f8b;
+			}
+			.library-hero {
+				background: linear-gradient(120deg, #f7f9fb 0%, #f3f6f8 100%);
+				border: 1px solid var(--line-200);
+				border-radius: 12px;
+				padding: 1.5rem 1.75rem;
+				margin-bottom: 1.5rem;
+			}
+			.library-hero h1 {
+				margin: 0 0 0.4rem 0;
+				color: var(--ink-900);
+				font-size: 1.8rem;
+				letter-spacing: 0.02em;
+			}
+			.library-hero p {
+				margin: 0;
+				color: var(--ink-700);
+			}
+			.library-toolbar {
+				display: flex;
+				gap: 1rem;
+				flex-wrap: wrap;
+				align-items: center;
+				margin-bottom: 1.25rem;
+			}
+			.library-toolbar .search {
+				flex: 1 1 320px;
+			}
+			.library-toolbar input[type="text"] {
+				background: var(--paper-0);
+				border: 1px solid var(--line-200);
+				border-radius: 8px;
+				padding: 0.75rem 1rem;
+				color: var(--ink-900);
+				height: auto;
+			}
+			.library-stats {
+				color: var(--ink-500);
+				font-size: 0.9rem;
+			}
+			.book-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+				gap: 1rem;
+			}
+			.book-card {
+				background: var(--paper-0);
+				border: 1px solid var(--line-200);
+				border-radius: 10px;
+				padding: 1rem 1rem 0.9rem 1rem;
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+				min-height: 140px;
+				box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+			}
+			.book-title {
+				color: var(--ink-900);
+				font-size: 1rem;
+				line-height: 1.45;
+				margin: 0;
+			}
+			.book-meta {
+				color: var(--ink-500);
+				font-size: 0.85rem;
+				display: flex;
+				gap: 0.75rem;
+				flex-wrap: wrap;
+			}
+			.book-link {
+				margin-top: auto;
+				color: var(--accent-600);
+				font-weight: 600;
+				text-decoration: none;
+			}
+			.book-link:hover {
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><strong>Khoahoc</strong>.xyz</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<div class="library-hero">
+										<h2>Sách khoa học phổ thông</h2>
+										<p>Những cuốn sách nền tảng giúp mở rộng kiến thức khoa học thường thức.</p>
+									</div>
+
+									<div class="library-toolbar">
+										<div class="search">
+											<input type="text" id="library-search" placeholder="Tìm nhanh trong danh mục này..." />
+										</div>
+										<div class="library-stats" id="library-stats">Đang tải danh sách...</div>
+									</div>
+
+									<div id="library-content" class="book-grid"></div>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+	<header class="major">
+		<h2>Menu</h2>
+	</header>
+	<ul>
+		<li><a href="../../index.html">🏠 Khóa học</a></li>
+		<li><a href="../../khoa-hoc-pho-thong/index.html">🔭 Khoa học phổ thông</a></li>
+		<li><a href="../../kinh-te-hoc/index.html">💰 Kinh tế học</a></li>
+		<li><a href="../../tam-ly-hoc/index.html">🧠 Tâm lý học</a></li>
+		<li>
+			<span class="opener">🏛 Triết học</span>
+			<ul>
+				<li><a href="../../triet-hoc/index.html">Tổng quan triết học</a></li>
+				<li><a href="../../triet-hoc/phuong-dong/index.html">Phương Đông</a></li>
+				<li><a href="../../triet-hoc/phuong-tay/index.html">Phương Tây</a></li>
+				<li><a href="../../triet-hoc/tho-viet-nam/index.html">Thơ Việt Nam</a></li>
+				<li><a href="../../triet-hoc/tho-nuoc-ngoai/index.html">Thơ nước ngoài</a></li>
+			</ul>
+		</li>
+		<li><a href="../../tinh-hoa-nhan-loai/index.html">🧭 Tinh hoa - nhân loại</a></li>
+		<li>
+			<span class="opener">📚 Tủ sách - nền tảng</span>
+			<ul>
+				<li><a href="../../tu-sach-nen-tang/index.html">Tổng quan tủ sách</a></li>
+				<li><a href="../../tu-sach-nen-tang/sach-khoa-hoc-pho-thong/index.html">Sách khoa học phổ thông</a></li>
+				<li><a href="../../tu-sach-nen-tang/sach-kinh-te-hoc/index.html">Sách kinh tế học</a></li>
+				<li><a href="../../tu-sach-nen-tang/sach-tam-ly-hoc/index.html">Sách tâm lý học</a></li>
+				<li><a href="../../tu-sach-nen-tang/sach-triet-hoc/index.html">Sách triết học</a></li>
+				<li><a href="../../tu-sach-nen-tang/sach-xyz/index.html">Sách chọn lọc</a></li>
+			</ul>
+		</li>
+		<li><a href="../../ung-dung-nang-suat/index.html">📱 Ứng dụng - năng suất</a></li>
+		<li><a href="../../templates/generic.html">bài viết</a></li>
+		<li><a href="../../templates/elements.html">nút bấm, bảng biểu</a></li>
+	</ul>
+</nav>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const manifestUrl = '../../assets/ebooks/manifest.json';
+				const contentEl = document.getElementById('library-content');
+				const statsEl = document.getElementById('library-stats');
+				const searchEl = document.getElementById('library-search');
+				const categoryId = 'sach-khoa-hoc-pho-thong';
+
+				const normalize = (value) => value
+					.toLowerCase()
+					.normalize('NFD')
+					.replace(/[\u0300-\u036f]/g, '');
+
+				const toTitle = (filename) => filename
+					.replace(/\.[^/.]+$/, '')
+					.replace(/[_-]+/g, ' ')
+					.replace(/\s+/g, ' ')
+					.trim();
+
+				const formatSize = (bytes) => {
+					if (!Number.isFinite(bytes)) return '';
+					const units = ['B', 'KB', 'MB', 'GB'];
+					let size = bytes;
+					let idx = 0;
+					while (size >= 1024 && idx < units.length - 1) {
+						size /= 1024;
+						idx += 1;
+					}
+					return `${size.toFixed(size >= 10 || idx === 0 ? 0 : 1)} ${units[idx]}`;
+				};
+
+				const buildBookCard = (book) => {
+					const card = document.createElement('div');
+					card.className = 'book-card';
+
+					const title = document.createElement('p');
+					title.className = 'book-title';
+					title.textContent = book.title || toTitle(book.file);
+
+					const meta = document.createElement('div');
+					meta.className = 'book-meta';
+					meta.innerHTML = `
+						<span>${(book.ext || '').toUpperCase()}</span>
+						<span>${formatSize(book.size)}</span>
+					`;
+
+					const link = document.createElement('a');
+					link.className = 'book-link';
+					link.href = `../../assets/ebooks/${categoryId}/${encodeURIComponent(book.file)}`;
+					link.textContent = 'Tải eBook';
+					link.setAttribute('download', '');
+
+					card.appendChild(title);
+					card.appendChild(meta);
+					card.appendChild(link);
+
+					return card;
+				};
+
+				const renderLibrary = (items, keyword = '') => {
+					contentEl.innerHTML = '';
+					const fragment = document.createDocumentFragment();
+					const normalizedKeyword = normalize(keyword.trim());
+					let visibleCount = 0;
+
+					items.forEach((item) => {
+						if (normalizedKeyword) {
+							const label = normalize((item.title || toTitle(item.file)) + ' ' + item.file);
+							if (!label.includes(normalizedKeyword)) return;
+						}
+						fragment.appendChild(buildBookCard(item));
+						visibleCount += 1;
+					});
+
+					if (visibleCount === 0) {
+						contentEl.innerHTML = '<p>Không tìm thấy eBook phù hợp.</p>';
+					} else {
+						contentEl.appendChild(fragment);
+					}
+
+					statsEl.textContent = `${visibleCount} eBook`;
+				};
+
+				fetch(manifestUrl)
+					.then((res) => {
+						if (!res.ok) throw new Error('Manifest not found');
+						return res.json();
+					})
+					.then((data) => {
+						const category = (data.categories || []).find((item) => item.id === categoryId);
+						const items = category ? category.items : [];
+						renderLibrary(items);
+						searchEl.addEventListener('input', (event) => {
+							renderLibrary(items, event.target.value);
+						});
+					})
+					.catch(() => {
+						statsEl.textContent = 'Không thể tải danh sách eBook.';
+						contentEl.innerHTML = '<p>Hãy chạy script build manifest và tải lại trang.</p>';
+					});
+			});
+		</script>
+
+	</body>
+</html>
+
+
+
+
+
+

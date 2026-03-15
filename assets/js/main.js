@@ -238,6 +238,22 @@
 		var $menu = $('#menu'),
 			$menu_openers = $menu.children('ul').find('.opener');
 
+		// Keep "Triết học" submenu open when visiting triết học pages.
+			(function() {
+				var path = (window.location.pathname || '').toLowerCase();
+
+				$menu_openers.each(function() {
+					var $opener = $(this);
+					var text = $opener.text().toLowerCase();
+
+					if (path.indexOf('triet-hoc') !== -1 && text.indexOf('triết học') !== -1)
+						$opener.addClass('active');
+
+					if (path.indexOf('tu-sach-nen-tang') !== -1 && (text.indexOf('tủ sách') !== -1 || text.indexOf('tu sach') !== -1))
+						$opener.addClass('active');
+				});
+			})();
+
 		// Openers.
 			$menu_openers.each(function() {
 
