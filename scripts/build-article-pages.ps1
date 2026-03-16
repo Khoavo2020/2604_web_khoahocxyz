@@ -96,7 +96,7 @@ $articleTemplate = @"
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="../index.html">🏠 Khóa học</a></li>
+										<li><a href="../index.html">🏠 Khoahoc.xyz</a></li>
 									</ul>
 								</nav>
 

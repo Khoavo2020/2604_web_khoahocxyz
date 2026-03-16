@@ -137,7 +137,7 @@ $pages += @{ Path = 'index.html'; Content = @"
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">🏠 Khóa học</a></li>
+										<li><a href="index.html">🏠 Khoahoc.xyz</a></li>
 									</ul>
 								</nav>
 
@@ -246,7 +246,7 @@ $pages += @{ Path = 'khoa-hoc-pho-thong\index.html'; Content = @"
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="../index.html">🏠 Khóa học</a></li>
+										<li><a href="../index.html">🏠 Khoahoc.xyz</a></li>
 									</ul>
 								</nav>
 
@@ -351,7 +351,7 @@ $pages += @{ Path = 'kinh-te-hoc\index.html'; Content = @"
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="../index.html">🏠 Khóa học</a></li>
+										<li><a href="../index.html">🏠 Khoahoc.xyz</a></li>
 									</ul>
 								</nav>
 
@@ -456,7 +456,7 @@ $pages += @{ Path = 'tam-ly-hoc\index.html'; Content = @"
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="../index.html">🏠 Khóa học</a></li>
+										<li><a href="../index.html">🏠 Khoahoc.xyz</a></li>
 									</ul>
 								</nav>
 
@@ -577,7 +577,7 @@ $pages += @{ Path = 'triet-hoc\index.html'; Content = @"
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="../index.html">🏠 Khóa học</a></li>
+										<li><a href="../index.html">🏠 Khoahoc.xyz</a></li>
 									</ul>
 								</nav>
 
@@ -682,7 +682,7 @@ $pages += @{ Path = 'ung-dung-nang-suat\index.html'; Content = @"
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="../index.html">🏠 Khóa học</a></li>
+										<li><a href="../index.html">🏠 Khoahoc.xyz</a></li>
 									</ul>
 								</nav>
 
