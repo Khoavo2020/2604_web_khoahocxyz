@@ -13,3 +13,7 @@ Cách tự động cập nhật khi thêm ebook
 Chạy lại script:
 powershell -ExecutionPolicy Bypass -File scripts\build-ebooks-manifest.ps1
 
+
+
+#### color
+f56a6a -> 00796b

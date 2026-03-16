@@ -143,7 +143,7 @@ $pages += @{ Path = 'index.html'; Content = @"
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									<p class="copyright">Copyright &copy; <a href="https://facebook.com/KhoaHoc.xyz">Khoahoc.xyz</a></p>
 								</footer>
 
 						</div>
@@ -199,7 +199,7 @@ $pages += @{ Path = 'khoa-hoc-pho-thong\index.html'; Content = @"
 								<section>
 									<header class="main">
 										<h1>Khoa học phổ thông</h1>
-										<p>Tóm lược các ý tưởng lớn, giúp bạn nắm nhanh mà vẫn hiểu đúng.</p>
+										<p>Hiệu ứng Matthew: Internet làm người thông minh thông minh hơn và người ngu ngu hơn</p>
 									</header>
 
 									<div class="posts">
@@ -252,7 +252,7 @@ $pages += @{ Path = 'khoa-hoc-pho-thong\index.html'; Content = @"
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									<p class="copyright">Copyright &copy; <a href="https://facebook.com/KhoaHoc.xyz">Khoahoc.xyz</a></p>
 								</footer>
 
 						</div>
@@ -308,7 +308,7 @@ $pages += @{ Path = 'kinh-te-hoc\index.html'; Content = @"
 								<section>
 									<header class="main">
 										<h1>Kinh tế học</h1>
-										<p>Hiểu quyết định, khan hiếm và cách thị trường vận hành.</p>
+										<p>Kinh tế học giải đáp những câu hỏi về cách xã hội vận hành</p>
 									</header>
 
 									<div class="posts">
@@ -357,7 +357,7 @@ $pages += @{ Path = 'kinh-te-hoc\index.html'; Content = @"
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									<p class="copyright">Copyright &copy; <a href="https://facebook.com/KhoaHoc.xyz">Khoahoc.xyz</a></p>
 								</footer>
 
 						</div>
@@ -413,7 +413,7 @@ $pages += @{ Path = 'tam-ly-hoc\index.html'; Content = @"
 								<section>
 									<header class="main">
 										<h1>Tâm lý học</h1>
-										<p>Hiểu hành vi, cảm xúc và cách não bộ ra quyết định.</p>
+										<p>Tâm lý học giải đáp những câu hỏi về hành vi của con người</p>
 									</header>
 
 									<div class="posts">
@@ -462,7 +462,7 @@ $pages += @{ Path = 'tam-ly-hoc\index.html'; Content = @"
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									<p class="copyright">Copyright &copy; <a href="https://facebook.com/KhoaHoc.xyz">Khoahoc.xyz</a></p>
 								</footer>
 
 						</div>
@@ -518,7 +518,7 @@ $pages += @{ Path = 'triet-hoc\index.html'; Content = @"
 								<section>
 									<header class="main">
 										<h1>Triết học</h1>
-										<p>Những câu hỏi lớn về ý nghĩa sống, đạo đức và tự do.</p>
+										<p>Triết học giải đáp những câu hỏi về ý nghĩa của sự tồn tại</p>
 									</header>
 
 									<div class="posts">
@@ -583,7 +583,7 @@ $pages += @{ Path = 'triet-hoc\index.html'; Content = @"
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									<p class="copyright">Copyright &copy; <a href="https://facebook.com/KhoaHoc.xyz">Khoahoc.xyz</a></p>
 								</footer>
 
 						</div>
@@ -639,7 +639,7 @@ $pages += @{ Path = 'ung-dung-nang-suat\index.html'; Content = @"
 								<section>
 									<header class="main">
 										<h1>Ứng dụng - Năng suất</h1>
-										<p>Hệ thống làm việc gọn gàng, giảm nhiễu và tăng hiệu quả.</p>
+										<p>Thời gian là tất cả những gì bạn có</p>
 									</header>
 
 									<div class="posts">
@@ -688,7 +688,7 @@ $pages += @{ Path = 'ung-dung-nang-suat\index.html'; Content = @"
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									<p class="copyright">Copyright &copy; <a href="https://facebook.com/KhoaHoc.xyz">Khoahoc.xyz</a></p>
 								</footer>
 
 						</div>

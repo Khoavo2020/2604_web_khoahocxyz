@@ -99,7 +99,7 @@ $indexTemplate = @"
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									<p class="copyright">Copyright &copy; <a href="https://facebook.com/KhoaHoc.xyz">Khoahoc.xyz</a></p>
 								</footer>
 
 						</div>
@@ -172,7 +172,7 @@ $articleTemplate = @"
 
 								<section>
 									<header class="major">
-										<h2>Gợi ý tiếp theo</h2>
+										<h3>Xem thêm </h3>
 									</header>
 									<div class="posts">
 										<article>
@@ -248,7 +248,7 @@ $articleTemplate = @"
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									<p class="copyright">Copyright &copy; <a href="https://facebook.com/KhoaHoc.xyz">Khoahoc.xyz</a></p>
 								</footer>
 
 						</div>
