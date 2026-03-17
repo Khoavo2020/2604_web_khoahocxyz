@@ -4,11 +4,7 @@ $pages = @()
 
 $pages += @{ Path = 'index.html'; Content = @"
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Khoahoc.xyz</title>
@@ -164,11 +160,7 @@ $pages += @{ Path = 'index.html'; Content = @"
 
 $pages += @{ Path = 'khoa-hoc-pho-thong\index.html'; Content = @"
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Khoa học phổ thông - Khoahoc.xyz</title>
@@ -273,11 +265,7 @@ $pages += @{ Path = 'khoa-hoc-pho-thong\index.html'; Content = @"
 
 $pages += @{ Path = 'kinh-te-hoc\index.html'; Content = @"
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Kinh tế học - Khoahoc.xyz</title>
@@ -378,11 +366,7 @@ $pages += @{ Path = 'kinh-te-hoc\index.html'; Content = @"
 
 $pages += @{ Path = 'tam-ly-hoc\index.html'; Content = @"
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Tâm lý học - Khoahoc.xyz</title>
@@ -483,11 +467,7 @@ $pages += @{ Path = 'tam-ly-hoc\index.html'; Content = @"
 
 $pages += @{ Path = 'triet-hoc\index.html'; Content = @"
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Triết học - Khoahoc.xyz</title>
@@ -604,11 +584,7 @@ $pages += @{ Path = 'triet-hoc\index.html'; Content = @"
 
 $pages += @{ Path = 'ung-dung-nang-suat\index.html'; Content = @"
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Ứng dụng - Năng suất - Khoahoc.xyz</title>

@@ -1,30 +1,20 @@
-Editorial by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+data\tinh-hoa-nhan-loai\quotes
 
 
-Say hello to Editorial, a blog/magazine-ish template built around a toggleable "locking"
-sidebar (scroll down to see what I mean) and an accordion-style menu. Not the usual landing
-page/portfolio affair you'd expect to see at HTML5 UP, but I figured for my 41st (!!!)
-template I'd change it up a little. Enjoy :)
-
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
-
-(* = not included)
-
-AJ
-aj@lkn.io | @ajlkn
+muc tinh-hoa-nhan-loai tôi có những file .txt line đầu là vietnamese line thứ 2 là english line 3 là tác giả (có thể có line empty ở giữa). những file này tôi export từ simplenote ra, vậy tôi nên tổ chức như thế nào ? ý tưởng của tôi là tôi sẽ sưu tầm liên tục trên simple note smartphone và lâu lâu tôi sẽ export ra và đẩy lên web. trang index mục này sẽ có những table 3 row cho 3 line trên. hãy code
 
 
-Credits:
+#### Cách dùng tự động --> thêm mới file trích đẫn .txt
+Mỗi lần bạn thêm/bớt file .txt, chỉ cần chạy:
+powershell -ExecutionPolicy Bypass -File scripts\build-quotes-manifest.ps1
 
-	Demo Images:
-		Unsplash (unsplash.com)
+#### Cách dùng tự động
+Cách tự động cập nhật khi thêm ebook
+Chạy lại script:
+powershell -ExecutionPolicy Bypass -File scripts\build-ebooks-manifest.ps1
 
-	Icons:
-		Font Awesome (fontawesome.io)
 
-	Other:
-		jQuery (jquery.com)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+
+#### color
+f56a6a -> 00796b

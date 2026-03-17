@@ -1,19 +1,41 @@
-data\tinh-hoa-nhan-loai\quotes
+hosting: GitHub
 
+Markdown -> build -> HTML5/css/js -> GitHub Pages
 
-muc tinh-hoa-nhan-loai tôi có những file .txt line đầu là vietnamese line thứ 2 là english line 3 là tác giả (có thể có line empty ở giữa). những file này tôi export từ simplenote ra, vậy tôi nên tổ chức như thế nào ? ý tưởng của tôi là tôi sẽ sưu tầm liên tục trên simple note smartphone và lâu lâu tôi sẽ export ra và đẩy lên web. trang index mục này sẽ có những table 3 row cho 3 line trên. hãy code
+mục tiêu của web khoahoc.xyz
+thiết kết heo mô hình “knowledge hub + sản phẩm”, tức là:
 
-
-#### Cách dùng tự động --> thêm mới file trích đẫn .txt
-Mỗi lần bạn thêm/bớt file .txt, chỉ cần chạy:
-powershell -ExecutionPolicy Bypass -File scripts\build-quotes-manifest.ps1
-
-#### Cách dùng tự động
-Cách tự động cập nhật khi thêm ebook
-Chạy lại script:
-powershell -ExecutionPolicy Bypass -File scripts\build-ebooks-manifest.ps1
+Content → thu hút người đọc (bài viết, kiến thức)
+Authority → xây uy tín (triết học, tâm lý, khoa học)
+Product → bán khóa học, app
+Community / Inspiration → câu cách ngôn, trí tuệ
 
 
 
-#### color
-f56a6a -> 00796b
+page:
+* Home : Khoahoc.xyz
+
+* Khoa học phổ thông
+* Kinh tế học
+* Tâm lý học
+* Triết học
+
+* Tinh hoa - nhân loại
+* Tủ sách - nền tảng
+* Ứng dụng - năng suất 
+
+
+sub page
+* Tủ sách - nền tảng
+    + Sách khoa học phổ thông
+    + Sách kinh tế học
+    + Sách tâm lý học
+    + Sách triết học
+
+* Triết học
+    + Triết học phương đông
+    + Triết học phương tây
+    + Thơ việt nam
+    + Thơ nước ngoài
+ 
+
