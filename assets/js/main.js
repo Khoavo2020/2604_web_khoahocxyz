@@ -261,12 +261,14 @@
 
 				$this.on('click', function(event) {
 
-					// Prevent default.
-						event.preventDefault();
-
 					// Toggle.
 						$menu_openers.not($this).removeClass('active');
 						$this.toggleClass('active');
+
+					// If it's a link, navigate.
+						if ($this.is('a')) {
+							window.location.href = $this.attr('href');
+						}
 
 					// Trigger resize (sidebar lock).
 						$window.triggerHandler('resize.sidebar-lock');

@@ -2,15 +2,16 @@
 
 <html>
 	<head>
-		<title> - Khoahoc.xyz</title>
+		<title>{{CATEGORY_TITLE}} - Khoahoc.xyz</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<link rel="stylesheet" href="{{ROOT_PREFIX}}assets/css/main.css" />
 		<style>
 			:root {
 				--ink-900: #1e1e1e;
 				--ink-700: #4a4a4a;
 				--ink-500: #7a7a7a;
+				--ink-300: #b8b8b8;
 				--paper-0: #ffffff;
 				--paper-1: #f7f7f7;
 				--line-200: #e8e8e8;
@@ -20,13 +21,13 @@
 				background: linear-gradient(120deg, #f7f9fb 0%, #f3f6f8 100%);
 				border: 1px solid var(--line-200);
 				border-radius: 12px;
-				padding: 1.5rem 1.75rem;
-				margin-bottom: 1.5rem;
+				padding: 1.75rem 2rem;
+				margin-bottom: 1.75rem;
 			}
 			.library-hero h2 {
-				margin: 0 0 0.4rem 0;
+				margin: 0 0 0.5rem 0;
 				color: var(--ink-900);
-				font-size: 1.8rem;
+				font-size: 2rem;
 				letter-spacing: 0.02em;
 			}
 			.library-hero p {
@@ -38,7 +39,7 @@
 				gap: 1rem;
 				flex-wrap: wrap;
 				align-items: center;
-				margin-bottom: 1.25rem;
+				margin-bottom: 1.5rem;
 			}
 			.library-toolbar .search {
 				flex: 1 1 320px;
@@ -54,6 +55,15 @@
 			.library-stats {
 				color: var(--ink-500);
 				font-size: 0.9rem;
+			}
+			.library-section {
+				margin-bottom: 2rem;
+			}
+			.library-section h2 {
+				font-size: 1.2rem;
+				letter-spacing: 0.02em;
+				color: var(--ink-900);
+				margin: 0 0 0.75rem 0;
 			}
 			.book-grid {
 				display: grid;
@@ -93,6 +103,14 @@
 			.book-link:hover {
 				text-decoration: underline;
 			}
+			@media (max-width: 736px) {
+				.library-hero {
+					padding: 1.25rem 1.35rem;
+				}
+				.library-hero h2 {
+					font-size: 1.6rem;
+				}
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -106,7 +124,7 @@
 
 							<!-- Header -->
 								<header id="header">
-									<div class="logo"><a href="../index.html"><strong>🏠</strong></a> » <a href="./index.html"><strong>Tủ sách nền tảng </strong></a> » Lựa chọn đúng quan trọng hơn nỗ lực</div>
+									<a href="{{ROOT_PREFIX}}index.html" class="logo"><strong>🏠</strong>.xyz</a>
 									<ul class="icons">
 										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
@@ -118,18 +136,18 @@
 							<!-- Content -->
 								<section>
 									<div class="library-hero">
-										<h2></h2>
-										<p></p>
+										<h2>{{CATEGORY_TITLE}}</h2>
+										<p>{{CATEGORY_DESC}}</p>
 									</div>
 
 									<div class="library-toolbar">
 										<div class="search">
-											<input type="text" id="library-search" placeholder="Tìm nhanh trong danh mục này..." />
+											<input type="text" id="library-search" placeholder="Tìm nhanh theo tên sách hoặc từ khóa..." />
 										</div>
 										<div class="library-stats" id="library-stats">Đang tải danh sách...</div>
 									</div>
 
-									<div id="library-content" class="book-grid"></div>
+									<div id="library-content"></div>
 								</section>
 
 						</div>
@@ -152,31 +170,31 @@
 		<h2>Menu</h2>
 	</header>
 	<ul>
-		<li><a href="../../index.html">🏠 Khoahoc.xyz</a></li>
-		<li><a href="../../khoa-hoc-pho-thong/index.html">🔭 Khoa học phổ thông</a></li>
-		<li><a href="../../kinh-te-hoc/index.html">💰 Kinh tế học</a></li>
-		<li><a href="../../tam-ly-hoc/index.html">🧠 Tâm lý học</a></li>
+		<li><a href="{{ROOT_PREFIX}}index.html">🏠 Khoahoc.xyz</a></li>
+		<li><a href="{{ROOT_PREFIX}}khoa-hoc-pho-thong/index.html">🔭 Khoa học phổ thông</a></li>
+		<li><a href="{{ROOT_PREFIX}}kinh-te-hoc/index.html">💰 Kinh tế học</a></li>
+		<li><a href="{{ROOT_PREFIX}}tam-ly-hoc/index.html">🧠 Tâm lý học</a></li>
 		<li>
-			<a href="../../triet-hoc/index.html" class="opener">🏛 Triết học</a>
+			<a href="{{ROOT_PREFIX}}triet-hoc/index.html" class="opener">🏛 Triết học</a>
 			<ul>
-				<li><a href="../../triet-hoc/phuong-dong/index.html">Phương Đông</a></li>
-				<li><a href="../../triet-hoc/phuong-tay/index.html">Phương Tây</a></li>
-				<li><a href="../../triet-hoc/tho-viet-nam/index.html">Thơ việt nam</a></li>
-				<li><a href="../../triet-hoc/tho-nuoc-ngoai/index.html">Thơ nước ngoài</a></li>
+				<li><a href="{{ROOT_PREFIX}}triet-hoc/phuong-dong/index.html">Phương Đông</a></li>
+				<li><a href="{{ROOT_PREFIX}}triet-hoc/phuong-tay/index.html">Phương Tây</a></li>
+				<li><a href="{{ROOT_PREFIX}}triet-hoc/tho-viet-nam/index.html">Thơ việt nam</a></li>
+				<li><a href="{{ROOT_PREFIX}}triet-hoc/tho-nuoc-ngoai/index.html">Thơ nước ngoài</a></li>
 			</ul>
 		</li>
-		<li><a href="../../tinh-hoa-nhan-loai/index.html">🧭 Tinh hoa - nhân loại</a></li>
+		<li><a href="{{ROOT_PREFIX}}tinh-hoa-nhan-loai/index.html">🧭 Tinh hoa - nhân loại</a></li>
 		<li>
-			<a href="../../tu-sach-nen-tang/index.html" class="opener">📚 Tủ sách - nền tảng</a>
+			<a href="{{ROOT_PREFIX}}tu-sach-nen-tang/index.html" class="opener">📚 Tủ sách - nền tảng</a>
 			<ul>
-				<li><a href="../../tu-sach-nen-tang/sach-khoa-hoc-pho-thong/index.html">Sách khoa học phổ thông</a></li>
-				<li><a href="../../tu-sach-nen-tang/sach-kinh-te-hoc/index.html">Sách kinh tế học</a></li>
-				<li><a href="../../tu-sach-nen-tang/sach-tam-ly-hoc/index.html">Sách tâm lý học</a></li>
-				<li><a href="../../tu-sach-nen-tang/sach-triet-hoc/index.html">Sách triết học</a></li>
-				<li><a href="../../tu-sach-nen-tang/sach-xyz/index.html">Sách chọn lọc</a></li>
+				<li><a href="{{ROOT_PREFIX}}tu-sach-nen-tang/sach-khoa-hoc-pho-thong/index.html">Sách khoa học phổ thông</a></li>
+				<li><a href="{{ROOT_PREFIX}}tu-sach-nen-tang/sach-kinh-te-hoc/index.html">Sách kinh tế học</a></li>
+				<li><a href="{{ROOT_PREFIX}}tu-sach-nen-tang/sach-tam-ly-hoc/index.html">Sách tâm lý học</a></li>
+				<li><a href="{{ROOT_PREFIX}}tu-sach-nen-tang/sach-triet-hoc/index.html">Sách triết học</a></li>
+				<li><a href="{{ROOT_PREFIX}}tu-sach-nen-tang/sach-xyz/index.html">Sách chọn lọc</a></li>
 			</ul>
 		</li>
-		<li><a href="../../ung-dung-nang-suat/index.html">📱 Ứng dụng - năng suất</a></li>
+		<li><a href="{{ROOT_PREFIX}}ung-dung-nang-suat/index.html">📱 Ứng dụng - năng suất</a></li>
 
 
 	</ul>
@@ -193,18 +211,17 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="../../assets/js/jquery.min.js"></script>
-			<script src="../../assets/js/browser.min.js"></script>
-			<script src="../../assets/js/breakpoints.min.js"></script>
-			<script src="../../assets/js/util.js"></script>
-			<script src="../../assets/js/main.js"></script>
+			<script src="{{ROOT_PREFIX}}assets/js/jquery.min.js"></script>
+			<script src="{{ROOT_PREFIX}}assets/js/browser.min.js"></script>
+			<script src="{{ROOT_PREFIX}}assets/js/breakpoints.min.js"></script>
+			<script src="{{ROOT_PREFIX}}assets/js/util.js"></script>
+			<script src="{{ROOT_PREFIX}}assets/js/main.js"></script>
 			<script>
 				document.addEventListener('DOMContentLoaded', () => {
-					const manifestUrl = '../../assets/ebooks/manifest.json';
+					const manifestUrl = '{{ROOT_PREFIX}}assets/ebooks/manifest.json';
 					const contentEl = document.getElementById('library-content');
 					const statsEl = document.getElementById('library-stats');
 					const searchEl = document.getElementById('library-search');
-					const categoryId = 'sach-tam-ly-hoc';
 
 					const normalize = (value) => value
 						.toLowerCase()
@@ -229,7 +246,7 @@
 						return `${size.toFixed(size >= 10 || idx === 0 ? 0 : 1)} ${units[idx]}`;
 					};
 
-					const buildBookCard = (book) => {
+					const buildBookCard = (book, categoryId) => {
 						const card = document.createElement('div');
 						card.className = 'book-card';
 
@@ -246,7 +263,7 @@
 
 						const link = document.createElement('a');
 						link.className = 'book-link';
-						link.href = `../../assets/ebooks/${categoryId}/${encodeURIComponent(book.file)}`;
+						link.href = `{{ROOT_PREFIX}}assets/ebooks/${categoryId}/${encodeURIComponent(book.file)}`;
 						link.textContent = 'Tải eBook';
 						link.setAttribute('download', '');
 
@@ -257,19 +274,38 @@
 						return card;
 					};
 
-					const renderLibrary = (items, keyword = '') => {
+					const renderLibrary = (data, keyword = '') => {
 						contentEl.innerHTML = '';
 						const fragment = document.createDocumentFragment();
 						const normalizedKeyword = normalize(keyword.trim());
 						let visibleCount = 0;
 
-						items.forEach((item) => {
-							if (normalizedKeyword) {
+						data.categories.forEach((category) => {
+							const section = document.createElement('div');
+							section.className = 'library-section';
+
+							const header = document.createElement('h2');
+							header.textContent = category.title;
+							section.appendChild(header);
+
+							const grid = document.createElement('div');
+							grid.className = 'book-grid';
+
+							const filteredItems = category.items.filter((item) => {
+								if (!normalizedKeyword) return true;
 								const label = normalize((item.title || toTitle(item.file)) + ' ' + item.file);
-								if (!label.includes(normalizedKeyword)) return;
+								return label.includes(normalizedKeyword);
+							});
+
+							filteredItems.forEach((item) => {
+								grid.appendChild(buildBookCard(item, category.id));
+							});
+
+							if (filteredItems.length > 0) {
+								section.appendChild(grid);
+								fragment.appendChild(section);
+								visibleCount += filteredItems.length;
 							}
-							fragment.appendChild(buildBookCard(item));
-							visibleCount += 1;
 						});
 
 						if (visibleCount === 0) {
@@ -287,11 +323,9 @@
 							return res.json();
 						})
 						.then((data) => {
-							const category = (data.categories || []).find((item) => item.id === categoryId);
-							const items = category ? category.items : [];
-							renderLibrary(items);
+							renderLibrary(data);
 							searchEl.addEventListener('input', (event) => {
-								renderLibrary(items, event.target.value);
+								renderLibrary(data, event.target.value);
 							});
 						})
 						.catch(() => {

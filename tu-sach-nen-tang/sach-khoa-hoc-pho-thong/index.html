@@ -1,8 +1,8 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 
 <html>
 	<head>
-		<title>Sách khoa học phổ thông - Khoahoc.xyz</title>
+		<title> - Khoahoc.xyz</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../../assets/css/main.css" />
@@ -23,7 +23,7 @@
 				padding: 1.5rem 1.75rem;
 				margin-bottom: 1.5rem;
 			}
-			.library-hero h1 {
+			.library-hero h2 {
 				margin: 0 0 0.4rem 0;
 				color: var(--ink-900);
 				font-size: 1.8rem;
@@ -106,20 +106,20 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="../../index.html" class="logo"><strong>Khoahoc</strong>.xyz</a>
+									<div class="logo"><a href="../index.html"><strong>🏠</strong></a> » <a href="./index.html"><strong>Tủ sách nền tảng </strong></a> » Lựa chọn đúng quan trọng hơn nỗ lực</div>
 									<ul class="icons">
 										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
 									</ul>
 								</header>
-								<p class="header-subline">Dong phu o day</p>
+
 
 							<!-- Content -->
 								<section>
 									<div class="library-hero">
-										<h2>Sách khoa học phổ thông</h2>
-										<p>Những cuốn sách nền tảng giúp mở rộng kiến thức khoa học thường thức.</p>
+										<h2></h2>
+										<p></p>
 									</div>
 
 									<div class="library-toolbar">
@@ -157,20 +157,18 @@
 		<li><a href="../../kinh-te-hoc/index.html">💰 Kinh tế học</a></li>
 		<li><a href="../../tam-ly-hoc/index.html">🧠 Tâm lý học</a></li>
 		<li>
-			<span class="opener">🏛 Triết học</span>
+			<a href="../../triet-hoc/index.html" class="opener">🏛 Triết học</a>
 			<ul>
-				<li><a href="../../triet-hoc/index.html">Tổng quan triết học</a></li>
 				<li><a href="../../triet-hoc/phuong-dong/index.html">Phương Đông</a></li>
 				<li><a href="../../triet-hoc/phuong-tay/index.html">Phương Tây</a></li>
-				<li><a href="../../triet-hoc/tho-viet-nam/index.html">Thơ Việt Nam</a></li>
+				<li><a href="../../triet-hoc/tho-viet-nam/index.html">Thơ việt nam</a></li>
 				<li><a href="../../triet-hoc/tho-nuoc-ngoai/index.html">Thơ nước ngoài</a></li>
 			</ul>
 		</li>
 		<li><a href="../../tinh-hoa-nhan-loai/index.html">🧭 Tinh hoa - nhân loại</a></li>
 		<li>
-			<span class="opener">📚 Tủ sách - nền tảng</span>
+			<a href="../../tu-sach-nen-tang/index.html" class="opener">📚 Tủ sách - nền tảng</a>
 			<ul>
-				<li><a href="../../tu-sach-nen-tang/index.html">Tổng quan tủ sách</a></li>
 				<li><a href="../../tu-sach-nen-tang/sach-khoa-hoc-pho-thong/index.html">Sách khoa học phổ thông</a></li>
 				<li><a href="../../tu-sach-nen-tang/sach-kinh-te-hoc/index.html">Sách kinh tế học</a></li>
 				<li><a href="../../tu-sach-nen-tang/sach-tam-ly-hoc/index.html">Sách tâm lý học</a></li>
@@ -200,114 +198,108 @@
 			<script src="../../assets/js/breakpoints.min.js"></script>
 			<script src="../../assets/js/util.js"></script>
 			<script src="../../assets/js/main.js"></script>
-		<script>
-			document.addEventListener('DOMContentLoaded', () => {
-				const manifestUrl = '../../assets/ebooks/manifest.json';
-				const contentEl = document.getElementById('library-content');
-				const statsEl = document.getElementById('library-stats');
-				const searchEl = document.getElementById('library-search');
-				const categoryId = 'sach-khoa-hoc-pho-thong';
+			<script>
+				document.addEventListener('DOMContentLoaded', () => {
+					const manifestUrl = '../../assets/ebooks/manifest.json';
+					const contentEl = document.getElementById('library-content');
+					const statsEl = document.getElementById('library-stats');
+					const searchEl = document.getElementById('library-search');
+					const categoryId = 'sach-khoa-hoc-pho-thong';
 
-				const normalize = (value) => value
-					.toLowerCase()
-					.normalize('NFD')
-					.replace(/[\u0300-\u036f]/g, '');
+					const normalize = (value) => value
+						.toLowerCase()
+						.normalize('NFD')
+						.replace(/[\u0300-\u036f]/g, '');
 
-				const toTitle = (filename) => filename
-					.replace(/\.[^/.]+$/, '')
-					.replace(/[_-]+/g, ' ')
-					.replace(/\s+/g, ' ')
-					.trim();
+					const toTitle = (filename) => filename
+						.replace(/\.[^/.]+$/, '')
+						.replace(/[_-]+/g, ' ')
+						.replace(/\s+/g, ' ')
+						.trim();
 
-				const formatSize = (bytes) => {
-					if (!Number.isFinite(bytes)) return '';
-					const units = ['B', 'KB', 'MB', 'GB'];
-					let size = bytes;
-					let idx = 0;
-					while (size >= 1024 && idx < units.length - 1) {
-						size /= 1024;
-						idx += 1;
-					}
-					return `${size.toFixed(size >= 10 || idx === 0 ? 0 : 1)} ${units[idx]}`;
-				};
-
-				const buildBookCard = (book) => {
-					const card = document.createElement('div');
-					card.className = 'book-card';
-
-					const title = document.createElement('p');
-					title.className = 'book-title';
-					title.textContent = book.title || toTitle(book.file);
-
-					const meta = document.createElement('div');
-					meta.className = 'book-meta';
-					meta.innerHTML = `
-						<span>${(book.ext || '').toUpperCase()}</span>
-						<span>${formatSize(book.size)}</span>
-					`;
-
-					const link = document.createElement('a');
-					link.className = 'book-link';
-					link.href = `../../assets/ebooks/${categoryId}/${encodeURIComponent(book.file)}`;
-					link.textContent = 'Tải eBook';
-					link.setAttribute('download', '');
-
-					card.appendChild(title);
-					card.appendChild(meta);
-					card.appendChild(link);
-
-					return card;
-				};
-
-				const renderLibrary = (items, keyword = '') => {
-					contentEl.innerHTML = '';
-					const fragment = document.createDocumentFragment();
-					const normalizedKeyword = normalize(keyword.trim());
-					let visibleCount = 0;
-
-					items.forEach((item) => {
-						if (normalizedKeyword) {
-							const label = normalize((item.title || toTitle(item.file)) + ' ' + item.file);
-							if (!label.includes(normalizedKeyword)) return;
+					const formatSize = (bytes) => {
+						if (!Number.isFinite(bytes)) return '';
+						const units = ['B', 'KB', 'MB', 'GB'];
+						let size = bytes;
+						let idx = 0;
+						while (size >= 1024 && idx < units.length - 1) {
+							size /= 1024;
+							idx += 1;
 						}
-						fragment.appendChild(buildBookCard(item));
-						visibleCount += 1;
-					});
+						return `${size.toFixed(size >= 10 || idx === 0 ? 0 : 1)} ${units[idx]}`;
+					};
 
-					if (visibleCount === 0) {
-						contentEl.innerHTML = '<p>Không tìm thấy eBook phù hợp.</p>';
-					} else {
-						contentEl.appendChild(fragment);
-					}
+					const buildBookCard = (book) => {
+						const card = document.createElement('div');
+						card.className = 'book-card';
 
-					statsEl.textContent = `${visibleCount} eBook`;
-				};
+						const title = document.createElement('p');
+						title.className = 'book-title';
+						title.textContent = book.title || toTitle(book.file);
 
-				fetch(manifestUrl)
-					.then((res) => {
-						if (!res.ok) throw new Error('Manifest not found');
-						return res.json();
-					})
-					.then((data) => {
-						const category = (data.categories || []).find((item) => item.id === categoryId);
-						const items = category ? category.items : [];
-						renderLibrary(items);
-						searchEl.addEventListener('input', (event) => {
-							renderLibrary(items, event.target.value);
+						const meta = document.createElement('div');
+						meta.className = 'book-meta';
+						meta.innerHTML = `
+							<span>${(book.ext || '').toUpperCase()}</span>
+							<span>${formatSize(book.size)}</span>
+						`;
+
+						const link = document.createElement('a');
+						link.className = 'book-link';
+						link.href = `../../assets/ebooks/${categoryId}/${encodeURIComponent(book.file)}`;
+						link.textContent = 'Tải eBook';
+						link.setAttribute('download', '');
+
+						card.appendChild(title);
+						card.appendChild(meta);
+						card.appendChild(link);
+
+						return card;
+					};
+
+					const renderLibrary = (items, keyword = '') => {
+						contentEl.innerHTML = '';
+						const fragment = document.createDocumentFragment();
+						const normalizedKeyword = normalize(keyword.trim());
+						let visibleCount = 0;
+
+						items.forEach((item) => {
+							if (normalizedKeyword) {
+								const label = normalize((item.title || toTitle(item.file)) + ' ' + item.file);
+								if (!label.includes(normalizedKeyword)) return;
+							}
+							fragment.appendChild(buildBookCard(item));
+							visibleCount += 1;
 						});
-					})
-					.catch(() => {
-						statsEl.textContent = 'Không thể tải danh sách eBook.';
-						contentEl.innerHTML = '<p>Hãy chạy script build manifest và tải lại trang.</p>';
-					});
-			});
-		</script>
+
+						if (visibleCount === 0) {
+							contentEl.innerHTML = '<p>Không tìm thấy eBook phù hợp.</p>';
+						} else {
+							contentEl.appendChild(fragment);
+						}
+
+						statsEl.textContent = `${visibleCount} eBook`;
+					};
+
+					fetch(manifestUrl)
+						.then((res) => {
+							if (!res.ok) throw new Error('Manifest not found');
+							return res.json();
+						})
+						.then((data) => {
+							const category = (data.categories || []).find((item) => item.id === categoryId);
+							const items = category ? category.items : [];
+							renderLibrary(items);
+							searchEl.addEventListener('input', (event) => {
+								renderLibrary(items, event.target.value);
+							});
+						})
+						.catch(() => {
+							statsEl.textContent = 'Không thể tải danh sách eBook.';
+							contentEl.innerHTML = '<p>Hãy chạy script build manifest và tải lại trang.</p>';
+						});
+				});
+			</script>
 
 	</body>
 </html>
-
-
-
-
-
-
