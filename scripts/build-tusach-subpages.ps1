@@ -172,8 +172,8 @@ $template = @'
 											</ul>
 										</li>
 										<li><a href="../../ung-dung-nang-suat/index.html">📱 Ứng dụng - năng suất</a></li>
-										<li><a href="../../templates/generic.html">bài viết</a></li>
-										<li><a href="../../templates/elements.html">nút bấm, bảng biểu</a></li>
+
+
 									</ul>
 								</nav>
 
