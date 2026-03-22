@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3f58" />
+      <stop offset="100%" stop-color="#f2c5d3" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="1030" cy="120" r="180" fill="#ffffff" opacity="0.08" />
+  <circle cx="160" cy="530" r="220" fill="#ffffff" opacity="0.08" />
+  <text x="56" y="84" fill="#ffffff" font-size="20" font-family="Arial, Helvetica, 'DejaVu Sans', 'Liberation Sans', sans-serif" opacity="0.85">khoahoc.xyz</text>
+  <text x="56" y="116" fill="#ffffff" font-size="22" font-family="Arial, Helvetica, 'DejaVu Sans', 'Liberation Sans', sans-serif" opacity="0.9">Tâm lý học</text>
+  <text x="56" y="150" fill="#ffffff" font-size="34" font-family="Calibri, 'Times New Roman', 'DejaVu Serif', 'Liberation Serif', serif">Hiệu ứng halo trong đánh giá con người</text>
+</svg>

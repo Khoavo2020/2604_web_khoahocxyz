@@ -1,10 +1,10 @@
-# AGENTS.md
+# AI Agent Instructions - khoahoc.xyz
 
 ## Project summary
+### Goal:
+`khoahoc.xyz` là một static website theo mô hình `knowledge hub + sản phẩm`
 
-`khoahoc.xyz` là một static website theo mô hình `knowledge hub + sản phẩm`.
-
-Các nhóm giá trị chính:
+### Core Value: 
 - `Content`: bài viết, giải thích khái niệm, tóm tắt sách, ghi chú học tập
 - `Authority`: xây uy tín qua chất lượng biên tập và định hướng học thuật
 - `Product`: khóa học, app, ebook, landing page sản phẩm
@@ -14,6 +14,7 @@ Các nhóm giá trị chính:
 
 - Static HTML/CSS/JS
 - GitHub Pages for hosting
+- Markdown-first workflow với source trong `content/`
 - Templates trong `_templates/`
 - Build scripts trong `scripts/`
 - Một phần nội dung có thể được sinh từ Markdown hoặc data source
@@ -35,8 +36,8 @@ Các nhóm trang chính hiện tại:
 - Kinh tế học
 - Tâm lý học
 - Triết học
-- Tinh hoa nhân loại
-- Tủ sách nền tảng
+- Tinh hoa - nhân loại
+- Tủ sách - nền tảng
 - Ứng dụng năng suất
 
 Các trang con có thể mở rộng:
@@ -44,15 +45,20 @@ Các trang con có thể mở rộng:
 - `triet-hoc/phuong-tay`
 - `triet-hoc/tho-viet-nam`
 - `triet-hoc/tho-nuoc-ngoai`
-- `tu-sach-nen-tang/sach-*`
+- `tu-sach-nen-tang/sach-khoa-hoc-pho-thong`
+- `tu-sach-nen-tang/sach-kinh-te-hoc`
+- `tu-sach-nen-tang/sach-tam-ly-hoc`
+- `tu-sach-nen-tang/sach-triet-hoc`
+- `tu-sach-nen-tang/sach-xyz`
+
+
+
+
 
 ## Cấu trúc hình ảnh
 
 - `images/` - Chỉ chứa hình ảnh dùng chung (category thumbnails, banners, etc.)
-- `[category]/[article]/image/` - Hình ảnh của từng bài viết cụ thể
-  - `thumb.jpg` - Thumbnail cho danh sách bài viết
-  - `cover.jpg` - Ảnh cover cho trang bài viết chi tiết
-  - Các ảnh khác nếu cần
+- `[category]/[article]/[article].jpg` - Hình ảnh của từng bài viết cụ thể
 
 ## Definition of good output
 
@@ -71,4 +77,3 @@ Khi làm việc trong repo này, ưu tiên các đầu ra sau:
 - script build nhỏ, dễ đọc, ít phụ thuộc
 - cấu trúc thư mục nhất quán
 - checklist hoặc roadmap ngắn cho bước tiếp theo
-

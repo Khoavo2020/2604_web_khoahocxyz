@@ -1,0 +1,51 @@
+[
+  {
+    "slug": "khoa-hoc-pho-thong",
+    "title": "Khoa học phổ thông",
+    "tagline": "Giải thích thế giới bằng những ý tưởng đơn giản, rõ ràng và có thể kiểm chứng.",
+    "description": "Những bài viết nhập môn giúp người đọc hiểu nhanh các khái niệm khoa học quan trọng trong đời sống.",
+    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Khoa học phổ thông</strong></a> » Hiệu ứng Matthew: Internet làm người thông minh thông minh hơn và người ngu ngu hơn</div><ul class=\"icons\"><li><a href=\"#\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"#\" class=\"icon brands fa-instagram\"><span class=\"label\">Instagram</span></a></li><li><a href=\"#\" class=\"icon brands fa-medium-m\"><span class=\"label\">Medium</span></a></li></ul></header>"
+  },
+  {
+    "slug": "kinh-te-hoc",
+    "title": "Kinh tế học",
+    "tagline": "Tư duy kinh tế để hiểu lựa chọn, nguồn lực và những đánh đổi mỗi ngày.",
+    "description": "Chuyên mục này tập trung vào các khái niệm nền tảng của kinh tế học và cách áp dụng chúng vào thực tế.",
+    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Kinh tế học</strong></a> » Kinh tế học giải đáp những câu hỏi về cách xã hội vận hành</div><ul class=\"icons\"><li><a href=\"#\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"#\" class=\"icon brands fa-instagram\"><span class=\"label\">Instagram</span></a></li><li><a href=\"#\" class=\"icon brands fa-medium-m\"><span class=\"label\">Medium</span></a></li></ul></header>"
+  },
+  {
+    "slug": "tam-ly-hoc",
+    "title": "Tâm lý học",
+    "tagline": "Hiểu bản thân và hành vi con người bằng góc nhìn tâm lý học ứng dụng.",
+    "description": "Các bài viết ngắn gọn về nhận thức, cảm xúc, động lực và thói quen của con người.",
+    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Tâm lý học</strong></a> » Tâm lý học giải đáp những câu hỏi về hành vi của con người</div><ul class=\"icons\"><li><a href=\"#\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"#\" class=\"icon brands fa-instagram\"><span class=\"label\">Instagram</span></a></li><li><a href=\"#\" class=\"icon brands fa-medium-m\"><span class=\"label\">Medium</span></a></li></ul></header>"
+  },
+  {
+    "slug": "triet-hoc",
+    "title": "Triết học",
+    "tagline": "Những câu hỏi lớn về ý nghĩa, tự do, trách nhiệm và cách sống.",
+    "description": "Một không gian để tiếp cận triết học theo hướng gần gũi, có chiều sâu và hữu ích cho đời sống hiện đại.",
+    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Triết học</strong></a> - Triết học giải đáp những câu hỏi về ý nghĩa của sự tồn tại</div><ul class=\"icons\"><li><a href=\"#\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"#\" class=\"icon brands fa-instagram\"><span class=\"label\">Instagram</span></a></li><li><a href=\"#\" class=\"icon brands fa-medium-m\"><span class=\"label\">Medium</span></a></li></ul></header>"
+  },
+  {
+    "slug": "tinh-hoa-nhan-loai",
+    "title": "Tinh hoa - nhân loại",
+    "tagline": "Những ý tưởng đẹp, câu nói sâu sắc và bài học bền vững từ nhiều thời đại.",
+    "description": "Tuyển chọn các bài viết giàu chất suy ngẫm, cô đọng tinh thần học hỏi và cảm hứng sống.",
+    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Tinh hoa - nhân loại</strong></a> » Túi khôn của nhà thông thái</div><ul class=\"icons\"><li><a href=\"#\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"#\" class=\"icon brands fa-instagram\"><span class=\"label\">Instagram</span></a></li><li><a href=\"#\" class=\"icon brands fa-medium-m\"><span class=\"label\">Medium</span></a></li></ul></header>"
+  },
+  {
+    "slug": "tu-sach-nen-tang",
+    "title": "Tủ sách - nền tảng",
+    "tagline": "Sách hay là chiếc cầu nối từ hứng thú nhất thời sang năng lực học tập bền vững.",
+    "description": "Những ghi chú sách và danh mục đọc nền tảng cho người muốn tự học một cách nghiêm túc.",
+    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Tủ sách - nền tảng </strong></a> » Lựa chọn đúng quan trọng hơn nỗ lực</div><ul class=\"icons\"><li><a href=\"#\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"#\" class=\"icon brands fa-instagram\"><span class=\"label\">Instagram</span></a></li><li><a href=\"#\" class=\"icon brands fa-medium-m\"><span class=\"label\">Medium</span></a></li></ul></header>"
+  },
+  {
+    "slug": "ung-dung-nang-suat",
+    "title": "Ứng dụng - năng suất",
+    "tagline": "Công cụ, hệ thống và nguyên tắc giúp làm việc hiệu quả mà không kiệt sức.",
+    "description": "Chuyên mục dành cho các phương pháp, ứng dụng và thói quen nâng cao năng suất cá nhân.",
+    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Ứng dụng - năng suất</strong></a> - Thời gian là tất cả những gì bạn có</div><ul class=\"icons\"><li><a href=\"#\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"#\" class=\"icon brands fa-instagram\"><span class=\"label\">Instagram</span></a></li><li><a href=\"#\" class=\"icon brands fa-medium-m\"><span class=\"label\">Medium</span></a></li></ul></header>"
+  }
+]

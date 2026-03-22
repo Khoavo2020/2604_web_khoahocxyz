@@ -45,8 +45,8 @@ Website được thiết kế theo mô hình:
 - Kinh tế học
 - Tâm lý học
 - Triết học
-- Tinh hoa nhân loại
-- Tủ sách nền tảng
+- Tinh hoa - nhân loại
+- Tủ sách - nền tảng
 - Ứng dụng năng suất
 
 ## 7. Nguyên tắc ưu tiên
