@@ -37,5 +37,31 @@ sub page
     + Triết học phương tây
     + Thơ việt nam
     + Thơ nước ngoài
+
+
+## Cấu trúc thư mục và hình ảnh
+
+### Hình ảnh
+- `images/` - Chỉ chứa hình ảnh dùng chung (category thumbnails, banners, etc.)
+- `[category]/[article]/image/` - Hình ảnh của từng bài viết cụ thể
+  - `thumb.jpg` - Thumbnail cho danh sách bài viết
+  - `cover.jpg` - Ảnh cover cho trang bài viết chi tiết
+  - Các ảnh khác nếu cần
+
+### Ví dụ cấu trúc:
+```
+khoa-hoc-pho-thong/
+├── index.html
+├── ky-uc-khong-co-that/
+│   ├── image/
+│   │   ├── thumb.jpg
+│   │   └── cover.jpg
+│   └── ky-uc-khong-co-that.html
+└── iq-quoc-gia-va-su-giau-co/
+    ├── image/
+    │   ├── thumb.jpg
+    │   └── cover.jpg
+    └── iq-quoc-gia-va-su-giau-co.html
+```
  
 

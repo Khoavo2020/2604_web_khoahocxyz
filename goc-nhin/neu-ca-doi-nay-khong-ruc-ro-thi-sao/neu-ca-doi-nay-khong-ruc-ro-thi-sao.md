@@ -13,4 +13,4 @@ Hãy nhớ: bạn không cần phải là mặt trời để tỏa sáng, nhưng
 Cuộc đời này không dành cho sự hời hợt. Nó dành cho những người trẻ dám hiếu thắng, dám xông pha, và dám sống một hành trình rực rỡ theo cách của riêng mình.
 
 
-![cover1](image/cover1.jpg)
+![img](neu-ca-doi-nay-khong-ruc-ro-thi-sao.jpg)

@@ -48,3 +48,5 @@ Project còn thiếu:
 - Chuẩn hóa 1 chuyên mục làm mẫu trước, ví dụ `khoa-hoc-pho-thong`
 - Sau khi mẫu ổn, nhân rộng bằng template/script
 
+
+# 2603w12.t1

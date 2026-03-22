@@ -22,4 +22,4 @@ Tâm lý học đám đông là một nhánh của tâm lý học xã hội, ngh
 
 
 
-![cover1](image/cover2.jpg)
+![img](tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.jpg)

@@ -46,6 +46,14 @@ Các trang con có thể mở rộng:
 - `triet-hoc/tho-nuoc-ngoai`
 - `tu-sach-nen-tang/sach-*`
 
+## Cấu trúc hình ảnh
+
+- `images/` - Chỉ chứa hình ảnh dùng chung (category thumbnails, banners, etc.)
+- `[category]/[article]/image/` - Hình ảnh của từng bài viết cụ thể
+  - `thumb.jpg` - Thumbnail cho danh sách bài viết
+  - `cover.jpg` - Ảnh cover cho trang bài viết chi tiết
+  - Các ảnh khác nếu cần
+
 ## Definition of good output
 
 Một thay đổi được xem là tốt khi:
