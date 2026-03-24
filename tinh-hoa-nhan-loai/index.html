@@ -6,21 +6,104 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Tuyển chọn các bài viết giàu chất suy ngẫm, cô đọng tinh thần học hỏi và cảm hứng sống." />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<style>
+			.cover-list {
+				display: block;
+				margin-bottom: 1.5em;
+			}
+			.cover-list article {
+				margin: 0 0 1.35em 0;
+				padding: 0 0 1em 0;
+				position: relative;
+				width: 100%;
+			}
+			.cover-list article::before {
+				display: none !important;
+			}
+			.cover-list article::after {
+				background: rgba(210, 215, 217, 0.75);
+				bottom: 0;
+				content: '';
+				display: block;
+				height: 1px;
+				left: 0;
+				position: absolute;
+				width: 100%;
+			}
+			.cover-list article:last-child {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+			.cover-list article:last-child::after {
+				display: none;
+			}
+			.cover-list article h3 {
+				font-size: 1em;
+				font-weight: 700;
+				letter-spacing: -0.01em;
+				line-height: 1.24;
+				margin: 0 0 0.35em 0;
+			}
+			.cover-list article h3 a {
+				border-bottom: 0;
+			}
+			.cover-list .cover-item-body {
+				align-items: start;
+				display: grid;
+				gap: 0.75em;
+				grid-template-columns: 9.75em minmax(0, 1fr);
+			}
+			.cover-list article .image {
+				display: block;
+				margin: 0;
+				width: 100%;
+			}
+			.cover-list article .image img {
+				aspect-ratio: 16 / 10;
+				display: block;
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
+			.cover-list article p {
+				color: #4f5b62;
+				font-size: 0.85em;
+				line-height: 1.6;
+				margin: 0;
+			}
+			@media screen and (max-width: 480px) {
+				.cover-list article {
+					margin-bottom: 1.2em;
+					padding-bottom: 0.9em;
+				}
+				.cover-list article h3 {
+					font-size: 0.854em;
+				}
+				.cover-list .cover-item-body {
+					gap: 0.85em;
+					grid-template-columns: 7.25em minmax(0, 1fr);
+				}
+				.cover-list article p {
+					font-size: 0.7em;
+					line-height: 1.5;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<div id="wrapper">
 			<div id="main">
 				<div class="inner">
-					<header id="header"><div class="logo"><a href="../index.html"><strong>🏠</strong></a> » <a href="./index.html"><strong>Tinh hoa - nhân loại</strong></a> » Túi khôn của nhà thông thái</div><ul class="icons"><li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li><li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li></ul></header>
+					<header id="header"><div class="logo"><a href="../index.html"><strong>🏠</strong></a> » <a href="./index.html"><strong>Tinh hoa - nhân loại</strong></a> » Túi khôn của nhà thông thái</div><ul class="icons"><li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li></ul></header>
 					
 
 					<section>
-						<div class="posts">
-							<article><h3><a href="cau-noi-giup-dung-lai/index.html">Những câu nói hay giúp ta dừng lại một nhịp</a></h3><a href="cau-noi-giup-dung-lai/index.html" class="image"><img src="../assets/generated/covers/tinh-hoa-nhan-loai/cau-noi-giup-dung-lai.svg" alt="" style="width: 20%;"></a><p>Có những câu ngắn nhưng đủ làm thay đổi nhịp suy nghĩ của cả một ngày.</p></article>
-<article><h3><a href="dep-va-sau/index.html">Vì sao con người luôn tìm cái đẹp và cái sâu</a></h3><a href="dep-va-sau/index.html" class="image"><img src="../assets/generated/covers/tinh-hoa-nhan-loai/dep-va-sau.svg" alt="" style="width: 20%;"></a><p>Ta không chỉ cần sống sót mà còn cần những điều làm đời sống đáng sống hơn.</p></article>
-<article><h3><a href="doc-sach-de-lam-gi/index.html">Đọc sách để làm gì ngoài việc biết thêm</a></h3><a href="doc-sach-de-lam-gi/index.html" class="image"><img src="../assets/generated/covers/tinh-hoa-nhan-loai/doc-sach-de-lam-gi.svg" alt="" style="width: 20%;"></a><p>Một cuốn sách tốt không chỉ cho thông tin mà còn cho ta một cách nhìn khác về đời sống.</p></article>
-<article><h3><a href="song-cham-de-thay-ro/index.html">Sống chậm để thấy rõ hơn</a></h3><a href="song-cham-de-thay-ro/index.html" class="image"><img src="../assets/generated/covers/tinh-hoa-nhan-loai/song-cham-de-thay-ro.svg" alt="" style="width: 20%;"></a><p>Chậm lại không phải để trì hoãn mà để quan sát kỹ hơn điều mình đang sống.</p></article>
-<article><h3><a href="tinh-than-hoc-suot-doi/index.html">Tinh thần học suốt đời được nuôi bằng điều gì</a></h3><a href="tinh-than-hoc-suot-doi/index.html" class="image"><img src="../assets/generated/covers/tinh-hoa-nhan-loai/tinh-than-hoc-suot-doi.svg" alt="" style="width: 20%;"></a><p>Không phải chỉ bằng kỷ luật mà còn bằng niềm vui được hiểu thêm một chút về thế giới.</p></article>
+						<div class="cover-list">
+							<article><h3><a href="cau-noi-giup-dung-lai/index.html">Những câu nói hay giúp ta dừng lại một nhịp</a></h3><div class="cover-item-body"><a href="cau-noi-giup-dung-lai/index.html" class="image"><img src="../assets/generated/covers/tinh-hoa-nhan-loai/cau-noi-giup-dung-lai.svg" alt=""></a><p>Có những câu ngắn nhưng đủ làm thay đổi nhịp suy nghĩ của cả một ngày.</p></div></article>
+<article><h3><a href="dep-va-sau/index.html">Vì sao con người luôn tìm cái đẹp và cái sâu</a></h3><div class="cover-item-body"><a href="dep-va-sau/index.html" class="image"><img src="../assets/generated/covers/tinh-hoa-nhan-loai/dep-va-sau.svg" alt=""></a><p>Ta không chỉ cần sống sót mà còn cần những điều làm đời sống đáng sống hơn.</p></div></article>
+<article><h3><a href="doc-sach-de-lam-gi/index.html">Đọc sách để làm gì ngoài việc biết thêm</a></h3><div class="cover-item-body"><a href="doc-sach-de-lam-gi/index.html" class="image"><img src="../assets/generated/covers/tinh-hoa-nhan-loai/doc-sach-de-lam-gi.svg" alt=""></a><p>Một cuốn sách tốt không chỉ cho thông tin mà còn cho ta một cách nhìn khác về đời sống.</p></div></article>
+<article><h3><a href="song-cham-de-thay-ro/index.html">Sống chậm để thấy rõ hơn</a></h3><div class="cover-item-body"><a href="song-cham-de-thay-ro/index.html" class="image"><img src="../assets/generated/covers/tinh-hoa-nhan-loai/song-cham-de-thay-ro.svg" alt=""></a><p>Chậm lại không phải để trì hoãn mà để quan sát kỹ hơn điều mình đang sống.</p></div></article>
+<article><h3><a href="tinh-than-hoc-suot-doi/index.html">Tinh thần học suốt đời được nuôi bằng điều gì</a></h3><div class="cover-item-body"><a href="tinh-than-hoc-suot-doi/index.html" class="image"><img src="../assets/generated/covers/tinh-hoa-nhan-loai/tinh-than-hoc-suot-doi.svg" alt=""></a><p>Không phải chỉ bằng kỷ luật mà còn bằng niềm vui được hiểu thêm một chút về thế giới.</p></div></article>
 						</div>
 					</section>
 				</div>

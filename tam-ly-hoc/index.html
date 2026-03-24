@@ -6,21 +6,104 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Các bài viết ngắn gọn về nhận thức, cảm xúc, động lực và thói quen của con người." />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<style>
+			.cover-list {
+				display: block;
+				margin-bottom: 1.5em;
+			}
+			.cover-list article {
+				margin: 0 0 1.35em 0;
+				padding: 0 0 1em 0;
+				position: relative;
+				width: 100%;
+			}
+			.cover-list article::before {
+				display: none !important;
+			}
+			.cover-list article::after {
+				background: rgba(210, 215, 217, 0.75);
+				bottom: 0;
+				content: '';
+				display: block;
+				height: 1px;
+				left: 0;
+				position: absolute;
+				width: 100%;
+			}
+			.cover-list article:last-child {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+			.cover-list article:last-child::after {
+				display: none;
+			}
+			.cover-list article h3 {
+				font-size: 1em;
+				font-weight: 700;
+				letter-spacing: -0.01em;
+				line-height: 1.24;
+				margin: 0 0 0.35em 0;
+			}
+			.cover-list article h3 a {
+				border-bottom: 0;
+			}
+			.cover-list .cover-item-body {
+				align-items: start;
+				display: grid;
+				gap: 0.75em;
+				grid-template-columns: 9.75em minmax(0, 1fr);
+			}
+			.cover-list article .image {
+				display: block;
+				margin: 0;
+				width: 100%;
+			}
+			.cover-list article .image img {
+				aspect-ratio: 16 / 10;
+				display: block;
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
+			.cover-list article p {
+				color: #4f5b62;
+				font-size: 0.85em;
+				line-height: 1.6;
+				margin: 0;
+			}
+			@media screen and (max-width: 480px) {
+				.cover-list article {
+					margin-bottom: 1.2em;
+					padding-bottom: 0.9em;
+				}
+				.cover-list article h3 {
+					font-size: 0.854em;
+				}
+				.cover-list .cover-item-body {
+					gap: 0.85em;
+					grid-template-columns: 7.25em minmax(0, 1fr);
+				}
+				.cover-list article p {
+					font-size: 0.7em;
+					line-height: 1.5;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<div id="wrapper">
 			<div id="main">
 				<div class="inner">
-					<header id="header"><div class="logo"><a href="../index.html"><strong>🏠</strong></a> » <a href="./index.html"><strong>Tâm lý học</strong></a> » Tâm lý học giải đáp những câu hỏi về hành vi của con người</div><ul class="icons"><li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li><li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li></ul></header>
+					<header id="header"><div class="logo"><a href="../index.html"><strong>🏠</strong></a> » <a href="./index.html"><strong>Tâm lý học</strong></a> » Tâm lý học giải đáp những câu hỏi về hành vi của con người</div><ul class="icons"><li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li></ul></header>
 					
 
 					<section>
-						<div class="posts">
-							<article><h3><a href="dong-luc-noi-tai/index.html">Động lực nội tại và cách học bền vững</a></h3><a href="dong-luc-noi-tai/index.html" class="image"><img src="../assets/generated/covers/tam-ly-hoc/dong-luc-noi-tai.svg" alt="" style="width: 20%;"></a><p>Khi việc học gắn với ý nghĩa cá nhân, ta ít phụ thuộc hơn vào cảm hứng nhất thời.</p></article>
-<article><h3><a href="hieu-ung-halo/index.html">Hiệu ứng halo trong đánh giá con người</a></h3><a href="hieu-ung-halo/index.html" class="image"><img src="../assets/generated/covers/tam-ly-hoc/hieu-ung-halo.svg" alt="" style="width: 20%;"></a><p>Một ấn tượng tốt ở một mặt nào đó có thể lan sang mọi đánh giá còn lại.</p></article>
-<article><h3><a href="stress-va-phuc-hoi/index.html">Stress và khả năng phục hồi</a></h3><a href="stress-va-phuc-hoi/index.html" class="image"><img src="../assets/generated/covers/tam-ly-hoc/stress-va-phuc-hoi.svg" alt="" style="width: 20%;"></a><p>Vấn đề không phải là không bao giờ stress mà là biết phục hồi sau áp lực.</p></article>
-<article><h3><a href="thien-kien-xac-nhan/index.html">Thiên kiến xác nhận</a></h3><a href="thien-kien-xac-nhan/index.html" class="image"><img src="../assets/generated/covers/tam-ly-hoc/thien-kien-xac-nhan.svg" alt="" style="width: 20%;"></a><p>Vì sao chúng ta thường ưu tiên thông tin củng cố niềm tin có sẵn.</p></article>
-<article><h3><a href="vong-lap-thoi-quen/index.html">Vòng lặp thói quen</a></h3><a href="vong-lap-thoi-quen/index.html" class="image"><img src="../assets/generated/covers/tam-ly-hoc/vong-lap-thoi-quen.svg" alt="" style="width: 20%;"></a><p>Thói quen bền vững thường được hình thành từ tín hiệu, hành động và phần thưởng.</p></article>
+						<div class="cover-list">
+							<article><h3><a href="dong-luc-noi-tai/index.html">Động lực nội tại và cách học bền vững</a></h3><div class="cover-item-body"><a href="dong-luc-noi-tai/index.html" class="image"><img src="../assets/generated/covers/tam-ly-hoc/dong-luc-noi-tai.svg" alt=""></a><p>Khi việc học gắn với ý nghĩa cá nhân, ta ít phụ thuộc hơn vào cảm hứng nhất thời.</p></div></article>
+<article><h3><a href="hieu-ung-halo/index.html">Hiệu ứng halo trong đánh giá con người</a></h3><div class="cover-item-body"><a href="hieu-ung-halo/index.html" class="image"><img src="../assets/generated/covers/tam-ly-hoc/hieu-ung-halo.svg" alt=""></a><p>Một ấn tượng tốt ở một mặt nào đó có thể lan sang mọi đánh giá còn lại.</p></div></article>
+<article><h3><a href="stress-va-phuc-hoi/index.html">Stress và khả năng phục hồi</a></h3><div class="cover-item-body"><a href="stress-va-phuc-hoi/index.html" class="image"><img src="../assets/generated/covers/tam-ly-hoc/stress-va-phuc-hoi.svg" alt=""></a><p>Vấn đề không phải là không bao giờ stress mà là biết phục hồi sau áp lực.</p></div></article>
+<article><h3><a href="thien-kien-xac-nhan/index.html">Thiên kiến xác nhận</a></h3><div class="cover-item-body"><a href="thien-kien-xac-nhan/index.html" class="image"><img src="../assets/generated/covers/tam-ly-hoc/thien-kien-xac-nhan.svg" alt=""></a><p>Vì sao chúng ta thường ưu tiên thông tin củng cố niềm tin có sẵn.</p></div></article>
+<article><h3><a href="vong-lap-thoi-quen/index.html">Vòng lặp thói quen</a></h3><div class="cover-item-body"><a href="vong-lap-thoi-quen/index.html" class="image"><img src="../assets/generated/covers/tam-ly-hoc/vong-lap-thoi-quen.svg" alt=""></a><p>Thói quen bền vững thường được hình thành từ tín hiệu, hành động và phần thưởng.</p></div></article>
 						</div>
 					</section>
 				</div>

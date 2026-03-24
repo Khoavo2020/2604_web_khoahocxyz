@@ -6,21 +6,106 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Những bài viết nhập môn giúp người đọc hiểu nhanh các khái niệm khoa học quan trọng trong đời sống." />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<style>
+			.cover-list {
+				display: block;
+				margin-bottom: 1.5em;
+			}
+			.cover-list article {
+				margin: 0 0 1.35em 0;
+				padding: 0 0 1em 0;
+				position: relative;
+				width: 100%;
+			}
+			.cover-list article::before {
+				display: none !important;
+			}
+			.cover-list article::after {
+				background: rgba(210, 215, 217, 0.75);
+				bottom: 0;
+				content: '';
+				display: block;
+				height: 1px;
+				left: 0;
+				position: absolute;
+				width: 100%;
+			}
+			.cover-list article:last-child {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+			.cover-list article:last-child::after {
+				display: none;
+			}
+			.cover-list article h3 {
+				font-size: 1em;
+				font-weight: 700;
+				letter-spacing: -0.01em;
+				line-height: 1.24;
+				margin: 0 0 0.35em 0;
+			}
+			.cover-list article h3 a {
+				border-bottom: 0;
+			}
+			.cover-list .cover-item-body {
+				align-items: start;
+				display: grid;
+				gap: 0.75em;
+				grid-template-columns: 9.75em minmax(0, 1fr);
+			}
+			.cover-list article .image {
+				display: block;
+				margin: 0;
+				width: 100%;
+			}
+			.cover-list article .image img {
+				aspect-ratio: 16 / 10;
+				display: block;
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
+			.cover-list article p {
+				color: #4f5b62;
+				font-size: 0.85em;
+				line-height: 1.6;
+				margin: 0;
+			}
+			@media screen and (max-width: 480px) {
+				.cover-list article {
+					margin-bottom: 1.2em;
+					padding-bottom: 0.9em;
+				}
+				.cover-list article h3 {
+					font-size: 0.854em;
+				}
+				.cover-list .cover-item-body {
+					gap: 0.85em;
+					grid-template-columns: 7.25em minmax(0, 1fr);
+				}
+				.cover-list article p {
+					font-size: 0.7em;
+					line-height: 1.5;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<div id="wrapper">
 			<div id="main">
 				<div class="inner">
-					<header id="header"><div class="logo"><a href="../index.html"><strong>🏠</strong></a> » <a href="./index.html"><strong>Khoa học phổ thông</strong></a> » Hiệu ứng Matthew: Internet làm người thông minh thông minh hơn và người ngu ngu hơn</div><ul class="icons"><li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li><li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li></ul></header>
+					<header id="header"><div class="logo"><a href="../index.html"><strong>🏠</strong></a> » <a href="./index.html"><strong>Khoa học phổ thông</strong></a> » Hiệu ứng Matthew: Internet làm người thông minh thông minh hơn và người ngu ngu hơn</div><ul class="icons"><li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li></ul></header>
 					
 
 					<section>
-						<div class="posts">
-							<article><h3><a href="bau-troi-mau-xanh/index.html">Vì sao bầu trời có màu xanh</a></h3><a href="bau-troi-mau-xanh/index.html" class="image"><img src="../assets/generated/covers/khoa-hoc-pho-thong/bau-troi-mau-xanh.svg" alt="" style="width: 20%;"></a><p>Hiện tượng quen thuộc này là một bài học đẹp về ánh sáng và khí quyển.</p></article>
-<article><h3><a href="entropy-trong-doi-song/index.html">Entropy trong đời sống thường ngày</a></h3><a href="entropy-trong-doi-song/index.html" class="image"><img src="../assets/generated/covers/khoa-hoc-pho-thong/entropy-trong-doi-song.svg" alt="" style="width: 20%;"></a><p>Một khái niệm vật lý có thể giúp ta hiểu vì sao mọi thứ dễ bừa bộn hơn là ngăn nắp.</p></article>
-<article><h3><a href="giac-ngu-va-tri-nho/index.html">Giấc ngủ ảnh hưởng đến trí nhớ thế nào</a></h3><a href="giac-ngu-va-tri-nho/index.html" class="image"><img src="../assets/generated/covers/khoa-hoc-pho-thong/giac-ngu-va-tri-nho.svg" alt="" style="width: 20%;"></a><p>Ngủ không chỉ để nghỉ mà còn để não bộ củng cố điều đã học.</p></article>
-<article><h3><a href="placebo-la-gi/index.html">Hiệu ứng placebo là gì</a></h3><a href="placebo-la-gi/index.html" class="image"><img src="../assets/generated/covers/khoa-hoc-pho-thong/placebo-la-gi.svg" alt="" style="width: 20%;"></a><p>Niềm tin có thể tạo ra thay đổi thật trong cảm nhận và hành vi.</p></article>
-<article><h3><a href="tu-duy-thong-ke-co-ban/index.html">Tư duy thống kê cơ bản cho người mới</a></h3><a href="tu-duy-thong-ke-co-ban/index.html" class="image"><img src="../assets/generated/covers/khoa-hoc-pho-thong/tu-duy-thong-ke-co-ban.svg" alt="" style="width: 20%;"></a><p>Một vài nguyên tắc đơn giản có thể giúp ta bớt cả tin trước những kết luận hấp dẫn.</p></article>
+						<div class="cover-list">
+							<article><h3><a href="bau-troi-mau-xanh/index.html">Vì sao bầu trời có màu xanh</a></h3><div class="cover-item-body"><a href="bau-troi-mau-xanh/index.html" class="image"><img src="../assets/generated/covers/khoa-hoc-pho-thong/bau-troi-mau-xanh.svg" alt=""></a><p>Hiện tượng quen thuộc này là một bài học đẹp về ánh sáng và khí quyển.</p></div></article>
+<article><h3><a href="entropy-trong-doi-song/index.html">Entropy trong đời sống thường ngày</a></h3><div class="cover-item-body"><a href="entropy-trong-doi-song/index.html" class="image"><img src="../assets/generated/covers/khoa-hoc-pho-thong/entropy-trong-doi-song.svg" alt=""></a><p>Một khái niệm vật lý có thể giúp ta hiểu vì sao mọi thứ dễ bừa bộn hơn là ngăn nắp.</p></div></article>
+<article><h3><a href="giac-ngu-va-tri-nho/index.html">Giấc ngủ ảnh hưởng đến trí nhớ thế nào</a></h3><div class="cover-item-body"><a href="giac-ngu-va-tri-nho/index.html" class="image"><img src="../assets/generated/covers/khoa-hoc-pho-thong/giac-ngu-va-tri-nho.svg" alt=""></a><p>Ngủ không chỉ để nghỉ mà còn để não bộ củng cố điều đã học.</p></div></article>
+<article><h3><a href="iq-quoc-gia-va-su-giau-co/index.html">IQ trung bình và sự giàu có</a></h3><div class="cover-item-body"><a href="iq-quoc-gia-va-su-giau-co/index.html" class="image"><img src="../khoa-hoc-pho-thong/iq-quoc-gia-va-su-giau-co/iq-quoc-gia-va-su-giau-co.jpg" alt=""></a><p>Tương quan giữa giáo dục, năng lực nhận thức và sự thịnh vượng của một quốc gia.</p></div></article>
+<article><h3><a href="ky-uc-khong-co-that/index.html">Ký ức không có thật</a></h3><div class="cover-item-body"><a href="ky-uc-khong-co-that/index.html" class="image"><img src="../khoa-hoc-pho-thong/ky-uc-khong-co-that/ky-uc-khong-co-that.jpg" alt=""></a><p>Vì sao trí nhớ dễ bị sai lệch và cách bạn tự kiểm chứng lại ký ức.</p></div></article>
+<article><h3><a href="placebo-la-gi/index.html">Hiệu ứng placebo là gì</a></h3><div class="cover-item-body"><a href="placebo-la-gi/index.html" class="image"><img src="../assets/generated/covers/khoa-hoc-pho-thong/placebo-la-gi.svg" alt=""></a><p>Niềm tin có thể tạo ra thay đổi thật trong cảm nhận và hành vi.</p></div></article>
+<article><h3><a href="tu-duy-thong-ke-co-ban/index.html">Tư duy thống kê cơ bản cho người mới</a></h3><div class="cover-item-body"><a href="tu-duy-thong-ke-co-ban/index.html" class="image"><img src="../assets/generated/covers/khoa-hoc-pho-thong/tu-duy-thong-ke-co-ban.svg" alt=""></a><p>Một vài nguyên tắc đơn giản có thể giúp ta bớt cả tin trước những kết luận hấp dẫn.</p></div></article>
 						</div>
 					</section>
 				</div>

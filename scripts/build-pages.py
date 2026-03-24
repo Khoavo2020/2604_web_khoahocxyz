@@ -34,6 +34,9 @@ def extract_first(pattern: str, text: str, default: str = "") -> str:
 
 
 def extract_posts_block(text: str) -> str:
+    posts = extract_first(r'<div class="cover-list">(.*?)</div>', text, "").strip()
+    if posts:
+        return posts
     return extract_first(r'<div class="posts">(.*?)</div>', text, "").strip()
 
 
@@ -67,27 +70,23 @@ def extract_article_fields(text: str) -> dict[str, str]:
 
 
 def transform_posts(posts_html: str) -> str:
-    # Transform the posts HTML to new structure: title above image, image smaller, title clickable, no button
     pattern = r'<article>(.*?)</article>'
     def replace_article(match):
         content = match.group(1)
-        # Extract href from the image link
         href_match = re.search(r'<a href="([^"]*)"[^>]*class="image"', content)
         href = href_match.group(1) if href_match else ''
-        # Extract img src
         img_match = re.search(r'<img src="([^"]*)"', content)
         img_src = img_match.group(1) if img_match else ''
-        # Extract h3 title
-        h3_match = re.search(r'<h3>(.*?)</h3>', content)
-        title = h3_match.group(1) if h3_match else ''
-        # Extract p desc
+        title_match = re.search(r'<h3>\s*(?:<a [^>]*>)?(.*?)(?:</a>)?\s*</h3>', content, re.DOTALL)
+        title = title_match.group(1).strip() if title_match else ''
         p_match = re.search(r'<p>(.*?)</p>', content)
         desc = p_match.group(1) if p_match else ''
-        # New structure
         new_article = f'''<article>
 <h3><a href="{href}">{title}</a></h3>
-<a href="{href}" class="image"><img src="{img_src}" alt="" style="width: 20%;"></a>
+<div class="cover-item-body">
+<a href="{href}" class="image"><img src="{img_src}" alt=""></a>
 <p>{desc}</p>
+</div>
 </article>'''
         return new_article
     return re.sub(pattern, replace_article, posts_html, flags=re.DOTALL)
@@ -124,6 +123,10 @@ def build_categories() -> None:
         title, desc = extract_main_title_desc(html)
         tagline = extract_header_tagline(html) or desc
         posts = extract_posts_block(html)
+        if not title or not posts:
+            # Preserve pages whose header/content is managed by another workflow.
+            print(f"Skipped: {path.relative_to(ROOT)}")
+            continue
         posts = transform_posts(posts)
         prefix = root_prefix(path.relative_to(ROOT))
         values = {

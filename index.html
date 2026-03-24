@@ -6,6 +6,104 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.cover-list {
+				display: block;
+				margin-bottom: 1.5em;
+			}
+
+			.cover-list article {
+				margin: 0 0 1.35em 0;
+				padding: 0 0 1em 0;
+				position: relative;
+				width: 100%;
+			}
+
+			.cover-list article::before {
+				display: none !important;
+			}
+
+			.cover-list article::after {
+				background: rgba(210, 215, 217, 0.75);
+				bottom: 0;
+				content: '';
+				display: block;
+				height: 1px;
+				left: 0;
+				position: absolute;
+				width: 100%;
+			}
+
+			.cover-list article:last-child {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+
+			.cover-list article:last-child::after {
+				display: none;
+			}
+
+			.cover-list article h3 {
+				font-size: 1em;
+				font-weight: 700;
+				letter-spacing: -0.01em;
+				line-height: 1.24;
+				margin: 0 0 0.35em 0;
+			}
+
+			.cover-list article h3 a {
+				border-bottom: 0;
+			}
+
+			.cover-list .cover-item-body {
+				align-items: start;
+				display: grid;
+				gap: 0.75em;
+				grid-template-columns: 9.75em minmax(0, 1fr);
+			}
+
+			.cover-list article .image {
+				display: block;
+				margin: 0;
+				width: 100%;
+			}
+
+			.cover-list article .image img {
+				aspect-ratio: 16 / 10;
+				display: block;
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
+
+			.cover-list article p {
+				color: #4f5b62;
+				font-size: 0.85em;
+				line-height: 1.6;
+				margin: 0;
+			}
+
+			@media screen and (max-width: 480px) {
+				.cover-list article {
+					margin-bottom: 1.2em;
+					padding-bottom: 0.9em;
+				}
+
+				.cover-list article h3 {
+					font-size: 0.854em;
+				}
+
+				.cover-list .cover-item-body {
+					gap: 0.85em;
+					grid-template-columns: 7.25em minmax(0, 1fr);
+				}
+
+				.cover-list article p {
+					font-size: 0.7em;
+					line-height: 1.5;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -20,22 +118,25 @@
 								<header id="header">
 									<a href="index.html" class="logo"><strong>🏠 xyz</strong>: Ba trụ cột » Sống khoa học - Làm việc năng suất - Học tập suốt đời</a>
 									<ul class="icons">
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+										<li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
 									</ul>
 								</header>
 								<section>
-									<div class="posts">
+									<div class="cover-list">
 										<article>
 											<h3><a href="goc-nhin/neu-ca-doi-nay-khong-ruc-ro-thi-sao/neu-ca-doi-nay-khong-ruc-ro-thi-sao.html">Lỡ đâu cả đời này không rực rỡ?</a></h3>
-											<a href="goc-nhin/neu-ca-doi-nay-khong-ruc-ro-thi-sao/neu-ca-doi-nay-khong-ruc-ro-thi-sao.html" class="image"><img src="goc-nhin/neu-ca-doi-nay-khong-ruc-ro-thi-sao/neu-ca-doi-nay-khong-ruc-ro-thi-sao.jpg" alt="" style="width: 20%;"></a>
-											<!-- <p>Tìm hiểu về ý nghĩa của sự rực rỡ trong cuộc sống.</p> -->
+											<div class="cover-item-body">
+												<a href="goc-nhin/neu-ca-doi-nay-khong-ruc-ro-thi-sao/neu-ca-doi-nay-khong-ruc-ro-thi-sao.html" class="image"><img src="goc-nhin/neu-ca-doi-nay-khong-ruc-ro-thi-sao/neu-ca-doi-nay-khong-ruc-ro-thi-sao.jpg" alt="Lỡ đâu cả đời này không rực rỡ?"></a>
+												<p>Tìm hiểu về ý nghĩa của sự rực rỡ trong cuộc sống.</p>
+											</div>
 										</article>
 										<article>
 											<h3><a href="goc-nhin/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.html">Tâm lý học đám đông với thần tượng âm nhạc</a></h3>
-											<a href="goc-nhin/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.html" class="image"><img src="goc-nhin/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.jpg" alt="" style="width: 20%;"></a>
-											<!-- <p>Khám phá lý do tại sao chúng ta yêu thích những chữ ký âm nhạc.</p> -->
+											<div class="cover-item-body">
+												<a href="goc-nhin/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.html" class="image"><img src="goc-nhin/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.jpg" alt="Tâm lý học đám đông với thần tượng âm nhạc"></a>
+												<p>Khám phá lý do tại sao chúng ta dễ bị cuốn theo cảm xúc tập thể quanh thần tượng âm nhạc.</p>
+											</div>
 										</article>
 									</div>
 									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
@@ -47,16 +148,20 @@
 								<section>
 									<!-- Khoa học phổ thông -->
 									<h3 style="margin-top: 1.5em;">🔭 Khoa học phổ thông</h3>
-									<div class="posts">
+									<div class="cover-list">
 										<article>
 											<h3><a href="khoa-hoc-pho-thong/ky-uc-khong-co-that/ky-uc-khong-co-that.html">Ký ức không có thật</a></h3>
-											<a href="khoa-hoc-pho-thong/ky-uc-khong-co-that/ky-uc-khong-co-that.html" class="image"><img src="khoa-hoc-pho-thong/ky-uc-khong-co-that/ky-uc-khong-co-that.jpg" alt="" style="width: 20%;"></a>
-											<p>Trí nhớ có thể bị "điều chỉnh" mỗi lần bạn kể lại.</p>
+											<div class="cover-item-body">
+												<a href="khoa-hoc-pho-thong/ky-uc-khong-co-that/ky-uc-khong-co-that.html" class="image"><img src="khoa-hoc-pho-thong/ky-uc-khong-co-that/ky-uc-khong-co-that.jpg" alt="Ký ức không có thật"></a>
+												<p>Trí nhớ có thể bị "điều chỉnh" mỗi lần bạn kể lại.</p>
+											</div>
 										</article>
 										<article>
 											<h3><a href="khoa-hoc-pho-thong/iq-quoc-gia-va-su-giau-co/iq-quoc-gia-va-su-giau-co.html">IQ trung bình và sự giàu có</a></h3>
-											<a href="khoa-hoc-pho-thong/iq-quoc-gia-va-su-giau-co/iq-quoc-gia-va-su-giau-co.html" class="image"><img src="khoa-hoc-pho-thong/iq-quoc-gia-va-su-giau-co/iq-quoc-gia-va-su-giau-co.jpg" alt="" style="width: 20%;"></a>
-											<p>Mối liên hệ giữa giáo dục, năng lực nhận thức và thịnh vượng.</p>
+											<div class="cover-item-body">
+												<a href="khoa-hoc-pho-thong/iq-quoc-gia-va-su-giau-co/iq-quoc-gia-va-su-giau-co.html" class="image"><img src="khoa-hoc-pho-thong/iq-quoc-gia-va-su-giau-co/iq-quoc-gia-va-su-giau-co.jpg" alt="IQ trung bình và sự giàu có"></a>
+												<p>Mối liên hệ giữa giáo dục, năng lực nhận thức và thịnh vượng.</p>
+											</div>
 										</article>
 									</div>
 									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
@@ -68,14 +173,18 @@
 								<section>
 									<!-- Kinh tế học -->
 									<h3 style="margin-top: 1.5em;">💰 Kinh tế học</h3>
-									<div class="posts">
+									<div class="cover-list">
 										<article>
 											<h3><a href="kinh-te-hoc/chi-phi-co-hoi.html">Chi phí cơ hội</a></h3>
-											<a href="kinh-te-hoc/chi-phi-co-hoi.html" class="image"><img src="kinh-te-hoc/chi-phi-co-hoi/chi-phi-co-hoi.jpg" alt="" style="width: 20%;"></a>
+											<div class="cover-item-body">
+												<a href="kinh-te-hoc/chi-phi-co-hoi.html" class="image"><img src="kinh-te-hoc/chi-phi-co-hoi/chi-phi-co-hoi.jpg" alt="Chi phí cơ hội"></a>
+											</div>
 										</article>
 										<article>
 											<h3><a href="kinh-te-hoc/loi-the-so-sanh.html">Lợi thế so sánh</a></h3>
-											<a href="kinh-te-hoc/loi-the-so-sanh.html" class="image"><img src="kinh-te-hoc/loi-the-so-sanh/loi-the-so-sanh.jpg" alt="" style="width: 20%;"></a>
+											<div class="cover-item-body">
+												<a href="kinh-te-hoc/loi-the-so-sanh.html" class="image"><img src="kinh-te-hoc/loi-the-so-sanh/loi-the-so-sanh.jpg" alt="Lợi thế so sánh"></a>
+											</div>
 										</article>
 									</div>
 									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
@@ -84,16 +193,20 @@
 
 									<!-- Tâm lý học -->
 									<h3 style="margin-top: 1.5em;">🧠 Tâm lý học</h3>
-									<div class="posts">
+									<div class="cover-list">
 										<article>
 											<h3><a href="tam-ly-hoc/vong-lap-thoi-quen.html">Vòng lặp thói quen</a></h3>
-											<a href="tam-ly-hoc/vong-lap-thoi-quen.html" class="image"><img src="images/pic03.jpg" alt="" style="width: 20%;"></a>
-											<p>Nhận diện tín hiệu – hành động – phần thưởng để thay đổi.</p>
+											<div class="cover-item-body">
+												<a href="tam-ly-hoc/vong-lap-thoi-quen.html" class="image"><img src="images/pic03.jpg" alt="Vòng lặp thói quen"></a>
+												<p>Nhận diện tín hiệu – hành động – phần thưởng để thay đổi.</p>
+											</div>
 										</article>
 										<article>
 											<h3><a href="tam-ly-hoc/thien-kien-xac-nhan.html">Thiên kiến xác nhận</a></h3>
-											<a href="tam-ly-hoc/thien-kien-xac-nhan.html" class="image"><img src="images/pic08.jpg" alt="" style="width: 20%;"></a>
-											<p>Vì sao ta dễ chỉ tin vào điều củng cố niềm tin sẵn có.</p>
+											<div class="cover-item-body">
+												<a href="tam-ly-hoc/thien-kien-xac-nhan.html" class="image"><img src="images/pic08.jpg" alt="Thiên kiến xác nhận"></a>
+												<p>Vì sao ta dễ chỉ tin vào điều củng cố niềm tin sẵn có.</p>
+											</div>
 										</article>
 									</div>
 									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
@@ -102,11 +215,13 @@
 
 									<!-- Triết học -->
 									<h3 style="margin-top: 1.5em;">🏛 Triết học</h3>
-									<div class="posts">
+									<div class="cover-list">
 										<article>
 											<h3><a href="triet-hoc/index.html">Triết học</a></h3>
-											<a href="triet-hoc/index.html" class="image"><img src="images/pic04.jpg" alt="" style="width: 20%;"></a>
-											<p>Những câu hỏi nền tảng về ý nghĩa, đạo đức và lối sống.</p>
+											<div class="cover-item-body">
+												<a href="triet-hoc/index.html" class="image"><img src="images/pic04.jpg" alt="Triết học"></a>
+												<p>Những câu hỏi nền tảng về ý nghĩa, đạo đức và lối sống.</p>
+											</div>
 										</article>
 									</div>
 									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
@@ -115,11 +230,13 @@
 
 									<!-- Tinh hoa - Nhân loại -->
 									<h3 style="margin-top: 1.5em;">🧭 Tinh hoa - Nhân loại</h3>
-									<div class="posts">
+									<div class="cover-list">
 										<article>
 											<h3><a href="tinh-hoa-nhan-loai/index.html">Tinh hoa - Nhân loại</a></h3>
-											<a href="tinh-hoa-nhan-loai/index.html" class="image"><img src="images/pic06.jpg" alt="" style="width: 20%;"></a>
-											<p>Trích dẫn chọn lọc để nuôi dưỡng tư duy dài hạn.</p>
+											<div class="cover-item-body">
+												<a href="tinh-hoa-nhan-loai/index.html" class="image"><img src="images/pic06.jpg" alt="Tinh hoa - Nhân loại"></a>
+												<p>Trích dẫn chọn lọc để nuôi dưỡng tư duy dài hạn.</p>
+											</div>
 										</article>
 									</div>
 									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
@@ -128,11 +245,13 @@
 
 									<!-- Tủ sách - nền tảng -->
 									<h3 style="margin-top: 1.5em;">📚 Tủ sách - nền tảng</h3>
-									<div class="posts">
+									<div class="cover-list">
 										<article>
 											<h3><a href="tu-sach-nen-tang/index.html">Tủ sách - nền tảng</a></h3>
-											<a href="tu-sach-nen-tang/index.html" class="image"><img src="kinh-te-hoc/loi-the-so-sanh/loi-the-so-sanh.jpg" alt="" style="width: 20%;"></a>
-											<p>Kho ebook phân loại theo chủ đề để học sâu.</p>
+											<div class="cover-item-body">
+												<a href="tu-sach-nen-tang/index.html" class="image"><img src="kinh-te-hoc/loi-the-so-sanh/loi-the-so-sanh.jpg" alt="Tủ sách - nền tảng"></a>
+												<p>Kho ebook phân loại theo chủ đề để học sâu.</p>
+											</div>
 										</article>
 									</div>
 									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
@@ -141,11 +260,13 @@
 
 									<!-- Ứng dụng - năng suất -->
 									<h3 style="margin-top: 1.5em;">📱 Ứng dụng - năng suất</h3>
-									<div class="posts">
+									<div class="cover-list">
 										<article>
 											<h3><a href="ung-dung-nang-suat/index.html">Ứng dụng - năng suất</a></h3>
-											<a href="ung-dung-nang-suat/index.html" class="image"><img src="images/pic08.jpg" alt="" style="width: 20%;"></a>
-											<p>Công cụ và hệ thống làm việc hiệu quả.</p>
+											<div class="cover-item-body">
+												<a href="ung-dung-nang-suat/index.html" class="image"><img src="images/pic08.jpg" alt="Ứng dụng - năng suất"></a>
+												<p>Công cụ và hệ thống làm việc hiệu quả.</p>
+											</div>
 										</article>
 									</div>
 									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
@@ -224,7 +345,6 @@
 
 	</body>
 </html>
-
 
 
 

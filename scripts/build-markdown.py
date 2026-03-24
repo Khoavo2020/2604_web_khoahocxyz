@@ -61,6 +61,11 @@ def render_inline(text: str) -> str:
     return text
 
 
+def indent_block(text: str, level: int) -> str:
+    prefix = "\t" * level
+    return "\n".join(f"{prefix}{line}" if line else "" for line in text.splitlines())
+
+
 def render_markdown(markdown: str) -> str:
     lines = markdown.splitlines()
     html_parts: list[str] = []
@@ -71,7 +76,7 @@ def render_markdown(markdown: str) -> str:
     def flush_paragraph() -> None:
         if paragraph_lines:
             text = " ".join(line.strip() for line in paragraph_lines)
-            html_parts.append(f"<p>{render_inline(text)}</p>")
+            html_parts.append(f'<p class="markdown-paragraph">{render_inline(text)}</p>')
             paragraph_lines.clear()
 
     def flush_list() -> None:
@@ -194,9 +199,8 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
         f'<div class="logo"><a href="{prefix}index.html"><strong>&#x1F3E0;</strong></a> » '
         f'<a href="{section_href}"><strong>{escape(section_title)}</strong></a></div>'
         '<ul class="icons">'
-        '<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>'
-        '<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>'
-        '<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>'
+        '<li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>'
+        '<li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>'
         '</ul>'
         '</header>'
     )
@@ -209,10 +213,10 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
         "SECTION_LINK": section_href,
         "HEADER_SUBLINE": header_subline,
         "BACK_LINK_LABEL": back_link_label,
-        "HERO_BLOCK": hero_block,
-        "ARTICLE_BODY": article_body,
+        "HERO_BLOCK": indent_block(hero_block, 6) if hero_block else "",
+        "ARTICLE_BODY": indent_block(article_body, 6),
         "ROOT_PREFIX": prefix,
-        "ARTICLE_HEADER_BLOCK": article_header_block,
+        "ARTICLE_HEADER_BLOCK": indent_block(article_header_block, 5),
     }
 
     html = template
@@ -237,8 +241,10 @@ def render_post_card(article: dict[str, str], category_index_path: Path) -> str:
     return (
         "<article>"
         f'<h3><a href="{href}">{escape(article["title"])}</a></h3>'
-        f'<a href="{href}" class="image"><img src="{image_src}" alt="" style="width: 20%;"></a>'
+        '<div class="cover-item-body">'
+        f'<a href="{href}" class="image"><img src="{image_src}" alt=""></a>'
         f"<p>{escape(article['description'])}</p>"
+        "</div>"
         "</article>"
     )
 
@@ -261,9 +267,8 @@ def build_category_pages(articles: list[dict[str, str]], sections: dict[str, dic
                 '<header id="header">'
                 f'<a href="{prefix}index.html" class="logo"><strong>Khoahoc</strong>.xyz</a>'
                 '<ul class="icons">'
-                '<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>'
-                '<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>'
-                '<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>'
+                '<li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>'
+                '<li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>'
                 '</ul>'
                 '</header>'
             )

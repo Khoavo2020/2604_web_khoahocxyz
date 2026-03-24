@@ -1,10 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
-/*
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -1770,9 +1766,75 @@ button,
     .posts article .image {
       display: block;
       margin: 0 0 2em 0; }
-      .posts article .image img {
-        display: block;
-        width: 100%; }
+.posts article .image img {
+  display: block;
+  width: 100%; }
+
+.cover-list {
+  display: block;
+  margin-bottom: 1.5em; }
+  .cover-list article {
+    margin: 0 0 2.5em 6em;
+    padding-top: 0;
+    width: 100%; }
+  .cover-list article:before {
+    display: none; }
+  .cover-list article:after {
+    bottom: -1.25em;
+    width: 100%; }
+  .cover-list article:last-child {
+    margin-bottom: 0; }
+    .cover-list article:last-child:after {
+      display: none; }
+  .cover-list article h3 {
+    font-size: 1.6em;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    margin: 0 0 0.85em 0; }
+  .cover-list article h3 a {
+    border-bottom: 0; }
+  .cover-list article p {
+    color: #4f5b62;
+    font-size: 1.18em;
+    line-height: 1.65;
+    margin: 0; }
+  .cover-list .cover-item-body {
+    align-items: start;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 9.5em minmax(0, 1fr); }
+  .cover-list article .image {
+    border-radius: 0;
+    margin: 0;
+    width: 100%; }
+  .cover-list article .image img {
+    aspect-ratio: 16 / 10;
+    border-radius: 0;
+    height: 100%;
+    object-fit: cover;
+    width: 100%; }
+
+@media screen and (max-width: 736px) {
+  .cover-list article {
+    margin: 0 0 2.25em 4.5em; }
+  .cover-list article:after {
+    bottom: -1.125em; } }
+
+@media screen and (max-width: 480px) {
+  .cover-list {
+    margin-bottom: 1.25em; }
+    .cover-list article {
+      margin: 0 0 2em 0; }
+    .cover-list article h3 {
+      font-size: 1.3em;
+      margin-bottom: 0.75em; }
+    .cover-list article p {
+      font-size: 1em;
+      line-height: 1.55; }
+    .cover-list .cover-item-body {
+      gap: 0.85em;
+      grid-template-columns: 7.5em minmax(0, 1fr); } }
   @media screen and (min-width: 1681px) {
     .posts article:nth-child(3n + 1):before {
       display: none; }

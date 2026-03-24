@@ -6,21 +6,104 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Một không gian để tiếp cận triết học theo hướng gần gũi, có chiều sâu và hữu ích cho đời sống hiện đại." />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<style>
+			.cover-list {
+				display: block;
+				margin-bottom: 1.5em;
+			}
+			.cover-list article {
+				margin: 0 0 1.35em 0;
+				padding: 0 0 1em 0;
+				position: relative;
+				width: 100%;
+			}
+			.cover-list article::before {
+				display: none !important;
+			}
+			.cover-list article::after {
+				background: rgba(210, 215, 217, 0.75);
+				bottom: 0;
+				content: '';
+				display: block;
+				height: 1px;
+				left: 0;
+				position: absolute;
+				width: 100%;
+			}
+			.cover-list article:last-child {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+			.cover-list article:last-child::after {
+				display: none;
+			}
+			.cover-list article h3 {
+				font-size: 1em;
+				font-weight: 700;
+				letter-spacing: -0.01em;
+				line-height: 1.24;
+				margin: 0 0 0.35em 0;
+			}
+			.cover-list article h3 a {
+				border-bottom: 0;
+			}
+			.cover-list .cover-item-body {
+				align-items: start;
+				display: grid;
+				gap: 0.75em;
+				grid-template-columns: 9.75em minmax(0, 1fr);
+			}
+			.cover-list article .image {
+				display: block;
+				margin: 0;
+				width: 100%;
+			}
+			.cover-list article .image img {
+				aspect-ratio: 16 / 10;
+				display: block;
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
+			.cover-list article p {
+				color: #4f5b62;
+				font-size: 0.85em;
+				line-height: 1.6;
+				margin: 0;
+			}
+			@media screen and (max-width: 480px) {
+				.cover-list article {
+					margin-bottom: 1.2em;
+					padding-bottom: 0.9em;
+				}
+				.cover-list article h3 {
+					font-size: 0.854em;
+				}
+				.cover-list .cover-item-body {
+					gap: 0.85em;
+					grid-template-columns: 7.25em minmax(0, 1fr);
+				}
+				.cover-list article p {
+					font-size: 0.7em;
+					line-height: 1.5;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<div id="wrapper">
 			<div id="main">
 				<div class="inner">
-					<header id="header"><div class="logo"><a href="../index.html"><strong>🏠</strong></a> » <a href="./index.html"><strong>Triết học</strong></a> - Triết học giải đáp những câu hỏi về ý nghĩa của sự tồn tại</div><ul class="icons"><li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li><li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li></ul></header>
+					<header id="header"><div class="logo"><a href="../index.html"><strong>🏠</strong></a> » <a href="./index.html"><strong>Triết học</strong></a> » Triết học giải đáp những câu hỏi về ý nghĩa của sự tồn tại</div><ul class="icons"><li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li></ul></header>
 					
 
 					<section>
-						<div class="posts">
-							<article><h3><a href="biet-minh-la-dau/index.html">Biết mình là điểm khởi đầu của triết học sống</a></h3><a href="biet-minh-la-dau/index.html" class="image"><img src="../assets/generated/covers/triet-hoc/biet-minh-la-dau.svg" alt="" style="width: 20%;"></a><p>Trước khi hỏi nên làm gì, có lẽ ta cần hiểu mình đang sống theo điều gì.</p></article>
-<article><h3><a href="chu-nghia-khac-ky/index.html">Chủ nghĩa Khắc kỷ nhìn nghịch cảnh thế nào</a></h3><a href="chu-nghia-khac-ky/index.html" class="image"><img src="../assets/generated/covers/triet-hoc/chu-nghia-khac-ky.svg" alt="" style="width: 20%;"></a><p>Bình thản không đến từ việc tránh khó khăn mà từ cách ta đáp lại hoàn cảnh.</p></article>
-<article><h3><a href="dao-va-hanh-dong/index.html">Đạo và hành động không gượng ép</a></h3><a href="dao-va-hanh-dong/index.html" class="image"><img src="../assets/generated/covers/triet-hoc/dao-va-hanh-dong.svg" alt="" style="width: 20%;"></a><p>Có những lúc tiến bộ đến từ sự đúng nhịp hơn là từ cố sức hơn.</p></article>
-<article><h3><a href="song-toi-gian-va-tu-do/index.html">Sống tối giản có phải là tự do hơn</a></h3><a href="song-toi-gian-va-tu-do/index.html" class="image"><img src="../assets/generated/covers/triet-hoc/song-toi-gian-va-tu-do.svg" alt="" style="width: 20%;"></a><p>Giảm bớt sở hữu không tự động đem lại tự do nhưng mở ra khả năng lựa chọn sáng suốt hơn.</p></article>
-<article><h3><a href="y-nghia-va-trach-nhiem/index.html">Ý nghĩa thường đi cùng trách nhiệm</a></h3><a href="y-nghia-va-trach-nhiem/index.html" class="image"><img src="../assets/generated/covers/triet-hoc/y-nghia-va-trach-nhiem.svg" alt="" style="width: 20%;"></a><p>Điều làm đời sống sâu sắc hơn cũng thường đòi hỏi ta trưởng thành hơn.</p></article>
+						<div class="cover-list">
+							<article><h3><a href="biet-minh-la-dau/index.html">Biết mình là điểm khởi đầu của triết học sống</a></h3><div class="cover-item-body"><a href="biet-minh-la-dau/index.html" class="image"><img src="../assets/generated/covers/triet-hoc/biet-minh-la-dau.svg" alt=""></a><p>Trước khi hỏi nên làm gì, có lẽ ta cần hiểu mình đang sống theo điều gì.</p></div></article>
+<article><h3><a href="chu-nghia-khac-ky/index.html">Chủ nghĩa Khắc kỷ nhìn nghịch cảnh thế nào</a></h3><div class="cover-item-body"><a href="chu-nghia-khac-ky/index.html" class="image"><img src="../assets/generated/covers/triet-hoc/chu-nghia-khac-ky.svg" alt=""></a><p>Bình thản không đến từ việc tránh khó khăn mà từ cách ta đáp lại hoàn cảnh.</p></div></article>
+<article><h3><a href="dao-va-hanh-dong/index.html">Đạo và hành động không gượng ép</a></h3><div class="cover-item-body"><a href="dao-va-hanh-dong/index.html" class="image"><img src="../assets/generated/covers/triet-hoc/dao-va-hanh-dong.svg" alt=""></a><p>Có những lúc tiến bộ đến từ sự đúng nhịp hơn là từ cố sức hơn.</p></div></article>
+<article><h3><a href="song-toi-gian-va-tu-do/index.html">Sống tối giản có phải là tự do hơn</a></h3><div class="cover-item-body"><a href="song-toi-gian-va-tu-do/index.html" class="image"><img src="../assets/generated/covers/triet-hoc/song-toi-gian-va-tu-do.svg" alt=""></a><p>Giảm bớt sở hữu không tự động đem lại tự do nhưng mở ra khả năng lựa chọn sáng suốt hơn.</p></div></article>
+<article><h3><a href="y-nghia-va-trach-nhiem/index.html">Ý nghĩa thường đi cùng trách nhiệm</a></h3><div class="cover-item-body"><a href="y-nghia-va-trach-nhiem/index.html" class="image"><img src="../assets/generated/covers/triet-hoc/y-nghia-va-trach-nhiem.svg" alt=""></a><p>Điều làm đời sống sâu sắc hơn cũng thường đòi hỏi ta trưởng thành hơn.</p></div></article>
 						</div>
 					</section>
 				</div>

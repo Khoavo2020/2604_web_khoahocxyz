@@ -5,7 +5,90 @@
 		<title>Thơ việt nam - Khoahoc.xyz</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../../../assets/css/main.css" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<style>
+			.cover-list {
+				display: block;
+				margin-bottom: 1.5em;
+			}
+			.cover-list article {
+				margin: 0 0 1.35em 0;
+				padding: 0 0 1em 0;
+				position: relative;
+				width: 100%;
+			}
+			.cover-list article::before {
+				display: none !important;
+			}
+			.cover-list article::after {
+				background: rgba(210, 215, 217, 0.75);
+				bottom: 0;
+				content: '';
+				display: block;
+				height: 1px;
+				left: 0;
+				position: absolute;
+				width: 100%;
+			}
+			.cover-list article:last-child {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+			.cover-list article:last-child::after {
+				display: none;
+			}
+			.cover-list article h3 {
+				font-size: 1em;
+				font-weight: 700;
+				letter-spacing: -0.01em;
+				line-height: 1.24;
+				margin: 0 0 0.35em 0;
+			}
+			.cover-list article h3 a {
+				border-bottom: 0;
+			}
+			.cover-list .cover-item-body {
+				align-items: start;
+				display: grid;
+				gap: 0.75em;
+				grid-template-columns: 9.75em minmax(0, 1fr);
+			}
+			.cover-list article .image {
+				display: block;
+				margin: 0;
+				width: 100%;
+			}
+			.cover-list article .image img {
+				aspect-ratio: 16 / 10;
+				display: block;
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
+			.cover-list article p {
+				color: #4f5b62;
+				font-size: 0.85em;
+				line-height: 1.6;
+				margin: 0;
+			}
+			@media screen and (max-width: 480px) {
+				.cover-list article {
+					margin-bottom: 1.2em;
+					padding-bottom: 0.9em;
+				}
+				.cover-list article h3 {
+					font-size: 0.854em;
+				}
+				.cover-list .cover-item-body {
+					gap: 0.85em;
+					grid-template-columns: 7.25em minmax(0, 1fr);
+				}
+				.cover-list article p {
+					font-size: 0.7em;
+					line-height: 1.5;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -18,38 +101,29 @@
 
 							<!-- Header -->
 								<header id="header">
-									<div class="logo"><a href="../../../index.html"><strong>🏠</strong></a> » <a href="./index.html"><strong>Thơ việt nam</strong></a> » Dòng thời gian</div>
+									<div class="logo"><a href="../../index.html"><strong>🏠</strong></a> » <a href="./index.html"><strong>Thơ việt nam</strong></a> » Những bài thơ gợi mở về thân phận, tình yêu và thời gian.</div>
 									<ul class="icons">
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+										<li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
 									</ul>
 								</header>
 
 
 							<!-- Content -->
 								<section>
-									<!-- <header class="main">
+									<header class="main">
 										<h2>Thơ việt nam</h2>
 										<p>Những bài thơ gợi mở về thân phận, tình yêu và thời gian.</p>
-									</header> -->
+									</header>
 
 									
 
-									<div class="posts">
+									<div class="cover-list">
 										<article>
 <h3><a href="tho-va-than-phan.html"><a href="tho-va-than-phan.html"><a href="tho-va-than-phan.html"><a href="tho-va-than-phan.html"><a href="tho-va-than-phan.html"><a href="tho-va-than-phan.html"><a href="tho-va-than-phan.html"><a href="tho-va-than-phan.html"><a href="tho-va-than-phan.html"><a href="tho-va-than-phan.html">Thơ và thân phận</a></a></a></a></a></a></a></a></a></a></h3>
-<a href="tho-va-than-phan.html" class="image"><img src="../../../images/pic07.jpg" alt="" style="width: 20%;"></a>
+<div class="cover-item-body">
+<a href="tho-va-than-phan.html" class="image"><img src="../../../images/pic07.jpg" alt=""></a>
 <p>Những tiếng nói chạm vào nỗi cô đơn và khát vọng.</p>
-</article>
-
-
-
-<article>
-<h3><a href="thoi-gian-ky-uc.html"><a href="thoi-gian-ky-uc.html"><a href="thoi-gian-ky-uc.html"><a href="thoi-gian-ky-uc.html"><a href="thoi-gian-ky-uc.html"><a href="thoi-gian-ky-uc.html"><a href="thoi-gian-ky-uc.html"><a href="thoi-gian-ky-uc.html"><a href="thoi-gian-ky-uc.html"><a href="thoi-gian-ky-uc.html">Thời gian và ký ức</a></a></a></a></a></a></a></a></a></a></h3>
-<a href="thoi-gian-ky-uc.html" class="image"><img src="../../../images/pic09.jpg" alt="" style="width: 20%;"></a>
-<p>Thơ lưu giữ những mảnh ký ức mong manh.</p>
-</article>
 									</div>
 								</section>
 
@@ -73,31 +147,32 @@
 		<h2>Menu</h2>
 	</header>
 	<ul>
-		<li><a href="../../../index.html">🏠 Khoahoc.xyz</a></li>
-		<li><a href="../../../khoa-hoc-pho-thong/index.html">🔭 Khoa học phổ thông</a></li>
-		<li><a href="../../../kinh-te-hoc/index.html">💰 Kinh tế học</a></li>
-		<li><a href="../../../tam-ly-hoc/index.html">🧠 Tâm lý học</a></li>
+		<li><a href="../../index.html">🏠 Khoahoc.xyz</a></li>
+		<li><a href="../../khoa-hoc-pho-thong/index.html">🔭 Khoa học phổ thông</a></li>
+		<li><a href="../../kinh-te-hoc/index.html">💰 Kinh tế học</a></li>
+		<li><a href="../../tam-ly-hoc/index.html">🧠 Tâm lý học</a></li>
 		<li>
-			<a href="../../../triet-hoc/index.html" class="opener">🏛 Triết học</a>
+			<a href="../../triet-hoc/index.html" class="opener">🏛 Triết học</a>
 			<ul>
-				<li><a href="../../../triet-hoc/phuong-dong/index.html">Phương Đông</a></li>
-				<li><a href="../../../triet-hoc/phuong-tay/index.html">Phương Tây</a></li>
-				<li><a href="../../../triet-hoc/tho-viet-nam/index.html">Thơ việt nam</a></li>
-				<li><a href="../../../triet-hoc/tho-nuoc-ngoai/index.html">Thơ nước ngoài</a></li>
+				<li><a href="../../triet-hoc/phuong-dong/index.html">Phương Đông</a></li>
+				<li><a href="../../triet-hoc/phuong-tay/index.html">Phương Tây</a></li>
+				<li><a href="../../triet-hoc/tho-viet-nam/index.html">Thơ việt nam</a></li>
+				<li><a href="../../triet-hoc/tho-nuoc-ngoai/index.html">Thơ nước ngoài</a></li>
 			</ul>
 		</li>
-		<li><a href="../../../tinh-hoa-nhan-loai/index.html">🧭 Tinh hoa - nhân loại</a></li>
+		<li><a href="../../tinh-hoa-nhan-loai/index.html">🧭 Tinh hoa - nhân loại</a></li>
 		<li>
-			<a href="../../../tu-sach-nen-tang/index.html" class="opener">📚 Tủ sách - nền tảng</a>
+			<a href="../../tu-sach-nen-tang/index.html" class="opener">📚 Tủ sách - nền tảng</a>
 			<ul>
-				<li><a href="../../../tu-sach-nen-tang/sach-khoa-hoc-pho-thong/index.html">Sách khoa học phổ thông</a></li>
-				<li><a href="../../../tu-sach-nen-tang/sach-kinh-te-hoc/index.html">Sách kinh tế học</a></li>
-				<li><a href="../../../tu-sach-nen-tang/sach-tam-ly-hoc/index.html">Sách tâm lý học</a></li>
-				<li><a href="../../../tu-sach-nen-tang/sach-triet-hoc/index.html">Sách triết học</a></li>
-				<li><a href="../../../tu-sach-nen-tang/sach-xyz/index.html">Sách chọn lọc</a></li>
+				<li><a href="../../tu-sach-nen-tang/sach-khoa-hoc-pho-thong/index.html">Sách khoa học phổ thông</a></li>
+				<li><a href="../../tu-sach-nen-tang/sach-kinh-te-hoc/index.html">Sách kinh tế học</a></li>
+				<li><a href="../../tu-sach-nen-tang/sach-tam-ly-hoc/index.html">Sách tâm lý học</a></li>
+				<li><a href="../../tu-sach-nen-tang/sach-triet-hoc/index.html">Sách triết học</a></li>
+				<li><a href="../../tu-sach-nen-tang/sach-xyz/index.html">Sách chọn lọc</a></li>
 			</ul>
 		</li>
-		<li><a href="../../../ung-dung-nang-suat/index.html">📱 Ứng dụng - năng suất</a></li>
+		<li><a href="../../ung-dung-nang-suat/index.html">📱 Ứng dụng - năng suất</a></li>
+		<li><a href="../../goc-nhin/index.html">✨ Góc nhìn</a></li>
 
 
 	</ul>
@@ -114,12 +189,11 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="../../../assets/js/jquery.min.js"></script>
-			<script src="../../../assets/js/browser.min.js"></script>
-			<script src="../../../assets/js/breakpoints.min.js"></script>
-			<script src="../../../assets/js/util.js"></script>
-			<script src="../../../assets/js/main.js"></script>
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
 
 	</body>
 </html>
-
