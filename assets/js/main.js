@@ -272,4 +272,121 @@
 
 			});
 
+	// Homepage sections.
+		(function() {
+			var dataNode = document.getElementById('homepage-sections-data');
+			var containers = document.querySelectorAll('[data-home-list]');
+
+			if (!dataNode || !containers.length)
+				return;
+
+			function escapeHtml(value) {
+				return String(value || '')
+					.replace(/&/g, '&amp;')
+					.replace(/</g, '&lt;')
+					.replace(/>/g, '&gt;')
+					.replace(/"/g, '&quot;')
+					.replace(/'/g, '&#39;');
+			}
+
+			function getDateKey() {
+				var formatter = new Intl.DateTimeFormat('en-CA', {
+					timeZone: 'Asia/Ho_Chi_Minh',
+					year: 'numeric',
+					month: '2-digit',
+					day: '2-digit'
+				});
+				var parts = formatter.formatToParts(new Date());
+				var values = {};
+
+				parts.forEach(function(part) {
+					if (part.type !== 'literal')
+						values[part.type] = part.value;
+				});
+
+				return [values.year, values.month, values.day].join('-');
+			}
+
+			function xmur3(str) {
+				var i;
+				var h = 1779033703 ^ str.length;
+				for (i = 0; i < str.length; i++)
+					h = Math.imul(h ^ str.charCodeAt(i), 3432918353);
+
+				return function() {
+					h = Math.imul(h ^ (h >>> 16), 2246822507);
+					h = Math.imul(h ^ (h >>> 13), 3266489909);
+					return (h ^= h >>> 16) >>> 0;
+				};
+			}
+
+			function mulberry32(seed) {
+				return function() {
+					var t = seed += 0x6D2B79F5;
+					t = Math.imul(t ^ (t >>> 15), t | 1);
+					t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+					return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+				};
+			}
+
+			function pickDailyArticles(items, count, seedKey) {
+				var shuffled = items.slice();
+				var rand = mulberry32(xmur3(seedKey)());
+				var i, j, temp;
+
+				for (i = shuffled.length - 1; i > 0; i--) {
+					j = Math.floor(rand() * (i + 1));
+					temp = shuffled[i];
+					shuffled[i] = shuffled[j];
+					shuffled[j] = temp;
+				}
+
+				return shuffled.slice(0, Math.min(count, shuffled.length));
+			}
+
+			function renderArticle(article) {
+				var href = escapeHtml(article.href);
+				var title = escapeHtml(article.title);
+				var description = escapeHtml(article.description);
+				var image = article.image
+					? '<a href="' + href + '" class="image"><img src="' + escapeHtml(article.image) + '" alt="' + title + '"></a>'
+					: '';
+
+				return [
+					'<article>',
+					'<h3><a href="' + href + '">' + title + '</a></h3>',
+					'<div class="cover-item-body">',
+					image,
+					'<p>' + description + '</p>',
+					'</div>',
+					'</article>'
+				].join('');
+			}
+
+			try {
+				var payload = JSON.parse(dataNode.textContent || '{}');
+				var sections = payload.sections || [];
+				var dateKey = getDateKey();
+
+				sections.forEach(function(section) {
+					var container = document.querySelector('[data-home-list="' + section.slug + '"]');
+					var selectedArticles;
+
+					if (!container)
+						return;
+
+					selectedArticles = pickDailyArticles(section.articles || [], 2, section.slug + '|' + dateKey);
+					container.innerHTML = selectedArticles.map(renderArticle).join('');
+
+					if (selectedArticles.length === 1)
+						container.classList.add('keep-divider');
+					else
+						container.classList.remove('keep-divider');
+				});
+			}
+			catch (error) {
+				console.error('Unable to render homepage sections', error);
+			}
+		})();
+
 })(jQuery);

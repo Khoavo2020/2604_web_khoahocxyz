@@ -13,7 +13,18 @@ CONTENT_ROOT = ROOT / "content"
 ARTICLE_TEMPLATE_PATH = ROOT / "_templates" / "markdown-article.html"
 CATEGORY_TEMPLATE_PATH = ROOT / "_templates" / "markdown-category.html"
 SECTIONS_PATH = ROOT / "data" / "site-sections.json"
+HOME_PAGE_PATH = ROOT / "index.html"
 IMAGE_EXTENSIONS = {".svg", ".jpg", ".jpeg", ".png", ".webp", ".gif"}
+HOMEPAGE_SECTION_CONFIG = [
+    {"slug": "goc-nhin", "title": "Góc nhìn", "link": "goc-nhin/index.html"},
+    {"slug": "khoa-hoc-pho-thong", "link": "khoa-hoc-pho-thong/index.html"},
+    {"slug": "kinh-te-hoc", "link": "kinh-te-hoc/index.html"},
+    {"slug": "tam-ly-hoc", "link": "tam-ly-hoc/index.html"},
+    {"slug": "triet-hoc", "link": "triet-hoc/index.html"},
+    {"slug": "tinh-hoa-nhan-loai", "link": "tinh-hoa-nhan-loai/index.html"},
+    {"slug": "tu-sach-nen-tang", "link": "tu-sach-nen-tang/index.html"},
+    {"slug": "ung-dung-nang-suat", "link": "ung-dung-nang-suat/index.html"},
+]
 
 
 def read_text(path: Path) -> str:
@@ -207,7 +218,7 @@ def resolve_article_image(source_path: Path, metadata: dict[str, str]) -> str:
     return ensure_generated_cover(source_path)
 
 
-def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dict[str, str]:
+def collect_article_data(source_path: Path, sections: dict[str, dict[str, str]]) -> dict[str, str]:
     metadata, markdown_body = parse_front_matter(read_text(source_path))
     category_slug = source_path.relative_to(CONTENT_ROOT).parts[0]
     section = sections.get(
@@ -232,7 +243,31 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
     else:
         output_path = ROOT / source_path.relative_to(CONTENT_ROOT).with_suffix("") / "index.html"
 
-    article_body = render_markdown(markdown_body)
+    return {
+        "title": title,
+        "description": description,
+        "category_slug": category_slug,
+        "output_path": str(output_path.relative_to(ROOT)).replace("\\", "/"),
+        "hero_image": hero_image,
+        "section_title": section_title,
+        "section_link": section_link,
+        "header_subline": header_subline,
+        "back_link_label": back_link_label,
+        "markdown_body": markdown_body,
+    }
+
+
+def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dict[str, str]:
+    article = collect_article_data(source_path, sections)
+    title = article["title"]
+    description = article["description"]
+    section_title = article["section_title"]
+    header_subline = article["header_subline"]
+    back_link_label = article["back_link_label"]
+    hero_image = article["hero_image"]
+    output_path = ROOT / article["output_path"]
+
+    article_body = render_markdown(article["markdown_body"])
     prefix = root_prefix(output_path)
     hero_src = resolve_asset(hero_image, prefix)
     hero_block = (
@@ -240,7 +275,7 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
         if hero_src
         else ""
     )
-    section_href = resolve_link(section_link, prefix)
+    section_href = resolve_link(article["section_link"], prefix)
     article_header_block = (
         '<header id="header">'
         f'<div class="logo"><a href="{prefix}index.html"><strong>&#x1F3E0;</strong></a> » '
@@ -271,13 +306,7 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
         html = html.replace(f"{{{{{key}}}}}", value)
 
     write_text(output_path, html)
-    return {
-        "title": title,
-        "description": description,
-        "category_slug": category_slug,
-        "output_path": str(output_path.relative_to(ROOT)).replace("\\", "/"),
-        "hero_image": hero_image,
-    }
+    return {key: value for key, value in article.items() if key != "markdown_body"}
 
 
 def render_post_card(article: dict[str, str], category_index_path: Path) -> str:
@@ -340,6 +369,50 @@ def build_category_pages(articles: list[dict[str, str]], sections: dict[str, dic
     return built_paths
 
 
+def build_homepage_payload(articles: list[dict[str, str]], sections: dict[str, dict[str, str]]) -> dict[str, object]:
+    payload_sections: list[dict[str, object]] = []
+
+    for config in HOMEPAGE_SECTION_CONFIG:
+        slug = config["slug"]
+        section = sections.get(slug, {})
+        section_articles = [
+            {
+                "title": article["title"],
+                "description": article["description"],
+                "href": article["output_path"],
+                "image": article["hero_image"],
+            }
+            for article in articles
+            if article["category_slug"] == slug
+        ]
+        section_articles.sort(key=lambda item: item["href"])
+
+        payload_sections.append(
+            {
+                "slug": slug,
+                "title": config.get("title", section.get("title", slug.replace("-", " ").title())),
+                "link": config["link"],
+                "articles": section_articles,
+            }
+        )
+
+    return {"sections": payload_sections}
+
+
+def write_homepage_payload(articles: list[dict[str, str]], sections: dict[str, dict[str, str]]) -> None:
+    html = read_text(HOME_PAGE_PATH)
+    payload = json.dumps(build_homepage_payload(articles, sections), ensure_ascii=False, indent=2)
+    pattern = r'(<script id="homepage-sections-data" type="application/json">)(.*?)(</script>)'
+
+    def replace(match: re.Match[str]) -> str:
+        return f"{match.group(1)}\n{payload}\n\t\t\t{match.group(3)}"
+
+    updated_html, count = re.subn(pattern, replace, html, count=1, flags=re.DOTALL)
+    if count != 1:
+        raise ValueError("Could not find homepage data script tag in index.html")
+    write_text(HOME_PAGE_PATH, updated_html)
+
+
 def iter_markdown_files() -> list[Path]:
     return sorted(path for path in CONTENT_ROOT.rglob("*.md") if path.name.lower() != "readme.md")
 
@@ -347,9 +420,10 @@ def iter_markdown_files() -> list[Path]:
 def main() -> None:
     sections = load_sections()
     target = sys.argv[1] if len(sys.argv) > 1 else "all"
+    all_sources = iter_markdown_files()
 
     if target == "all":
-        sources = iter_markdown_files()
+        sources = all_sources
     else:
         source = Path(target)
         if not source.is_absolute():
@@ -361,13 +435,15 @@ def main() -> None:
 
     articles = [build_article(source, sections) for source in sources]
     built_paths = [ROOT / article["output_path"] for article in articles]
-    category_paths = build_category_pages(articles, sections)
+    all_articles = articles if target == "all" else [collect_article_data(source, sections) for source in all_sources]
+    category_paths = build_category_pages(all_articles, sections)
+    write_homepage_payload(all_articles, sections)
 
     for path in built_paths:
         print(f"Built: {path.relative_to(ROOT)}")
-    if target == "all":
-        for path in category_paths:
-            print(f"Built: {path.relative_to(ROOT)}")
+    for path in category_paths:
+        print(f"Built: {path.relative_to(ROOT)}")
+    print(f"Built: {HOME_PAGE_PATH.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

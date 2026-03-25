@@ -43,6 +43,14 @@
 				display: none;
 			}
 
+			.cover-list.keep-divider article:last-child {
+				padding-bottom: 1em;
+			}
+
+			.cover-list.keep-divider article:last-child::after {
+				display: block;
+			}
+
 			.cover-list article h3 {
 				font-size: 1em;
 				font-weight: 700;
@@ -81,6 +89,10 @@
 				font-size: 0.85em;
 				line-height: 1.6;
 				margin: 0;
+				max-width: 33ch;
+			}
+			#header .logo {
+				max-width: 67ch;
 			}
 
 			@media screen and (max-width: 480px) {
@@ -101,6 +113,7 @@
 				.cover-list article p {
 					font-size: 0.7em;
 					line-height: 1.5;
+					max-width: none;
 				}
 			}
 		</style>
@@ -123,22 +136,7 @@
 									</ul>
 								</header>
 								<section>
-									<div class="cover-list">
-										<article>
-											<h3><a href="goc-nhin/neu-ca-doi-nay-khong-ruc-ro-thi-sao/neu-ca-doi-nay-khong-ruc-ro-thi-sao.html">Lỡ đâu cả đời này không rực rỡ?</a></h3>
-											<div class="cover-item-body">
-												<a href="goc-nhin/neu-ca-doi-nay-khong-ruc-ro-thi-sao/neu-ca-doi-nay-khong-ruc-ro-thi-sao.html" class="image"><img src="goc-nhin/neu-ca-doi-nay-khong-ruc-ro-thi-sao/neu-ca-doi-nay-khong-ruc-ro-thi-sao.jpg" alt="Lỡ đâu cả đời này không rực rỡ?"></a>
-												<p>Tìm hiểu về ý nghĩa của sự rực rỡ trong cuộc sống.</p>
-											</div>
-										</article>
-										<article>
-											<h3><a href="goc-nhin/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.html">Tâm lý học đám đông với thần tượng âm nhạc</a></h3>
-											<div class="cover-item-body">
-												<a href="goc-nhin/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.html" class="image"><img src="goc-nhin/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.jpg" alt="Tâm lý học đám đông với thần tượng âm nhạc"></a>
-												<p>Khám phá lý do tại sao chúng ta dễ bị cuốn theo cảm xúc tập thể quanh thần tượng âm nhạc.</p>
-											</div>
-										</article>
-									</div>
+									<div class="cover-list" data-home-list="goc-nhin"></div>
 									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
 										<li><a href="goc-nhin/index.html">Xem thêm..</a></li>
 									</ul>
@@ -148,22 +146,7 @@
 								<section>
 									<!-- Khoa học phổ thông -->
 									<h3 style="margin-top: 1.5em;">🔭 Khoa học phổ thông</h3>
-									<div class="cover-list">
-										<article>
-											<h3><a href="khoa-hoc-pho-thong/ky-uc-khong-co-that/ky-uc-khong-co-that.html">Ký ức không có thật</a></h3>
-											<div class="cover-item-body">
-												<a href="khoa-hoc-pho-thong/ky-uc-khong-co-that/ky-uc-khong-co-that.html" class="image"><img src="khoa-hoc-pho-thong/ky-uc-khong-co-that/ky-uc-khong-co-that.jpg" alt="Ký ức không có thật"></a>
-												<p>Trí nhớ có thể bị "điều chỉnh" mỗi lần bạn kể lại.</p>
-											</div>
-										</article>
-										<article>
-											<h3><a href="khoa-hoc-pho-thong/iq-quoc-gia-va-su-giau-co/iq-quoc-gia-va-su-giau-co.html">IQ trung bình và sự giàu có</a></h3>
-											<div class="cover-item-body">
-												<a href="khoa-hoc-pho-thong/iq-quoc-gia-va-su-giau-co/iq-quoc-gia-va-su-giau-co.html" class="image"><img src="khoa-hoc-pho-thong/iq-quoc-gia-va-su-giau-co/iq-quoc-gia-va-su-giau-co.jpg" alt="IQ trung bình và sự giàu có"></a>
-												<p>Mối liên hệ giữa giáo dục, năng lực nhận thức và thịnh vượng.</p>
-											</div>
-										</article>
-									</div>
+									<div class="cover-list" data-home-list="khoa-hoc-pho-thong"></div>
 									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
 										<li><a href="khoa-hoc-pho-thong/index.html">Xem thêm..</a></li>
 									</ul>
@@ -173,102 +156,42 @@
 								<section>
 									<!-- Kinh tế học -->
 									<h3 style="margin-top: 1.5em;">💰 Kinh tế học</h3>
-									<div class="cover-list">
-										<article>
-											<h3><a href="kinh-te-hoc/chi-phi-co-hoi.html">Chi phí cơ hội</a></h3>
-											<div class="cover-item-body">
-												<a href="kinh-te-hoc/chi-phi-co-hoi.html" class="image"><img src="kinh-te-hoc/chi-phi-co-hoi/chi-phi-co-hoi.jpg" alt="Chi phí cơ hội"></a>
-											</div>
-										</article>
-										<article>
-											<h3><a href="kinh-te-hoc/loi-the-so-sanh.html">Lợi thế so sánh</a></h3>
-											<div class="cover-item-body">
-												<a href="kinh-te-hoc/loi-the-so-sanh.html" class="image"><img src="kinh-te-hoc/loi-the-so-sanh/loi-the-so-sanh.jpg" alt="Lợi thế so sánh"></a>
-											</div>
-										</article>
-									</div>
+									<div class="cover-list" data-home-list="kinh-te-hoc"></div>
 									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
 										<li><a href="kinh-te-hoc/index.html">Xem thêm..</a></li>
 									</ul>
 
 									<!-- Tâm lý học -->
 									<h3 style="margin-top: 1.5em;">🧠 Tâm lý học</h3>
-									<div class="cover-list">
-										<article>
-											<h3><a href="tam-ly-hoc/vong-lap-thoi-quen.html">Vòng lặp thói quen</a></h3>
-											<div class="cover-item-body">
-												<a href="tam-ly-hoc/vong-lap-thoi-quen.html" class="image"><img src="images/pic03.jpg" alt="Vòng lặp thói quen"></a>
-												<p>Nhận diện tín hiệu – hành động – phần thưởng để thay đổi.</p>
-											</div>
-										</article>
-										<article>
-											<h3><a href="tam-ly-hoc/thien-kien-xac-nhan.html">Thiên kiến xác nhận</a></h3>
-											<div class="cover-item-body">
-												<a href="tam-ly-hoc/thien-kien-xac-nhan.html" class="image"><img src="images/pic08.jpg" alt="Thiên kiến xác nhận"></a>
-												<p>Vì sao ta dễ chỉ tin vào điều củng cố niềm tin sẵn có.</p>
-											</div>
-										</article>
-									</div>
+									<div class="cover-list" data-home-list="tam-ly-hoc"></div>
 									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
 										<li><a href="tam-ly-hoc/index.html">Xem thêm..</a></li>
 									</ul>
 
 									<!-- Triết học -->
 									<h3 style="margin-top: 1.5em;">🏛 Triết học</h3>
-									<div class="cover-list">
-										<article>
-											<h3><a href="triet-hoc/index.html">Triết học</a></h3>
-											<div class="cover-item-body">
-												<a href="triet-hoc/index.html" class="image"><img src="images/pic04.jpg" alt="Triết học"></a>
-												<p>Những câu hỏi nền tảng về ý nghĩa, đạo đức và lối sống.</p>
-											</div>
-										</article>
-									</div>
+									<div class="cover-list" data-home-list="triet-hoc"></div>
 									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
 										<li><a href="triet-hoc/index.html">Xem thêm..</a></li>
 									</ul>
 
 									<!-- Tinh hoa - Nhân loại -->
 									<h3 style="margin-top: 1.5em;">🧭 Tinh hoa - Nhân loại</h3>
-									<div class="cover-list">
-										<article>
-											<h3><a href="tinh-hoa-nhan-loai/index.html">Tinh hoa - Nhân loại</a></h3>
-											<div class="cover-item-body">
-												<a href="tinh-hoa-nhan-loai/index.html" class="image"><img src="images/pic06.jpg" alt="Tinh hoa - Nhân loại"></a>
-												<p>Trích dẫn chọn lọc để nuôi dưỡng tư duy dài hạn.</p>
-											</div>
-										</article>
-									</div>
+									<div class="cover-list" data-home-list="tinh-hoa-nhan-loai"></div>
 									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
 										<li><a href="tinh-hoa-nhan-loai/index.html">Xem thêm..</a></li>
 									</ul>
 
 									<!-- Tủ sách - nền tảng -->
 									<h3 style="margin-top: 1.5em;">📚 Tủ sách - nền tảng</h3>
-									<div class="cover-list">
-										<article>
-											<h3><a href="tu-sach-nen-tang/index.html">Tủ sách - nền tảng</a></h3>
-											<div class="cover-item-body">
-												<a href="tu-sach-nen-tang/index.html" class="image"><img src="kinh-te-hoc/loi-the-so-sanh/loi-the-so-sanh.jpg" alt="Tủ sách - nền tảng"></a>
-												<p>Kho ebook phân loại theo chủ đề để học sâu.</p>
-											</div>
-										</article>
-									</div>
+									<div class="cover-list" data-home-list="tu-sach-nen-tang"></div>
 									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
 										<li><a href="tu-sach-nen-tang/index.html">Xem thêm..</a></li>
 									</ul>
 
 									<!-- Ứng dụng - năng suất -->
 									<h3 style="margin-top: 1.5em;">📱 Ứng dụng - năng suất</h3>
-									<div class="cover-list">
-										<article>
-											<h3><a href="ung-dung-nang-suat/index.html">Ứng dụng - năng suất</a></h3>
-											<div class="cover-item-body">
-												<a href="ung-dung-nang-suat/index.html" class="image"><img src="images/pic08.jpg" alt="Ứng dụng - năng suất"></a>
-												<p>Công cụ và hệ thống làm việc hiệu quả.</p>
-											</div>
-										</article>
-									</div>
+									<div class="cover-list" data-home-list="ung-dung-nang-suat"></div>
 									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
 										<li><a href="ung-dung-nang-suat/index.html">Xem thêm..</a></li>
 									</ul>
@@ -320,7 +243,6 @@
 			</ul>
 		</li>
 		<li><a href="ung-dung-nang-suat/index.html">📱 Ứng dụng - năng suất</a></li>
-		<li><a href="goc-nhin/index.html">✨ Góc nhìn</a></li>
 
 
 	</ul>
@@ -337,6 +259,302 @@
 			</div>
 
 		<!-- Scripts -->
+			<script id="homepage-sections-data" type="application/json">
+{
+  "sections": [
+    {
+      "slug": "goc-nhin",
+      "title": "Góc nhìn",
+      "link": "goc-nhin/index.html",
+      "articles": [
+        {
+          "title": "Lỡ đâu cả đời này không rực rỡ?",
+          "description": "Thế giới này không dành cho những kẻ ngồi yên.",
+          "href": "goc-nhin/neu-ca-doi-nay-khong-ruc-ro-thi-sao/index.html",
+          "image": "content/goc-nhin/_images/neu-ca-doi-nay-khong-ruc-ro-thi-sao.jpg"
+        },
+        {
+          "title": "Tâm lý học đám đông với thần tượng âm nhạc",
+          "description": "Tâm lý học đám đông với thần tượng âm nhạc (fandom) là hiện tượng cá nhân hòa mình vào tập thể, đánh mất nhận định riêng để hành động theo số đông",
+          "href": "goc-nhin/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac/index.html",
+          "image": "content/goc-nhin/_images/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "khoa-hoc-pho-thong",
+      "title": "Khoa học phổ thông",
+      "link": "khoa-hoc-pho-thong/index.html",
+      "articles": [
+        {
+          "title": "Vì sao bầu trời có màu xanh",
+          "description": "Hiện tượng quen thuộc này là một bài học đẹp về ánh sáng và khí quyển.",
+          "href": "khoa-hoc-pho-thong/bau-troi-mau-xanh/index.html",
+          "image": "content/khoa-hoc-pho-thong/_images/bau-troi-mau-xanh.svg"
+        },
+        {
+          "title": "Entropy trong đời sống thường ngày",
+          "description": "Một khái niệm vật lý có thể giúp ta hiểu vì sao mọi thứ dễ bừa bộn hơn là ngăn nắp.",
+          "href": "khoa-hoc-pho-thong/entropy-trong-doi-song/index.html",
+          "image": "content/khoa-hoc-pho-thong/_images/entropy-trong-doi-song.svg"
+        },
+        {
+          "title": "Giấc ngủ ảnh hưởng đến trí nhớ thế nào",
+          "description": "Ngủ không chỉ để nghỉ mà còn để não bộ củng cố điều đã học.",
+          "href": "khoa-hoc-pho-thong/giac-ngu-va-tri-nho/index.html",
+          "image": "content/khoa-hoc-pho-thong/_images/giac-ngu-va-tri-nho.svg"
+        },
+        {
+          "title": "IQ trung bình và sự giàu có",
+          "description": "Tương quan giữa giáo dục, năng lực nhận thức và sự thịnh vượng của một quốc gia.",
+          "href": "khoa-hoc-pho-thong/iq-quoc-gia-va-su-giau-co/index.html",
+          "image": "content/khoa-hoc-pho-thong/_images/iq-quoc-gia-va-su-giau-co.jpg"
+        },
+        {
+          "title": "Ký ức không có thật",
+          "description": "Vì sao trí nhớ dễ bị sai lệch và cách bạn tự kiểm chứng lại ký ức.",
+          "href": "khoa-hoc-pho-thong/ky-uc-khong-co-that/index.html",
+          "image": "content/khoa-hoc-pho-thong/_images/ky-uc-khong-co-that.jpg"
+        },
+        {
+          "title": "Hiệu ứng placebo là gì",
+          "description": "Niềm tin có thể tạo ra thay đổi thật trong cảm nhận và hành vi.",
+          "href": "khoa-hoc-pho-thong/placebo-la-gi/index.html",
+          "image": "content/khoa-hoc-pho-thong/_images/placebo-la-gi.svg"
+        },
+        {
+          "title": "Tư duy thống kê cơ bản cho người mới",
+          "description": "Một vài nguyên tắc đơn giản có thể giúp ta bớt cả tin trước những kết luận hấp dẫn.",
+          "href": "khoa-hoc-pho-thong/tu-duy-thong-ke-co-ban/index.html",
+          "image": "content/khoa-hoc-pho-thong/_images/tu-duy-thong-ke-co-ban.svg"
+        }
+      ]
+    },
+    {
+      "slug": "kinh-te-hoc",
+      "title": "Kinh tế học",
+      "link": "kinh-te-hoc/index.html",
+      "articles": [
+        {
+          "title": "Chi phí cơ hội trong đời sống hằng ngày",
+          "description": "Mỗi lựa chọn đều có một cái giá vô hình là thứ ta bỏ lỡ khi chọn phương án khác.",
+          "href": "kinh-te-hoc/chi-phi-co-hoi-trong-doi-song/index.html",
+          "image": "content/kinh-te-hoc/_images/chi-phi-co-hoi-trong-doi-song.svg"
+        },
+        {
+          "title": "Cung và cầu là gì",
+          "description": "Khái niệm cơ bản nhất của kinh tế học giúp giải thích giá cả và hành vi thị trường.",
+          "href": "kinh-te-hoc/cung-cau-la-gi/index.html",
+          "image": "content/kinh-te-hoc/_images/cung-cau-la-gi.svg"
+        },
+        {
+          "title": "Khuyến khích ảnh hưởng đến hành vi ra sao",
+          "description": "Con người phản ứng rất mạnh với cách phần thưởng và chi phí được thiết kế.",
+          "href": "kinh-te-hoc/dong-luc-va-khuyen-khich/index.html",
+          "image": "content/kinh-te-hoc/_images/dong-luc-va-khuyen-khich.svg"
+        },
+        {
+          "title": "Lợi thế so sánh giúp hợp tác hiệu quả hơn",
+          "description": "Không cần giỏi nhất mọi thứ, chỉ cần tương đối phù hợp hơn ở một việc nào đó.",
+          "href": "kinh-te-hoc/loi-the-so-sanh/index.html",
+          "image": "content/kinh-te-hoc/_images/loi-the-so-sanh.svg"
+        },
+        {
+          "title": "Khan hiếm là điểm xuất phát của kinh tế học",
+          "description": "Vì nguồn lực luôn có giới hạn nên lựa chọn và phân bổ trở nên quan trọng.",
+          "href": "kinh-te-hoc/nguon-luc-khan-hiem/index.html",
+          "image": "content/kinh-te-hoc/_images/nguon-luc-khan-hiem.svg"
+        }
+      ]
+    },
+    {
+      "slug": "tam-ly-hoc",
+      "title": "Tâm lý học",
+      "link": "tam-ly-hoc/index.html",
+      "articles": [
+        {
+          "title": "Động lực nội tại và cách học bền vững",
+          "description": "Khi việc học gắn với ý nghĩa cá nhân, ta ít phụ thuộc hơn vào cảm hứng nhất thời.",
+          "href": "tam-ly-hoc/dong-luc-noi-tai/index.html",
+          "image": "content/tam-ly-hoc/_images/dong-luc-noi-tai.svg"
+        },
+        {
+          "title": "Hiệu ứng halo trong đánh giá con người",
+          "description": "Một ấn tượng tốt ở một mặt nào đó có thể lan sang mọi đánh giá còn lại.",
+          "href": "tam-ly-hoc/hieu-ung-halo/index.html",
+          "image": "content/tam-ly-hoc/_images/hieu-ung-halo.svg"
+        },
+        {
+          "title": "Stress và khả năng phục hồi",
+          "description": "Vấn đề không phải là không bao giờ stress mà là biết phục hồi sau áp lực.",
+          "href": "tam-ly-hoc/stress-va-phuc-hoi/index.html",
+          "image": "content/tam-ly-hoc/_images/stress-va-phuc-hoi.svg"
+        },
+        {
+          "title": "Thiên kiến xác nhận",
+          "description": "Vì sao chúng ta thường ưu tiên thông tin củng cố niềm tin có sẵn.",
+          "href": "tam-ly-hoc/thien-kien-xac-nhan/index.html",
+          "image": "content/tam-ly-hoc/_images/thien-kien-xac-nhan.svg"
+        },
+        {
+          "title": "Vòng lặp thói quen",
+          "description": "Thói quen bền vững thường được hình thành từ tín hiệu, hành động và phần thưởng.",
+          "href": "tam-ly-hoc/vong-lap-thoi-quen/index.html",
+          "image": "content/tam-ly-hoc/_images/vong-lap-thoi-quen.svg"
+        }
+      ]
+    },
+    {
+      "slug": "triet-hoc",
+      "title": "Triết học",
+      "link": "triet-hoc/index.html",
+      "articles": [
+        {
+          "title": "Biết mình là điểm khởi đầu của triết học sống",
+          "description": "Trước khi hỏi nên làm gì, có lẽ ta cần hiểu mình đang sống theo điều gì.",
+          "href": "triet-hoc/biet-minh-la-dau/index.html",
+          "image": "content/triet-hoc/_images/biet-minh-la-dau.svg"
+        },
+        {
+          "title": "Chủ nghĩa Khắc kỷ nhìn nghịch cảnh thế nào",
+          "description": "Bình thản không đến từ việc tránh khó khăn mà từ cách ta đáp lại hoàn cảnh.",
+          "href": "triet-hoc/chu-nghia-khac-ky/index.html",
+          "image": "content/triet-hoc/_images/chu-nghia-khac-ky.svg"
+        },
+        {
+          "title": "Đạo và hành động không gượng ép",
+          "description": "Có những lúc tiến bộ đến từ sự đúng nhịp hơn là từ cố sức hơn.",
+          "href": "triet-hoc/dao-va-hanh-dong/index.html",
+          "image": "content/triet-hoc/_images/dao-va-hanh-dong.svg"
+        },
+        {
+          "title": "Sống tối giản có phải là tự do hơn",
+          "description": "Giảm bớt sở hữu không tự động đem lại tự do nhưng mở ra khả năng lựa chọn sáng suốt hơn.",
+          "href": "triet-hoc/song-toi-gian-va-tu-do/index.html",
+          "image": "content/triet-hoc/_images/song-toi-gian-va-tu-do.svg"
+        },
+        {
+          "title": "Ý nghĩa thường đi cùng trách nhiệm",
+          "description": "Điều làm đời sống sâu sắc hơn cũng thường đòi hỏi ta trưởng thành hơn.",
+          "href": "triet-hoc/y-nghia-va-trach-nhiem/index.html",
+          "image": "content/triet-hoc/_images/y-nghia-va-trach-nhiem.svg"
+        }
+      ]
+    },
+    {
+      "slug": "tinh-hoa-nhan-loai",
+      "title": "Tinh hoa - nhân loại",
+      "link": "tinh-hoa-nhan-loai/index.html",
+      "articles": [
+        {
+          "title": "Những câu nói hay giúp ta dừng lại một nhịp",
+          "description": "Có những câu ngắn nhưng đủ làm thay đổi nhịp suy nghĩ của cả một ngày.",
+          "href": "tinh-hoa-nhan-loai/cau-noi-giup-dung-lai/index.html",
+          "image": "content/tinh-hoa-nhan-loai/_images/cau-noi-giup-dung-lai.svg"
+        },
+        {
+          "title": "Vì sao con người luôn tìm cái đẹp và cái sâu",
+          "description": "Ta không chỉ cần sống sót mà còn cần những điều làm đời sống đáng sống hơn.",
+          "href": "tinh-hoa-nhan-loai/dep-va-sau/index.html",
+          "image": "content/tinh-hoa-nhan-loai/_images/dep-va-sau.svg"
+        },
+        {
+          "title": "Đọc sách để làm gì ngoài việc biết thêm",
+          "description": "Một cuốn sách tốt không chỉ cho thông tin mà còn cho ta một cách nhìn khác về đời sống.",
+          "href": "tinh-hoa-nhan-loai/doc-sach-de-lam-gi/index.html",
+          "image": "content/tinh-hoa-nhan-loai/_images/doc-sach-de-lam-gi.svg"
+        },
+        {
+          "title": "Sống chậm để thấy rõ hơn",
+          "description": "Chậm lại không phải để trì hoãn mà để quan sát kỹ hơn điều mình đang sống.",
+          "href": "tinh-hoa-nhan-loai/song-cham-de-thay-ro/index.html",
+          "image": "content/tinh-hoa-nhan-loai/_images/song-cham-de-thay-ro.svg"
+        },
+        {
+          "title": "Tinh thần học suốt đời được nuôi bằng điều gì",
+          "description": "Không phải chỉ bằng kỷ luật mà còn bằng niềm vui được hiểu thêm một chút về thế giới.",
+          "href": "tinh-hoa-nhan-loai/tinh-than-hoc-suot-doi/index.html",
+          "image": "content/tinh-hoa-nhan-loai/_images/tinh-than-hoc-suot-doi.svg"
+        }
+      ]
+    },
+    {
+      "slug": "tu-sach-nen-tang",
+      "title": "Tủ sách - nền tảng",
+      "link": "tu-sach-nen-tang/index.html",
+      "articles": [
+        {
+          "title": "Cách ghi chú để biến việc đọc thành tri thức của mình",
+          "description": "Một cuốn sách chỉ thực sự ở lại khi ta biết đối thoại với nó bằng ghi chú.",
+          "href": "tu-sach-nen-tang/cach-ghi-chu-khi-doc/index.html",
+          "image": "content/tu-sach-nen-tang/_images/cach-ghi-chu-khi-doc.svg"
+        },
+        {
+          "title": "Đọc sách kinh tế cho người mới bắt đầu",
+          "description": "Điều quan trọng không phải đọc thật nhiều thuật ngữ mà là học cách nhìn thấy các đánh đổi.",
+          "href": "tu-sach-nen-tang/doc-sach-kinh-te-cho-nguoi-moi/index.html",
+          "image": "content/tu-sach-nen-tang/_images/doc-sach-kinh-te-cho-nguoi-moi.svg"
+        },
+        {
+          "title": "Một lộ trình sách nhập môn khoa học phổ thông",
+          "description": "Nếu muốn bắt đầu đọc khoa học một cách có hệ thống, hãy đi từ trực giác đến khái niệm.",
+          "href": "tu-sach-nen-tang/sach-nhap-mon-khoa-hoc/index.html",
+          "image": "content/tu-sach-nen-tang/_images/sach-nhap-mon-khoa-hoc.svg"
+        },
+        {
+          "title": "Những hướng đọc tâm lý học nền tảng",
+          "description": "Đọc tâm lý học không chỉ để hiểu người khác mà còn để bớt ngây thơ với chính mình.",
+          "href": "tu-sach-nen-tang/sach-tam-ly-nen-doc/index.html",
+          "image": "content/tu-sach-nen-tang/_images/sach-tam-ly-nen-doc.svg"
+        },
+        {
+          "title": "Triết học cho người bận rộn",
+          "description": "Không cần đọc dày ngay từ đầu; điều quan trọng là giữ được sợi dây liên hệ với các câu hỏi lớn.",
+          "href": "tu-sach-nen-tang/triet-hoc-cho-nguoi-ban-ron/index.html",
+          "image": "content/tu-sach-nen-tang/_images/triet-hoc-cho-nguoi-ban-ron.svg"
+        }
+      ]
+    },
+    {
+      "slug": "ung-dung-nang-suat",
+      "title": "Ứng dụng - năng suất",
+      "link": "ung-dung-nang-suat/index.html",
+      "articles": [
+        {
+          "title": "Ghi chú như một bộ não thứ hai",
+          "description": "Một hệ thống ghi chú tốt không chỉ lưu trữ mà còn giúp suy nghĩ lại và kết nối ý tưởng.",
+          "href": "ung-dung-nang-suat/ghi-chu-thu-hai-nao/index.html",
+          "image": "content/ung-dung-nang-suat/_images/ghi-chu-thu-hai-nao.svg"
+        },
+        {
+          "title": "Hệ thống ba danh sách để giảm quá tải",
+          "description": "Tách việc phải làm thành ba lớp giúp đầu óc bớt hỗn loạn hơn rất nhiều.",
+          "href": "ung-dung-nang-suat/he-thong-ba-danh-sach/index.html",
+          "image": "content/ung-dung-nang-suat/_images/he-thong-ba-danh-sach.svg"
+        },
+        {
+          "title": "Pomodoro có thực sự hiệu quả không",
+          "description": "Một kỹ thuật đơn giản nhưng hữu ích vì nó làm việc bắt đầu dễ hơn và nghỉ ngơi có chủ đích hơn.",
+          "href": "ung-dung-nang-suat/pomodoro-co-thuc-su-hieu-qua/index.html",
+          "image": "content/ung-dung-nang-suat/_images/pomodoro-co-thuc-su-hieu-qua.svg"
+        },
+        {
+          "title": "Review tuần cá nhân để đi đường dài",
+          "description": "Một buổi nhìn lại ngắn mỗi tuần có thể giúp bạn tránh trôi theo bận rộn mà quên mất hướng đi.",
+          "href": "ung-dung-nang-suat/review-tuan-ca-nhan/index.html",
+          "image": "content/ung-dung-nang-suat/_images/review-tuan-ca-nhan.svg"
+        },
+        {
+          "title": "Thiết kế môi trường làm việc để bớt phân tâm",
+          "description": "Môi trường xung quanh thường quyết định ta có giữ được nhịp làm việc hay không.",
+          "href": "ung-dung-nang-suat/thiet-ke-moi-truong-lam-viec/index.html",
+          "image": "content/ung-dung-nang-suat/_images/thiet-ke-moi-truong-lam-viec.svg"
+        }
+      ]
+    }
+  ]
+}
+			</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
@@ -345,9 +563,3 @@
 
 	</body>
 </html>
-
-
-
-
-
-
