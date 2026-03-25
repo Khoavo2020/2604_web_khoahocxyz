@@ -4,6 +4,7 @@ from html import escape
 import json
 from pathlib import Path
 import re
+import subprocess
 import sys
 
 
@@ -12,6 +13,7 @@ CONTENT_ROOT = ROOT / "content"
 ARTICLE_TEMPLATE_PATH = ROOT / "_templates" / "markdown-article.html"
 CATEGORY_TEMPLATE_PATH = ROOT / "_templates" / "markdown-category.html"
 SECTIONS_PATH = ROOT / "data" / "site-sections.json"
+IMAGE_EXTENSIONS = {".svg", ".jpg", ".jpeg", ".png", ".webp", ".gif"}
 
 
 def read_text(path: Path) -> str:
@@ -166,10 +168,55 @@ def resolve_link(path_value: str, prefix: str) -> str:
     return resolve_asset(path_value, prefix)
 
 
+def find_content_image(source_path: Path) -> str:
+    category_slug = source_path.relative_to(CONTENT_ROOT).parts[0]
+    images_dir = CONTENT_ROOT / category_slug / "_images"
+    if not images_dir.exists():
+        return ""
+
+    candidates = sorted(images_dir.glob(f"{source_path.stem}.*"))
+    for candidate in candidates:
+        if candidate.suffix.lower() in IMAGE_EXTENSIONS:
+            return candidate.relative_to(ROOT).as_posix()
+    return ""
+
+
+def ensure_generated_cover(source_path: Path) -> str:
+    subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "generate-covers.py"), str(source_path.relative_to(ROOT))],
+        check=True,
+        cwd=ROOT,
+    )
+    return find_content_image(source_path)
+
+
+def resolve_article_image(source_path: Path, metadata: dict[str, str]) -> str:
+    hero_image = metadata.get("hero_image", "").strip()
+    if hero_image.startswith(("http://", "https://")):
+        return hero_image
+
+    content_image = find_content_image(source_path)
+    if content_image:
+        return content_image
+
+    if hero_image:
+        hero_path = ROOT / hero_image
+        if hero_path.exists():
+            return hero_image.replace("\\", "/")
+
+    return ensure_generated_cover(source_path)
+
+
 def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dict[str, str]:
     metadata, markdown_body = parse_front_matter(read_text(source_path))
     category_slug = source_path.relative_to(CONTENT_ROOT).parts[0]
-    section = sections[category_slug]
+    section = sections.get(
+        category_slug,
+        {
+            "title": metadata.get("section_title", category_slug.replace("-", " ").title()),
+            "tagline": metadata.get("header_subline", ""),
+        },
+    )
 
     title = metadata["title"]
     description = metadata.get("description", "")
@@ -177,7 +224,7 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
     section_link = metadata.get("section_link", f"{category_slug}/index.html")
     header_subline = metadata.get("header_subline", section["tagline"])
     back_link_label = metadata.get("back_link_label", f"Quay ve {section_title}")
-    hero_image = metadata.get("hero_image", "")
+    hero_image = resolve_article_image(source_path, metadata)
 
     output_rel = metadata.get("output_path")
     if output_rel:

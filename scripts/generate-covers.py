@@ -4,12 +4,13 @@ import argparse
 from html import escape
 import json
 from pathlib import Path
+import re
 
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT_ROOT = ROOT / "content"
 SECTIONS_PATH = ROOT / "data" / "site-sections.json"
-TEMPLATE_ROOT = ROOT / "_templates" / "covers"
+GENERATED_TEMPLATE_ROOT = ROOT / "assets" / "generated" / "covers"
 
 SITE_NAME = "khoahoc.xyz"
 TITLE_X = 56
@@ -125,13 +126,31 @@ def render_title_lines(title: str) -> str:
     return "\n".join(rendered_lines)
 
 
-def resolve_cover_path(source_path: Path, metadata: dict[str, str]) -> Path:
-    hero_image = metadata.get("hero_image", "").strip()
-    if hero_image:
-        return ROOT / hero_image
-
+def resolve_cover_path(source_path: Path) -> Path:
     category_slug = source_path.relative_to(CONTENT_ROOT).parts[0]
-    return ROOT / "assets" / "generated" / "covers" / category_slug / f"{source_path.stem}.svg"
+    return CONTENT_ROOT / category_slug / "_images" / f"{source_path.stem}.svg"
+
+
+def replace_text_node_content(svg: str, index: int, text: str) -> str:
+    matches = list(re.finditer(r"<text\b[^>]*>.*?</text>", svg, flags=re.DOTALL))
+    if len(matches) <= index:
+        raise ValueError("SVG template does not have enough <text> nodes.")
+
+    match = matches[index]
+    opening = re.match(r"<text\b[^>]*>", match.group(0), flags=re.DOTALL)
+    if not opening:
+        raise ValueError("Invalid <text> node in SVG template.")
+    replacement = f"{opening.group(0)}{escape(text)}</text>"
+    return f"{svg[:match.start()]}{replacement}{svg[match.end():]}"
+
+
+def replace_title_node(svg: str, title: str) -> str:
+    matches = list(re.finditer(r"<text\b[^>]*>.*?</text>", svg, flags=re.DOTALL))
+    if len(matches) < 3:
+        raise ValueError("SVG template does not have enough <text> nodes.")
+    match = matches[2]
+    replacement = render_title_lines(title)
+    return f"{svg[:match.start()]}{replacement}{svg[match.end():]}"
 
 
 def build_cover(source_path: Path, sections: dict[str, dict[str, str]]) -> Path:
@@ -141,16 +160,16 @@ def build_cover(source_path: Path, sections: dict[str, dict[str, str]]) -> Path:
 
     title = metadata["title"]
     section_title = metadata.get("section_title", section["title"])
-    template_path = TEMPLATE_ROOT / f"{category_slug}.svg.tpl"
-    cover_path = resolve_cover_path(source_path, metadata)
+    template_path = GENERATED_TEMPLATE_ROOT / category_slug / "_img_template.svg"
+    cover_path = resolve_cover_path(source_path)
 
     if not template_path.exists():
         raise FileNotFoundError(f"Missing cover template for category: {category_slug}")
 
     svg = read_text(template_path)
-    svg = svg.replace("{{SITE_NAME}}", escape(SITE_NAME))
-    svg = svg.replace("{{SECTION_TITLE}}", escape(section_title))
-    svg = svg.replace("{{TITLE_LINES}}", render_title_lines(title))
+    svg = replace_text_node_content(svg, 0, SITE_NAME)
+    svg = replace_text_node_content(svg, 1, section_title)
+    svg = replace_title_node(svg, title)
     write_text(cover_path, svg)
     return cover_path
 

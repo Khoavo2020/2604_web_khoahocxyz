@@ -15,22 +15,25 @@ Tech direction hiện tại:
 - Build scripts: `scripts/`
 
 ## Cấu trúc chính
+- `scripts/`   : script build và script hỗ trợ cập nhật hàng loạt
 
-- `index.html`: trang chủ
 - `_templates/`: template dùng để build page/article
-- `scripts/`: script build và script hỗ trợ cập nhật hàng loạt
-- `assets/`: CSS, JS, font, giao diện chung
-- `images/`: hình ảnh dùng chung
-- `data/`: dữ liệu tĩnh, manifest, nguồn nội dung phụ trợ
+- `assets/`    : CSS, JS, font, giao diện chung, image dùng chung
+- `content/`            : nguồn bài viết Markdown
+- `data/`      : dữ liệu tĩnh, manifest, nguồn nội dung phụ trợ
+- `docs/`               : tài liệu định hướng dự án
+
+- `index.html` : trang chủ
+
+- `goc-nhin/`  : chuyên mục góc nhìn, xu hướng
 - `khoa-hoc-pho-thong/`: chuyên mục khoa học phổ thông
-- `kinh-te-hoc/`: chuyên mục kinh tế học
-- `tam-ly-hoc/`: chuyên mục tâm lý học
-- `triet-hoc/`: chuyên mục triết học và các nhánh con
-- `tinh-hoa-nhan-loai/`: câu cách ngôn, trích dẫn, cảm hứng
-- `tu-sach-nen-tang/`: thư mục tủ sách và phân loại sách
-- `ung-dung-nang-suat/`: app, công cụ, năng suất
-- `docs/`: tài liệu định hướng dự án
-- `content/`: nguồn bài viết Markdown
+- `kinh-te-hoc/`        : chuyên mục kinh tế học
+
+- `tam-ly-hoc/`         : chuyên mục tâm lý học
+- `tinh-hoa-nhan-loai/` : câu cách ngôn, trích dẫn, cảm hứng
+- `triet-hoc/`          : chuyên mục triết học và các nhánh con
+- `tu-sach-nen-tang/`   : thư mục tủ sách và phân loại sách
+- `ung-dung-nang-suat/` : app, công cụ, năng suất
 
 ## Tài liệu nên đọc trước khi làm tiếp
 

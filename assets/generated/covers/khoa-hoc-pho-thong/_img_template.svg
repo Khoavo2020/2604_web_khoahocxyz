@@ -9,6 +9,6 @@
   <circle cx="1030" cy="120" r="180" fill="#ffffff" opacity="0.08" />
   <circle cx="160" cy="530" r="220" fill="#ffffff" opacity="0.08" />
   <text x="56" y="84" fill="#ffffff" font-size="20" font-family="Arial, Helvetica, 'DejaVu Sans', 'Liberation Sans', sans-serif" opacity="0.85">khoahoc.xyz</text>
-  <text x="56" y="116" fill="#ffffff" font-size="22" font-family="Arial, Helvetica, 'DejaVu Sans', 'Liberation Sans', sans-serif" opacity="0.9">Khoa học phổ thông</text>
-  <text x="56" y="150" fill="#ffffff" font-size="34" font-family="Calibri, 'Times New Roman', 'DejaVu Serif', 'Liberation Serif', serif">Hiệu ứng placebo là gì</text>
+  <text x="56" y="116" fill="#ffffff" font-size="22" font-family="Arial, Helvetica, 'DejaVu Sans', 'Liberation Sans', sans-serif" opacity="0.9">Tên chuyên mục</text>
+  <text x="56" y="150" fill="#ffffff" font-size="34" font-family="Calibri, 'Times New Roman', 'DejaVu Serif', 'Liberation Serif', serif">Tiêu đề bài viết</text>
 </svg>
