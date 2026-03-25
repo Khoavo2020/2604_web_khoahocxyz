@@ -1923,8 +1923,19 @@ button,
     #main > .inner > section {
       padding: 4.5em 0 3.5em 0 ;
       border-top: solid 2px rgba(210, 215, 217, 0.75); }
+      #main > .inner > section > h1,
+      #main > .inner > section > h2,
+      #main > .inner > section > h3,
+      #main > .inner > section > h4,
+      #main > .inner > section > h5,
+      #main > .inner > section > h6,
+      #main > .inner > section > p,
+      #main > .inner > section > ul,
+      #main > .inner > section > ol,
+      #main > .inner > section > blockquote {
+        max-width: 87ch; }
       #main > .inner > section:first-of-type {
-        border-top: 0 !important; }
+          border-top: 0 !important; }
   @media screen and (max-width: 1680px) {
     #main > .inner {
       padding: 0 5em 0.1em 5em ; }
