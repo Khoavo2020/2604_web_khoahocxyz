@@ -5,7 +5,7 @@ section_title: Khoa học phổ thông
 section_link: khoa-hoc-pho-thong/index.html
 header_subline: header_subline
 back_link_label: back
-hero_image: khoa-hoc-pho-thong/iq-quoc-gia-va-su-giau-co/iq-quoc-gia-va-su-giau-co.jpg
+hero_image: content/khoa-hoc-pho-thong/_images/iq-quoc-gia-va-su-giau-co.jpg
 output_path: khoa-hoc-pho-thong/iq-quoc-gia-va-su-giau-co/index.html
 ---
 

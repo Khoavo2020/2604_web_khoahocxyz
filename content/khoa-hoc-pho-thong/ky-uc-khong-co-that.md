@@ -5,7 +5,7 @@ section_title: Khoa học phổ thông
 section_link: khoa-hoc-pho-thong/index.html
 header_subline: header_subline
 back_link_label: back
-hero_image: khoa-hoc-pho-thong/ky-uc-khong-co-that/ky-uc-khong-co-that.jpg
+hero_image: 
 output_path: khoa-hoc-pho-thong/ky-uc-khong-co-that/index.html
 ---
 
