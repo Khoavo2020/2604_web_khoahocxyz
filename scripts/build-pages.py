@@ -99,6 +99,7 @@ def build_categories() -> None:
     template_library_category = read_text(ROOT / "_templates" / "library-category.html")
 
     categories = [
+        ("standard", "goc-nhin/index.html"),
         ("standard", "khoa-hoc-pho-thong/index.html"),
         ("standard", "kinh-te-hoc/index.html"),
         ("standard", "tam-ly-hoc/index.html"),

@@ -234,7 +234,7 @@ def collect_article_data(source_path: Path, sections: dict[str, dict[str, str]])
     section_title = metadata.get("section_title", section["title"])
     section_link = metadata.get("section_link", f"{category_slug}/index.html")
     header_subline = metadata.get("header_subline", section["tagline"])
-    back_link_label = metadata.get("back_link_label", f"Quay ve {section_title}")
+    back_link_label = metadata.get("back_link_label", f"Quay về {section_title}")
     hero_image = resolve_article_image(source_path, metadata)
 
     output_rel = metadata.get("output_path")

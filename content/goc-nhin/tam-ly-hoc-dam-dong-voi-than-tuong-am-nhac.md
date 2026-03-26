@@ -3,9 +3,9 @@ title: Tâm lý học đám đông với thần tượng âm nhạc
 description: Tâm lý học đám đông với thần tượng âm nhạc (fandom) là hiện tượng cá nhân hòa mình vào tập thể, đánh mất nhận định riêng để hành động theo số đông
 section_title: Góc nhìn
 section_link: goc-nhin/index.html
-header_subline: header_subline
-back_link_label: back
-hero_image: goc-nhin/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.jpg
+header_subline: Dòng thời gian
+back_link_label: Quay về chuyên mục Góc nhìn
+hero_image: content/goc-nhin/_images/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.jpg
 output_path: goc-nhin/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac/index.html
 ---
 

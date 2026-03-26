@@ -1,5 +1,12 @@
 [
   {
+    "slug": "goc-nhin",
+    "title": "Góc nhìn",
+    "tagline": "Những quan sát, liên tưởng và ghi chép ngắn để đọc đời sống theo chiều sâu cá nhân.",
+    "description": "Chuyên mục tập hợp các bài viết dạng góc nhìn, dòng thời gian và suy ngẫm ngắn về đời sống, văn hóa và tâm lý.",
+    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Góc nhìn</strong></a> » Dòng thời gian</div><ul class=\"icons\"><li><a href=\"https://facebook.com/KhoaHoc.xyz\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"https://www.youtube.com/@chieusangmoi5363\" class=\"icon brands fa-youtube\"><span class=\"label\">YouTube</span></a></li></ul></header>"
+  },
+  {
     "slug": "khoa-hoc-pho-thong",
     "title": "Khoa học phổ thông",
     "tagline": "Giải thích thế giới bằng những ý tưởng đơn giản, rõ ràng và có thể kiểm chứng.",

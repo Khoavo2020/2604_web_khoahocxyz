@@ -25,6 +25,7 @@
 - Không tự ý đổi cấu trúc URL hoặc đổi tên thư mục nếu chưa thật cần thiết.
 - Giữ giao diện đơn giản, đọc tốt trên mobile, phù hợp site tri thức.
 - Khi thêm trang mới, cần giữ consistency với menu, header, footer và style chung.
+- `goc-nhin` là một chuyên mục hợp lệ trong cấu trúc site, nhưng để giữ menu tối giản thì không thêm `goc-nhin` vào sidebar/menu chung; chỉ hiển thị nó như một section trên trang chủ, trừ khi user yêu cầu khác.
 - Khi sửa nội dung tiếng Việt, ưu tiên UTF-8 chuẩn và tránh lỗi encoding.
 - Nếu có nhiều hướng triển khai, ưu tiên hướng ít phức tạp nhất và dễ bảo trì trên GitHub Pages.
 
