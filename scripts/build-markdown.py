@@ -17,7 +17,7 @@ HOME_PAGE_PATH = ROOT / "index.html"
 IMAGE_EXTENSIONS = {".svg", ".jpg", ".jpeg", ".png", ".webp", ".gif"}
 HOMEPAGE_SECTION_CONFIG = [
     {"slug": "goc-nhin", "title": "Góc nhìn", "link": "goc-nhin/index.html"},
-    {"slug": "khoa-hoc-pho-thong", "link": "khoa-hoc-pho-thong/index.html"},
+    {"slug": "khoa-hoc", "link": "khoa-hoc/index.html"},
     {"slug": "kinh-te-hoc", "link": "kinh-te-hoc/index.html"},
     {"slug": "tam-ly-hoc", "link": "tam-ly-hoc/index.html"},
     {"slug": "triet-hoc", "link": "triet-hoc/index.html"},

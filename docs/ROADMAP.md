@@ -45,7 +45,7 @@ Project còn thiếu:
 
 - Điền đầy đủ phần mô tả trong `docs/PROJECT_BRIEF.md`
 - Chọn một quy trình chính: `Markdown first` hoặc `HTML first`
-- Chuẩn hóa 1 chuyên mục làm mẫu trước, ví dụ `khoa-hoc-pho-thong`
+- Chuẩn hóa 1 chuyên mục làm mẫu trước, ví dụ `khoa-hoc`
 - Sau khi mẫu ổn, nhân rộng bằng template/script
 
 

@@ -8,7 +8,7 @@ CONTENT_ROOT = ROOT / "content"
 
 
 SECTIONS = {
-    "khoa-hoc-pho-thong": {
+    "khoa-hoc": {
         "title": "Khoa học",
         "tagline": "Giải thích thế giới bằng những ý tưởng đơn giản, rõ ràng và có thể kiểm chứng.",
         "focus": [
@@ -82,7 +82,7 @@ SECTIONS = {
 
 
 ARTICLES = {
-    "khoa-hoc-pho-thong": [
+    "khoa-hoc": [
         ("bau-troi-mau-xanh", "Vì sao bầu trời có màu xanh", "Hiện tượng quen thuộc này là một bài học đẹp về ánh sáng và khí quyển."),
         ("giac-ngu-va-tri-nho", "Giấc ngủ ảnh hưởng đến trí nhớ thế nào", "Ngủ không chỉ để nghỉ mà còn để não bộ củng cố điều đã học."),
         ("placebo-la-gi", "Hiệu ứng placebo là gì", "Niềm tin có thể tạo ra thay đổi thật trong cảm nhận và hành vi."),

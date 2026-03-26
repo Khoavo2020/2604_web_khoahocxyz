@@ -48,7 +48,7 @@ Các trang con có thể mở rộng:
 - `triet-hoc/phuong-tay`
 - `triet-hoc/tho-viet-nam`
 - `triet-hoc/tho-nuoc-ngoai`
-- `tu-sach-nen-tang/sach-khoa-hoc-pho-thong`
+- `tu-sach-nen-tang/sach-khoa-hoc`
 - `tu-sach-nen-tang/sach-kinh-te-hoc`
 - `tu-sach-nen-tang/sach-tam-ly-hoc`
 - `tu-sach-nen-tang/sach-triet-hoc`

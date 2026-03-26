@@ -100,7 +100,7 @@ def build_categories() -> None:
 
     categories = [
         ("standard", "goc-nhin/index.html"),
-        ("standard", "khoa-hoc-pho-thong/index.html"),
+        ("standard", "khoa-hoc/index.html"),
         ("standard", "kinh-te-hoc/index.html"),
         ("standard", "tam-ly-hoc/index.html"),
         ("standard", "ung-dung-nang-suat/index.html"),
@@ -111,7 +111,7 @@ def build_categories() -> None:
         ("standard", "triet-hoc/tho-nuoc-ngoai/index.html"),
         ("quotes", "tinh-hoa-nhan-loai/index.html"),
         ("library", "tu-sach-nen-tang/index.html"),
-        ("library-category", "tu-sach-nen-tang/sach-khoa-hoc-pho-thong/index.html"),
+        ("library-category", "tu-sach-nen-tang/sach-khoa-hoc/index.html"),
         ("library-category", "tu-sach-nen-tang/sach-kinh-te-hoc/index.html"),
         ("library-category", "tu-sach-nen-tang/sach-tam-ly-hoc/index.html"),
         ("library-category", "tu-sach-nen-tang/sach-triet-hoc/index.html"),
@@ -157,8 +157,8 @@ def build_articles() -> None:
     template_article = read_text(ROOT / "_templates" / "article.html")
 
     articles = [
-        "khoa-hoc-pho-thong/ky-uc-khong-co-that.html",
-        "khoa-hoc-pho-thong/iq-quoc-gia-va-su-giau-co.html",
+        "khoa-hoc/ky-uc-khong-co-that.html",
+        "khoa-hoc/iq-quoc-gia-va-su-giau-co.html",
         "kinh-te-hoc/chi-phi-co-hoi.html",
         "kinh-te-hoc/loi-the-so-sanh.html",
         "tam-ly-hoc/vong-lap-thoi-quen.html",

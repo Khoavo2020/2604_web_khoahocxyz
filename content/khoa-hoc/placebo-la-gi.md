@@ -1,21 +1,21 @@
 ---
-title: Giấc ngủ ảnh hưởng đến trí nhớ thế nào
-description: Ngủ không chỉ để nghỉ mà còn để não bộ củng cố điều đã học.
+title: Hiệu ứng placebo là gì
+description: Niềm tin có thể tạo ra thay đổi thật trong cảm nhận và hành vi.
 section_title: Khoa học
-section_link: khoa-hoc-pho-thong/index.html
+section_link: khoa-hoc/index.html
 header_subline: Giải thích thế giới bằng những ý tưởng đơn giản, rõ ràng và có thể kiểm chứng.
 back_link_label: • Khoa học
-hero_image: assets/generated/covers/khoa-hoc-pho-thong/giac-ngu-va-tri-nho.svg
-output_path: khoa-hoc-pho-thong/giac-ngu-va-tri-nho/index.html
+hero_image: assets/generated/covers/khoa-hoc/placebo-la-gi.svg
+output_path: khoa-hoc/placebo-la-gi/index.html
 ---
 
 Khoa học có giá trị ở chỗ nó biến những điều tưởng như xa vời thành điều ai cũng có thể hiểu và áp dụng.
 
-Ngủ không chỉ để nghỉ mà còn để não bộ củng cố điều đã học.
+Niềm tin có thể tạo ra thay đổi thật trong cảm nhận và hành vi.
 
 ## Góc nhìn chính
 
-Giấc ngủ ảnh hưởng đến trí nhớ thế nào gợi ý rằng điều quan trọng không chỉ nằm ở thông tin bề mặt mà còn ở cách ta diễn giải và áp dụng nó vào đời sống.
+Hiệu ứng placebo là gì gợi ý rằng điều quan trọng không chỉ nằm ở thông tin bề mặt mà còn ở cách ta diễn giải và áp dụng nó vào đời sống.
 
 ## Ba ý nên nhớ
 

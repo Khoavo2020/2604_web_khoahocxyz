@@ -27,7 +27,7 @@ Ràng buộc:
 ## Ví dụ yêu cầu tốt
 
 ```md
-Hãy chuẩn hóa chuyên mục `khoa-hoc-pho-thong`.
+Hãy chuẩn hóa chuyên mục `khoa-hoc`.
 Mục tiêu là làm giao diện danh mục dễ đọc hơn nhưng vẫn giữ style chung.
 Bạn được phép sửa template nếu cần, nhưng không đổi URL hiện tại.
 Sau khi sửa, hãy nói rõ file nào là nơi cần chỉnh về sau.

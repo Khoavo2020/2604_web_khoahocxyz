@@ -1,21 +1,21 @@
 ---
-title: Entropy trong đời sống thường ngày
-description: Một khái niệm vật lý có thể giúp ta hiểu vì sao mọi thứ dễ bừa bộn hơn là ngăn nắp.
+title: Giấc ngủ ảnh hưởng đến trí nhớ thế nào
+description: Ngủ không chỉ để nghỉ mà còn để não bộ củng cố điều đã học.
 section_title: Khoa học
-section_link: khoa-hoc-pho-thong/index.html
+section_link: khoa-hoc/index.html
 header_subline: Giải thích thế giới bằng những ý tưởng đơn giản, rõ ràng và có thể kiểm chứng.
 back_link_label: • Khoa học
-hero_image: assets/generated/covers/khoa-hoc-pho-thong/entropy-trong-doi-song.svg
-output_path: khoa-hoc-pho-thong/entropy-trong-doi-song/index.html
+hero_image: assets/generated/covers/khoa-hoc/giac-ngu-va-tri-nho.svg
+output_path: khoa-hoc/giac-ngu-va-tri-nho/index.html
 ---
 
 Khoa học có giá trị ở chỗ nó biến những điều tưởng như xa vời thành điều ai cũng có thể hiểu và áp dụng.
 
-Một khái niệm vật lý có thể giúp ta hiểu vì sao mọi thứ dễ bừa bộn hơn là ngăn nắp.
+Ngủ không chỉ để nghỉ mà còn để não bộ củng cố điều đã học.
 
 ## Góc nhìn chính
 
-Entropy trong đời sống thường ngày gợi ý rằng điều quan trọng không chỉ nằm ở thông tin bề mặt mà còn ở cách ta diễn giải và áp dụng nó vào đời sống.
+Giấc ngủ ảnh hưởng đến trí nhớ thế nào gợi ý rằng điều quan trọng không chỉ nằm ở thông tin bề mặt mà còn ở cách ta diễn giải và áp dụng nó vào đời sống.
 
 ## Ba ý nên nhớ
 

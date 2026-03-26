@@ -2,11 +2,11 @@
 title: Vì sao bầu trời có màu xanh
 description: Hiện tượng quen thuộc này là một bài học đẹp về ánh sáng và khí quyển.
 section_title: Khoa học
-section_link: khoa-hoc-pho-thong/index.html
+section_link: khoa-hoc/index.html
 header_subline: Giải thích thế giới bằng những ý tưởng đơn giản, rõ ràng và có thể kiểm chứng.
 back_link_label: • Khoa học
-hero_image: assets/generated/covers/khoa-hoc-pho-thong/bau-troi-mau-xanh.svg
-output_path: khoa-hoc-pho-thong/bau-troi-mau-xanh/index.html
+hero_image: assets/generated/covers/khoa-hoc/bau-troi-mau-xanh.svg
+output_path: khoa-hoc/bau-troi-mau-xanh/index.html
 ---
 
 Khoa học có giá trị ở chỗ nó biến những điều tưởng như xa vời thành điều ai cũng có thể hiểu và áp dụng.
