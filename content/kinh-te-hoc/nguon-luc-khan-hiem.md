@@ -4,7 +4,7 @@ description: Vì nguồn lực luôn có giới hạn nên lựa chọn và phâ
 section_title: Kinh tế học
 section_link: kinh-te-hoc/index.html
 header_subline: Tư duy kinh tế để hiểu lựa chọn, nguồn lực và những đánh đổi mỗi ngày.
-back_link_label: Quay về chuyên mục Kinh tế học
+back_link_label: • Kinh tế học
 hero_image: assets/generated/covers/kinh-te-hoc/nguon-luc-khan-hiem.svg
 output_path: kinh-te-hoc/nguon-luc-khan-hiem/index.html
 ---

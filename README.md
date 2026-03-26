@@ -26,7 +26,7 @@ Tech direction hiện tại:
 - `index.html` : trang chủ
 
 - `goc-nhin/`  : chuyên mục góc nhìn, xu hướng
-- `khoa-hoc-pho-thong/`: chuyên mục khoa học phổ thông
+- `khoa-hoc-pho-thong/`: chuyên mục Khoa học
 - `kinh-te-hoc/`        : chuyên mục kinh tế học
 
 - `tam-ly-hoc/`         : chuyên mục tâm lý học

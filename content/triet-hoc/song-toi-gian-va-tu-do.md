@@ -4,7 +4,7 @@ description: Giảm bớt sở hữu không tự động đem lại tự do như
 section_title: Triết học
 section_link: triet-hoc/index.html
 header_subline: Những câu hỏi lớn về ý nghĩa, tự do, trách nhiệm và cách sống.
-back_link_label: Quay về chuyên mục Triết học
+back_link_label: • Triết học
 hero_image: assets/generated/covers/triet-hoc/song-toi-gian-va-tu-do.svg
 output_path: triet-hoc/song-toi-gian-va-tu-do/index.html
 ---

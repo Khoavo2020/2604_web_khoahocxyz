@@ -9,14 +9,14 @@ CONTENT_ROOT = ROOT / "content"
 
 SECTIONS = {
     "khoa-hoc-pho-thong": {
-        "title": "Khoa học phổ thông",
+        "title": "Khoa học",
         "tagline": "Giải thích thế giới bằng những ý tưởng đơn giản, rõ ràng và có thể kiểm chứng.",
         "focus": [
             "đi từ hiện tượng quen thuộc đến nguyên lý nền tảng",
             "giữ cách giải thích ngắn gọn và dễ hình dung",
             "khuyến khích người đọc đặt thêm câu hỏi sau khi hiểu điều cơ bản",
         ],
-        "opener": "Khoa học phổ thông có giá trị ở chỗ nó biến những điều tưởng như xa vời thành điều ai cũng có thể hiểu và áp dụng.",
+        "opener": "Khoa học có giá trị ở chỗ nó biến những điều tưởng như xa vời thành điều ai cũng có thể hiểu và áp dụng.",
     },
     "kinh-te-hoc": {
         "title": "Kinh tế học",
@@ -118,7 +118,7 @@ ARTICLES = {
         ("song-cham-de-thay-ro", "Sống chậm để thấy rõ hơn", "Chậm lại không phải để trì hoãn mà để quan sát kỹ hơn điều mình đang sống."),
     ],
     "tu-sach-nen-tang": [
-        ("sach-nhap-mon-khoa-hoc", "Một lộ trình sách nhập môn khoa học phổ thông", "Nếu muốn bắt đầu đọc khoa học một cách có hệ thống, hãy đi từ trực giác đến khái niệm."),
+        ("sach-nhap-mon-khoa-hoc", "Một lộ trình sách nhập môn Khoa học", "Nếu muốn bắt đầu đọc khoa học một cách có hệ thống, hãy đi từ trực giác đến khái niệm."),
         ("doc-sach-kinh-te-cho-nguoi-moi", "Đọc sách kinh tế cho người mới bắt đầu", "Điều quan trọng không phải đọc thật nhiều thuật ngữ mà là học cách nhìn thấy các đánh đổi."),
         ("sach-tam-ly-nen-doc", "Những hướng đọc tâm lý học nền tảng", "Đọc tâm lý học không chỉ để hiểu người khác mà còn để bớt ngây thơ với chính mình."),
         ("triet-hoc-cho-nguoi-ban-ron", "Triết học cho người bận rộn", "Không cần đọc dày ngay từ đầu; điều quan trọng là giữ được sợi dây liên hệ với các câu hỏi lớn."),
@@ -143,7 +143,7 @@ def build_markdown(category_slug: str, slug: str, title: str, description: str) 
         f"section_title: {section['title']}",
         f"section_link: {category_slug}/index.html",
         f"header_subline: {section['tagline']}",
-        f"back_link_label: Quay về chuyên mục {section['title']}",
+        f"back_link_label: • {section['title']}",
         f"hero_image: content/{category_slug}/_images/{slug}.svg",
         f"output_path: {category_slug}/{slug}/index.html",
         "---",

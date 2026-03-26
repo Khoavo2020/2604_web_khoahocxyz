@@ -8,10 +8,10 @@
   },
   {
     "slug": "khoa-hoc-pho-thong",
-    "title": "Khoa học phổ thông",
+    "title": "Khoa học",
     "tagline": "Giải thích thế giới bằng những ý tưởng đơn giản, rõ ràng và có thể kiểm chứng.",
     "description": "Những bài viết nhập môn giúp người đọc hiểu nhanh các khái niệm khoa học quan trọng trong đời sống.",
-    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Khoa học phổ thông</strong></a> » Hiệu ứng Matthew: Internet làm người thông minh thông minh hơn và người ngu ngu hơn</div><ul class=\"icons\"><li><a href=\"https://facebook.com/KhoaHoc.xyz\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"https://www.youtube.com/@chieusangmoi5363\" class=\"icon brands fa-youtube\"><span class=\"label\">YouTube</span></a></li></ul></header>"
+    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Khoa học</strong></a> » Hiệu ứng Matthew: Internet làm người thông minh thông minh hơn và người ngu ngu hơn</div><ul class=\"icons\"><li><a href=\"https://facebook.com/KhoaHoc.xyz\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"https://www.youtube.com/@chieusangmoi5363\" class=\"icon brands fa-youtube\"><span class=\"label\">YouTube</span></a></li></ul></header>"
   },
   {
     "slug": "kinh-te-hoc",

@@ -4,7 +4,7 @@ description: Trước khi hỏi nên làm gì, có lẽ ta cần hiểu mình đ
 section_title: Triết học
 section_link: triet-hoc/index.html
 header_subline: Những câu hỏi lớn về ý nghĩa, tự do, trách nhiệm và cách sống.
-back_link_label: Quay về chuyên mục Triết học
+back_link_label: • Triết học
 hero_image: assets/generated/covers/triet-hoc/biet-minh-la-dau.svg
 output_path: triet-hoc/biet-minh-la-dau/index.html
 ---

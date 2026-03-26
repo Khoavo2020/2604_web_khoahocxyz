@@ -1,7 +1,7 @@
 ---
 title: IQ trung bình và sự giàu có
 description: Tương quan giữa giáo dục, năng lực nhận thức và sự thịnh vượng của một quốc gia.
-section_title: Khoa học phổ thông
+section_title: Khoa học
 section_link: khoa-hoc-pho-thong/index.html
 header_subline: header_subline
 back_link_label: back

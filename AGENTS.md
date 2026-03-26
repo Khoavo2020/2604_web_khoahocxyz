@@ -29,11 +29,12 @@
 - Khi sửa nội dung tiếng Việt, ưu tiên UTF-8 chuẩn và tránh lỗi encoding.
 - Nếu có nhiều hướng triển khai, ưu tiên hướng ít phức tạp nhất và dễ bảo trì trên GitHub Pages.
 
+
 ## Content architecture
 
 Các nhóm trang chính hiện tại:
-- Home
-- Khoa học phổ thông
+- Home xyz
+- Khoa học
 - Kinh tế học
 - Tâm lý học
 - Triết học
@@ -42,6 +43,7 @@ Các nhóm trang chính hiện tại:
 - Ứng dụng năng suất
 
 Các trang con có thể mở rộng:
+- `goc-nhin`
 - `triet-hoc/phuong-dong`
 - `triet-hoc/phuong-tay`
 - `triet-hoc/tho-viet-nam`
@@ -58,8 +60,8 @@ Các trang con có thể mở rộng:
 
 ## Cấu trúc hình ảnh
 
-- `images/` - Chỉ chứa hình ảnh dùng chung (category thumbnails, banners, etc.)
-- `[category]/[article]/[article].jpg` - Hình ảnh của từng bài viết cụ thể
+- `assets/images/` - Chỉ chứa hình ảnh dùng chung (category thumbnails, banners, etc.)
+- `content/[category]/_images/[article].jpg` - Hình ảnh của từng bài viết cụ thể
 
 ## Definition of good output
 

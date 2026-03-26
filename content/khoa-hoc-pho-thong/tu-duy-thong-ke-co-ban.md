@@ -1,15 +1,15 @@
 ---
 title: Tư duy thống kê cơ bản cho người mới
 description: Một vài nguyên tắc đơn giản có thể giúp ta bớt cả tin trước những kết luận hấp dẫn.
-section_title: Khoa học phổ thông
+section_title: Khoa học
 section_link: khoa-hoc-pho-thong/index.html
 header_subline: Giải thích thế giới bằng những ý tưởng đơn giản, rõ ràng và có thể kiểm chứng.
-back_link_label: Quay về chuyên mục Khoa học phổ thông
+back_link_label: • Khoa học
 hero_image: assets/generated/covers/khoa-hoc-pho-thong/tu-duy-thong-ke-co-ban.svg
 output_path: khoa-hoc-pho-thong/tu-duy-thong-ke-co-ban/index.html
 ---
 
-Khoa học phổ thông có giá trị ở chỗ nó biến những điều tưởng như xa vời thành điều ai cũng có thể hiểu và áp dụng.
+Khoa học có giá trị ở chỗ nó biến những điều tưởng như xa vời thành điều ai cũng có thể hiểu và áp dụng.
 
 Một vài nguyên tắc đơn giản có thể giúp ta bớt cả tin trước những kết luận hấp dẫn.
 

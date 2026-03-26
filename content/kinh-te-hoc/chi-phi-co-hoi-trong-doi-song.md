@@ -4,7 +4,7 @@ description: Mỗi lựa chọn đều có một cái giá vô hình là thứ t
 section_title: Kinh tế học
 section_link: kinh-te-hoc/index.html
 header_subline: Tư duy kinh tế để hiểu lựa chọn, nguồn lực và những đánh đổi mỗi ngày.
-back_link_label: Quay về chuyên mục Kinh tế học
+back_link_label: • Kinh tế học
 hero_image: assets/generated/covers/kinh-te-hoc/chi-phi-co-hoi-trong-doi-song.svg
 output_path: kinh-te-hoc/chi-phi-co-hoi-trong-doi-song/index.html
 ---

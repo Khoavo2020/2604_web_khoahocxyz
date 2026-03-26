@@ -4,7 +4,7 @@ description: Khái niệm cơ bản nhất của kinh tế học giúp giải th
 section_title: Kinh tế học
 section_link: kinh-te-hoc/index.html
 header_subline: Tư duy kinh tế để hiểu lựa chọn, nguồn lực và những đánh đổi mỗi ngày.
-back_link_label: Quay về chuyên mục Kinh tế học
+back_link_label: • Kinh tế học
 hero_image: assets/generated/covers/kinh-te-hoc/cung-cau-la-gi.svg
 output_path: kinh-te-hoc/cung-cau-la-gi/index.html
 ---

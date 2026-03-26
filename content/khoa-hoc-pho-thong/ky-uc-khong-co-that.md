@@ -1,7 +1,7 @@
 ---
 title: Ký ức không có thật
 description: Vì sao trí nhớ dễ bị sai lệch và cách bạn tự kiểm chứng lại ký ức.
-section_title: Khoa học phổ thông
+section_title: Khoa học
 section_link: khoa-hoc-pho-thong/index.html
 header_subline: header_subline
 back_link_label: back

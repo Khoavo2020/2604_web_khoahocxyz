@@ -1,15 +1,15 @@
 ---
 title: Giấc ngủ ảnh hưởng đến trí nhớ thế nào
 description: Ngủ không chỉ để nghỉ mà còn để não bộ củng cố điều đã học.
-section_title: Khoa học phổ thông
+section_title: Khoa học
 section_link: khoa-hoc-pho-thong/index.html
 header_subline: Giải thích thế giới bằng những ý tưởng đơn giản, rõ ràng và có thể kiểm chứng.
-back_link_label: Quay về chuyên mục Khoa học phổ thông
+back_link_label: • Khoa học
 hero_image: assets/generated/covers/khoa-hoc-pho-thong/giac-ngu-va-tri-nho.svg
 output_path: khoa-hoc-pho-thong/giac-ngu-va-tri-nho/index.html
 ---
 
-Khoa học phổ thông có giá trị ở chỗ nó biến những điều tưởng như xa vời thành điều ai cũng có thể hiểu và áp dụng.
+Khoa học có giá trị ở chỗ nó biến những điều tưởng như xa vời thành điều ai cũng có thể hiểu và áp dụng.
 
 Ngủ không chỉ để nghỉ mà còn để não bộ củng cố điều đã học.
 

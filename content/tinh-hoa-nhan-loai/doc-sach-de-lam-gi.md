@@ -4,7 +4,7 @@ description: Một cuốn sách tốt không chỉ cho thông tin mà còn cho t
 section_title: Tinh hoa - nhân loại
 section_link: tinh-hoa-nhan-loai/index.html
 header_subline: Những ý tưởng đẹp, câu nói sâu sắc và bài học bền vững từ nhiều thời đại.
-back_link_label: Quay về chuyên mục Tinh hoa - nhân loại
+back_link_label: • Tinh hoa - nhân loại
 hero_image: assets/generated/covers/tinh-hoa-nhan-loai/doc-sach-de-lam-gi.svg
 output_path: tinh-hoa-nhan-loai/doc-sach-de-lam-gi/index.html
 ---

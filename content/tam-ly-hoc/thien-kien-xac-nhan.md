@@ -4,7 +4,7 @@ description: Vì sao chúng ta thường ưu tiên thông tin củng cố niềm
 section_title: Tâm lý học
 section_link: tam-ly-hoc/index.html
 header_subline: Hiểu bản thân và hành vi con người bằng góc nhìn tâm lý học ứng dụng.
-back_link_label: Quay về chuyên mục Tâm lý học
+back_link_label: • Tâm lý học
 hero_image: assets/generated/covers/tam-ly-hoc/thien-kien-xac-nhan.svg
 output_path: tam-ly-hoc/thien-kien-xac-nhan/index.html
 ---

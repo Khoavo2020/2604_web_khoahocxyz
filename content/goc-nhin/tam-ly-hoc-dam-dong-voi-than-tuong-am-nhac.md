@@ -4,7 +4,7 @@ description: Tâm lý học đám đông với thần tượng âm nhạc (fando
 section_title: Góc nhìn
 section_link: goc-nhin/index.html
 header_subline: Dòng thời gian
-back_link_label: Quay về chuyên mục Góc nhìn
+back_link_label: • Góc nhìn
 hero_image: content/goc-nhin/_images/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.jpg
 output_path: goc-nhin/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac/index.html
 ---

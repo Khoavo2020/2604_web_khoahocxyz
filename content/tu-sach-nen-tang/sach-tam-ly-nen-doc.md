@@ -4,7 +4,7 @@ description: Đọc tâm lý học không chỉ để hiểu người khác mà 
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/index.html
 header_subline: Sách hay là chiếc cầu nối từ hứng thú nhất thời sang năng lực học tập bền vững.
-back_link_label: Quay về chuyên mục Tủ sách - nền tảng
+back_link_label: • Tủ sách - nền tảng
 hero_image: assets/generated/covers/tu-sach-nen-tang/sach-tam-ly-nen-doc.svg
 output_path: tu-sach-nen-tang/sach-tam-ly-nen-doc/index.html
 ---

@@ -4,7 +4,7 @@ description: Một buổi nhìn lại ngắn mỗi tuần có thể giúp bạn 
 section_title: Ứng dụng - năng suất
 section_link: ung-dung-nang-suat/index.html
 header_subline: Công cụ, hệ thống và nguyên tắc giúp làm việc hiệu quả mà không kiệt sức.
-back_link_label: Quay về chuyên mục Ứng dụng - năng suất
+back_link_label: • Ứng dụng - năng suất
 hero_image: assets/generated/covers/ung-dung-nang-suat/review-tuan-ca-nhan.svg
 output_path: ung-dung-nang-suat/review-tuan-ca-nhan/index.html
 ---

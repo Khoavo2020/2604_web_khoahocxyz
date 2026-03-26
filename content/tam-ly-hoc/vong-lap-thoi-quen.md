@@ -4,7 +4,7 @@ description: Thói quen bền vững thường được hình thành từ tín h
 section_title: Tâm lý học
 section_link: tam-ly-hoc/index.html
 header_subline: Hiểu bản thân và hành vi con người bằng góc nhìn tâm lý học ứng dụng.
-back_link_label: Quay về chuyên mục Tâm lý học
+back_link_label: • Tâm lý học
 hero_image: assets/generated/covers/tam-ly-hoc/vong-lap-thoi-quen.svg
 output_path: tam-ly-hoc/vong-lap-thoi-quen/index.html
 ---

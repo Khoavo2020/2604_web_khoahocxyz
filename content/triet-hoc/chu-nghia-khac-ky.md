@@ -4,7 +4,7 @@ description: Bình thản không đến từ việc tránh khó khăn mà từ c
 section_title: Triết học
 section_link: triet-hoc/index.html
 header_subline: Những câu hỏi lớn về ý nghĩa, tự do, trách nhiệm và cách sống.
-back_link_label: Quay về chuyên mục Triết học
+back_link_label: • Triết học
 hero_image: assets/generated/covers/triet-hoc/chu-nghia-khac-ky.svg
 output_path: triet-hoc/chu-nghia-khac-ky/index.html
 ---

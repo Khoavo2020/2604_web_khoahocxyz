@@ -4,7 +4,7 @@ description: Điều quan trọng không phải đọc thật nhiều thuật ng
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/index.html
 header_subline: Sách hay là chiếc cầu nối từ hứng thú nhất thời sang năng lực học tập bền vững.
-back_link_label: Quay về chuyên mục Tủ sách - nền tảng
+back_link_label: • Tủ sách - nền tảng
 hero_image: assets/generated/covers/tu-sach-nen-tang/doc-sach-kinh-te-cho-nguoi-moi.svg
 output_path: tu-sach-nen-tang/doc-sach-kinh-te-cho-nguoi-moi/index.html
 ---

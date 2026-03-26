@@ -4,7 +4,7 @@ description: Không cần đọc dày ngay từ đầu; điều quan trọng là
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/index.html
 header_subline: Sách hay là chiếc cầu nối từ hứng thú nhất thời sang năng lực học tập bền vững.
-back_link_label: Quay về chuyên mục Tủ sách - nền tảng
+back_link_label: • Tủ sách - nền tảng
 hero_image: assets/generated/covers/tu-sach-nen-tang/triet-hoc-cho-nguoi-ban-ron.svg
 output_path: tu-sach-nen-tang/triet-hoc-cho-nguoi-ban-ron/index.html
 ---

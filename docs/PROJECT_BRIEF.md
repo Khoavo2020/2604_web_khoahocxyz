@@ -41,7 +41,7 @@ Website được thiết kế theo mô hình:
 ## 6. Các chuyên mục cốt lõi
 
 - Home
-- Khoa học phổ thông
+- Khoa học
 - Kinh tế học
 - Tâm lý học
 - Triết học
