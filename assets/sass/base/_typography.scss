@@ -181,3 +181,48 @@
 	.align-right {
 		text-align: right;
 	}
+
+	body.article-page, body.article-page input, body.article-page select, body.article-page textarea {
+		/* khoa: --> article font family */
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+		/* khoa: --> article text color */
+		color: #1c1e21;
+		/* khoa: --> article font size */
+		font-size: 12pt;
+		/* khoa: --> article line height */
+		line-height: 1.7;
+	}
+
+	body.article-page #main .article-content h1,
+	body.article-page #main .article-content h2,
+	body.article-page #main .article-content h3,
+	body.article-page #main .article-content h4,
+	body.article-page #main .article-content h5,
+	body.article-page #main .article-content h6 {
+		/* khoa: --> article heading font */
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+		/* khoa: --> article heading color */
+		color: #050505;
+		/* khoa: --> article heading spacing */
+		line-height: 1.35;
+	}
+
+	body.article-page #main .article-content p,
+	body.article-page #main .article-content li {
+		/* khoa: --> article paragraph color */
+		color: #1c1e21;
+	}
+
+	body.article-page #main .article-content a {
+		/* khoa: --> article link color */
+		color: #1877f2;
+	}
+
+	body.article-page #main .article-content blockquote {
+		/* khoa: --> article quote surface */
+		background: #ffffff;
+		/* khoa: --> article quote border */
+		border-left-color: #d8dadf;
+		/* khoa: --> article quote text */
+		color: #3a3b3c;
+	}

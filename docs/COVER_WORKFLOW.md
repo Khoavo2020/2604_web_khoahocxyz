@@ -2,13 +2,13 @@
 
 SVG cover cho bai viet duoc tao tu front matter trong `content/` va template nen theo tung category.
 
-## Thu muc lien quan
+### Thu muc lien quan
 
 - `scripts/generate-covers.py`: script sinh cover SVG
 - `_templates/covers/<category>.svg.tpl`: template background theo tung category
 - `assets/generated/covers/<category>/<slug>.svg`: file cover duoc sinh ra
 
-## Nguon du lieu
+### Nguon du lieu
 
 Script lay cac gia tri sau tu front matter cua bai Markdown:
 
@@ -22,7 +22,7 @@ Neu khong co `hero_image`, script se mac dinh ghi ra:
 assets/generated/covers/<category>/<slug>.svg
 ```
 
-## Lenh su dung
+### Lenh su dung
 
 Sinh lai toan bo cover:
 
@@ -42,14 +42,14 @@ Sinh cover cho mot category:
 python scripts/generate-covers.py --category triet-hoc
 ```
 
-## Cach mo rong
+### Cach mo rong
 
 1. Tao bai moi trong `content/<category>/<slug>.md`
 2. Dat `hero_image` theo convention cover hien tai
 3. Chay script generate cover
 4. Chay tiep `python scripts/build-markdown.py` neu muon build HTML
 
-## Ghi chu
+### Ghi chu
 
 - Script giu nguyen mau sac/background theo template hien co, chi thay phan text.
 - Tieu de duoc tu dong xuong dong de hop layout cover rong `1200x630`.

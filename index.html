@@ -6,130 +6,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			.cover-list {
-				display: block;
-				margin-bottom: 0.91em;
-			}
-
-			.cover-list article {
-				margin: 0 0 0.83em 0;
-				padding: 0 0 0.61em 0;
-				position: relative;
-				width: 100%;
-			}
-
-			.cover-list article::before {
-				display: none !important;
-			}
-
-			.cover-list article::after {
-				background: rgba(210, 215, 217, 0.75);
-				bottom: 0;
-				content: '';
-				display: block;
-				height: 1px;
-				left: 0;
-				position: absolute;
-				width: 100%;
-			}
-
-			.cover-list article:last-child {
-				margin-bottom: 0;
-				padding-bottom: 0;
-			}
-
-			.cover-list article:last-child::after {
-				display: none;
-			}
-
-			.cover-list.keep-divider article:last-child {
-				padding-bottom: 0.61em;
-			}
-
-			.cover-list.keep-divider article:last-child::after {
-				display: block;
-			}
-
-			.cover-list article h3 {
-				font-size: 1em;
-				font-weight: 700;
-				letter-spacing: -0.01em;
-				line-height: 1.24;
-				margin: 0 0 0.17em 0;
-			}
-
-			.cover-list article h3 a {
-				border-bottom: 0;
-			}
-
-			.cover-list .cover-item-body {
-				align-items: start;
-				display: grid;
-				gap: 0.39em;
-				grid-template-columns: 9.75em minmax(0, 1fr);
-			}
-
-			.cover-list article .image {
-				display: block;
-				margin: 0;
-				width: 100%;
-			}
-
-			.cover-list article .image img {
-				aspect-ratio: 16 / 10;
-				display: block;
-				height: 100%;
-				object-fit: cover;
-				width: 100%;
-			}
-
-			.cover-list article p {
-				color: #4f5b62;
-				font-size: 0.85em;
-				line-height: 1.6;
-				margin: 0;
-				max-width: 33ch;
-			}
-			#header .logo {
-				max-width: 67ch;
-			}
-			#main > .inner > section > h3 {
-				margin-top: 0.63em !important;
-			}
-			#main > .inner > section > ul.actions {
-				margin-bottom: 0.1em !important;
-			}
-			#main > .inner > section > ul.actions a {
-				color: inherit;
-				border-bottom-color: transparent;
-				font-size: 0.83em;
-			}
-
-			@media screen and (max-width: 480px) {
-				.cover-list article {
-					margin-bottom: 0.71em;
-					padding-bottom: 0.49em;
-				}
-
-				.cover-list article h3 {
-					font-size: 0.854em;
-				}
-
-				.cover-list .cover-item-body {
-					gap: 0.43em;
-					grid-template-columns: 7.25em minmax(0, 1fr);
-				}
-
-				.cover-list article p {
-					font-size: 0.7em;
-					line-height: 1.5;
-					max-width: none;
-				}
-			}
-		</style>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload site-page">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -140,8 +18,10 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>🏠 xyz</strong>: Ba trụ cột » Sống khoa học - Làm việc năng suất - Học tập suốt đời</a>
-									<ul class="icons">
+                  <div class="logo">
+									<a href="index.html" ><strong>🏠 xyz</strong>:</a> » Ba trụ cột » Sống khoa học - Làm việc năng suất - Học tập suốt đời
+									</div>
+                  <ul class="icons">
 										<li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 										<li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
 									</ul>
@@ -149,7 +29,7 @@
 
 								<section>
 									<div class="cover-list" data-home-list="goc-nhin"></div>
-									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
+									<ul class="actions" style="justify-content: flex-end;">
 										<li><a href="goc-nhin/index.html">Xem thêm..</a></li>
 									</ul>
 								</section>
@@ -157,9 +37,9 @@
 							<!-- Section -->
 								<section>
 									<!-- Khoa học -->
-									<h3 style="margin-top: 0.5em;">Khoa học</h3>
+									<h3>Khoa học</h3>
 									<div class="cover-list" data-home-list="khoa-hoc"></div>
-									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
+									<ul class="actions" style="justify-content: flex-end;">
 										<li><a href="khoa-hoc/index.html">Xem thêm..</a></li>
 									</ul>
 								</section>
@@ -167,9 +47,9 @@
 							<!-- Section -->
 								<section>
 									<!-- Kinh tế học -->
-									<h3 style="margin-top: 0.5em;">Kinh tế học</h3>
+									<h3>Kinh tế học</h3>
 									<div class="cover-list" data-home-list="kinh-te-hoc"></div>
-									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
+									<ul class="actions" style="justify-content: flex-end;">
 										<li><a href="kinh-te-hoc/index.html">Xem thêm..</a></li>
 									</ul>
 								</section>
@@ -177,9 +57,9 @@
 							<!-- Section -->
 								<section>
 									<!-- Tâm lý học -->
-									<h3 style="margin-top: 0.5em;">Tâm lý học</h3>
+									<h3>Tâm lý học</h3>
 									<div class="cover-list" data-home-list="tam-ly-hoc"></div>
-									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
+									<ul class="actions" style="justify-content: flex-end;">
 										<li><a href="tam-ly-hoc/index.html">Xem thêm..</a></li>
 									</ul>
 								</section>
@@ -187,9 +67,9 @@
 							<!-- Section -->
 								<section>
 									<!-- Triết học -->
-									<h3 style="margin-top: 0.5em;">Triết học</h3>
+									<h3>Triết học</h3>
 									<div class="cover-list" data-home-list="triet-hoc"></div>
-									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
+									<ul class="actions" style="justify-content: flex-end;">
 										<li><a href="triet-hoc/index.html">Xem thêm..</a></li>
 									</ul>
 								</section>
@@ -197,9 +77,9 @@
 							<!-- Section -->
 								<section>
 									<!-- Tinh hoa - Nhân loại -->
-									<h3 style="margin-top: 0.5em;">Tinh hoa - Nhân loại</h3>
+									<h3>Tinh hoa - Nhân loại</h3>
 									<div class="cover-list" data-home-list="tinh-hoa-nhan-loai"></div>
-									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
+									<ul class="actions" style="justify-content: flex-end;">
 										<li><a href="tinh-hoa-nhan-loai/index.html">Xem thêm..</a></li>
 									</ul>
 								</section>
@@ -207,9 +87,9 @@
 							<!-- Section -->
 								<section>
 									<!-- Tủ sách - nền tảng -->
-									<h3 style="margin-top: 0.5em;">Tủ sách - nền tảng</h3>
+									<h3>Tủ sách - nền tảng</h3>
 									<div class="cover-list" data-home-list="tu-sach-nen-tang"></div>
-									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
+									<ul class="actions" style="justify-content: flex-end;">
 										<li><a href="tu-sach-nen-tang/index.html">Xem thêm..</a></li>
 									</ul>
 								</section>
@@ -217,9 +97,9 @@
 							<!-- Section -->
 								<section>
 									<!-- Ứng dụng - năng suất -->
-									<h3 style="margin-top: 0.5em;">Ứng dụng - năng suất</h3>
+									<h3>Ứng dụng - năng suất</h3>
 									<div class="cover-list" data-home-list="ung-dung-nang-suat"></div>
-									<ul class="actions" style="justify-content: flex-end; margin-bottom: 1.5em;">
+									<ul class="actions" style="justify-content: flex-end;">
 										<li><a href="ung-dung-nang-suat/index.html">Xem thêm..</a></li>
 									</ul>
 
@@ -299,6 +179,12 @@
           "description": "Thế giới này không dành cho những kẻ ngồi yên.",
           "href": "goc-nhin/neu-ca-doi-nay-khong-ruc-ro-thi-sao/index.html",
           "image": "content/goc-nhin/_images/neu-ca-doi-nay-khong-ruc-ro-thi-sao.jpg"
+        },
+        {
+          "title": "Siêu dự báo",
+          "description": "Sinh vật có não là để dự đoán tương lai",
+          "href": "goc-nhin/sieu-du-bao/index.html",
+          "image": "content/goc-nhin/_images/sieu-du-bao.svg"
         },
         {
           "title": "Tâm lý học đám đông với thần tượng âm nhạc",

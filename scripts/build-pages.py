@@ -34,10 +34,10 @@ def extract_first(pattern: str, text: str, default: str = "") -> str:
 
 
 def extract_posts_block(text: str) -> str:
-    posts = extract_first(r'<div class="cover-list">(.*?)</div>', text, "").strip()
+    posts = extract_first(r'<div class="cover-list">(.*?)</div>\s*</section>', text, "").strip()
     if posts:
         return posts
-    return extract_first(r'<div class="posts">(.*?)</div>', text, "").strip()
+    return extract_first(r'<div class="posts">(.*?)</div>\s*</section>', text, "").strip()
 
 
 def extract_header_tagline(text: str) -> str:
@@ -77,8 +77,9 @@ def transform_posts(posts_html: str) -> str:
         href = href_match.group(1) if href_match else ''
         img_match = re.search(r'<img src="([^"]*)"', content)
         img_src = img_match.group(1) if img_match else ''
-        title_match = re.search(r'<h3>\s*(?:<a [^>]*>)?(.*?)(?:</a>)?\s*</h3>', content, re.DOTALL)
+        title_match = re.search(r'<h3>(.*?)</h3>', content, re.DOTALL | re.IGNORECASE)
         title = title_match.group(1).strip() if title_match else ''
+        title = re.sub(r'<[^>]+>', '', title).strip()
         p_match = re.search(r'<p>(.*?)</p>', content)
         desc = p_match.group(1) if p_match else ''
         new_article = f'''<article>
@@ -120,6 +121,9 @@ def build_categories() -> None:
 
     for kind, rel_path in categories:
         path = ROOT / rel_path
+        if not path.exists():
+            print(f"Skipped missing: {path.relative_to(ROOT)}")
+            continue
         html = read_text(path)
         title, desc = extract_main_title_desc(html)
         tagline = extract_header_tagline(html) or desc

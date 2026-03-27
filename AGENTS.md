@@ -1,6 +1,6 @@
 # AI Agent Instructions - khoahoc.xyz
 
-## Project summary
+### Project summary
 ### Goal:
 `khoahoc.xyz` là một static website theo mô hình `knowledge hub + sản phẩm`
 
@@ -10,7 +10,7 @@
 - `Product`: khóa học, app, ebook, landing page sản phẩm
 - `Community / Inspiration`: câu trích dẫn, tinh hoa nhân loại, tài nguyên truyền cảm hứng
 
-## Current stack
+### Current stack
 
 - Static HTML/CSS/JS
 - GitHub Pages for hosting
@@ -19,7 +19,7 @@
 - Build scripts trong `scripts/`
 - Một phần nội dung có thể được sinh từ Markdown hoặc data source
 
-## Working principles for Codex
+### Working principles for Codex
 
 - Ưu tiên thay đổi qua template và script nếu có nhiều page dùng chung.
 - Không tự ý đổi cấu trúc URL hoặc đổi tên thư mục nếu chưa thật cần thiết.
@@ -30,7 +30,7 @@
 - Nếu có nhiều hướng triển khai, ưu tiên hướng ít phức tạp nhất và dễ bảo trì trên GitHub Pages.
 
 
-## Content architecture
+### Content architecture
 
 Các nhóm trang chính hiện tại:
 - Home xyz
@@ -58,12 +58,12 @@ Các trang con có thể mở rộng:
 
 
 
-## Cấu trúc hình ảnh
+### Cấu trúc hình ảnh
 
 - `assets/images/` - Chỉ chứa hình ảnh dùng chung (category thumbnails, banners, etc.)
 - `content/[category]/_images/[article].jpg` - Hình ảnh của từng bài viết cụ thể
 
-## Definition of good output
+### Definition of good output
 
 Một thay đổi được xem là tốt khi:
 - đúng mục tiêu kinh doanh và biên tập của site
@@ -72,7 +72,7 @@ Một thay đổi được xem là tốt khi:
 - không tạo thêm thao tác thủ công lặp lại
 - dễ tiếp tục mở rộng bằng template/script
 
-## Preferred deliverables
+### Preferred deliverables
 
 Khi làm việc trong repo này, ưu tiên các đầu ra sau:
 - file tài liệu rõ mục tiêu trước khi code lớn

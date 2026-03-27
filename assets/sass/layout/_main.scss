@@ -65,3 +65,38 @@
 			}
 		}
 	}
+
+	body.article-page {
+		#main {
+			/* khoa: --> article main canvas */
+			background: #ffffff;
+		}
+
+		#main > .inner {
+			/* khoa: --> article reading width */
+			max-width: 60em;
+		}
+
+		#main > .inner > section.article-content {
+			/* khoa: --> article card spacing */
+			padding: 2.5em 0 1.5em 0;
+			/* khoa: --> article card border */
+			border-top: 0;
+		}
+
+		#main > .inner > section.article-content > h1,
+		#main > .inner > section.article-content > h2,
+		#main > .inner > section.article-content > h3,
+		#main > .inner > section.article-content > h4,
+		#main > .inner > section.article-content > h5,
+		#main > .inner > section.article-content > h6,
+		#main > .inner > section.article-content > p,
+		#main > .inner > section.article-content > ul,
+		#main > .inner > section.article-content > ol,
+		#main > .inner > section.article-content > blockquote,
+		#main > .inner > section.article-content > .image.main,
+		#main > .inner > section.article-content > .markdown-paragraph {
+			/* khoa: --> article content width */
+			max-width: 42em;
+		}
+	}

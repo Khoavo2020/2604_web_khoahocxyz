@@ -20,7 +20,7 @@ SECTIONS = {
     },
     "kinh-te-hoc": {
         "title": "Kinh tế học",
-        "tagline": "Tư duy kinh tế để hiểu lựa chọn, nguồn lực và những đánh đổi mỗi ngày.",
+        "tagline": "no-need",
         "focus": [
             "nhìn rõ cái giá của mỗi lựa chọn",
             "phân biệt trực giác hấp dẫn với phân tích có cấu trúc",

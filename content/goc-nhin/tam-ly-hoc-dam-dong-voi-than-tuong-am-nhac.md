@@ -24,7 +24,7 @@ Tâm lý học đám đông với thần tượng âm nhạc (fandom) là hiện
 • **Tạo dựng bản sắc nhóm:** Đám đông thần tượng tạo ra một cộng đồng, mang đến cảm giác được chấp nhận, thuộc về và có chung mục tiêu bảo vệ hay tôn vinh thần tượng. 
 
 
-#### Tác động của tâm lý đám đông thần tượng:
+### Tác động của tâm lý đám đông thần tượng:
 • **Tích cực:** Tạo động lực, niềm vui, sự kết nối cộng đồng, và sự ủng hộ mạnh mẽ cho thần tượng.
 • **Tiêu cực:** Có thể dẫn đến hành vi mù quáng, thiếu tỉnh táo, cạnh tranh không lành mạnh giữa các fandom, hoặc chi tiêu quá mức. 
 
