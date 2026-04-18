@@ -3,7 +3,7 @@ title: Đọc sách kinh tế cho người mới bắt đầu
 description: Điều quan trọng không phải đọc thật nhiều thuật ngữ mà là học cách nhìn thấy các đánh đổi.
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/index.html
-header_subline: Sách hay là chiếc cầu nối từ hứng thú nhất thời sang năng lực học tập bền vững.
+header_subline: 
 back_link_label: • Tủ sách - nền tảng
 hero_image: assets/generated/covers/tu-sach-nen-tang/doc-sach-kinh-te-cho-nguoi-moi.svg
 output_path: tu-sach-nen-tang/doc-sach-kinh-te-cho-nguoi-moi/index.html

@@ -3,7 +3,7 @@ title: Ghi chú như một bộ não thứ hai
 description: Một hệ thống ghi chú tốt không chỉ lưu trữ mà còn giúp suy nghĩ lại và kết nối ý tưởng.
 section_title: Ứng dụng - năng suất
 section_link: ung-dung-nang-suat/index.html
-header_subline: Công cụ, hệ thống và nguyên tắc giúp làm việc hiệu quả mà không kiệt sức.
+header_subline: 
 back_link_label: • Ứng dụng - năng suất
 hero_image: assets/generated/covers/ung-dung-nang-suat/ghi-chu-thu-hai-nao.svg
 output_path: ung-dung-nang-suat/ghi-chu-thu-hai-nao/index.html

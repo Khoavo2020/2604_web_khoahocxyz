@@ -17,13 +17,11 @@ HOME_PAGE_PATH = ROOT / "index.html"
 IMAGE_EXTENSIONS = {".svg", ".jpg", ".jpeg", ".png", ".webp", ".gif"}
 HOMEPAGE_SECTION_CONFIG = [
     {"slug": "goc-nhin", "title": "Góc nhìn", "link": "goc-nhin/index.html"},
+    {"slug": "trend", "title": "Trend", "link": "trend/index.html"},
     {"slug": "khoa-hoc", "link": "khoa-hoc/index.html"},
     {"slug": "kinh-te-hoc", "link": "kinh-te-hoc/index.html"},
     {"slug": "tam-ly-hoc", "link": "tam-ly-hoc/index.html"},
     {"slug": "triet-hoc", "link": "triet-hoc/index.html"},
-    {"slug": "tinh-hoa-nhan-loai", "link": "tinh-hoa-nhan-loai/index.html"},
-    {"slug": "tu-sach-nen-tang", "link": "tu-sach-nen-tang/index.html"},
-    {"slug": "ung-dung-nang-suat", "link": "ung-dung-nang-suat/index.html"},
 ]
 
 

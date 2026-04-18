@@ -3,7 +3,7 @@ title: Thiết kế môi trường làm việc để bớt phân tâm
 description: Môi trường xung quanh thường quyết định ta có giữ được nhịp làm việc hay không.
 section_title: Ứng dụng - năng suất
 section_link: ung-dung-nang-suat/index.html
-header_subline: Công cụ, hệ thống và nguyên tắc giúp làm việc hiệu quả mà không kiệt sức.
+header_subline: 
 back_link_label: • Ứng dụng - năng suất
 hero_image: assets/generated/covers/ung-dung-nang-suat/thiet-ke-moi-truong-lam-viec.svg
 output_path: ung-dung-nang-suat/thiet-ke-moi-truong-lam-viec/index.html

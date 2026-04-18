@@ -20,3 +20,20 @@ hư hỏng (protein lỗi, vi khuẩn, tế bào già) để tái chế thành n
 • Giảm viêm: quét sạch các gốc tự do thải ra bởi ti thể
 
 • Ngừa ung thư: ngăn chặn sự tích lũy của các đột biến lỗi ở cấp độ tế bào.
+
+
+Kiểm tra break line
+
+
+cách ở trên 2 empty line
+
+
+
+cách 4 empty line
+<br><br>
+cách 1 br
+<br><br><br><br>
+cách 2 br
+<br><br><br><br><br><br>
+cách 3 br
+<br><br><br><br>

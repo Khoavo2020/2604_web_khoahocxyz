@@ -3,7 +3,7 @@ title: Sống tối giản có phải là tự do hơn
 description: Giảm bớt sở hữu không tự động đem lại tự do nhưng mở ra khả năng lựa chọn sáng suốt hơn.
 section_title: Triết học
 section_link: triet-hoc/index.html
-header_subline: Những câu hỏi lớn về ý nghĩa, tự do, trách nhiệm và cách sống.
+header_subline: 
 back_link_label: • Triết học
 hero_image: assets/generated/covers/triet-hoc/song-toi-gian-va-tu-do.svg
 output_path: triet-hoc/song-toi-gian-va-tu-do/index.html

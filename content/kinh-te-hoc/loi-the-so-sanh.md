@@ -3,7 +3,7 @@ title: Lợi thế so sánh giúp hợp tác hiệu quả hơn
 description: Không cần giỏi nhất mọi thứ, chỉ cần tương đối phù hợp hơn ở một việc nào đó.
 section_title: Kinh tế học
 section_link: kinh-te-hoc/index.html
-header_subline: no-need
+header_subline: 
 back_link_label: • Kinh tế học
 hero_image: assets/generated/covers/kinh-te-hoc/loi-the-so-sanh.svg
 output_path: kinh-te-hoc/loi-the-so-sanh/index.html

@@ -3,7 +3,7 @@ title: Biết mình là điểm khởi đầu của triết học sống
 description: Trước khi hỏi nên làm gì, có lẽ ta cần hiểu mình đang sống theo điều gì.
 section_title: Triết học
 section_link: triet-hoc/index.html
-header_subline: Những câu hỏi lớn về ý nghĩa, tự do, trách nhiệm và cách sống.
+header_subline: 
 back_link_label: • Triết học
 hero_image: assets/generated/covers/triet-hoc/biet-minh-la-dau.svg
 output_path: triet-hoc/biet-minh-la-dau/index.html

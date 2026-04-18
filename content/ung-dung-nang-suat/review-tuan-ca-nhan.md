@@ -3,7 +3,7 @@ title: Review tuần cá nhân để đi đường dài
 description: Một buổi nhìn lại ngắn mỗi tuần có thể giúp bạn tránh trôi theo bận rộn mà quên mất hướng đi.
 section_title: Ứng dụng - năng suất
 section_link: ung-dung-nang-suat/index.html
-header_subline: Công cụ, hệ thống và nguyên tắc giúp làm việc hiệu quả mà không kiệt sức.
+header_subline: 
 back_link_label: • Ứng dụng - năng suất
 hero_image: assets/generated/covers/ung-dung-nang-suat/review-tuan-ca-nhan.svg
 output_path: ung-dung-nang-suat/review-tuan-ca-nhan/index.html

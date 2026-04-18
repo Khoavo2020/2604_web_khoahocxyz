@@ -3,7 +3,7 @@ title: Hiệu ứng halo trong đánh giá con người
 description: Một ấn tượng tốt ở một mặt nào đó có thể lan sang mọi đánh giá còn lại.
 section_title: Tâm lý học
 section_link: tam-ly-hoc/index.html
-header_subline: Hiểu bản thân và hành vi con người bằng góc nhìn tâm lý học ứng dụng.
+header_subline: 
 back_link_label: • Tâm lý học
 hero_image: assets/generated/covers/tam-ly-hoc/hieu-ung-halo.svg
 output_path: tam-ly-hoc/hieu-ung-halo/index.html

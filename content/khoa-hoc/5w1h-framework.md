@@ -1,9 +1,9 @@
 ---
-title: 5W1H Framework – công cụ đơn giản nhưng mạnh mẽ
+title: 5W1H Framework
 description: 5W1H là một framework cực kỳ hữu ích để phân tích vấn đề và khơi gợi ý tưởng
 section_title: Khoa học
 section_link: khoa-hoc/index.html
-header_subline: tbd
+header_subline: 
 back_link_label: • Khoa học
 hero_image: assets/generated/covers/khoa-hoc/5w1h-framework.jpg
 output_path: khoa-hoc/5w1h-framework/index.html

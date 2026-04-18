@@ -3,7 +3,7 @@ title: Pomodoro có thực sự hiệu quả không
 description: Một kỹ thuật đơn giản nhưng hữu ích vì nó làm việc bắt đầu dễ hơn và nghỉ ngơi có chủ đích hơn.
 section_title: Ứng dụng - năng suất
 section_link: ung-dung-nang-suat/index.html
-header_subline: Công cụ, hệ thống và nguyên tắc giúp làm việc hiệu quả mà không kiệt sức.
+header_subline: 
 back_link_label: • Ứng dụng - năng suất
 hero_image: assets/generated/covers/ung-dung-nang-suat/pomodoro-co-thuc-su-hieu-qua.svg
 output_path: ung-dung-nang-suat/pomodoro-co-thuc-su-hieu-qua/index.html

@@ -3,7 +3,7 @@ title: Thiên kiến xác nhận
 description: Vì sao chúng ta thường ưu tiên thông tin củng cố niềm tin có sẵn.
 section_title: Tâm lý học
 section_link: tam-ly-hoc/index.html
-header_subline: Hiểu bản thân và hành vi con người bằng góc nhìn tâm lý học ứng dụng.
+header_subline: 
 back_link_label: • Tâm lý học
 hero_image: assets/generated/covers/tam-ly-hoc/thien-kien-xac-nhan.svg
 output_path: tam-ly-hoc/thien-kien-xac-nhan/index.html

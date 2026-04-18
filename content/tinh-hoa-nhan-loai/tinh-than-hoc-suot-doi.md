@@ -3,7 +3,7 @@ title: Tinh thần học suốt đời được nuôi bằng điều gì
 description: Không phải chỉ bằng kỷ luật mà còn bằng niềm vui được hiểu thêm một chút về thế giới.
 section_title: Tinh hoa - nhân loại
 section_link: tinh-hoa-nhan-loai/index.html
-header_subline: Những ý tưởng đẹp, câu nói sâu sắc và bài học bền vững từ nhiều thời đại.
+header_subline: 
 back_link_label: • Tinh hoa - nhân loại
 hero_image: assets/generated/covers/tinh-hoa-nhan-loai/tinh-than-hoc-suot-doi.svg
 output_path: tinh-hoa-nhan-loai/tinh-than-hoc-suot-doi/index.html

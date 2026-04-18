@@ -1967,7 +1967,8 @@ body.site-page .cover-list {
   body.site-page .cover-list article h3 a:hover {
     color: #078fef !important; }
   body.site-page .cover-list article p {
-    font-size: 0.85em;
+    /* khoa: --> site list/card description */
+    font-size: 0.9em;
     line-height: 1.6;
     max-width: 33ch; }
   body.site-page .cover-list .cover-item-body {
@@ -1984,7 +1985,8 @@ body.site-page .cover-list {
   body.site-page .cover-list article h3 {
     font-size: 0.854em; }
   body.site-page .cover-list article p {
-    font-size: 0.7em;
+    /* khoa: --> site list/card description*/
+    font-size: 0.75em;
     line-height: 1.5;
     max-width: none; }
   body.site-page .cover-list .cover-item-body {

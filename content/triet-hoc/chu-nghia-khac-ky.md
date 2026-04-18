@@ -3,7 +3,7 @@ title: Chủ nghĩa Khắc kỷ nhìn nghịch cảnh thế nào
 description: Bình thản không đến từ việc tránh khó khăn mà từ cách ta đáp lại hoàn cảnh.
 section_title: Triết học
 section_link: triet-hoc/index.html
-header_subline: Những câu hỏi lớn về ý nghĩa, tự do, trách nhiệm và cách sống.
+header_subline: 
 back_link_label: • Triết học
 hero_image: assets/generated/covers/triet-hoc/chu-nghia-khac-ky.svg
 output_path: triet-hoc/chu-nghia-khac-ky/index.html

@@ -3,7 +3,7 @@ title: Triết học cho người bận rộn
 description: Không cần đọc dày ngay từ đầu; điều quan trọng là giữ được sợi dây liên hệ với các câu hỏi lớn.
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/index.html
-header_subline: Sách hay là chiếc cầu nối từ hứng thú nhất thời sang năng lực học tập bền vững.
+header_subline: 
 back_link_label: • Tủ sách - nền tảng
 hero_image: assets/generated/covers/tu-sach-nen-tang/triet-hoc-cho-nguoi-ban-ron.svg
 output_path: tu-sach-nen-tang/triet-hoc-cho-nguoi-ban-ron/index.html

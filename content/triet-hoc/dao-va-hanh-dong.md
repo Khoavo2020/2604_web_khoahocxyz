@@ -3,7 +3,7 @@ title: Đạo và hành động không gượng ép
 description: Có những lúc tiến bộ đến từ sự đúng nhịp hơn là từ cố sức hơn.
 section_title: Triết học
 section_link: triet-hoc/index.html
-header_subline: Những câu hỏi lớn về ý nghĩa, tự do, trách nhiệm và cách sống.
+header_subline: 
 back_link_label: • Triết học
 hero_image: assets/generated/covers/triet-hoc/dao-va-hanh-dong.svg
 output_path: triet-hoc/dao-va-hanh-dong/index.html

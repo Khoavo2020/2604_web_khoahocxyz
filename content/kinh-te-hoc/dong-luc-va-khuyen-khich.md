@@ -3,7 +3,7 @@ title: Khuyến khích ảnh hưởng đến hành vi ra sao
 description: Con người phản ứng rất mạnh với cách phần thưởng và chi phí được thiết kế.
 section_title: Kinh tế học
 section_link: kinh-te-hoc/index.html
-header_subline: no-need
+header_subline: 
 back_link_label: • Kinh tế học
 hero_image: assets/generated/covers/kinh-te-hoc/dong-luc-va-khuyen-khich.svg
 output_path: kinh-te-hoc/dong-luc-va-khuyen-khich/index.html

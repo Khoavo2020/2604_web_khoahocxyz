@@ -3,7 +3,7 @@ title: Cách ghi chú để biến việc đọc thành tri thức của mình
 description: Một cuốn sách chỉ thực sự ở lại khi ta biết đối thoại với nó bằng ghi chú.
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/index.html
-header_subline: Sách hay là chiếc cầu nối từ hứng thú nhất thời sang năng lực học tập bền vững.
+header_subline: 
 back_link_label: • Tủ sách - nền tảng
 hero_image: assets/generated/covers/tu-sach-nen-tang/cach-ghi-chu-khi-doc.svg
 output_path: tu-sach-nen-tang/cach-ghi-chu-khi-doc/index.html

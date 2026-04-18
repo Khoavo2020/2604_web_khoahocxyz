@@ -3,7 +3,7 @@ title: Lỡ đâu cả đời này không rực rỡ?
 description: Thế giới này không dành cho những kẻ ngồi yên. 
 section_title: Góc nhìn
 section_link: goc-nhin/index.html
-header_subline: Dòng thời gian
+header_subline: 
 back_link_label: • Góc nhìn
 hero_image: content/goc-nhin/_images/neu-ca-doi-nay-khong-ruc-ro-thi-sao.jpg
 output_path: goc-nhin/neu-ca-doi-nay-khong-ruc-ro-thi-sao/index.html

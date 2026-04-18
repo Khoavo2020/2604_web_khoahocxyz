@@ -4,8 +4,39 @@
 		<title>Tinh hoa - nhân loại - Khoahoc.xyz</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Tuyển chọn các bài viết giàu chất suy ngẫm, cô đọng tinh thần học hỏi và cảm hứng sống." />
+		<meta name="description" content="category-tbd" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<style>
+			#quotes {
+				display: grid;
+				gap: 1.25rem;
+			}
+			.quote-card {
+				background: #ffffff;
+				border: 1px solid #eeeeee;
+				border-radius: 8px;
+				padding: 1rem 1.25rem;
+				box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+			}
+			.quote-vi {
+				color: #222222;
+				font-size: 0.95rem;
+				line-height: 1.6;
+				margin: 0 0 0.35rem 0;
+			}
+			.quote-en {
+				color: #777777;
+				font-size: 0.90rem;
+				line-height: 1.6;
+				margin: 0;
+			}
+			.quote-author {
+				color: #aaaaaa;
+				font-size: 0.85rem;
+				letter-spacing: 0.02em;
+				margin: 0.85rem 0 0 0;
+			}
+		</style>
 	</head>
 	<body class="is-preload site-page">
 		<div id="wrapper">
@@ -14,27 +45,35 @@
 					<header id="header"><div class="logo"><a href="../index.html"><strong>🏠</strong></a> » <a href="./index.html"><strong>Tinh hoa - nhân loại</strong></a> » Túi khôn của nhà thông thái</div><ul class="icons"><li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li></ul></header>
 					
 
-					<section>
-						<div class="cover-list">
-							<article><h3><a href="cau-noi-giup-dung-lai/index.html">Những câu nói hay giúp ta dừng lại một nhịp</a></h3><div class="cover-item-body"><a href="cau-noi-giup-dung-lai/index.html" class="image"><img src="../content/tinh-hoa-nhan-loai/_images/cau-noi-giup-dung-lai.svg" alt=""></a><p>Có những câu ngắn nhưng đủ làm thay đổi nhịp suy nghĩ của cả một ngày.</p></div></article>
-<article><h3><a href="dep-va-sau/index.html">Vì sao con người luôn tìm cái đẹp và cái sâu</a></h3><div class="cover-item-body"><a href="dep-va-sau/index.html" class="image"><img src="../content/tinh-hoa-nhan-loai/_images/dep-va-sau.svg" alt=""></a><p>Ta không chỉ cần sống sót mà còn cần những điều làm đời sống đáng sống hơn.</p></div></article>
-<article><h3><a href="doc-sach-de-lam-gi/index.html">Đọc sách để làm gì ngoài việc biết thêm</a></h3><div class="cover-item-body"><a href="doc-sach-de-lam-gi/index.html" class="image"><img src="../content/tinh-hoa-nhan-loai/_images/doc-sach-de-lam-gi.svg" alt=""></a><p>Một cuốn sách tốt không chỉ cho thông tin mà còn cho ta một cách nhìn khác về đời sống.</p></div></article>
-<article><h3><a href="song-cham-de-thay-ro/index.html">Sống chậm để thấy rõ hơn</a></h3><div class="cover-item-body"><a href="song-cham-de-thay-ro/index.html" class="image"><img src="../content/tinh-hoa-nhan-loai/_images/song-cham-de-thay-ro.svg" alt=""></a><p>Chậm lại không phải để trì hoãn mà để quan sát kỹ hơn điều mình đang sống.</p></div></article>
-<article><h3><a href="tinh-than-hoc-suot-doi/index.html">Tinh thần học suốt đời được nuôi bằng điều gì</a></h3><div class="cover-item-body"><a href="tinh-than-hoc-suot-doi/index.html" class="image"><img src="../content/tinh-hoa-nhan-loai/_images/tinh-than-hoc-suot-doi.svg" alt=""></a><p>Không phải chỉ bằng kỷ luật mà còn bằng niềm vui được hiểu thêm một chút về thế giới.</p></div></article>
+							<!-- Content -->
+								<section>
+									<!-- <header class="main">
+										<h2>Tinh hoa nhân loại</h2>
+									</header>
+
+									<p>Túi khôn của nhà thông thái</p> -->
+
+									<div id="quotes">
+										<p id="quotes-status">Đang tải trích dẫn...</p>
+									</div>
+								</section>
+
 						</div>
-					</section>
-				</div>
-			</div>
+					</div>
 
-			<div id="sidebar">
-				<div class="inner">
-					<section id="search" class="alt">
-						<form method="post" action="#">
-							<input type="text" name="query" id="query" placeholder="Search" />
-						</form>
-					</section>
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
 
-					<nav id="menu">
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
 						<header class="major">
 							<h2>Menu</h2>
 						</header>
@@ -62,5 +101,85 @@
 		<script src="../assets/js/breakpoints.min.js"></script>
 		<script src="../assets/js/util.js"></script>
 		<script src="../assets/js/main.js"></script>
+			<script>
+				document.addEventListener('DOMContentLoaded', () => {
+					const quotesRoot = '../data/tinh-hoa-nhan-loai/quotes';
+					const statusEl = document.getElementById('quotes-status');
+					const container = document.getElementById('quotes');
+
+					const hasNonAscii = (text) => /[^\x00-\x7F]/.test(text);
+
+					fetch(`${quotesRoot}/manifest.json`)
+						.then((res) => {
+							if (!res.ok) {
+								throw new Error('Không tìm thấy manifest.json');
+							}
+							return res.json();
+						})
+						.then((files) => Promise.all(
+							files.map((file) => fetch(`${quotesRoot}/${encodeURIComponent(file)}`)
+								.then((res) => res.ok ? res.text() : '')
+								.then((text) => ({ file, text }))
+							)
+						))
+						.then((items) => {
+							const fragments = document.createDocumentFragment();
+
+							items.forEach(({ text }) => {
+								const lines = text
+									.split(/\r?\n/)
+									.map((line) => line.trim())
+									.filter(Boolean)
+									.slice(0, 3);
+
+								if (lines.length < 2) {
+									return;
+								}
+
+								let [line1, line2, author] = [lines[0] || '', lines[1] || '', lines[2] || ''];
+								let vietnamese = line1;
+								let english = line2;
+
+								if (!hasNonAscii(line1) && hasNonAscii(line2)) {
+									vietnamese = line2;
+									english = line1;
+								}
+
+								const wrapper = document.createElement('div');
+								wrapper.className = 'quote-card';
+
+								const viEl = document.createElement('div');
+								viEl.className = 'quote-vi';
+								viEl.textContent = vietnamese;
+
+								const enEl = document.createElement('div');
+								enEl.className = 'quote-en';
+								enEl.textContent = english;
+
+								wrapper.appendChild(viEl);
+								wrapper.appendChild(enEl);
+
+								if (author) {
+									const authorEl = document.createElement('div');
+									authorEl.className = 'quote-author';
+									authorEl.textContent = author;
+									wrapper.appendChild(authorEl);
+								}
+								fragments.appendChild(wrapper);
+							});
+
+							if (statusEl) {
+								statusEl.remove();
+							}
+							container.appendChild(fragments);
+						})
+						.catch(() => {
+							if (statusEl) {
+								statusEl.textContent = 'Không thể tải trích dẫn.';
+							}
+						});
+				});
+			</script>
+
 	</body>
 </html>

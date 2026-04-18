@@ -3,7 +3,7 @@ title: Những câu nói hay giúp ta dừng lại một nhịp
 description: Có những câu ngắn nhưng đủ làm thay đổi nhịp suy nghĩ của cả một ngày.
 section_title: Tinh hoa - nhân loại
 section_link: tinh-hoa-nhan-loai/index.html
-header_subline: Những ý tưởng đẹp, câu nói sâu sắc và bài học bền vững từ nhiều thời đại.
+header_subline: 
 back_link_label: • Tinh hoa - nhân loại
 hero_image: assets/generated/covers/tinh-hoa-nhan-loai/cau-noi-giup-dung-lai.svg
 output_path: tinh-hoa-nhan-loai/cau-noi-giup-dung-lai/index.html

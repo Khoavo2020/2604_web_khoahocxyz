@@ -3,7 +3,7 @@ title: Giấc ngủ ảnh hưởng đến trí nhớ thế nào
 description: Ngủ không chỉ để nghỉ mà còn để não bộ củng cố điều đã học.
 section_title: Khoa học
 section_link: khoa-hoc/index.html
-header_subline: Giải thích thế giới bằng những ý tưởng đơn giản, rõ ràng và có thể kiểm chứng.
+header_subline: 
 back_link_label: • Khoa học
 hero_image: assets/generated/covers/khoa-hoc/giac-ngu-va-tri-nho.svg
 output_path: khoa-hoc/giac-ngu-va-tri-nho/index.html

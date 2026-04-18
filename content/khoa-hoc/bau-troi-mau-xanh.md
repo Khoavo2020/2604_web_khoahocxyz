@@ -3,32 +3,38 @@ title: Vì sao bầu trời có màu xanh
 description: Hiện tượng quen thuộc này là một bài học đẹp về ánh sáng và khí quyển.
 section_title: Khoa học
 section_link: khoa-hoc/index.html
-header_subline: Giải thích thế giới bằng những ý tưởng đơn giản, rõ ràng và có thể kiểm chứng.
+header_subline: 
 back_link_label: • Khoa học
 hero_image: assets/generated/covers/khoa-hoc/bau-troi-mau-xanh.svg
 output_path: khoa-hoc/bau-troi-mau-xanh/index.html
 ---
 
-Khoa học có giá trị ở chỗ nó biến những điều tưởng như xa vời thành điều ai cũng có thể hiểu và áp dụng.
+# Chờ nhau Lẳng lơ
 
-Hiện tượng quen thuộc này là một bài học đẹp về ánh sáng và khí quyển.
+Láng giềng đã đỏ đèn đâu?
 
-### Góc nhìn chính
 
-Vì sao bầu trời có màu xanh gợi ý rằng điều quan trọng không chỉ nằm ở thông tin bề mặt mà còn ở cách ta diễn giải và áp dụng nó vào đời sống.
+Chờ em ăn dập miếng giầu, em sang.
 
-### Ba ý nên nhớ
 
-- đi từ hiện tượng quen thuộc đến nguyên lý nền tảng
-- giữ cách giải thích ngắn gọn và dễ hình dung
-- khuyến khích người đọc đặt thêm câu hỏi sau khi hiểu điều cơ bản
+Đôi ta cùng ở một làng,
 
-### Gợi ý áp dụng
 
-Thay vì cố nhớ mọi chi tiết ngay lập tức, hãy giữ lại một ý chính, một ví dụ gần gũi và một hành động nhỏ có thể thử ngay trong tuần này.
+Cùng chung một ngõ, vội vàng chi anh?
 
-> Học tốt không bắt đầu từ việc biết thật nhiều, mà từ việc hiểu rõ thêm một điều và sống khác đi một chút.
 
-### Kết luận
+Em nghe họ nói mong manh,
 
-Khi đọc về chủ đề này, mục tiêu không phải là có ngay câu trả lời cuối cùng mà là nhìn thế giới và chính mình sáng rõ hơn từng chút một.
+
+Hình như họ biết chúng mình... với nhau.
+[1]
+
+
+
+
+Ai làm cả gió đắt cau?
+
+
+Mấy hôm sương muối cho giầu đổ non?
+
+> *1937*

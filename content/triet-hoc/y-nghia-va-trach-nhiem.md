@@ -3,7 +3,7 @@ title: Ý nghĩa thường đi cùng trách nhiệm
 description: Điều làm đời sống sâu sắc hơn cũng thường đòi hỏi ta trưởng thành hơn.
 section_title: Triết học
 section_link: triet-hoc/index.html
-header_subline: Những câu hỏi lớn về ý nghĩa, tự do, trách nhiệm và cách sống.
+header_subline: 
 back_link_label: • Triết học
 hero_image: assets/generated/covers/triet-hoc/y-nghia-va-trach-nhiem.svg
 output_path: triet-hoc/y-nghia-va-trach-nhiem/index.html

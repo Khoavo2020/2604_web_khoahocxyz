@@ -3,7 +3,7 @@ title: Chi phí cơ hội trong đời sống hằng ngày
 description: Mỗi lựa chọn đều có một cái giá vô hình là thứ ta bỏ lỡ khi chọn phương án khác.
 section_title: Kinh tế học
 section_link: kinh-te-hoc/index.html
-header_subline: no-need
+header_subline: 
 back_link_label: • Kinh tế học
 hero_image: assets/generated/covers/kinh-te-hoc/chi-phi-co-hoi-trong-doi-song.svg
 output_path: kinh-te-hoc/chi-phi-co-hoi-trong-doi-song/index.html
