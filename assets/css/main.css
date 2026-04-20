@@ -2074,8 +2074,8 @@ body.site-page .cover-list {
   flex-shrink: 1;
   width: 100%; }
   #main > .inner {
-    padding: 0 6em 0.1em 6em ;
-    margin: 0 auto;
+    padding: 0 4em 0.1em 4em ;
+    margin: 0;
     max-width: 110em; }
     #main > .inner > section {
       padding: 1.17em 0 0.79em 0 ;
@@ -2095,17 +2095,20 @@ body.site-page .cover-list {
           border-top: 0 !important; }
   @media screen and (max-width: 1680px) {
     #main > .inner {
-      padding: 0 5em 0.1em 5em ; }
+      padding: 0 3em 0.1em 3em ;
+      margin: 0; }
       #main > .inner > section {
         padding: 1.09em 0 0.71em 0 ; } }
   @media screen and (max-width: 1280px) {
     #main > .inner {
-      padding: 0 4em 0.1em 4em ; }
+      padding: 0 2em 0.1em 2em ;
+      margin: 0; }
       #main > .inner > section {
         padding: 0.97em 0 0.63em 0 ; } }
   @media screen and (max-width: 736px) {
     #main > .inner {
-      padding: 0 2em 0.1em 2em ; }
+      padding: 0 1em 0.1em 1.5em ;
+      margin: 0; }
       #main > .inner > section {
         padding: 0.83em 0 0.41em 0 ; } }
 
@@ -2236,7 +2239,7 @@ body.article-page #main > .inner > section.article-content > .markdown-paragraph
       border-bottom: 0;
       margin: -1.11em 0 1.49em -1.11em;
       padding: 1.11em;
-      width: calc(100% + 4.44444em); }
+      width: calc(100% + 2.22222em); }
   #sidebar .toggle {
     text-decoration: none;
     -moz-transition: left 0.5s ease;
@@ -2247,7 +2250,7 @@ body.article-page #main > .inner > section.article-content > .markdown-paragraph
     border: 0;
     display: block;
     height: 7.5em;
-    left: 26em;
+    left: 25.25em;
     line-height: 7.5em;
     outline: 0;
     overflow: hidden;
@@ -2290,10 +2293,10 @@ body.article-page #main > .inner > section.article-content > .markdown-paragraph
         #sidebar > .inner > .alt {
           margin: -0.91em 0 1.27em -0.91em;
           padding: 0.91em;
-          width: calc(100% + 3.33333em); }
+          width: calc(100% + 1.81818em); }
       #sidebar .toggle {
         height: 6.25em;
-        left: 24em;
+        left: 23.25em;
         line-height: 6.25em;
         text-indent: 5em;
         width: 5em; }
@@ -2325,6 +2328,7 @@ body.article-page #main > .inner > section.article-content > .markdown-paragraph
           height: 4em;
           width: 100%; }
       #sidebar .toggle {
+        left: 22em;
         text-indent: 6em;
         width: 6em; }
         #sidebar .toggle:before {

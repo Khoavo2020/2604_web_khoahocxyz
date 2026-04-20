@@ -1,27 +1,348 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Góc nhìn - Khoahoc.xyz</title>
+		<title>Lịch âm dương - Khoahoc.xyz</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Chuyên mục tập hợp các bài viết dạng góc nhìn, dòng thời gian và suy ngẫm ngắn về đời sống, văn hóa và tâm lý." />
+		<meta name="description" content="Lịch âm dương theo tháng với giao diện đơn giản, dễ đọc trên desktop và mobile." />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<style>
+			:root {
+				--calendar-accent: #34c13a;
+				--calendar-accent-soft: #eefbea;
+				--calendar-line: #d8dde3;
+				--calendar-paper: #ffffff;
+				--calendar-paper-soft: #fbfbfb;
+				--calendar-sunday: #d05058;
+				--calendar-text: #1f2a37;
+				--calendar-muted: #8f98a3;
+			}
+
+			.calendar-page {
+				max-width: 72rem;
+			}
+
+			.calendar-quote {
+				background: #fbfcfd;
+				border: 1px solid var(--calendar-line);
+				border-radius: 0.85rem;
+				color: #4f5b66;
+				font-style: italic;
+				margin: 0 0 1.25rem 0;
+				padding: 0.95rem 1.1rem;
+			}
+
+			.calendar-quote p {
+				margin: 0;
+			}
+
+			.calendar-shell {
+				background: var(--calendar-paper);
+				border: 1px solid var(--calendar-line);
+				border-radius: 1rem;
+				box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+				overflow: hidden;
+			}
+
+			.calendar-toolbar {
+				align-items: center;
+				background: linear-gradient(180deg, #ffffff 0%, #fafcfa 100%);
+				border-bottom: 1px solid var(--calendar-line);
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1rem;
+				justify-content: space-between;
+				padding: 1.1rem;
+			}
+
+			.calendar-selects {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.9rem;
+				width: 100%;
+			}
+
+			.calendar-select {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				background: #ffffff;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23929ba5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+				background-position: right 0.95rem center;
+				background-repeat: no-repeat;
+				background-size: 1rem;
+				border: 1px solid var(--calendar-line);
+				border-radius: 0.8rem;
+				box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+				color: var(--calendar-text);
+				font-size: 1.05rem;
+				height: auto;
+				min-width: 12rem;
+				padding: 0.85rem 2.6rem 0.85rem 1rem;
+			}
+
+			.calendar-select-month {
+				flex: 0 1 12rem;
+			}
+
+			.calendar-select-year {
+				flex: 0 1 12rem;
+				margin-left: auto;
+			}
+
+			.calendar-actions {
+				align-items: center;
+				display: flex;
+				gap: 0.75rem;
+			}
+
+			.calendar-button {
+				background: linear-gradient(180deg, #f8fff6 0%, #e8f8e4 100%);
+				border: 1px solid #8fd18c;
+				border-radius: 0.8rem;
+				box-shadow: 0 3px 10px rgba(52, 193, 58, 0.14);
+				color: #29942f;
+				cursor: pointer;
+				font-family: "Roboto Slab", serif;
+				font-size: 0.95rem;
+				font-weight: 700;
+				letter-spacing: 0.03em;
+				padding: 0.85rem 1.35rem;
+				text-transform: uppercase;
+			}
+
+			.calendar-meta {
+				color: #6c7680;
+				font-size: 0.95rem;
+				padding: 1rem 1.1rem 0 1.1rem;
+			}
+
+			.calendar-weekdays,
+			.calendar-grid {
+				display: grid;
+				grid-template-columns: repeat(7, minmax(0, 1fr));
+			}
+
+			.calendar-weekdays {
+				border-top: 1px solid var(--calendar-line);
+			}
+
+			.calendar-weekday {
+				border-right: 1px solid var(--calendar-line);
+				color: #2e3640;
+				font-size: 0.94rem;
+				letter-spacing: 0.03em;
+				padding: 1rem 0.75rem;
+				text-align: center;
+				text-transform: uppercase;
+			}
+
+			.calendar-weekday:last-child {
+				border-right: 0;
+			}
+
+			.calendar-weekday.is-sunday {
+				color: var(--calendar-sunday);
+			}
+
+			.calendar-grid {
+				background: var(--calendar-paper);
+			}
+
+			.calendar-day {
+				background: #ffffff;
+				border-right: 1px solid var(--calendar-line);
+				border-top: 1px solid var(--calendar-line);
+				display: flex;
+				flex-direction: column;
+				gap: 0.35rem;
+				/* khoa: -->: <size of calendar cell height> */
+				min-height: 4rem;
+				padding: 0.8rem 0.75rem;
+				position: relative;
+			}
+
+			.calendar-day:nth-child(7n) {
+				border-right: 0;
+			}
+
+			.calendar-day.is-other-month {
+				background: var(--calendar-paper-soft);
+			}
+
+			.calendar-day.is-other-month .solar-day,
+			.calendar-day.is-other-month .lunar-day {
+				color: #b6bdc5;
+			}
+
+			.calendar-day.is-sunday .solar-day,
+			.calendar-day.is-sunday .lunar-day {
+				color: var(--calendar-sunday);
+			}
+
+			.calendar-day.is-today {
+				background: var(--calendar-accent);
+				box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+			}
+
+			.calendar-day.is-today .solar-day,
+			.calendar-day.is-today .lunar-day,
+			.calendar-day.is-today .day-note {
+				color: #ffffff;
+			}
+
+			.solar-day {
+				color: var(--calendar-text);
+				/* khoa: -->: <size of solar day number> */
+				font-size: 1.5rem;
+				font-weight: 700;
+				line-height: 1;
+			}
+
+			.lunar-day {
+				align-self: flex-end;
+				color: #313944;
+				font-size: 1.15rem;
+				line-height: 1;
+				margin-top: auto;
+			}
+
+			.day-note {
+				color: var(--calendar-muted);
+				font-size: 0.76rem;
+				letter-spacing: 0.02em;
+			}
+
+			.calendar-legend {
+				color: #6c7680;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1rem;
+				padding: 1rem 1.1rem 1.2rem 1.1rem;
+			}
+
+			.calendar-legend span {
+				align-items: center;
+				display: inline-flex;
+				gap: 0.45rem;
+			}
+
+			.calendar-legend i {
+				border-radius: 999px;
+				display: inline-block;
+				height: 0.85rem;
+				width: 0.85rem;
+			}
+
+			.legend-today {
+				background: var(--calendar-accent);
+			}
+
+			.legend-muted {
+				background: #eef1f4;
+				border: 1px solid #d7dce1;
+			}
+
+			@media screen and (max-width: 980px) {
+				.calendar-page {
+					max-width: none;
+				}
+
+				.calendar-toolbar {
+					align-items: stretch;
+				}
+
+				.calendar-actions {
+					width: 100%;
+				}
+
+				.calendar-button {
+					width: 100%;
+				}
+			}
+
+			@media screen and (max-width: 736px) {
+				.calendar-heading h1 {
+					font-size: 1.55rem;
+				}
+
+				.calendar-select {
+					min-width: 0;
+					width: 100%;
+				}
+
+				.calendar-selects {
+					width: 100%;
+				}
+
+				.calendar-selects > * {
+					flex: 1 1 100%;
+				}
+
+				.calendar-select-year {
+					margin-left: 0;
+				}
+
+				.calendar-weekday {
+					font-size: 0.73rem;
+					padding: 0.75rem 0.25rem;
+				}
+
+				.calendar-day {
+					/* khoa: -->: <size of calendar cell height on mobile> */
+					min-height: 4rem;
+					padding: 0.6rem 0.45rem;
+				}
+
+				.solar-day {
+					/* khoa: -->: <size of solar day number on mobile> */
+					font-size: 1.1rem;
+				}
+
+				.lunar-day {
+					font-size: 0.92rem;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload site-page">
 		<div id="wrapper">
 			<div id="main">
 				<div class="inner">
-					<header id="header"><div class="logo"><a href="../index.html"><strong>🏠</strong></a> » <a href="./index.html"><strong>Góc nhìn</strong></a> » Dòng thời gian</div><ul class="icons"><li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li><li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li></ul></header>
-					
+					<header id="header">
+						<div class="logo">
+							<a href="../index.html"><strong>🏠 xyz</strong></a>:
+							» <a href="./index.html"><strong>Lịch âm dương</strong></a> » xem âm lịch
+						</div>
+						<ul class="icons">
+							<li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="./index.html" class="icon solid fa-calendar-alt"><span class="label">Lịch âm dương</span></a></li>
+						</ul>
+					</header>
 
-					<section>
-						<div class="cover-list">
-							<article><h3><a href="cach-xem-phim-sex-phim-nguoi-lon-2026/index.html">cách xem phim sex, cách xem phim người lớn 2026, phim 18 +</a></h3><div class="cover-item-body"><a href="cach-xem-phim-sex-phim-nguoi-lon-2026/index.html" class="image"><img src="../content/goc-nhin/_images/cach-xem-phim-sex-cach-xem-phim-nguoi-lon-2026.svg" alt=""></a><p>cách xem phim sex, cách xem phim người lớn 2026, phim 18 +</p></div></article>
-<article><h3><a href="sieu-du-bao/index.html">Siêu dự báo</a></h3><div class="cover-item-body"><a href="sieu-du-bao/index.html" class="image"><img src="../content/goc-nhin/_images/hai-dao-tu-than.svg" alt=""></a><p>Sinh vật có não là để dự đoán tương lai</p></div></article>
-<article><h3><a href="neu-ca-doi-nay-khong-ruc-ro-thi-sao/index.html">Lỡ đâu cả đời này không rực rỡ?</a></h3><div class="cover-item-body"><a href="neu-ca-doi-nay-khong-ruc-ro-thi-sao/index.html" class="image"><img src="../content/goc-nhin/_images/neu-ca-doi-nay-khong-ruc-ro-thi-sao.jpg" alt=""></a><p>Thế giới này không dành cho những kẻ ngồi yên.</p></div></article>
-<article><h3><a href="sieu-du-bao/index.html">Siêu dự báo</a></h3><div class="cover-item-body"><a href="sieu-du-bao/index.html" class="image"><img src="../content/goc-nhin/_images/sieu-du-bao.svg" alt=""></a><p>Sinh vật có não là để dự đoán tương lai</p></div></article>
-<article><h3><a href="tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac/index.html">Tâm lý học đám đông với thần tượng âm nhạc</a></h3><div class="cover-item-body"><a href="tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac/index.html" class="image"><img src="../content/goc-nhin/_images/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.jpg" alt=""></a><p>Tâm lý học đám đông với thần tượng âm nhạc (fandom) là hiện tượng cá nhân hòa mình vào tập thể, đánh mất nhận định riêng để hành động theo số đông</p></div></article>
-<article><h3><a href="trich-diem/index.html">Siêu dự báo</a></h3><div class="cover-item-body"><a href="trich-diem/index.html" class="image"><img src="../content/goc-nhin/_images/trich-diem.svg" alt=""></a><p>Sinh vật có não là để dự đoán tương lai</p></div></article>
+					<section class="calendar-page">
+						<div class="calendar-quote">
+							<p>Ở đời muôn sự của chung, thời gian ngày tháng là riêng của mình..</p>
+						</div>
+						<div class="calendar-actions">
+							<!-- <button id="today-button" class="calendar-button" type="button">Hôm nay</button> -->
+						</div>
+
+						<div class="calendar-shell">
+							<div class="calendar-toolbar">
+								<div class="calendar-selects">
+									<select id="month-select" class="calendar-select calendar-select-month" aria-label="Chọn tháng"></select>
+									<select id="year-select" class="calendar-select calendar-select-year" aria-label="Chọn năm"></select>
+								</div>
+							</div>
+
+							<div id="calendar-meta" class="calendar-meta"></div>
+							<div id="calendar-weekdays" class="calendar-weekdays"></div>
+							<div id="calendar-grid" class="calendar-grid"></div>
+							<div class="calendar-legend">
+								<!-- <span><i class="legend-today"></i> Hôm nay</span> -->
+								<!-- <span><i class="legend-muted"></i> Ngày ngoài tháng đang xem</span> -->
+							</div>
 						</div>
 					</section>
 				</div>
@@ -44,9 +365,26 @@
 							<li><a href="../khoa-hoc/index.html">🔭 Khoa học</a></li>
 							<li><a href="../kinh-te-hoc/index.html">💰 Kinh tế học</a></li>
 							<li><a href="../tam-ly-hoc/index.html">🧠 Tâm lý học</a></li>
-							<li><a href="../triet-hoc/index.html">🏛 Triết học</a></li>
+							<li>
+								<a href="../triet-hoc/index.html" class="opener">🏛 Triết học</a>
+								<ul>
+									<li><a href="../triet-hoc/phuong-dong/index.html">Phương Đông</a></li>
+									<li><a href="../triet-hoc/phuong-tay/index.html">Phương Tây</a></li>
+									<li><a href="../triet-hoc/tho-viet-nam/index.html">Thơ việt nam</a></li>
+									<li><a href="../triet-hoc/tho-nuoc-ngoai/index.html">Thơ nước ngoài</a></li>
+								</ul>
+							</li>
 							<li><a href="../tinh-hoa-nhan-loai/index.html">🧭 Tinh hoa - nhân loại</a></li>
-							<li><a href="../tu-sach-nen-tang/index.html">📚 Tủ sách - nền tảng</a></li>
+							<li>
+								<a href="../tu-sach-nen-tang/index.html" class="opener">📚 Tủ sách - nền tảng</a>
+								<ul>
+									<li><a href="../tu-sach-nen-tang/sach-khoa-hoc/index.html">Sách Khoa học</a></li>
+									<li><a href="../tu-sach-nen-tang/sach-kinh-te-hoc/index.html">Sách kinh tế học</a></li>
+									<li><a href="../tu-sach-nen-tang/sach-tam-ly-hoc/index.html">Sách tâm lý học</a></li>
+									<li><a href="../tu-sach-nen-tang/sach-triet-hoc/index.html">Sách triết học</a></li>
+									<li><a href="../tu-sach-nen-tang/sach-xyz/index.html">Sách chọn lọc</a></li>
+								</ul>
+							</li>
 							<li><a href="../ung-dung-nang-suat/index.html">📱 Ứng dụng - năng suất</a></li>
 						</ul>
 					</nav>
@@ -63,5 +401,163 @@
 		<script src="../assets/js/breakpoints.min.js"></script>
 		<script src="../assets/js/util.js"></script>
 		<script src="../assets/js/main.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				var weekdayLabels = [
+					'Thứ hai',
+					'Thứ ba',
+					'Thứ tư',
+					'Thứ năm',
+					'Thứ sáu',
+					'Thứ bảy',
+					'Chủ nhật'
+				];
+				var monthSelect = document.getElementById('month-select');
+				var yearSelect = document.getElementById('year-select');
+				var todayButton = document.getElementById('today-button');
+				var metaEl = document.getElementById('calendar-meta');
+				var weekdaysEl = document.getElementById('calendar-weekdays');
+				var gridEl = document.getElementById('calendar-grid');
+				var today = new Date();
+				var viewYear = today.getFullYear();
+				var viewMonth = today.getMonth();
+				var lunarFormatter;
+
+				try {
+					lunarFormatter = new Intl.DateTimeFormat('en-u-ca-chinese', {
+						day: 'numeric',
+						month: 'numeric'
+					});
+				}
+				catch (error) {
+					lunarFormatter = null;
+				}
+
+				function buildSelects() {
+					var monthOptions = '';
+					var startYear = today.getFullYear() - 30;
+					var endYear = today.getFullYear() + 30;
+					var yearOptions = '';
+					var month;
+					var year;
+
+					for (month = 0; month < 12; month += 1)
+						monthOptions += '<option value="' + month + '">Tháng ' + (month + 1) + '</option>';
+
+					for (year = startYear; year <= endYear; year += 1)
+						yearOptions += '<option value="' + year + '">Năm ' + year + '</option>';
+
+					monthSelect.innerHTML = monthOptions;
+					yearSelect.innerHTML = yearOptions;
+				}
+
+				function buildWeekdays() {
+					weekdaysEl.innerHTML = weekdayLabels.map(function (label, index) {
+						var sundayClass = index === 6 ? ' is-sunday' : '';
+						return '<div class="calendar-weekday' + sundayClass + '">' + label + '</div>';
+					}).join('');
+				}
+
+				function normalizeMondayFirst(dayIndex) {
+					return (dayIndex + 6) % 7;
+				}
+
+				function isSameDate(a, b) {
+					return a.getFullYear() === b.getFullYear()
+						&& a.getMonth() === b.getMonth()
+						&& a.getDate() === b.getDate();
+				}
+
+				function getLunarLabel(date) {
+					var parts;
+					var lunarDay;
+					var lunarMonth;
+
+					if (!lunarFormatter)
+						return '';
+
+					parts = lunarFormatter.formatToParts(date);
+					lunarDay = parts.find(function (part) { return part.type === 'day'; });
+					lunarMonth = parts.find(function (part) { return part.type === 'month'; });
+
+					if (!lunarDay || !lunarMonth)
+						return '';
+
+					if (Number(lunarDay.value) === 1)
+						return lunarDay.value + '/' + lunarMonth.value;
+
+					return lunarDay.value;
+				}
+
+				function getMetaText(year, month) {
+					var baseText = 'Tháng ' + (month + 1) + ' năm ' + year;
+
+					if (!lunarFormatter)
+						return baseText + ' · Trình duyệt hiện tại chưa hỗ trợ hiển thị ngày âm.';
+
+					return baseText;
+				}
+
+				function renderCalendar(year, month) {
+					var firstDay = new Date(year, month, 1);
+					var startOffset = normalizeMondayFirst(firstDay.getDay());
+					var gridStart = new Date(year, month, 1 - startOffset);
+					var html = '';
+					var i;
+
+					monthSelect.value = String(month);
+					yearSelect.value = String(year);
+					metaEl.textContent = getMetaText(year, month);
+
+					for (i = 0; i < 42; i += 1) {
+						var current = new Date(gridStart.getFullYear(), gridStart.getMonth(), gridStart.getDate() + i);
+						var inCurrentMonth = current.getMonth() === month;
+						var isSunday = current.getDay() === 0;
+						var isToday = isSameDate(current, today);
+						var classNames = ['calendar-day'];
+						var note = '';
+
+						if (!inCurrentMonth)
+							classNames.push('is-other-month');
+						if (isSunday)
+							classNames.push('is-sunday');
+						if (isToday)
+							classNames.push('is-today');
+						/* if (current.getDate() === 1)
+							note = 'Đầu tháng';  */ 
+
+						html += [
+							'<div class="' + classNames.join(' ') + '">',
+							'<div class="solar-day">' + current.getDate() + '</div>',
+							note ? '<div class="day-note">' + note + '</div>' : '<div class="day-note"></div>',
+							'<div class="lunar-day">' + getLunarLabel(current) + '</div>',
+							'</div>'
+						].join('');
+					}
+
+					gridEl.innerHTML = html;
+				}
+
+				buildSelects();
+				buildWeekdays();
+				renderCalendar(viewYear, viewMonth);
+
+				monthSelect.addEventListener('change', function () {
+					viewMonth = Number(monthSelect.value);
+					renderCalendar(viewYear, viewMonth);
+				});
+
+				yearSelect.addEventListener('change', function () {
+					viewYear = Number(yearSelect.value);
+					renderCalendar(viewYear, viewMonth);
+				});
+
+				todayButton.addEventListener('click', function () {
+					viewYear = today.getFullYear();
+					viewMonth = today.getMonth();
+					renderCalendar(viewYear, viewMonth);
+				});
+			});
+		</script>
 	</body>
 </html>
