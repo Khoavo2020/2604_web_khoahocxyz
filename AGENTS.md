@@ -52,10 +52,10 @@ Các nhóm trang chính hiện tại:
 
 Các trang con có thể mở rộng:
 - `goc-nhin`
-- `triet-hoc/_sub_phuong-dong`
-- `triet-hoc/_sub_phuong-tay`
-- `triet-hoc/_sub_tho-viet-nam`
-- `triet-hoc/_sub_tho-nuoc-ngoai`
+- `triet-hoc/01_sub_phuong-dong`
+- `triet-hoc/01_sub_phuong-tay`
+- `triet-hoc/01_sub_tho-viet-nam`
+- `triet-hoc/01_sub_tho-nuoc-ngoai`
 - `tu-sach-nen-tang/sach-khoa-hoc`
 - `tu-sach-nen-tang/sach-kinh-te-hoc`
 - `tu-sach-nen-tang/sach-tam-ly-hoc`
@@ -65,7 +65,7 @@ Các trang con có thể mở rộng:
 ### Cấu trúc hình ảnh
 
 - `assets/images/` - Chỉ chứa hình ảnh dùng chung (category thumbnails, banners, etc.)
-- `content/[category]/_images/[article].jpg` - Hình ảnh của từng bài viết cụ thể
+- `content/[category]/01_images/[article].jpg` - Hình ảnh của từng bài viết cụ thể
 
 ### Definition of good output
 

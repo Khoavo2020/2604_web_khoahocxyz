@@ -129,9 +129,9 @@ def render_title_lines(title: str) -> str:
 def resolve_cover_path(source_path: Path) -> Path:
     parts = source_path.relative_to(CONTENT_ROOT).parts
     category_slug = parts[0]
-    if len(parts) > 2 and parts[1].startswith("_sub_"):
-        return CONTENT_ROOT / category_slug / parts[1] / "_images" / f"{source_path.stem}.svg"
-    return CONTENT_ROOT / category_slug / "_images" / f"{source_path.stem}.svg"
+    if len(parts) > 2 and parts[1].startswith("01_sub_"):
+        return CONTENT_ROOT / category_slug / parts[1] / "01_images" / f"{source_path.stem}.svg"
+    return CONTENT_ROOT / category_slug / "01_images" / f"{source_path.stem}.svg"
 
 
 def replace_text_node_content(svg: str, index: int, text: str) -> str:

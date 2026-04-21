@@ -144,7 +144,7 @@ def build_markdown(category_slug: str, slug: str, title: str, description: str) 
         f"section_link: {category_slug}/index.html",
         f"header_subline: {section['tagline']}",
         f"back_link_label: • {section['title']}",
-        f"hero_image: content/{category_slug}/_images/{slug}.svg",
+        f"hero_image: content/{category_slug}/01_images/{slug}.svg",
         f"output_path: {category_slug}/{slug}/index.html",
         "---",
         "",

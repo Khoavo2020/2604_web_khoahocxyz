@@ -5,7 +5,7 @@ section_title: Trend
 section_link: trend/index.html
 header_subline: 
 back_link_label: • Trend
-hero_image: content/trend/_images/cach-xem-phim-sex-phim-nguoi-lon-2026.jpg
+hero_image: content/trend/01_images/cach-xem-phim-sex-phim-nguoi-lon-2026.jpg
 output_path: trend/cach-xem-phim-sex-phim-nguoi-lon-2026/index.html
 ---
 Tải trình duyệt web Opera trên PC hoặc App điện thoại

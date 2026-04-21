@@ -2,11 +2,11 @@
 title: Triết học phương Đông - sự hòa hợp giữa con người và thiên nhiên, đạo đức nhân sinh, và tâm linh
 description: Nhìn nhận vũ trụ và con người trong một chỉnh thể thống nhất, không tách rời.
 section_title: Triết học
-section_link: triet-hoc/_sub_phuong-dong/index.html
+section_link: triet-hoc/01_sub_phuong-dong/index.html
 header_subline: 
 back_link_label: • phuong-dong
 hero_image: -
-output_path: triet-hoc/_sub_phuong-dong/phan-tich-logic-va-duy-ly/index.html
+output_path: triet-hoc/01_sub_phuong-dong/phan-tich-logic-va-duy-ly/index.html
 ---
 
 Triết học Ấn Độ: Nhấn mạnh tâm linh, sự giải thoát (Moksha), 

@@ -27,28 +27,28 @@ HOMEPAGE_SECTION_CONFIG = [
 CATEGORY_CHILD_PAGES = {
     "triet-hoc": [
         {
-            "slug": "_sub_phuong-dong",
+            "slug": "01_sub_phuong-dong",
             "title": "Phương Đông",
             "description": "Đạo, vô vi, tu dưỡng và cách sống hài hòa với tự nhiên.",
-            "href": "triet-hoc/_sub_phuong-dong/index.html",
+            "href": "triet-hoc/01_sub_phuong-dong/index.html",
         },
         {
-            "slug": "_sub_phuong-tay",
+            "slug": "01_sub_phuong-tay",
             "title": "Phương Tây",
             "description": "Logic, đạo đức học và những câu hỏi về tự do con người.",
-            "href": "triet-hoc/_sub_phuong-tay/index.html",
+            "href": "triet-hoc/01_sub_phuong-tay/index.html",
         },
         {
-            "slug": "_sub_tho-viet-nam",
+            "slug": "01_sub_tho-viet-nam",
             "title": "Thơ Việt Nam",
             "description": "Những bài thơ gợi mở về thân phận, tình yêu và thời gian.",
-            "href": "triet-hoc/_sub_tho-viet-nam/index.html",
+            "href": "triet-hoc/01_sub_tho-viet-nam/index.html",
         },
         {
-            "slug": "_sub_tho-nuoc-ngoai",
+            "slug": "01_sub_tho-nuoc-ngoai",
             "title": "Thơ nước ngoài",
             "description": "Những bài thơ kinh điển mở rộng cảm thức về nhân sinh.",
-            "href": "triet-hoc/_sub_tho-nuoc-ngoai/index.html",
+            "href": "triet-hoc/01_sub_tho-nuoc-ngoai/index.html",
         },
     ]
 }
@@ -216,9 +216,9 @@ def article_section_key(source_path: Path) -> str:
 def article_image_dir(source_path: Path) -> Path:
     parts = source_path.relative_to(CONTENT_ROOT).parts
     category_slug = parts[0]
-    if len(parts) > 2 and parts[1].startswith("_sub_"):
-        return CONTENT_ROOT / category_slug / parts[1] / "_images"
-    return CONTENT_ROOT / category_slug / "_images"
+    if len(parts) > 2 and parts[1].startswith("01_sub_"):
+        return CONTENT_ROOT / category_slug / parts[1] / "01_images"
+    return CONTENT_ROOT / category_slug / "01_images"
 
 
 def find_content_image(source_path: Path) -> str:
