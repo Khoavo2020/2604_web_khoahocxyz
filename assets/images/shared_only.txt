@@ -1,0 +1,95 @@
+{
+    "generatedAt":  "2026-03-16T00:50:41",
+    "categories":  [
+                       {
+                           "id":  "sach-khoa-hoc",
+                           "title":  "Sách Khoa học",
+                           "items":  [
+                                         {
+                                             "file":  "Life_3.0-Loai_nguoi_trong_ky_nguyen_tri_tue_nhan_tao-Max_Tegmark.epub",
+                                             "ext":  "epub",
+                                             "size":  6559019
+                                         },
+                                         {
+                                             "file":  "nickBostrom_SuperIntelligence_SieuTriTue_vn.pdf",
+                                             "ext":  "pdf",
+                                             "size":  8744904
+                                         },
+                                         {
+                                             "file":  "sapiens_luoc-su-ve-loai-nguoi-yuval-noah-harari.pdf",
+                                             "ext":  "pdf",
+                                             "size":  4623178
+                                         },
+                                         {
+                                             "file":  "stevenPinker__How_the_Mind_Works_1997_TriOcVanHanhNtn__vn.pdf",
+                                             "ext":  "pdf",
+                                             "size":  20824141
+                                         }
+                                     ]
+                       },
+                       {
+                           "id":  "sach-kinh-te-hoc",
+                           "title":  "Sách kinh tế học",
+                           "items":  [
+                                         {
+                                             "file":  "PhaiTraiDungSai_MichaelSandel.epub",
+                                             "ext":  "epub",
+                                             "size":  464727
+                                         },
+                                         {
+                                             "file":  "Tu_duy_chien_luoc_ly_thuyet_tro_choi_thuc_hanh_Dixit_Nalebuff_5star.epub",
+                                             "ext":  "epub",
+                                             "size":  1564507
+                                         }
+                                     ]
+                       },
+                       {
+                           "id":  "sach-tam-ly-hoc",
+                           "title":  "Sách tâm lý học",
+                           "items":  [
+                                         {
+                                             "file":  "thuyet_phuc_bang_tam_ly.epub",
+                                             "ext":  "epub",
+                                             "size":  298645
+                                         }
+                                     ]
+                       },
+                       {
+                           "id":  "sach-triet-hoc",
+                           "title":  "Sách triết học",
+                           "items":  [
+                                         {
+                                             "file":  "Kinh-Pháp-Cú_Dhammapadā-.pdf",
+                                             "ext":  "pdf",
+                                             "size":  429804
+                                         },
+                                         {
+                                             "file":  "Những bức thư của Seneca _Letters of Seneca (1-43).pdf",
+                                             "ext":  "pdf",
+                                             "size":  1593561
+                                         },
+                                         {
+                                             "file":  "Toi-la-ai-va-neu-vay-thi-bao-nhieu--richard-david-precht.epub",
+                                             "ext":  "epub",
+                                             "size":  409155
+                                         }
+                                     ]
+                       },
+                       {
+                           "id":  "sach-xyz",
+                           "title":  "Sách chọn lọc",
+                           "items":  [
+                                         {
+                                             "file":  "Cai_cuoi_cua_thanh_nhan_NDC.epub",
+                                             "ext":  "epub",
+                                             "size":  129445
+                                         },
+                                         {
+                                             "file":  "Thi-nhan-viet-nam-hoai-thanh-hoai-chan.mobi",
+                                             "ext":  "mobi",
+                                             "size":  832886
+                                         }
+                                     ]
+                       }
+                   ]
+}

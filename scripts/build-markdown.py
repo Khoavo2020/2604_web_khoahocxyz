@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from html import escape
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -23,6 +24,34 @@ HOMEPAGE_SECTION_CONFIG = [
     {"slug": "tam-ly-hoc", "link": "tam-ly-hoc/index.html"},
     {"slug": "triet-hoc", "link": "triet-hoc/index.html"},
 ]
+CATEGORY_CHILD_PAGES = {
+    "triet-hoc": [
+        {
+            "slug": "_sub_phuong-dong",
+            "title": "Phương Đông",
+            "description": "Đạo, vô vi, tu dưỡng và cách sống hài hòa với tự nhiên.",
+            "href": "triet-hoc/_sub_phuong-dong/index.html",
+        },
+        {
+            "slug": "_sub_phuong-tay",
+            "title": "Phương Tây",
+            "description": "Logic, đạo đức học và những câu hỏi về tự do con người.",
+            "href": "triet-hoc/_sub_phuong-tay/index.html",
+        },
+        {
+            "slug": "_sub_tho-viet-nam",
+            "title": "Thơ Việt Nam",
+            "description": "Những bài thơ gợi mở về thân phận, tình yêu và thời gian.",
+            "href": "triet-hoc/_sub_tho-viet-nam/index.html",
+        },
+        {
+            "slug": "_sub_tho-nuoc-ngoai",
+            "title": "Thơ nước ngoài",
+            "description": "Những bài thơ kinh điển mở rộng cảm thức về nhân sinh.",
+            "href": "triet-hoc/_sub_tho-nuoc-ngoai/index.html",
+        },
+    ]
+}
 
 
 def read_text(path: Path) -> str:
@@ -177,9 +206,23 @@ def resolve_link(path_value: str, prefix: str) -> str:
     return resolve_asset(path_value, prefix)
 
 
+def article_section_key(source_path: Path) -> str:
+    parts = source_path.relative_to(CONTENT_ROOT).parts
+    if len(parts) > 2:
+        return "/".join(parts[:2])
+    return parts[0]
+
+
+def article_image_dir(source_path: Path) -> Path:
+    parts = source_path.relative_to(CONTENT_ROOT).parts
+    category_slug = parts[0]
+    if len(parts) > 2 and parts[1].startswith("_sub_"):
+        return CONTENT_ROOT / category_slug / parts[1] / "_images"
+    return CONTENT_ROOT / category_slug / "_images"
+
+
 def find_content_image(source_path: Path) -> str:
-    category_slug = source_path.relative_to(CONTENT_ROOT).parts[0]
-    images_dir = CONTENT_ROOT / category_slug / "_images"
+    images_dir = article_image_dir(source_path)
     if not images_dir.exists():
         return ""
 
@@ -204,21 +247,45 @@ def resolve_article_image(source_path: Path, metadata: dict[str, str]) -> str:
     if hero_image.startswith(("http://", "https://")):
         return hero_image
 
-    content_image = find_content_image(source_path)
-    if content_image:
-        return content_image
-
-    if hero_image:
+    if hero_image and hero_image != "-":
         hero_path = ROOT / hero_image
         if hero_path.exists():
             return hero_image.replace("\\", "/")
 
-    return ensure_generated_cover(source_path)
+    content_image = find_content_image(source_path)
+    if content_image:
+        return content_image
+
+    if hero_image == "-":
+        return ensure_generated_cover(source_path)
+
+    return ""
+
+
+def derive_description(markdown_body: str) -> str:
+    for block in re.split(r"\n\s*\n", markdown_body.strip()):
+        line = " ".join(part.strip() for part in block.splitlines() if part.strip())
+        if not line:
+            continue
+        if line.startswith(("#", ">", "- ")):
+            continue
+        text = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r"\1", line)
+        text = re.sub(r"`([^`]+)`", r"\1", text)
+        text = re.sub(r"\*\*([^*]+)\*\*", r"\1", text)
+        text = re.sub(r"\*([^*]+)\*", r"\1", text)
+        text = re.sub(r"\s+", " ", text).strip()
+        if not text:
+            continue
+
+        match = re.search(r"^(.+?[.!?…])(?:\s|$)", text)
+        return match.group(1).strip() if match else text
+    return ""
 
 
 def collect_article_data(source_path: Path, sections: dict[str, dict[str, str]]) -> dict[str, str]:
     metadata, markdown_body = parse_front_matter(read_text(source_path))
     category_slug = source_path.relative_to(CONTENT_ROOT).parts[0]
+    section_key = article_section_key(source_path)
     section = sections.get(
         category_slug,
         {
@@ -228,11 +295,12 @@ def collect_article_data(source_path: Path, sections: dict[str, dict[str, str]])
     )
 
     title = metadata["title"]
-    description = metadata.get("description", "")
+    explicit_description = metadata.get("description", "").strip()
+    description = explicit_description or derive_description(markdown_body)
     section_title = metadata.get("section_title", section["title"])
     section_link = metadata.get("section_link", f"{category_slug}/index.html")
     header_subline = metadata.get("header_subline", section["tagline"])
-    back_link_label = metadata.get("back_link_label", f"• {section_title}")
+    back_link_label = metadata.get("back_link_label", f"â€¢ {section_title}")
     hero_image = resolve_article_image(source_path, metadata)
 
     output_rel = metadata.get("output_path")
@@ -244,7 +312,9 @@ def collect_article_data(source_path: Path, sections: dict[str, dict[str, str]])
     return {
         "title": title,
         "description": description,
+        "display_description": explicit_description,
         "category_slug": category_slug,
+        "section_key": section_key,
         "output_path": str(output_path.relative_to(ROOT)).replace("\\", "/"),
         "hero_image": hero_image,
         "section_title": section_title,
@@ -259,6 +329,7 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
     article = collect_article_data(source_path, sections)
     title = article["title"]
     description = article["description"]
+    display_description = article["display_description"]
     section_title = article["section_title"]
     header_subline = article["header_subline"]
     back_link_label = article["back_link_label"]
@@ -273,10 +344,11 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
         if hero_src
         else ""
     )
+    description_block = f"<p>{escape(display_description)}</p>" if display_description else ""
     section_href = resolve_link(article["section_link"], prefix)
     article_header_block = (
         '<header id="header">'
-        f'<div class="logo"><a href="{prefix}index.html"><strong>&#x1F3E0;</strong></a> » '
+        f'<div class="logo"><a href="{prefix}index.html"><strong>&#x1F3E0;</strong></a> &raquo; '
         f'<a href="{section_href}"><strong>{escape(section_title)}</strong></a></div>'
         '<ul class="icons">'
         '<li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>'
@@ -289,6 +361,7 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
     values = {
         "PAGE_TITLE": title,
         "PAGE_DESCRIPTION": description,
+        "PAGE_DESCRIPTION_BLOCK": indent_block(description_block, 6) if description_block else "",
         "SECTION_TITLE": section_title,
         "SECTION_LINK": section_href,
         "HEADER_SUBLINE": header_subline,
@@ -312,14 +385,57 @@ def render_post_card(article: dict[str, str], category_index_path: Path) -> str:
     href = output_path.relative_to(category_index_path.parent).as_posix()
     prefix = root_prefix(category_index_path)
     image_src = resolve_asset(article["hero_image"], prefix)
+    image_block = f'<a href="{href}" class="image"><img src="{image_src}" alt=""></a>' if image_src else ""
     return (
         "<article>"
         f'<h3><a href="{href}">{escape(article["title"])}</a></h3>'
         '<div class="cover-item-body">'
-        f'<a href="{href}" class="image"><img src="{image_src}" alt=""></a>'
+        f"{image_block}"
         f"<p>{escape(article['description'])}</p>"
         "</div>"
         "</article>"
+    )
+
+
+def render_child_page_cards(parent_slug: str, category_index_path: Path) -> str:
+    child_pages = CATEGORY_CHILD_PAGES.get(parent_slug, [])
+    if not child_pages:
+        return ""
+
+    cards: list[str] = []
+    for child in child_pages:
+        href = os.path.relpath(ROOT / child["href"], category_index_path.parent).replace("\\", "/")
+        cards.append(
+            "<article class=\"category-child-card\">"
+            f"<h3><a href=\"{href}\">{escape(child['title'])}</a></h3>"
+            f"<p>{escape(child['description'])}</p>"
+            f"<p class=\"category-child-cta\"><a href=\"{href}\">Xem chuyên mục</a></p>"
+            "</article>"
+        )
+
+    return (
+        '<div class="category-children-block">'
+        '<header class="main">'
+        "<h2>Chuyên mục con</h2>"
+        "<p>Đi theo từng nhánh để đọc đúng mạch nội dung của trang Triết học.</p>"
+        "</header>"
+        '<div class="category-child-grid">'
+        + "".join(cards)
+        + "</div>"
+        "</div>"
+    )
+
+
+def build_category_header(prefix: str, title: str, tagline: str, link_href: str) -> str:
+    return (
+        '<header id="header">'
+        f'<div class="logo"><a href="{prefix}index.html"><strong>&#x1F3E0;</strong></a> &raquo; '
+        f'<a href="{link_href}"><strong>{escape(title)}</strong></a> &raquo; {escape(tagline)}</div>'
+        '<ul class="icons">'
+        '<li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>'
+        '<li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>'
+        "</ul>"
+        "</header>"
     )
 
 
@@ -330,28 +446,22 @@ def build_category_pages(articles: list[dict[str, str]], sections: dict[str, dic
     for slug, section in sections.items():
         category_index_path = ROOT / slug / "index.html"
         prefix = root_prefix(category_index_path)
-        section_articles = [article for article in articles if article["category_slug"] == slug]
+        section_articles = [article for article in articles if article["section_key"] == slug]
         posts_html = "\n".join(render_post_card(article, category_index_path) for article in section_articles)
+        children_block = render_child_page_cards(slug, category_index_path)
         header_html = section.get("header_html", "").replace("__ROOT_PREFIX__", prefix)
         if header_html:
             header_block = header_html
             header_subline_block = ""
         else:
-            header_block = (
-                '<header id="header">'
-                f'<a href="{prefix}index.html" class="logo"><strong>Khoahoc</strong>.xyz</a>'
-                '<ul class="icons">'
-                '<li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>'
-                '<li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>'
-                '</ul>'
-                '</header>'
-            )
+            header_block = build_category_header(prefix, section["title"], section["tagline"], "./index.html")
             header_subline_block = f'<p class="header-subline">{section["tagline"]}</p>'
         values = {
             "CATEGORY_TITLE": section["title"],
             "CATEGORY_TAGLINE": section["tagline"],
             "CATEGORY_DESCRIPTION": section["description"],
             "CATEGORY_POSTS": posts_html,
+            "CATEGORY_CHILDREN_BLOCK": children_block,
             "ROOT_PREFIX": prefix,
             "HEADER_BLOCK": header_block,
             "HEADER_SUBLINE_BLOCK": header_subline_block,
@@ -363,6 +473,42 @@ def build_category_pages(articles: list[dict[str, str]], sections: dict[str, dic
 
         write_text(category_index_path, html)
         built_paths.append(category_index_path)
+
+    return built_paths
+
+
+def build_subcategory_pages(articles: list[dict[str, str]]) -> list[Path]:
+    template = read_text(CATEGORY_TEMPLATE_PATH)
+    built_paths: list[Path] = []
+
+    for parent_slug, child_pages in CATEGORY_CHILD_PAGES.items():
+        for child in child_pages:
+            section_key = f"{parent_slug}/{child['slug']}"
+            child_articles = [article for article in articles if article["section_key"] == section_key]
+            if not child_articles:
+                continue
+
+            category_index_path = ROOT / child["href"]
+            prefix = root_prefix(category_index_path)
+            posts_html = "\n".join(render_post_card(article, category_index_path) for article in child_articles)
+            header_block = build_category_header(prefix, child["title"], child["description"], "./index.html")
+            values = {
+                "CATEGORY_TITLE": child["title"],
+                "CATEGORY_TAGLINE": child["description"],
+                "CATEGORY_DESCRIPTION": child["description"],
+                "CATEGORY_POSTS": posts_html,
+                "CATEGORY_CHILDREN_BLOCK": "",
+                "ROOT_PREFIX": prefix,
+                "HEADER_BLOCK": header_block,
+                "HEADER_SUBLINE_BLOCK": "",
+            }
+
+            html = template
+            for key, value in values.items():
+                html = html.replace(f"{{{{{key}}}}}", value)
+
+            write_text(category_index_path, html)
+            built_paths.append(category_index_path)
 
     return built_paths
 
@@ -435,11 +581,14 @@ def main() -> None:
     built_paths = [ROOT / article["output_path"] for article in articles]
     all_articles = articles if target == "all" else [collect_article_data(source, sections) for source in all_sources]
     category_paths = build_category_pages(all_articles, sections)
+    subcategory_paths = build_subcategory_pages(all_articles)
     write_homepage_payload(all_articles, sections)
 
     for path in built_paths:
         print(f"Built: {path.relative_to(ROOT)}")
     for path in category_paths:
+        print(f"Built: {path.relative_to(ROOT)}")
+    for path in subcategory_paths:
         print(f"Built: {path.relative_to(ROOT)}")
     print(f"Built: {HOME_PAGE_PATH.relative_to(ROOT)}")
 

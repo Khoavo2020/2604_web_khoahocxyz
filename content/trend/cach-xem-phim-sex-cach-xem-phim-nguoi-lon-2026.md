@@ -1,10 +1,10 @@
 ---
 title: cách xem phim sex, cách xem phim người lớn 2026, phim 18 + 
 description: cách xem phim sex, cách xem phim người lớn 2026, phim 18 + 
-section_title: Góc nhìn
+section_title: Trend
 section_link: trend/index.html
 header_subline: 
-back_link_label: • Góc nhìn
+back_link_label: • Trend
 hero_image: content/trend/_images/cach-xem-phim-sex-phim-nguoi-lon-2026.jpg
 output_path: trend/cach-xem-phim-sex-phim-nguoi-lon-2026/index.html
 ---

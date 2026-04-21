@@ -4,7 +4,7 @@
 ### Goal:
 `khoahoc.xyz` là một static website theo mô hình `knowledge hub + sản phẩm`
 
-### Core Value: 
+### Core Value:
 - `Content`: bài viết, giải thích khái niệm, tóm tắt sách, ghi chú học tập
 - `Authority`: xây uy tín qua chất lượng biên tập và định hướng học thuật
 - `Product`: khóa học, app, ebook, landing page sản phẩm
@@ -29,6 +29,14 @@
 - Khi sửa nội dung tiếng Việt, ưu tiên UTF-8 chuẩn và tránh lỗi encoding.
 - Nếu có nhiều hướng triển khai, ưu tiên hướng ít phức tạp nhất và dễ bảo trì trên GitHub Pages.
 
+### Encoding safety
+
+- Tất cả file văn bản trong repo phải được đọc và ghi bằng `UTF-8`.
+- Khi dùng PowerShell để đọc file có tiếng Việt, luôn dùng `Get-Content -Encoding UTF8`.
+- Khi dùng PowerShell để ghi file có tiếng Việt, không dùng cách mặc định; chỉ ghi bằng API chỉ rõ UTF-8 như `[System.IO.File]::WriteAllText(..., [System.Text.UTF8Encoding]::new($false))`.
+- Ưu tiên sửa file bằng `apply_patch` hoặc script Python có `encoding="utf-8"`.
+- Không dùng chuỗi đã mojibake làm nguồn copy để tạo lại template/script.
+- Sau khi sửa template hoặc build script có tiếng Việt, phải kiểm tra lại output generated trước khi kết thúc.
 
 ### Content architecture
 
@@ -44,19 +52,15 @@ Các nhóm trang chính hiện tại:
 
 Các trang con có thể mở rộng:
 - `goc-nhin`
-- `triet-hoc/phuong-dong`
-- `triet-hoc/phuong-tay`
-- `triet-hoc/tho-viet-nam`
-- `triet-hoc/tho-nuoc-ngoai`
+- `triet-hoc/_sub_phuong-dong`
+- `triet-hoc/_sub_phuong-tay`
+- `triet-hoc/_sub_tho-viet-nam`
+- `triet-hoc/_sub_tho-nuoc-ngoai`
 - `tu-sach-nen-tang/sach-khoa-hoc`
 - `tu-sach-nen-tang/sach-kinh-te-hoc`
 - `tu-sach-nen-tang/sach-tam-ly-hoc`
 - `tu-sach-nen-tang/sach-triet-hoc`
 - `tu-sach-nen-tang/sach-xyz`
-
-
-
-
 
 ### Cấu trúc hình ảnh
 

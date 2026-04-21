@@ -127,7 +127,10 @@ def render_title_lines(title: str) -> str:
 
 
 def resolve_cover_path(source_path: Path) -> Path:
-    category_slug = source_path.relative_to(CONTENT_ROOT).parts[0]
+    parts = source_path.relative_to(CONTENT_ROOT).parts
+    category_slug = parts[0]
+    if len(parts) > 2 and parts[1].startswith("_sub_"):
+        return CONTENT_ROOT / category_slug / parts[1] / "_images" / f"{source_path.stem}.svg"
     return CONTENT_ROOT / category_slug / "_images" / f"{source_path.stem}.svg"
 
 

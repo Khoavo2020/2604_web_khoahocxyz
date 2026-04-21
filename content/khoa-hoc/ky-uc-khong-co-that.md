@@ -5,7 +5,7 @@ section_title: Khoa học
 section_link: khoa-hoc/index.html
 header_subline: 
 back_link_label: back
-hero_image: 
+hero_image: -
 output_path: khoa-hoc/ky-uc-khong-co-that/index.html
 ---
 

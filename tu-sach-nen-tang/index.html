@@ -67,7 +67,8 @@
 			}
 			.book-grid {
 				display: grid;
-				grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+				/* khoa: --> <size of book card width> */
+				grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
 				gap: 1rem;
 			}
 			.book-card {
@@ -95,13 +96,23 @@
 				flex-wrap: wrap;
 			}
 			.book-link {
+				align-items: center;
+				border-bottom: 0;
+				color: var(--ink-300);
+				display: inline-flex;
+				font-size: 1rem;
+				gap: 0.35rem;
 				margin-top: auto;
-				color: var(--accent-600);
 				font-weight: 600;
 				text-decoration: none;
 			}
+			.book-link .label {
+				color: inherit;
+				font-size: 0.85rem;
+			}
 			.book-link:hover {
-				text-decoration: underline;
+				color: var(--accent-600) !important;
+				text-decoration: none;
 			}
 			@media (max-width: 736px) {
 				.library-hero {
@@ -229,7 +240,9 @@
 						const link = document.createElement('a');
 						link.className = 'book-link';
 						link.href = `../assets/ebooks/${categoryId}/${encodeURIComponent(book.file)}`;
-						link.textContent = 'Tải eBook';
+						link.innerHTML = '<i class="icon solid fa-download" aria-hidden="true"></i><span class="label">Tải eBook</span>';
+						link.setAttribute('aria-label', 'Tải eBook');
+						link.setAttribute('title', 'Tải eBook');
 						link.setAttribute('download', '');
 
 						card.appendChild(title);

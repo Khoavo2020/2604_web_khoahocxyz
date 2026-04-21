@@ -10,5 +10,6 @@
   <circle cx="160" cy="530" r="220" fill="#ffffff" opacity="0.08" />
   <text x="56" y="84" fill="#ffffff" font-size="20" font-family="Arial, Helvetica, 'DejaVu Sans', 'Liberation Sans', sans-serif" opacity="0.85">khoahoc.xyz</text>
   <text x="56" y="116" fill="#ffffff" font-size="22" font-family="Arial, Helvetica, 'DejaVu Sans', 'Liberation Sans', sans-serif" opacity="0.9">Triết học</text>
-  <text x="56" y="150" fill="#ffffff" font-size="34" font-family="Calibri, 'Times New Roman', 'DejaVu Serif', 'Liberation Serif', serif">Đạo và hành động không gượng ép</text>
+    <text x="56" y="150" fill="#ffffff" font-size="34" font-family="Calibri, 'Times New Roman', 'DejaVu Serif', 'Liberation Serif', serif">Triết học phương Đông - sự hòa hợp giữa con người</text>
+  <text x="56" y="190" fill="#ffffff" font-size="34" font-family="Calibri, 'Times New Roman', 'DejaVu Serif', 'Liberation Serif', serif">và thiên nhiên, đạo đức nhân sinh, và tâm linh</text>
 </svg>

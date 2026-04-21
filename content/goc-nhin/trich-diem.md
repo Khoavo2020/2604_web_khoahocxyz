@@ -1,6 +1,6 @@
 ---
 title: Trích diễm
-description: Trích diễm
+description: Xuân lan thu cúc thành hư sự, Hạ thử đông hàn đoạt thiếu niên
 section_title: Góc nhìn
 section_link: goc-nhin/index.html
 header_subline: 
@@ -9,7 +9,8 @@ hero_image: content/goc-nhin/_images/trich-diem.jpg
 output_path: goc-nhin/trich-diem/index.html
 ---
 
+-- Nguyễn du
 
-Xuân lan thu cúc thành hư sự
+<!-- Xuân lan thu cúc thành hư sự -->
 
-Hạ thử đông hàn đoạt thiếu niên
+<!-- Hạ thử đông hàn đoạt thiếu niên -->
