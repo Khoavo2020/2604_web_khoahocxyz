@@ -2,11 +2,11 @@
 title: Người con gái ở lầu hoa
 description: 
 section_title: Triết học
-section_link: triet-hoc/_sub_tho-viet-nam/index.html
+section_link: triet-hoc/01_sub_tho-viet-nam/index.html
 header_subline: 
 back_link_label: • tho-viet-nam
 hero_image: 
-output_path: triet-hoc/_sub_tho-viet-nam/nguoi-con-gai-o-lau-hoa/index.html
+output_path: triet-hoc/01_sub_tho-viet-nam/nguoi-con-gai-o-lau-hoa/index.html
 ---
 
 Nhà nàng ở gốc cây mai trắng,

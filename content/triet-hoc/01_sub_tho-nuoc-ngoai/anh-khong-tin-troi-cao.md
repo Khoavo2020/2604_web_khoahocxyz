@@ -2,11 +2,11 @@
 title: Anh không tin trời cao
 description: 
 section_title: Triết học
-section_link: triet-hoc/_sub_tho-nuoc-ngoai/index.html
+section_link: triet-hoc/01_sub_tho-nuoc-ngoai/index.html
 header_subline: 
 back_link_label: • tho-nuoc-ngoai
 hero_image:
-output_path: triet-hoc/_sub_tho-nuoc-ngoai/anh-khong-tin-troi-cao/index.html
+output_path: triet-hoc/01_sub_tho-nuoc-ngoai/anh-khong-tin-troi-cao/index.html
 ---
 
 Anh không tin trời cao,

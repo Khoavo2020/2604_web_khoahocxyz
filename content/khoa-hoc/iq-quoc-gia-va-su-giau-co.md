@@ -5,7 +5,7 @@ section_title: Khoa học
 section_link: khoa-hoc/index.html
 header_subline: 
 back_link_label: back
-hero_image: content/khoa-hoc/_images/iq-quoc-gia-va-su-giau-co.jpg
+hero_image: content/khoa-hoc/01_images/iq-quoc-gia-va-su-giau-co.jpg
 output_path: khoa-hoc/iq-quoc-gia-va-su-giau-co/index.html
 ---
 

@@ -5,7 +5,7 @@ section_title: Góc nhìn
 section_link: goc-nhin/index.html
 header_subline: 
 back_link_label: • Góc nhìn
-hero_image: content/goc-nhin/_images/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.jpg
+hero_image: content/goc-nhin/01_images/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.jpg
 output_path: goc-nhin/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac/index.html
 ---
 
