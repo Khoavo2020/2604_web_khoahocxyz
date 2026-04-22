@@ -98,6 +98,7 @@
 			z-index: _misc(z-index-base);
 
 			&:before {
+				color: _palette(fg);
 				content: '\f0c9';
 				font-size: 2rem;
 				height: inherit;
@@ -193,8 +194,11 @@
 
 		@include breakpoint('<=small') {
 			.toggle {
-				text-indent: 7.25em;
-				width: 7.25em;
+				height: 4.5em;
+				line-height: 4.5em;
+				text-indent: 4.5em;
+				top: 0.5em;
+				width: 4.5em;
 
 				&:before {
 					color: _palette(fg);
@@ -208,11 +212,11 @@
 					background: transparentize(lighten(_palette(fg), 35), 0.25);
 					border-radius: _size(border-radius);
 					content: '';
-					height: 3.5em;
-					left: 1em;
+					height: 2.75em;
+					left: 0.85em;
 					position: absolute;
-					top: 1em;
-					width: 5em;
+					top: 0.85em;
+					width: 2.75em;
 				}
 			}
 		}

@@ -2273,6 +2273,7 @@ body.article-page #main > .inner > section.article-content > .markdown-paragraph
       font-family: 'Font Awesome 5 Free';
       font-weight: 900; }
     #sidebar .toggle:before {
+      color: #7f888f;
       content: '\f0c9';
       font-size: 2rem;
       height: inherit;
@@ -2338,8 +2339,11 @@ body.article-page #main > .inner > section.article-content > .markdown-paragraph
         display: none; } }
   @media screen and (max-width: 736px) {
     #sidebar .toggle {
-      text-indent: 7.25em;
-      width: 7.25em; }
+      height: 4.5em;
+      line-height: 4.5em;
+      text-indent: 4.5em;
+      top: 0.5em;
+      width: 4.5em; }
       #sidebar .toggle:before {
         color: #7f888f;
         margin-left: -0.0625em;
@@ -2350,11 +2354,11 @@ body.article-page #main > .inner > section.article-content > .markdown-paragraph
         background: rgba(222, 225, 226, 0.75);
         border-radius: 0.375em;
         content: '';
-        height: 3.5em;
-        left: 1em;
+        height: 2.75em;
+        left: 0.85em;
         position: absolute;
-        top: 1em;
-        width: 5em; } }
+        top: 0.85em;
+        width: 2.75em; } }
 
 /* Header */
 #header {
