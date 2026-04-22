@@ -272,6 +272,146 @@
 
 			});
 
+	// Sidebar quote.
+		(function() {
+			var quoteSection = document.getElementById('sidebar-quote');
+
+			if (!quoteSection)
+				return;
+
+			var quotesRoot = quoteSection.getAttribute('data-quotes-root');
+			var quoteBody = quoteSection.querySelector('.sidebar-quote-body');
+			var statusEl = quoteSection.querySelector('.sidebar-quote-status');
+
+			if (!quotesRoot || !quoteBody || !statusEl)
+				return;
+
+			function getDateKey() {
+				var formatter = new Intl.DateTimeFormat('en-CA', {
+					timeZone: 'Asia/Ho_Chi_Minh',
+					year: 'numeric',
+					month: '2-digit',
+					day: '2-digit'
+				});
+				var parts = formatter.formatToParts(new Date());
+				var values = {};
+
+				parts.forEach(function(part) {
+					if (part.type !== 'literal')
+						values[part.type] = part.value;
+				});
+
+				return [values.year, values.month, values.day].join('-');
+			}
+
+			function xmur3(str) {
+				var i;
+				var h = 1779033703 ^ str.length;
+
+				for (i = 0; i < str.length; i++)
+					h = Math.imul(h ^ str.charCodeAt(i), 3432918353);
+
+				return function() {
+					h = Math.imul(h ^ (h >>> 16), 2246822507);
+					h = Math.imul(h ^ (h >>> 13), 3266489909);
+					return (h ^= h >>> 16) >>> 0;
+				};
+			}
+
+			function hasNonAscii(text) {
+				return /[^\x00-\x7F]/.test(text || '');
+			}
+
+			function pickDailyFile(files) {
+				var seed = xmur3(getDateKey() + '|sidebar-quote')();
+
+				if (!files.length)
+					return '';
+
+				return files[seed % files.length];
+			}
+
+			function parseQuote(text) {
+				var lines = String(text || '')
+					.split(/\r?\n/)
+					.map(function(line) {
+						return line.trim();
+					})
+					.filter(Boolean);
+				var line1;
+				var line2;
+				var author;
+				var vietnamese;
+				var english;
+
+				if (lines.length < 2)
+					return null;
+
+				line1 = lines[0] || '';
+				line2 = lines[1] || '';
+				author = lines[2] || '';
+				vietnamese = line1;
+				english = line2;
+
+				if (!hasNonAscii(line1) && hasNonAscii(line2)) {
+					vietnamese = line2;
+					english = line1;
+				}
+				else if (hasNonAscii(line1) && !hasNonAscii(line2)) {
+					vietnamese = line1;
+					english = line2;
+				}
+
+				author = author.replace(/^--\s*/, '').replace(/\s*--$/, '').trim();
+
+				return {
+					vietnamese: vietnamese
+				};
+			}
+
+			function renderQuote(quote) {
+				var fragments = [];
+
+				if (quote.vietnamese)
+					fragments.push('<p class="sidebar-quote-text">"' + quote.vietnamese + '"</p>');
+
+				quoteBody.innerHTML = fragments.join('');
+			}
+
+			fetch(quotesRoot + '/manifest.json')
+				.then(function(res) {
+					if (!res.ok)
+						throw new Error('Manifest not found');
+
+					return res.json();
+				})
+				.then(function(files) {
+					var file = pickDailyFile((files || []).filter(Boolean));
+
+					if (!file)
+						throw new Error('No quote files');
+
+					return fetch(quotesRoot + '/' + encodeURIComponent(file));
+				})
+				.then(function(res) {
+					if (!res.ok)
+						throw new Error('Quote file not found');
+
+					return res.text();
+				})
+				.then(function(text) {
+					var quote = parseQuote(text);
+
+					if (!quote)
+						throw new Error('Invalid quote format');
+
+					renderQuote(quote);
+				})
+				.catch(function() {
+					statusEl.textContent = 'Chưa tải được trích dẫn hôm nay.';
+				});
+		})();
+
 	// Homepage sections.
 		(function() {
 			var dataNode = document.getElementById('homepage-sections-data');
