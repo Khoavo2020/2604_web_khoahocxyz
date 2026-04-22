@@ -272,6 +272,237 @@
 
 			});
 
+	// Sidebar search.
+		(function() {
+			var form = document.querySelector('#search form');
+			var input = document.getElementById('query');
+			var resultsEl;
+			var activeResults = [];
+			var searchInitialized = false;
+
+			if (!form || !input)
+				return;
+
+			function guessSiteRoot() {
+				var scripts = document.getElementsByTagName('script');
+				var i;
+				var src;
+
+				if (window.siteSearchRoot)
+					return window.siteSearchRoot;
+
+				for (i = 0; i < scripts.length; i++) {
+					src = scripts[i].src || '';
+
+					if (/assets\/js\/main\.js(?:\?.*)?$/.test(src))
+						return src.replace(/assets\/js\/main\.js(?:\?.*)?$/, '');
+				}
+
+				return '';
+			}
+
+			function normalizeText(value) {
+				var text = String(value || '').toLowerCase().trim();
+
+				if (text.normalize)
+					text = text.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+				return text.replace(/\s+/g, ' ');
+			}
+
+			function escapeHtml(value) {
+				return String(value || '')
+					.replace(/&/g, '&amp;')
+					.replace(/</g, '&lt;')
+					.replace(/>/g, '&gt;')
+					.replace(/"/g, '&quot;')
+					.replace(/'/g, '&#39;');
+			}
+
+			function resolveHref(href) {
+				var siteRoot = guessSiteRoot();
+
+				if (!href)
+					return '#';
+
+				if (/^(?:https?:)?\/\//.test(href))
+					return href;
+
+				if (siteRoot)
+					return new URL(href, siteRoot).href;
+
+				return href;
+			}
+
+			function scoreItem(item, query) {
+				var title = normalizeText(item.title);
+				var section = normalizeText(item.section);
+				var description = normalizeText(item.description);
+				var score = 0;
+
+				if (title.indexOf(query) !== -1)
+					score += title === query ? 120 : 80;
+
+				if (section.indexOf(query) !== -1)
+					score += 30;
+
+				if (description.indexOf(query) !== -1)
+					score += 15;
+
+				if (item.type === 'article')
+					score += 10;
+
+				return score;
+			}
+
+			function search(query) {
+				var searchIndex = window.siteSearchIndex || [];
+
+				return searchIndex
+					.map(function(item) {
+						return {
+							title: item.title,
+							description: item.description,
+							href: resolveHref(item.href),
+							section: item.section,
+							type: item.type,
+							score: scoreItem(item, query)
+						};
+					})
+					.filter(function(item) {
+						return item.score > 0;
+					})
+					.sort(function(a, b) {
+						if (b.score !== a.score)
+							return b.score - a.score;
+
+						return a.title.localeCompare(b.title);
+					})
+					.slice(0, 8);
+			}
+
+			function ensureResultsEl() {
+				if (resultsEl)
+					return resultsEl;
+
+				resultsEl = document.createElement('div');
+				resultsEl.className = 'search-results';
+				resultsEl.hidden = true;
+				form.appendChild(resultsEl);
+				return resultsEl;
+			}
+
+			function hideResults() {
+				if (!resultsEl)
+					return;
+
+				resultsEl.hidden = true;
+				resultsEl.innerHTML = '';
+				activeResults = [];
+			}
+
+			function renderResults(items, query) {
+				var container = ensureResultsEl();
+
+				activeResults = items;
+
+				if (!query) {
+					hideResults();
+					return;
+				}
+
+				if (!items.length) {
+					container.innerHTML = '<p class="search-results-empty">Không tìm thấy kết quả phù hợp.</p>';
+					container.hidden = false;
+					return;
+				}
+
+				container.innerHTML = items.map(function(item) {
+					var description = item.description ? '<p>' + escapeHtml(item.description) + '</p>' : '';
+					return [
+						'<a class="search-result" href="', escapeHtml(item.href), '">',
+						'<span class="search-result-type">', escapeHtml(item.section || item.type || ''), '</span>',
+						'<strong>', escapeHtml(item.title), '</strong>',
+						description,
+						'</a>'
+					].join('');
+				}).join('');
+				container.hidden = false;
+			}
+
+			input.setAttribute('autocomplete', 'off');
+
+			function bindEvents() {
+				if (searchInitialized)
+					return;
+
+				searchInitialized = true;
+
+				input.addEventListener('input', function() {
+					var query = normalizeText(input.value);
+
+					if (query.length < 2) {
+						hideResults();
+						return;
+					}
+
+					renderResults(search(query), query);
+				});
+
+				input.addEventListener('focus', function() {
+					var query = normalizeText(input.value);
+
+					if (query.length >= 2)
+						renderResults(search(query), query);
+				});
+
+				input.addEventListener('keydown', function(event) {
+					if (event.key === 'Escape') {
+						hideResults();
+						return;
+					}
+
+					if (event.key === 'Enter' && activeResults.length) {
+						event.preventDefault();
+						window.location.href = activeResults[0].href;
+					}
+				});
+
+				form.addEventListener('submit', function(event) {
+					event.preventDefault();
+
+					if (activeResults.length)
+						window.location.href = activeResults[0].href;
+				});
+
+				document.addEventListener('click', function(event) {
+					if (!form.contains(event.target))
+						hideResults();
+				});
+			}
+
+			function ensureSearchIndex() {
+				var searchIndex = window.siteSearchIndex || [];
+				var siteRoot = guessSiteRoot();
+				var script;
+
+				if (searchIndex.length) {
+					bindEvents();
+					return;
+				}
+
+				if (!siteRoot)
+					return;
+
+				script = document.createElement('script');
+				script.src = siteRoot + 'assets/js/site-search-index.js';
+				script.onload = bindEvents;
+				document.body.appendChild(script);
+			}
+
+			ensureSearchIndex();
+		})();
+
 	// Homepage sections.
 		(function() {
 			var dataNode = document.getElementById('homepage-sections-data');

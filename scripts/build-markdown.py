@@ -15,6 +15,7 @@ ARTICLE_TEMPLATE_PATH = ROOT / "_templates" / "markdown-article.html"
 CATEGORY_TEMPLATE_PATH = ROOT / "_templates" / "markdown-category.html"
 SECTIONS_PATH = ROOT / "data" / "site-sections.json"
 HOME_PAGE_PATH = ROOT / "index.html"
+SEARCH_INDEX_PATH = ROOT / "assets" / "js" / "site-search-index.js"
 IMAGE_EXTENSIONS = {".svg", ".jpg", ".jpeg", ".png", ".webp", ".gif"}
 HOMEPAGE_SECTION_CONFIG = [
     {"slug": "goc-nhin", "title": "Góc nhìn", "link": "goc-nhin/index.html"},
@@ -52,6 +53,22 @@ CATEGORY_CHILD_PAGES = {
         },
     ]
 }
+STATIC_SEARCH_PAGES = [
+    {
+        "title": "Trang chủ",
+        "description": "nội dung trên khoahoc.xyz.",
+        "href": "index.html",
+        "type": "page",
+        "section": "Tổng quan",
+    },
+    {
+        "title": "Lịch âm dương",
+        "description": "Trang lịch âm dương của khoahoc.xyz.",
+        "href": "lich-am-duong/index.html",
+        "type": "tool",
+        "section": "Tiện ích",
+    },
+]
 
 
 def read_text(path: Path) -> str:
@@ -543,6 +560,66 @@ def build_homepage_payload(articles: list[dict[str, str]], sections: dict[str, d
     return {"sections": payload_sections}
 
 
+def build_search_index(articles: list[dict[str, str]], sections: dict[str, dict[str, str]]) -> list[dict[str, str]]:
+    search_items: list[dict[str, str]] = []
+
+    for page in STATIC_SEARCH_PAGES:
+        search_items.append(page)
+
+    for slug, section in sections.items():
+        search_items.append(
+            {
+                "title": section["title"],
+                "description": section["description"],
+                "href": f"{slug}/index.html",
+                "type": "category",
+                "section": section["title"],
+            }
+        )
+
+    for parent_slug, child_pages in CATEGORY_CHILD_PAGES.items():
+        parent_title = sections.get(parent_slug, {}).get("title", parent_slug.replace("-", " ").title())
+        for child in child_pages:
+            search_items.append(
+                {
+                    "title": child["title"],
+                    "description": child["description"],
+                    "href": child["href"],
+                    "type": "subcategory",
+                    "section": parent_title,
+                }
+            )
+
+    for article in articles:
+        search_items.append(
+            {
+                "title": article["title"],
+                "description": article["description"],
+                "href": article["output_path"],
+                "type": "article",
+                "section": article["section_title"],
+            }
+        )
+
+    search_items.sort(key=lambda item: (item["section"], item["title"], item["href"]))
+    return search_items
+
+
+def write_search_index(articles: list[dict[str, str]], sections: dict[str, dict[str, str]]) -> None:
+    payload = json.dumps(build_search_index(articles, sections), ensure_ascii=False, indent=2)
+    js = (
+        "(function() {\n"
+        "  var current = document.currentScript;\n"
+        "  var src = current && current.src ? current.src : '';\n"
+        "  window.siteSearchRoot = src ? src.replace(/assets\\/js\\/site-search-index\\.js(?:\\?.*)?$/, '') : '';\n"
+        "  window.siteSearchIndex = "
+        + payload
+        + ";\n"
+        "})();\n"
+    )
+    write_text(SEARCH_INDEX_PATH, js)
+
+
 def write_homepage_payload(articles: list[dict[str, str]], sections: dict[str, dict[str, str]]) -> None:
     html = read_text(HOME_PAGE_PATH)
     payload = json.dumps(build_homepage_payload(articles, sections), ensure_ascii=False, indent=2)
@@ -583,6 +660,7 @@ def main() -> None:
     category_paths = build_category_pages(all_articles, sections)
     subcategory_paths = build_subcategory_pages(all_articles)
     write_homepage_payload(all_articles, sections)
+    write_search_index(all_articles, sections)
 
     for path in built_paths:
         print(f"Built: {path.relative_to(ROOT)}")
@@ -591,6 +669,7 @@ def main() -> None:
     for path in subcategory_paths:
         print(f"Built: {path.relative_to(ROOT)}")
     print(f"Built: {HOME_PAGE_PATH.relative_to(ROOT)}")
+    print(f"Built: {SEARCH_INDEX_PATH.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":
