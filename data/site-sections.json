@@ -18,27 +18,27 @@
     "title": "Khoa học",
     "tagline": "tagline-tbd",
     "description": "category-tbd",
-    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Khoa học</strong></a> » Hiệu ứng Matthew: ai đang có sẽ được cho thêm</div><ul class=\"icons\"><li><a href=\"https://facebook.com/KhoaHoc.xyz\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"https://www.youtube.com/@chieusangmoi5363\" class=\"icon brands fa-youtube\"><span class=\"label\">YouTube</span></a></li></ul></header>"
+    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Khoa học</strong></a> » ai đang có sẽ được cho thêm..</div><ul class=\"icons\"><li><a href=\"https://facebook.com/KhoaHoc.xyz\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"https://www.youtube.com/@chieusangmoi5363\" class=\"icon brands fa-youtube\"><span class=\"label\">YouTube</span></a></li></ul></header>"
   },
   {
     "slug": "kinh-te-hoc",
     "title": "Kinh tế học",
     "tagline": "tagline-tbd",
     "description": "category-tbd",
-    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Kinh tế học</strong></a> » Kinh tế học giải đáp những câu hỏi về cách xã hội vận hành</div><ul class=\"icons\"><li><a href=\"https://facebook.com/KhoaHoc.xyz\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"https://www.youtube.com/@chieusangmoi5363\" class=\"icon brands fa-youtube\"><span class=\"label\">YouTube</span></a></li></ul></header>"
+    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Kinh tế học</strong></a> » cách xã hội vận hành</div><ul class=\"icons\"><li><a href=\"https://facebook.com/KhoaHoc.xyz\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"https://www.youtube.com/@chieusangmoi5363\" class=\"icon brands fa-youtube\"><span class=\"label\">YouTube</span></a></li></ul></header>"
   },
   {
     "slug": "tam-ly-hoc",
     "title": "Tâm lý học",
     "tagline": "tagline-tbd",
     "description": "category-tbd",
-    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Tâm lý học</strong></a> » Tâm lý học giải đáp những câu hỏi về hành vi của con người</div><ul class=\"icons\"><li><a href=\"https://facebook.com/KhoaHoc.xyz\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"https://www.youtube.com/@chieusangmoi5363\" class=\"icon brands fa-youtube\"><span class=\"label\">YouTube</span></a></li></ul></header>"
+    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Tâm lý học</strong></a> » hành vi của con người</div><ul class=\"icons\"><li><a href=\"https://facebook.com/KhoaHoc.xyz\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"https://www.youtube.com/@chieusangmoi5363\" class=\"icon brands fa-youtube\"><span class=\"label\">YouTube</span></a></li></ul></header>"
   },
   {
     "slug": "triet-hoc",
     "title": "Triết học",
     "tagline": "tagline-tbd",
     "description": "category-tbd",
-    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Triết học</strong></a> » Triết học giải đáp những câu hỏi về ý nghĩa của sự tồn tại</div><ul class=\"icons\"><li><a href=\"https://facebook.com/KhoaHoc.xyz\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"https://www.youtube.com/@chieusangmoi5363\" class=\"icon brands fa-youtube\"><span class=\"label\">YouTube</span></a></li></ul></header>"
+    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong>🏠</strong></a> » <a href=\"./index.html\"><strong>Triết học</strong></a> » ý nghĩa và sự tồn tại</div><ul class=\"icons\"><li><a href=\"https://facebook.com/KhoaHoc.xyz\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"https://www.youtube.com/@chieusangmoi5363\" class=\"icon brands fa-youtube\"><span class=\"label\">YouTube</span></a></li></ul></header>"
   }
 ]
