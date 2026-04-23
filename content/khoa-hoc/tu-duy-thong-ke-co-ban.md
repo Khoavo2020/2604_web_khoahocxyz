@@ -1,10 +1,10 @@
 ---
-title: Tư duy thống kê cơ bản cho người mới
-description: Một vài nguyên tắc đơn giản có thể giúp ta bớt cả tin trước những kết luận hấp dẫn.
+title: Tư duy thống kê
+description: 
 section_title: Khoa học
 section_link: khoa-hoc/index.html
 header_subline: 
-back_link_label: • Khoa học
+back_link_label: 🔙
 hero_image: assets/generated/covers/khoa-hoc/tu-duy-thong-ke-co-ban.svg
 output_path: khoa-hoc/tu-duy-thong-ke-co-ban/index.html
 ---

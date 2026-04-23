@@ -1,17 +1,18 @@
 ---
 title: Hiệu ứng placebo là gì
-description: Niềm tin có thể tạo ra thay đổi thật trong cảm nhận và hành vi.
+description: 
 section_title: Khoa học
 section_link: khoa-hoc/index.html
 header_subline: 
-back_link_label: • Khoa học
+back_link_label: 🔙
 hero_image: assets/generated/covers/khoa-hoc/placebo-la-gi.svg
 output_path: khoa-hoc/placebo-la-gi/index.html
 ---
 
+Niềm tin có thể tạo ra thay đổi thật trong cảm nhận và hành vi.
+
 Khoa học có giá trị ở chỗ nó biến những điều tưởng như xa vời thành điều ai cũng có thể hiểu và áp dụng.
 
-Niềm tin có thể tạo ra thay đổi thật trong cảm nhận và hành vi.
 
 ### Góc nhìn chính
 

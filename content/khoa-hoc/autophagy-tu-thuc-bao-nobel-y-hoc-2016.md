@@ -1,13 +1,15 @@
 ---
 title: Nobel y học 2016 autophagy (tự thực bào) 🧬
-description: Bỏ ăn sáng giúp trẻ hoá, giảm viêm, giảm nguy cơ ung thư ở cấp độ tế bào 
+description: 
 section_title: Khoa học
 section_link: khoa-hoc/index.html
 header_subline: 
-back_link_label: • Khoa học
+back_link_label: 🔙
 hero_image: assets/generated/covers/khoa-hoc/autophagy-tu-thuc-bao-nobel-y-hoc-2016.jpg
 output_path: khoa-hoc/autophagy-tu-thuc-bao-nobel-y-hoc-2016/index.html
 ---
+
+Bỏ ăn sáng giúp trẻ hoá, giảm viêm, giảm nguy cơ ung thư ở cấp độ tế bào 
 
 --> Nobel y học 2016 autophagy (tự thực bào) 🧬. 
 

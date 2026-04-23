@@ -1,15 +1,13 @@
 ---
 title: Thiên kiến xác nhận
-description: Vì sao chúng ta thường ưu tiên thông tin củng cố niềm tin có sẵn.
+description: 
 section_title: Tâm lý học
 section_link: tam-ly-hoc/index.html
 header_subline: 
-back_link_label: • Tâm lý học
+back_link_label: 🔙
 hero_image: assets/generated/covers/tam-ly-hoc/thien-kien-xac-nhan.svg
 output_path: tam-ly-hoc/thien-kien-xac-nhan/index.html
 ---
-
-Tâm lý học giúp ta nhìn rõ hơn cách con người suy nghĩ, phản ứng và tự kể câu chuyện về chính mình.
 
 Vì sao chúng ta thường ưu tiên thông tin củng cố niềm tin có sẵn.
 

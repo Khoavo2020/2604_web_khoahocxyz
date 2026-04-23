@@ -1,15 +1,13 @@
 ---
 title: Vòng lặp thói quen
-description: Thói quen bền vững thường được hình thành từ tín hiệu, hành động và phần thưởng.
+description: 
 section_title: Tâm lý học
 section_link: tam-ly-hoc/index.html
 header_subline: 
-back_link_label: • Tâm lý học
+back_link_label: 🔙
 hero_image: assets/generated/covers/tam-ly-hoc/vong-lap-thoi-quen.svg
 output_path: tam-ly-hoc/vong-lap-thoi-quen/index.html
 ---
-
-Tâm lý học giúp ta nhìn rõ hơn cách con người suy nghĩ, phản ứng và tự kể câu chuyện về chính mình.
 
 Thói quen bền vững thường được hình thành từ tín hiệu, hành động và phần thưởng.
 

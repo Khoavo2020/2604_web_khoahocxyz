@@ -1,15 +1,15 @@
 ---
 title: Một lộ trình sách nhập môn Khoa học
-description: Nếu muốn bắt đầu đọc khoa học một cách có hệ thống, hãy đi từ trực giác đến khái niệm.
+description: 
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/index.html
 header_subline: 
-back_link_label: • Tủ sách - nền tảng
+back_link_label: 🔙
 hero_image: assets/generated/covers/tu-sach-nen-tang/sach-nhap-mon-khoa-hoc.svg
 output_path: tu-sach-nen-tang/sach-nhap-mon-khoa-hoc/index.html
 ---
 
-Một tủ sách nền tảng tốt không nhằm làm ta đọc nhiều hơn bằng mọi giá mà giúp ta đọc đúng thứ cần thiết vào đúng lúc.
+
 
 Nếu muốn bắt đầu đọc khoa học một cách có hệ thống, hãy đi từ trực giác đến khái niệm.
 

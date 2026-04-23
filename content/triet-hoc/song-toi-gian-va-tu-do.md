@@ -1,15 +1,14 @@
 ---
 title: Sống tối giản có phải là tự do hơn
-description: Giảm bớt sở hữu không tự động đem lại tự do nhưng mở ra khả năng lựa chọn sáng suốt hơn.
+description: 
 section_title: Triết học
 section_link: triet-hoc/index.html
 header_subline: 
-back_link_label: • Triết học
+back_link_label: 🔙
 hero_image: assets/generated/covers/triet-hoc/song-toi-gian-va-tu-do.svg
 output_path: triet-hoc/song-toi-gian-va-tu-do/index.html
 ---
 
-Triết học hữu ích nhất khi nó đi cùng đời sống thực, chứ không chỉ nằm trên trang sách như một cuộc tranh luận trừu tượng.
 
 Giảm bớt sở hữu không tự động đem lại tự do nhưng mở ra khả năng lựa chọn sáng suốt hơn.
 

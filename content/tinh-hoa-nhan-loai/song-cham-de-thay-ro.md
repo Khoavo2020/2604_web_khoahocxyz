@@ -1,15 +1,13 @@
 ---
 title: Sống chậm để thấy rõ hơn
-description: Chậm lại không phải để trì hoãn mà để quan sát kỹ hơn điều mình đang sống.
+description: 
 section_title: Tinh hoa - nhân loại
 section_link: tinh-hoa-nhan-loai/index.html
 header_subline: 
-back_link_label: • Tinh hoa - nhân loại
+back_link_label: 🔙
 hero_image: assets/generated/covers/tinh-hoa-nhan-loai/song-cham-de-thay-ro.svg
 output_path: tinh-hoa-nhan-loai/song-cham-de-thay-ro/index.html
 ---
-
-Tinh hoa - nhân loại thường nằm trong những ý tưởng cô đọng nhưng đủ sức làm ta dừng lại và suy nghĩ khác đi.
 
 Chậm lại không phải để trì hoãn mà để quan sát kỹ hơn điều mình đang sống.
 

@@ -1,15 +1,15 @@
 ---
 title: Thiết kế môi trường làm việc để bớt phân tâm
-description: Môi trường xung quanh thường quyết định ta có giữ được nhịp làm việc hay không.
+description: 
 section_title: Ứng dụng - năng suất
 section_link: ung-dung-nang-suat/index.html
 header_subline: 
-back_link_label: • Ứng dụng - năng suất
+back_link_label: 🔙
 hero_image: assets/generated/covers/ung-dung-nang-suat/thiet-ke-moi-truong-lam-viec.svg
 output_path: ung-dung-nang-suat/thiet-ke-moi-truong-lam-viec/index.html
 ---
 
-Năng suất bền vững không đến từ việc ép mình liên tục mà từ hệ thống đủ rõ để làm điều quan trọng một cách đều đặn.
+
 
 Môi trường xung quanh thường quyết định ta có giữ được nhịp làm việc hay không.
 

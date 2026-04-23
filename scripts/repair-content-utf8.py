@@ -36,7 +36,7 @@ SECTIONS = {
             "tách cảm xúc nhất thời khỏi quan sát dài hạn",
             "dùng hiểu biết tâm lý để sống tỉnh táo hơn",
         ],
-        "opener": "Tâm lý học giúp ta nhìn rõ hơn cách con người suy nghĩ, phản ứng và tự kể câu chuyện về chính mình.",
+        "opener": "",
     },
     "triet-hoc": {
         "title": "Triết học",
@@ -56,7 +56,7 @@ SECTIONS = {
             "nhắc lại những giá trị bền hơn nhịp gấp gáp",
             "biến cảm hứng thành chất liệu sống hằng ngày",
         ],
-        "opener": "Tinh hoa - nhân loại thường nằm trong những ý tưởng cô đọng nhưng đủ sức làm ta dừng lại và suy nghĩ khác đi.",
+        "opener": "",
     },
     "tu-sach-nen-tang": {
         "title": "Tủ sách - nền tảng",
@@ -66,7 +66,7 @@ SECTIONS = {
             "đọc để hiểu và ghi nhớ chứ không chỉ đọc cho xong",
             "xây một con đường tự học có thể duy trì lâu dài",
         ],
-        "opener": "Một tủ sách nền tảng tốt không nhằm làm ta đọc nhiều hơn bằng mọi giá mà giúp ta đọc đúng thứ cần thiết vào đúng lúc.",
+        "opener": "",
     },
     "ung-dung-nang-suat": {
         "title": "Ứng dụng - năng suất",
@@ -76,7 +76,7 @@ SECTIONS = {
             "giảm ma sát khi bắt đầu việc quan trọng",
             "đưa việc xem lại và điều chỉnh vào hệ thống hằng tuần",
         ],
-        "opener": "Năng suất bền vững không đến từ việc ép mình liên tục mà từ hệ thống đủ rõ để làm điều quan trọng một cách đều đặn.",
+        "opener": "",
     },
 }
 

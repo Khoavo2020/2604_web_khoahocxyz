@@ -1,15 +1,14 @@
 ---
 title: Động lực nội tại và cách học bền vững
-description: Khi việc học gắn với ý nghĩa cá nhân, ta ít phụ thuộc hơn vào cảm hứng nhất thời.
+description: 
 section_title: Tâm lý học
 section_link: tam-ly-hoc/index.html
 header_subline: 
-back_link_label: • Tâm lý học
+back_link_label: 🔙
 hero_image: assets/generated/covers/tam-ly-hoc/dong-luc-noi-tai.svg
 output_path: tam-ly-hoc/dong-luc-noi-tai/index.html
 ---
 
-Tâm lý học giúp ta nhìn rõ hơn cách con người suy nghĩ, phản ứng và tự kể câu chuyện về chính mình.
 
 Khi việc học gắn với ý nghĩa cá nhân, ta ít phụ thuộc hơn vào cảm hứng nhất thời.
 

@@ -1,15 +1,14 @@
 ---
 title: Stress và khả năng phục hồi
-description: Vấn đề không phải là không bao giờ stress mà là biết phục hồi sau áp lực.
+description: 
 section_title: Tâm lý học
 section_link: tam-ly-hoc/index.html
 header_subline: 
-back_link_label: • Tâm lý học
+back_link_label: 🔙
 hero_image: assets/generated/covers/tam-ly-hoc/stress-va-phuc-hoi.svg
 output_path: tam-ly-hoc/stress-va-phuc-hoi/index.html
 ---
 
-Tâm lý học giúp ta nhìn rõ hơn cách con người suy nghĩ, phản ứng và tự kể câu chuyện về chính mình.
 
 Vấn đề không phải là không bao giờ stress mà là biết phục hồi sau áp lực.
 

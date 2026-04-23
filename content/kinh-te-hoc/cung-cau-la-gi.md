@@ -1,15 +1,13 @@
 ---
 title: Cung và cầu là gì
-description: Khái niệm cơ bản nhất của kinh tế học giúp giải thích giá cả và hành vi thị trường.
+description: 
 section_title: Kinh tế học
 section_link: kinh-te-hoc/index.html
 header_subline: 
-back_link_label: • Kinh tế học
+back_link_label: 🔙
 hero_image: assets/generated/covers/kinh-te-hoc/cung-cau-la-gi.svg
 output_path: kinh-te-hoc/cung-cau-la-gi/index.html
 ---
-
-Kinh tế học không chỉ nói về tiền bạc. Nó là cách nhìn vào lựa chọn, ưu tiên và đánh đổi trong đời sống hằng ngày.
 
 Khái niệm cơ bản nhất của kinh tế học giúp giải thích giá cả và hành vi thị trường.
 

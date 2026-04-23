@@ -1,15 +1,15 @@
 ---
 title: Ghi chú như một bộ não thứ hai
-description: Một hệ thống ghi chú tốt không chỉ lưu trữ mà còn giúp suy nghĩ lại và kết nối ý tưởng.
+description: 
 section_title: Ứng dụng - năng suất
 section_link: ung-dung-nang-suat/index.html
 header_subline: 
-back_link_label: • Ứng dụng - năng suất
+back_link_label: 🔙
 hero_image: assets/generated/covers/ung-dung-nang-suat/ghi-chu-thu-hai-nao.svg
 output_path: ung-dung-nang-suat/ghi-chu-thu-hai-nao/index.html
 ---
 
-Năng suất bền vững không đến từ việc ép mình liên tục mà từ hệ thống đủ rõ để làm điều quan trọng một cách đều đặn.
+
 
 Một hệ thống ghi chú tốt không chỉ lưu trữ mà còn giúp suy nghĩ lại và kết nối ý tưởng.
 

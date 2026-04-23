@@ -1,15 +1,13 @@
 ---
 title: Khan hiếm là điểm xuất phát của kinh tế học
-description: Vì nguồn lực luôn có giới hạn nên lựa chọn và phân bổ trở nên quan trọng.
+description: 
 section_title: Kinh tế học
 section_link: kinh-te-hoc/index.html
 header_subline: 
-back_link_label: • Kinh tế học
+back_link_label: 🔙
 hero_image: assets/generated/covers/kinh-te-hoc/nguon-luc-khan-hiem.svg
 output_path: kinh-te-hoc/nguon-luc-khan-hiem/index.html
 ---
-
-Kinh tế học không chỉ nói về tiền bạc. Nó là cách nhìn vào lựa chọn, ưu tiên và đánh đổi trong đời sống hằng ngày.
 
 Vì nguồn lực luôn có giới hạn nên lựa chọn và phân bổ trở nên quan trọng.
 

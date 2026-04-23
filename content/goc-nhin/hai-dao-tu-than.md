@@ -1,11 +1,11 @@
 ---
 title: Hải đảo tự thân 🏝️
-description: Quay về nương tựa, \n Hải đảo tự thân
+description: 
 section_title: Góc nhìn
 section_link: goc-nhin/index.html
 header_subline: 
-back_link_label: • Góc nhìn
-hero_image: content/goc-nhin/01_images/hai-dao-tu-than.jpg
+back_link_label: 🔙
+hero_image: 
 output_path: goc-nhin/hai-dao-tu-than/index.html
 ---
 

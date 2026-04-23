@@ -1,14 +1,14 @@
 ---
 title: Triết học phương Tây - Phân tích, logic, duy lý
-description: Triết học phương Tây lấy logic và duy lý làm nền tảng, 
-
+description: 
 section_title: Triết học
 section_link: triet-hoc/01_sub_phuong-tay/index.html
 header_subline: 
-back_link_label: • phuong-tay
+back_link_label: 🔙
 hero_image: -
 output_path: triet-hoc/01_sub_phuong-tay/phan-tich-logic-va-duy-ly/index.html
 ---
+
 
 Triết học phương Tây lấy logic và duy lý làm nền tảng, 
 

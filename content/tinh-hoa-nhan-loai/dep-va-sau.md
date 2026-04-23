@@ -1,15 +1,13 @@
 ---
 title: Vì sao con người luôn tìm cái đẹp và cái sâu
-description: Ta không chỉ cần sống sót mà còn cần những điều làm đời sống đáng sống hơn.
+description: 
 section_title: Tinh hoa - nhân loại
 section_link: tinh-hoa-nhan-loai/index.html
 header_subline: 
-back_link_label: • Tinh hoa - nhân loại
+back_link_label: 🔙
 hero_image: assets/generated/covers/tinh-hoa-nhan-loai/dep-va-sau.svg
 output_path: tinh-hoa-nhan-loai/dep-va-sau/index.html
 ---
-
-Tinh hoa - nhân loại thường nằm trong những ý tưởng cô đọng nhưng đủ sức làm ta dừng lại và suy nghĩ khác đi.
 
 Ta không chỉ cần sống sót mà còn cần những điều làm đời sống đáng sống hơn.
 

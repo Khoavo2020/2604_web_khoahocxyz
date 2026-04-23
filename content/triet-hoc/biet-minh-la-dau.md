@@ -1,15 +1,13 @@
 ---
 title: Biết mình là điểm khởi đầu của triết học sống
-description: Trước khi hỏi nên làm gì, có lẽ ta cần hiểu mình đang sống theo điều gì.
+description: 
 section_title: Triết học
 section_link: triet-hoc/index.html
 header_subline: 
-back_link_label: • Triết học
+back_link_label: 🔙
 hero_image: assets/generated/covers/triet-hoc/biet-minh-la-dau.svg
 output_path: triet-hoc/biet-minh-la-dau/index.html
 ---
-
-Triết học hữu ích nhất khi nó đi cùng đời sống thực, chứ không chỉ nằm trên trang sách như một cuộc tranh luận trừu tượng.
 
 Trước khi hỏi nên làm gì, có lẽ ta cần hiểu mình đang sống theo điều gì.
 

@@ -1,15 +1,15 @@
 ---
 title: Cách ghi chú để biến việc đọc thành tri thức của mình
-description: Một cuốn sách chỉ thực sự ở lại khi ta biết đối thoại với nó bằng ghi chú.
+description: 
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/index.html
 header_subline: 
-back_link_label: • Tủ sách - nền tảng
+back_link_label: 🔙
 hero_image: assets/generated/covers/tu-sach-nen-tang/cach-ghi-chu-khi-doc.svg
 output_path: tu-sach-nen-tang/cach-ghi-chu-khi-doc/index.html
 ---
 
-Một tủ sách nền tảng tốt không nhằm làm ta đọc nhiều hơn bằng mọi giá mà giúp ta đọc đúng thứ cần thiết vào đúng lúc.
+
 
 Một cuốn sách chỉ thực sự ở lại khi ta biết đối thoại với nó bằng ghi chú.
 

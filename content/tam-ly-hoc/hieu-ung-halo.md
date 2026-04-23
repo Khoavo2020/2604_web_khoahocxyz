@@ -1,15 +1,14 @@
 ---
 title: Hiệu ứng halo trong đánh giá con người
-description: Một ấn tượng tốt ở một mặt nào đó có thể lan sang mọi đánh giá còn lại.
+description: 
 section_title: Tâm lý học
 section_link: tam-ly-hoc/index.html
 header_subline: 
-back_link_label: • Tâm lý học
+back_link_label: 🔙
 hero_image: assets/generated/covers/tam-ly-hoc/hieu-ung-halo.svg
 output_path: tam-ly-hoc/hieu-ung-halo/index.html
 ---
 
-Tâm lý học giúp ta nhìn rõ hơn cách con người suy nghĩ, phản ứng và tự kể câu chuyện về chính mình.
 
 Một ấn tượng tốt ở một mặt nào đó có thể lan sang mọi đánh giá còn lại.
 

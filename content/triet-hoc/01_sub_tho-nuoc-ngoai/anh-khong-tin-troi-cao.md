@@ -4,7 +4,7 @@ description:
 section_title: Triết học
 section_link: triet-hoc/01_sub_tho-nuoc-ngoai/index.html
 header_subline: 
-back_link_label: • tho-nuoc-ngoai
+back_link_label: 🔙
 hero_image:
 output_path: triet-hoc/01_sub_tho-nuoc-ngoai/anh-khong-tin-troi-cao/index.html
 ---

@@ -41,13 +41,13 @@ CATEGORY_CHILD_PAGES = {
         {
             "slug": "01_sub_tho-viet-nam",
             "title": "Thơ Việt Nam",
-            "description": "Những bài thơ gợi mở về thân phận, tình yêu và thời gian.",
+            "description": "",
             "href": "triet-hoc/01_sub_tho-viet-nam/index.html",
         },
         {
             "slug": "01_sub_tho-nuoc-ngoai",
             "title": "Thơ nước ngoài",
-            "description": "Những bài thơ kinh điển mở rộng cảm thức về nhân sinh.",
+            "description": "",
             "href": "triet-hoc/01_sub_tho-nuoc-ngoai/index.html",
         },
     ]
@@ -221,6 +221,18 @@ def article_image_dir(source_path: Path) -> Path:
     return CONTENT_ROOT / category_slug / "01_images"
 
 
+def get_child_page(section_key: str) -> tuple[str, dict[str, str]] | None:
+    if "/" not in section_key:
+        return None
+
+    parent_slug, child_slug = section_key.split("/", 1)
+    for child in CATEGORY_CHILD_PAGES.get(parent_slug, []):
+        if child["slug"] == child_slug:
+            return parent_slug, child
+
+    return None
+
+
 def find_content_image(source_path: Path) -> str:
     images_dir = article_image_dir(source_path)
     if not images_dir.exists():
@@ -302,6 +314,19 @@ def collect_article_data(source_path: Path, sections: dict[str, dict[str, str]])
     header_subline = metadata.get("header_subline", section["tagline"])
     back_link_label = metadata.get("back_link_label", f"â€¢ {section_title}")
     hero_image = resolve_article_image(source_path, metadata)
+    parent_title = ""
+    parent_link = ""
+    child_page = get_child_page(section_key)
+
+    if child_page:
+        parent_slug, child = child_page
+        parent_section = sections.get(parent_slug, {})
+        parent_title = parent_section.get("title", parent_slug.replace("-", " ").title())
+        parent_link = f"{parent_slug}/index.html"
+        section_title = child["title"]
+        section_link = child["href"]
+        if not metadata.get("header_subline"):
+            header_subline = child["description"]
 
     output_rel = metadata.get("output_path")
     if output_rel:
@@ -320,6 +345,8 @@ def collect_article_data(source_path: Path, sections: dict[str, dict[str, str]])
         "section_title": section_title,
         "section_link": section_link,
         "header_subline": header_subline,
+        "parent_title": parent_title,
+        "parent_link": parent_link,
         "back_link_label": back_link_label,
         "markdown_body": markdown_body,
     }
@@ -334,6 +361,8 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
     header_subline = article["header_subline"]
     back_link_label = article["back_link_label"]
     hero_image = article["hero_image"]
+    parent_title = article["parent_title"]
+    parent_link = article["parent_link"]
     output_path = ROOT / article["output_path"]
 
     article_body = render_markdown(article["markdown_body"])
@@ -346,10 +375,16 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
     )
     description_block = f"<p>{escape(display_description)}</p>" if display_description else ""
     section_href = resolve_link(article["section_link"], prefix)
+    parent_href = resolve_link(parent_link, prefix) if parent_link else ""
+    breadcrumb_parts = [f'<a href="{prefix}index.html"><strong>&#x1F3E0;</strong></a>']
+
+    if parent_title and parent_href:
+        breadcrumb_parts.append(f'<a href="{parent_href}"><strong>{escape(parent_title)}</strong></a>')
+
+    breadcrumb_parts.append(f'<a href="{section_href}"><strong>{escape(section_title)}</strong></a>')
     article_header_block = (
         '<header id="header">'
-        f'<div class="logo"><a href="{prefix}index.html"><strong>&#x1F3E0;</strong></a> &raquo; '
-        f'<a href="{section_href}"><strong>{escape(section_title)}</strong></a></div>'
+        f'<div class="logo">{" &raquo; ".join(breadcrumb_parts)}</div>'
         '<ul class="icons">'
         '<li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>'
         '<li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>'
@@ -407,18 +442,12 @@ def render_child_page_cards(parent_slug: str, category_index_path: Path) -> str:
         href = os.path.relpath(ROOT / child["href"], category_index_path.parent).replace("\\", "/")
         cards.append(
             "<article class=\"category-child-card\">"
-            f"<h3><a href=\"{href}\">{escape(child['title'])}</a></h3>"
-            f"<p>{escape(child['description'])}</p>"
-            f"<p class=\"category-child-cta\"><a href=\"{href}\">Xem chuyên mục</a></p>"
+            f"<a href=\"{href}\">{escape(child['title'])}</a>"
             "</article>"
         )
 
     return (
         '<div class="category-children-block">'
-        '<header class="main">'
-        "<h2>Chuyên mục con</h2>"
-        "<p>Đi theo từng nhánh để đọc đúng mạch nội dung của trang Triết học.</p>"
-        "</header>"
         '<div class="category-child-grid">'
         + "".join(cards)
         + "</div>"
@@ -426,11 +455,24 @@ def render_child_page_cards(parent_slug: str, category_index_path: Path) -> str:
     )
 
 
-def build_category_header(prefix: str, title: str, tagline: str, link_href: str) -> str:
+def build_category_header(
+    prefix: str,
+    title: str,
+    tagline: str,
+    link_href: str,
+    parent_title: str = "",
+    parent_link_href: str = "",
+) -> str:
+    breadcrumb_parts = [f'<a href="{prefix}index.html"><strong>&#x1F3E0;</strong></a>']
+
+    if parent_title and parent_link_href:
+        breadcrumb_parts.append(f'<a href="{parent_link_href}"><strong>{escape(parent_title)}</strong></a>')
+
+    breadcrumb_parts.append(f'<a href="{link_href}"><strong>{escape(title)}</strong></a>')
+
     return (
         '<header id="header">'
-        f'<div class="logo"><a href="{prefix}index.html"><strong>&#x1F3E0;</strong></a> &raquo; '
-        f'<a href="{link_href}"><strong>{escape(title)}</strong></a> &raquo; {escape(tagline)}</div>'
+        f'<div class="logo">{" &raquo; ".join(breadcrumb_parts)} &raquo; {escape(tagline)}</div>'
         '<ul class="icons">'
         '<li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>'
         '<li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>'
@@ -477,7 +519,7 @@ def build_category_pages(articles: list[dict[str, str]], sections: dict[str, dic
     return built_paths
 
 
-def build_subcategory_pages(articles: list[dict[str, str]]) -> list[Path]:
+def build_subcategory_pages(articles: list[dict[str, str]], sections: dict[str, dict[str, str]]) -> list[Path]:
     template = read_text(CATEGORY_TEMPLATE_PATH)
     built_paths: list[Path] = []
 
@@ -491,7 +533,15 @@ def build_subcategory_pages(articles: list[dict[str, str]]) -> list[Path]:
             category_index_path = ROOT / child["href"]
             prefix = root_prefix(category_index_path)
             posts_html = "\n".join(render_post_card(article, category_index_path) for article in child_articles)
-            header_block = build_category_header(prefix, child["title"], child["description"], "./index.html")
+            parent_title = sections.get(parent_slug, {}).get("title", parent_slug.replace("-", " ").title())
+            header_block = build_category_header(
+                prefix,
+                child["title"],
+                child["description"],
+                "./index.html",
+                parent_title=parent_title,
+                parent_link_href=f"{prefix}{parent_slug}/index.html",
+            )
             values = {
                 "CATEGORY_TITLE": child["title"],
                 "CATEGORY_TAGLINE": child["description"],
@@ -581,7 +631,7 @@ def main() -> None:
     built_paths = [ROOT / article["output_path"] for article in articles]
     all_articles = articles if target == "all" else [collect_article_data(source, sections) for source in all_sources]
     category_paths = build_category_pages(all_articles, sections)
-    subcategory_paths = build_subcategory_pages(all_articles)
+    subcategory_paths = build_subcategory_pages(all_articles, sections)
     write_homepage_payload(all_articles, sections)
 
     for path in built_paths:

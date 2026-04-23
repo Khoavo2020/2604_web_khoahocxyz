@@ -1,15 +1,13 @@
 ---
 title: Lợi thế so sánh giúp hợp tác hiệu quả hơn
-description: Không cần giỏi nhất mọi thứ, chỉ cần tương đối phù hợp hơn ở một việc nào đó.
+description: 
 section_title: Kinh tế học
 section_link: kinh-te-hoc/index.html
 header_subline: 
-back_link_label: • Kinh tế học
+back_link_label: 🔙
 hero_image: assets/generated/covers/kinh-te-hoc/loi-the-so-sanh.svg
 output_path: kinh-te-hoc/loi-the-so-sanh/index.html
 ---
-
-Kinh tế học không chỉ nói về tiền bạc. Nó là cách nhìn vào lựa chọn, ưu tiên và đánh đổi trong đời sống hằng ngày.
 
 Không cần giỏi nhất mọi thứ, chỉ cần tương đối phù hợp hơn ở một việc nào đó.
 

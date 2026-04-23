@@ -1,15 +1,15 @@
 ---
 title: Những hướng đọc tâm lý học nền tảng
-description: Đọc tâm lý học không chỉ để hiểu người khác mà còn để bớt ngây thơ với chính mình.
+description: 
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/index.html
 header_subline: 
-back_link_label: • Tủ sách - nền tảng
+back_link_label: 🔙
 hero_image: assets/generated/covers/tu-sach-nen-tang/sach-tam-ly-nen-doc.svg
 output_path: tu-sach-nen-tang/sach-tam-ly-nen-doc/index.html
 ---
 
-Một tủ sách nền tảng tốt không nhằm làm ta đọc nhiều hơn bằng mọi giá mà giúp ta đọc đúng thứ cần thiết vào đúng lúc.
+
 
 Đọc tâm lý học không chỉ để hiểu người khác mà còn để bớt ngây thơ với chính mình.
 

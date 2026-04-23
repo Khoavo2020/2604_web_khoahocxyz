@@ -1,15 +1,13 @@
 ---
 title: Chi phí cơ hội trong đời sống hằng ngày
-description: Mỗi lựa chọn đều có một cái giá vô hình là thứ ta bỏ lỡ khi chọn phương án khác.
+description: 
 section_title: Kinh tế học
 section_link: kinh-te-hoc/index.html
 header_subline: 
-back_link_label: • Kinh tế học
+back_link_label: 🔙
 hero_image: assets/generated/covers/kinh-te-hoc/chi-phi-co-hoi-trong-doi-song.svg
 output_path: kinh-te-hoc/chi-phi-co-hoi-trong-doi-song/index.html
 ---
-
-Kinh tế học không chỉ nói về tiền bạc. Nó là cách nhìn vào lựa chọn, ưu tiên và đánh đổi trong đời sống hằng ngày.
 
 Mỗi lựa chọn đều có một cái giá vô hình là thứ ta bỏ lỡ khi chọn phương án khác.
 
