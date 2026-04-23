@@ -24,18 +24,9 @@ hư hỏng (protein lỗi, vi khuẩn, tế bào già) để tái chế thành n
 • Ngừa ung thư: ngăn chặn sự tích lũy của các đột biến lỗi ở cấp độ tế bào.
 
 
-Kiểm tra break line
-
-
-cách ở trên 2 empty line
-
-
-
-cách 4 empty line
+---
+1
 <br><br>
-cách 1 br
+2
 <br><br><br><br>
-cách 2 br
-<br><br><br><br><br><br>
-cách 3 br
-<br><br><br><br>
+

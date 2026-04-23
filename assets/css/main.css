@@ -2160,10 +2160,13 @@ body.article-page #main > .inner > section.article-content > p,
 body.article-page #main > .inner > section.article-content > ul,
 body.article-page #main > .inner > section.article-content > ol,
 body.article-page #main > .inner > section.article-content > blockquote,
-body.article-page #main > .inner > section.article-content > .image.main,
 body.article-page #main > .inner > section.article-content > .markdown-paragraph {
   /* khoa: --> article content width */
   max-width: 42em; }
+
+body.article-page #main > .inner > section.article-content > .image.main {
+  /* khoa: --> article image width */
+  max-width: 52em; }
 
 /* Sidebar */
 #search form {
