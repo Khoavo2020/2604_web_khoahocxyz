@@ -1,5 +1,6 @@
 ---
 title: Sống tối giản có phải là tự do hơn
+title_sub: 
 description: 
 section_title: Triết học
 section_link: triet-hoc/index.html

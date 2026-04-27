@@ -1,5 +1,6 @@
 ---
 title: Tinh thần học suốt đời được nuôi bằng điều gì
+title_sub: 
 description: 
 section_title: Tinh hoa - nhân loại
 section_link: tinh-hoa-nhan-loai/index.html

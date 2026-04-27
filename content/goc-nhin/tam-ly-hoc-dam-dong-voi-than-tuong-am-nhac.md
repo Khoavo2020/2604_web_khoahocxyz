@@ -1,5 +1,6 @@
 ---
 title: Tâm lý học đám đông - sân khấu âm nhạc và chim mồi
+title_sub: 
 description: 
 section_title: Góc nhìn
 section_link: goc-nhin/index.html

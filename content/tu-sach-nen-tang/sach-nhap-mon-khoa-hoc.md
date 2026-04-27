@@ -1,5 +1,6 @@
 ---
 title: Một lộ trình sách nhập môn Khoa học
+title_sub: 
 description: 
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/index.html

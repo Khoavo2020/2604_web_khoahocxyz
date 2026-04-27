@@ -1,5 +1,6 @@
 ---
 title: Anh không tin trời cao
+title_sub: 
 description: 
 section_title: Triết học
 section_link: triet-hoc/01_sub_tho-nuoc-ngoai/index.html

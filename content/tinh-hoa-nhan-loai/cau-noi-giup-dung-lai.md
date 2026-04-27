@@ -1,5 +1,6 @@
 ---
 title: Những câu nói hay giúp ta dừng lại một nhịp
+title_sub: 
 description: 
 section_title: Tinh hoa - nhân loại
 section_link: tinh-hoa-nhan-loai/index.html

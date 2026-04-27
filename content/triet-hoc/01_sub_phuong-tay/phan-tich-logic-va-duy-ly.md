@@ -1,5 +1,6 @@
 ---
 title: Triết học phương Tây - Phân tích, logic, duy lý
+title_sub: 
 description: 
 section_title: Triết học
 section_link: triet-hoc/01_sub_phuong-tay/index.html

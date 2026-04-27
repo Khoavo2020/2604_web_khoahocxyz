@@ -1,5 +1,6 @@
 ---
 title: Lỡ đâu cả đời này không rực rỡ?
+title_sub: 
 description: 
 section_title: Góc nhìn
 section_link: goc-nhin/index.html

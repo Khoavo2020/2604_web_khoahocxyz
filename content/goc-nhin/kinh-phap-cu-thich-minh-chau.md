@@ -1,5 +1,6 @@
 ---
-title: Bắt đầu tìm hiểu kinh phật nguyên thủy - kinh pháp cú (thích minh châu)
+title: Bắt đầu tìm hiểu kinh phật nguyên thủy - Kinh Pháp Cú
+title_sub: (Thích Minh Châu)
 description: 
 section_title: Góc nhìn
 section_link: goc-nhin/index.html
@@ -28,32 +29,20 @@ Dịch tập Dhammapada này ra thể kệ, chúng tôi chỉ có một tâm ngu
 
 
 
-[Nghe audio] (https://on.soundcloud.com/cLsdaGmepelvDjaJXz)
+Nghe audio: [https://on.soundcloud.com/cLsdaGmepelvDjaJXz](https://on.soundcloud.com/cLsdaGmepelvDjaJXz)
 
 
 1. Ý dẫn đầu các pháp, 
-
 Ý làm chủ, ý tạo; 
-
 Nếu với ý ô nhiễm, 
-
 Nói lên hay hành động, 
-
 Khổ não bước theo sau, 
-
 Như xe, chân vật kéo. 
 
 2. Ý dẫn đầu các pháp, 
-
 Ý làm chủ, ý tạo, 
-
 Nếu với ý thanh tịnh, 
-
 Nói lên hay hành động, 
-
 An lạc bước theo sau, 
-
 Như bóng, không rời hình
-
-
-
+...

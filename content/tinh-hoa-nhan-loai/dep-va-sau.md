@@ -1,5 +1,6 @@
 ---
 title: Vì sao con người luôn tìm cái đẹp và cái sâu
+title_sub: 
 description: 
 section_title: Tinh hoa - nhân loại
 section_link: tinh-hoa-nhan-loai/index.html

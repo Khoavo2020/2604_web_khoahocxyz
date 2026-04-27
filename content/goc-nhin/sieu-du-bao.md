@@ -1,5 +1,6 @@
 ---
 title: Siêu dự báo
+title_sub: 
 description: 
 section_title: Góc nhìn
 section_link: goc-nhin/index.html

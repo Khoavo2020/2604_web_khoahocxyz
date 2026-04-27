@@ -1,5 +1,6 @@
 ---
 title: Stress và khả năng phục hồi
+title_sub: 
 description: 
 section_title: Tâm lý học
 section_link: tam-ly-hoc/index.html

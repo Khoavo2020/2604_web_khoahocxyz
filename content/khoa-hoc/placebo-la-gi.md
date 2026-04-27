@@ -1,5 +1,6 @@
 ---
 title: Hiệu ứng placebo là gì
+title_sub: 
 description: 
 section_title: Khoa học
 section_link: khoa-hoc/index.html

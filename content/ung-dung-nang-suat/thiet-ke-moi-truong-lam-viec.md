@@ -1,5 +1,6 @@
 ---
 title: Thiết kế môi trường làm việc để bớt phân tâm
+title_sub: 
 description: 
 section_title: Ứng dụng - năng suất
 section_link: ung-dung-nang-suat/index.html

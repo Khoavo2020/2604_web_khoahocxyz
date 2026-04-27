@@ -1,5 +1,6 @@
 ---
 title: Sinh vật có não là để dự đoán tương lai
+title_sub: 
 description: 
 section_title: Góc nhìn
 section_link: goc-nhin/index.html

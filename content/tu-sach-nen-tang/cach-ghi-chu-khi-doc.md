@@ -1,5 +1,6 @@
 ---
 title: Cách ghi chú để biến việc đọc thành tri thức của mình
+title_sub: 
 description: 
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/index.html

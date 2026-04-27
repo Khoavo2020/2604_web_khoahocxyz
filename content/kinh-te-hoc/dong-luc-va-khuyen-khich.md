@@ -1,5 +1,6 @@
 ---
 title: Khuyến khích ảnh hưởng đến hành vi ra sao
+title_sub: 
 description: 
 section_title: Kinh tế học
 section_link: kinh-te-hoc/index.html

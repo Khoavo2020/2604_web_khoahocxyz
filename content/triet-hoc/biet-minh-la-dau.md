@@ -1,5 +1,6 @@
 ---
 title: Biết mình là điểm khởi đầu của triết học sống
+title_sub: 
 description: 
 section_title: Triết học
 section_link: triet-hoc/index.html

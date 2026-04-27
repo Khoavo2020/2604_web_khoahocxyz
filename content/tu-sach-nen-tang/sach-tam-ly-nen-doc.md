@@ -1,5 +1,6 @@
 ---
 title: Những hướng đọc tâm lý học nền tảng
+title_sub: 
 description: 
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/index.html

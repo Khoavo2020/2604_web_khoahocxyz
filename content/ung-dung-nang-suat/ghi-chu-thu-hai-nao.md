@@ -1,5 +1,6 @@
 ---
 title: Ghi chú như một bộ não thứ hai
+title_sub: 
 description: 
 section_title: Ứng dụng - năng suất
 section_link: ung-dung-nang-suat/index.html

@@ -30,5 +30,3 @@ vì nó buộc bạn phải nhìn một tình huống từ nhiều góc độ: W
 - Toàn diện → Giúp tránh bỏ sót chi tiết quan trọng.
 - Khơi gợi tò mò & sáng tạo → Đặt câu hỏi mở để tìm ra nhiều góc nhìn.
 - Ứng dụng đa lĩnh vực → Từ báo chí, giáo dục, đến quản lý doanh nghiệp và điều tra.
-
-

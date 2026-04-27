@@ -1,5 +1,6 @@
 ---
 title: Hải đảo tự thân 🏝️
+title_sub: 
 description: 
 section_title: Triết học
 section_link: triet-hoc/01_sub_tho-viet-nam/index.html

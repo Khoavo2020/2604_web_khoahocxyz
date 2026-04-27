@@ -1,5 +1,6 @@
 ---
 title: Cổ phần và cổ tức
+title_sub: 
 description: 
 section_title: Trend
 section_link: trend/index.html

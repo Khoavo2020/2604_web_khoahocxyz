@@ -1,5 +1,6 @@
 ---
 title: Lợi thế so sánh giúp hợp tác hiệu quả hơn
+title_sub: 
 description: 
 section_title: Kinh tế học
 section_link: kinh-te-hoc/index.html

@@ -1,5 +1,6 @@
 ---
 title: Triết học phương Đông - sự hòa hợp giữa con người và thiên nhiên, đạo đức nhân sinh, và tâm linh
+title_sub: 
 description: 
 section_title: Triết học
 section_link: triet-hoc/01_sub_phuong-dong/index.html

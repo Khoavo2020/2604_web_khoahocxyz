@@ -94,16 +94,36 @@ def parse_front_matter(raw: str) -> tuple[dict[str, str], str]:
 
 def render_inline(text: str) -> str:
     text = escape(text)
+    # Support explicit <br> or <br/> tags
+    text = text.replace("&lt;br&gt;", "<br />").replace("&lt;br/&gt;", "<br />")
     text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
     text = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", text)
     text = re.sub(r"\*([^*]+)\*", r"<em>\1</em>", text)
-    text = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', text)
+    text = re.sub(r"\[([^\]]+)\]\s*\(([^)]+)\)", r'<a href="\2">\1</a>', text)
     return text
 
 
 def indent_block(text: str, level: int) -> str:
     prefix = "\t" * level
-    return "\n".join(f"{prefix}{line}" if line else "" for line in text.splitlines())
+    lines = text.splitlines()
+    res = []
+    in_pre = False
+    for line in lines:
+        if "<pre" in line:
+            res.append(f"{prefix}{line}")
+            if "</pre>" not in line:
+                in_pre = True
+            continue
+            
+        if in_pre:
+            if "</pre>" in line:
+                res.append(f"{prefix}{line}")
+                in_pre = False
+            else:
+                res.append(line)
+        else:
+            res.append(f"{prefix}{line}" if line else "")
+    return "\n".join(res)
 
 
 def render_markdown(markdown: str) -> str:
@@ -112,11 +132,15 @@ def render_markdown(markdown: str) -> str:
     paragraph_lines: list[str] = []
     list_items: list[str] = []
     quote_lines: list[str] = []
+    
+    in_code_block = False
+    code_lines: list[str] = []
+    code_lang = ""
 
     def flush_paragraph() -> None:
         if paragraph_lines:
-            text = " ".join(line.strip() for line in paragraph_lines)
-            html_parts.append(f'<p class="markdown-paragraph">{render_inline(text)}</p>')
+            text = "<br />".join(render_inline(line.strip()) for line in paragraph_lines)
+            html_parts.append(f'<p class="markdown-paragraph">{text}</p>')
             paragraph_lines.clear()
 
     def flush_list() -> None:
@@ -127,13 +151,35 @@ def render_markdown(markdown: str) -> str:
 
     def flush_quote() -> None:
         if quote_lines:
-            text = " ".join(line.strip() for line in quote_lines)
-            html_parts.append(f"<blockquote><p>{render_inline(text)}</p></blockquote>")
+            text = "<br />".join(render_inline(line.strip()) for line in quote_lines)
+            html_parts.append(f"<blockquote><p>{text}</p></blockquote>")
             quote_lines.clear()
 
     for raw_line in lines:
         line = raw_line.rstrip()
         stripped = line.strip()
+
+        # Handle Code Blocks
+        if stripped.startswith("```"):
+            if in_code_block:
+                # Escape code content but don't use render_inline
+                html_parts.append(f'<pre><code class="language-{code_lang}">')
+                html_parts.extend([escape(l) for l in code_lines])
+                html_parts.append('</code></pre>')
+                code_lines = []
+                in_code_block = False
+                code_lang = ""
+            else:
+                flush_paragraph()
+                flush_list()
+                flush_quote()
+                in_code_block = True
+                code_lang = stripped[3:].strip()
+            continue
+
+        if in_code_block:
+            code_lines.append(raw_line)
+            continue
 
         if not stripped:
             flush_paragraph()

@@ -1,5 +1,6 @@
 ---
 title: Động lực nội tại và cách học bền vững
+title_sub: 
 description: 
 section_title: Tâm lý học
 section_link: tam-ly-hoc/index.html

@@ -1,5 +1,6 @@
 ---
 title: Chủ nghĩa Khắc kỷ nhìn nghịch cảnh thế nào
+title_sub: 
 description: 
 section_title: Triết học
 section_link: triet-hoc/index.html

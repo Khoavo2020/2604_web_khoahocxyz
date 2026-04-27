@@ -1,5 +1,6 @@
 ---
 title: Vì sao bầu trời có màu xanh
+title_sub: 
 description: 
 section_title: Khoa học
 section_link: khoa-hoc/index.html
