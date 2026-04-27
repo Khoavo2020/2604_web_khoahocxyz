@@ -1,9 +1,11 @@
 ---
 title: 5W1H Framework
+title_sub: Framework sáu câu hỏi giúp giải quyết mọi vấn đề
 description: 
 section_title: Khoa học
 section_link: khoa-hoc/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/khoa-hoc/5w1h-framework.jpg
 output_path: khoa-hoc/5w1h-framework/index.html

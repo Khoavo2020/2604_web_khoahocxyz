@@ -3,7 +3,8 @@ title: Những câu nói hay giúp ta dừng lại một nhịp
 description: 
 section_title: Tinh hoa - nhân loại
 section_link: tinh-hoa-nhan-loai/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/tinh-hoa-nhan-loai/cau-noi-giup-dung-lai.svg
 output_path: tinh-hoa-nhan-loai/cau-noi-giup-dung-lai/index.html

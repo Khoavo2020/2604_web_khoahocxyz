@@ -3,7 +3,8 @@ title: Cổ phần và cổ tức
 description: 
 section_title: Trend
 section_link: trend/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: content/trend/01_images/co-phan-co-phieu-co-tuc.webp
 output_path: trend/co-phan-co-phieu-co-tuc/index.html

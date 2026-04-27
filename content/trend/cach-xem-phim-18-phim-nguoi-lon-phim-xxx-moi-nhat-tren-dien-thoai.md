@@ -3,7 +3,8 @@ title: Cách xem phim 18 +, phim người lớn, phim xxx mới nhất
 description: 
 section_title: Trend
 section_link: trend/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: content/trend/01_images/cach-xem-phim-18-phim-nguoi-lon-phim-xxx-moi-nhat-tren-dien-thoai.jpg
 output_path: trend/cach-xem-phim-18-phim-nguoi-lon-phim-xxx-moi-nhat-tren-dien-thoai/index.html

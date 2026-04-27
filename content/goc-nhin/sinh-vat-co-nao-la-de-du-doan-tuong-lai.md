@@ -3,7 +3,8 @@ title: Sinh vật có não là để dự đoán tương lai
 description: 
 section_title: Góc nhìn
 section_link: goc-nhin/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: content/goc-nhin/01_images/sinh-vat-co-nao-la-de-du-doan-tuong-lai.jpg
 output_path: goc-nhin/sinh-vat-co-nao-la-de-du-doan-tuong-lai/index.html

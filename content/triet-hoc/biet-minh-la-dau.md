@@ -3,7 +3,8 @@ title: Biết mình là điểm khởi đầu của triết học sống
 description: 
 section_title: Triết học
 section_link: triet-hoc/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/triet-hoc/biet-minh-la-dau.svg
 output_path: triet-hoc/biet-minh-la-dau/index.html

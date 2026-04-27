@@ -3,7 +3,8 @@ title: Hiệu ứng halo trong đánh giá con người
 description: 
 section_title: Tâm lý học
 section_link: tam-ly-hoc/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/tam-ly-hoc/hieu-ung-halo.svg
 output_path: tam-ly-hoc/hieu-ung-halo/index.html

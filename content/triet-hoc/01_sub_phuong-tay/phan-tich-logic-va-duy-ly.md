@@ -3,7 +3,8 @@ title: Triết học phương Tây - Phân tích, logic, duy lý
 description: 
 section_title: Triết học
 section_link: triet-hoc/01_sub_phuong-tay/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: -
 output_path: triet-hoc/01_sub_phuong-tay/phan-tich-logic-va-duy-ly/index.html

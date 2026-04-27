@@ -3,7 +3,8 @@ title: Người con gái ở lầu hoa
 description: 
 section_title: Triết học
 section_link: triet-hoc/01_sub_tho-viet-nam/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: 
 output_path: triet-hoc/01_sub_tho-viet-nam/nguoi-con-gai-o-lau-hoa/index.html

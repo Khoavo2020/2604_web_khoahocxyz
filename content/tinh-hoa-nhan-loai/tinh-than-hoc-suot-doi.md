@@ -3,7 +3,8 @@ title: Tinh thần học suốt đời được nuôi bằng điều gì
 description: 
 section_title: Tinh hoa - nhân loại
 section_link: tinh-hoa-nhan-loai/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/tinh-hoa-nhan-loai/tinh-than-hoc-suot-doi.svg
 output_path: tinh-hoa-nhan-loai/tinh-than-hoc-suot-doi/index.html

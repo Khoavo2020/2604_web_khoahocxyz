@@ -334,8 +334,13 @@ def collect_article_data(source_path: Path, sections: dict[str, dict[str, str]])
     else:
         output_path = ROOT / source_path.relative_to(CONTENT_ROOT).with_suffix("") / "index.html"
 
+    author = metadata.get("author", "").strip()
+    update_date = metadata.get("update_date", "").strip()
+    title_sub = metadata.get("title_sub", "").strip()
+
     return {
         "title": title,
+        "title_sub": title_sub,
         "description": description,
         "display_description": explicit_description,
         "category_slug": category_slug,
@@ -348,6 +353,8 @@ def collect_article_data(source_path: Path, sections: dict[str, dict[str, str]])
         "parent_title": parent_title,
         "parent_link": parent_link,
         "back_link_label": back_link_label,
+        "author": author,
+        "update_date": update_date,
         "markdown_body": markdown_body,
     }
 
@@ -355,6 +362,7 @@ def collect_article_data(source_path: Path, sections: dict[str, dict[str, str]])
 def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dict[str, str]:
     article = collect_article_data(source_path, sections)
     title = article["title"]
+    title_sub = article.get("title_sub", "")
     description = article["description"]
     display_description = article["display_description"]
     section_title = article["section_title"]
@@ -374,6 +382,7 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
         else ""
     )
     description_block = f"<p>{escape(display_description)}</p>" if display_description else ""
+    title_sub_block = f'<p class="article-title-sub"><i>{escape(title_sub)}</i></p>' if title_sub else ""
     section_href = resolve_link(article["section_link"], prefix)
     parent_href = resolve_link(parent_link, prefix) if parent_link else ""
     breadcrumb_parts = [f'<a href="{prefix}index.html"><strong>&#x1F3E0;</strong></a>']
@@ -392,9 +401,27 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
         '</header>'
     )
 
+    author = article.get("author", "")
+    update_date = article.get("update_date", "")
+    section_href = resolve_link(article["section_link"], prefix)
+    back_link_label = article["back_link_label"]
+
+    footer_info = []
+    if author:
+        footer_info.append(f'<span class="author">{escape(author)}</span>')
+    if update_date:
+        calendar_link = f"{prefix}lich-am-duong/index.html"
+        footer_info.append(f'<span class="date"><a href="{calendar_link}">{escape(update_date)}</a></span>')
+    
+    info_html = f'<div class="info">{" | ".join(footer_info)}</div>' if footer_info else ""
+    back_link_html = f'<div class="back-link"><a href="{section_href}">{escape(back_link_label)}</a></div>'
+    
+    article_footer_block = f'<div class="article-footer">{back_link_html}{info_html}</div>'
+
     template = read_text(ARTICLE_TEMPLATE_PATH)
     values = {
         "PAGE_TITLE": title,
+        "PAGE_TITLE_SUB_BLOCK": indent_block(title_sub_block, 6) if title_sub_block else "",
         "PAGE_DESCRIPTION": description,
         "PAGE_DESCRIPTION_BLOCK": indent_block(description_block, 6) if description_block else "",
         "SECTION_TITLE": section_title,
@@ -403,6 +430,7 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
         "BACK_LINK_LABEL": back_link_label,
         "HERO_BLOCK": indent_block(hero_block, 6) if hero_block else "",
         "ARTICLE_BODY": indent_block(article_body, 6),
+        "ARTICLE_FOOTER": indent_block(article_footer_block, 6) if article_footer_block else "",
         "ROOT_PREFIX": prefix,
         "ARTICLE_HEADER_BLOCK": indent_block(article_header_block, 5),
     }

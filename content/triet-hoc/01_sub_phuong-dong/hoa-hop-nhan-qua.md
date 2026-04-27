@@ -3,7 +3,8 @@ title: Triết học phương Đông - sự hòa hợp giữa con người và t
 description: 
 section_title: Triết học
 section_link: triet-hoc/01_sub_phuong-dong/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: -
 output_path: triet-hoc/01_sub_phuong-dong/phan-tich-logic-va-duy-ly/index.html

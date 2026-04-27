@@ -49,7 +49,8 @@ python scripts/build-markdown.py content/tam-ly-hoc/thien-kien-xac-nhan.md
 - `description`: mô tả ngắn
 - `section_title`: tên chuyên mục hiển thị ở header
 - `section_link`: link quay về trang chuyên mục
-- `header_subline`: dòng mô tả ngắn ở đầu trang
+- `author` : 
+- `update_date` : 
 - `back_link_label`: nhãn link quay lại
 - `hero_image`: ảnh đầu bài
 - `output_path`: nơi xuất file HTML

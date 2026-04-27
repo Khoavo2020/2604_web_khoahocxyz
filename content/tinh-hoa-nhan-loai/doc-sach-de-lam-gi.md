@@ -3,7 +3,8 @@ title: Đọc sách để làm gì ngoài việc biết thêm
 description: 
 section_title: Tinh hoa - nhân loại
 section_link: tinh-hoa-nhan-loai/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/tinh-hoa-nhan-loai/doc-sach-de-lam-gi.svg
 output_path: tinh-hoa-nhan-loai/doc-sach-de-lam-gi/index.html

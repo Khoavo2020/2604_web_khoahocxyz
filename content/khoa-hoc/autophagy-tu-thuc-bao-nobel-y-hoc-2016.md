@@ -3,7 +3,8 @@ title: Nobel y học 2016 autophagy (tự thực bào) 🧬
 description: 
 section_title: Khoa học
 section_link: khoa-hoc/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/khoa-hoc/autophagy-tu-thuc-bao-nobel-y-hoc-2016.jpg
 output_path: khoa-hoc/autophagy-tu-thuc-bao-nobel-y-hoc-2016/index.html

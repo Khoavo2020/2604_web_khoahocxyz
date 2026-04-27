@@ -3,7 +3,8 @@ title: Pomodoro có thực sự hiệu quả không
 description: 
 section_title: Ứng dụng - năng suất
 section_link: ung-dung-nang-suat/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/ung-dung-nang-suat/pomodoro-co-thuc-su-hieu-qua.svg
 output_path: ung-dung-nang-suat/pomodoro-co-thuc-su-hieu-qua/index.html

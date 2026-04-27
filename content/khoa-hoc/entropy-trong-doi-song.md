@@ -3,7 +3,8 @@ title: Entropy trong đời sống thường ngày
 description: 
 section_title: Khoa học
 section_link: khoa-hoc/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/khoa-hoc/entropy-trong-doi-song.svg
 output_path: khoa-hoc/entropy-trong-doi-song/index.html

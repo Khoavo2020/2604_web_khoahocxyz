@@ -3,7 +3,8 @@ title: Đọc sách kinh tế cho người mới bắt đầu
 description: 
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/tu-sach-nen-tang/doc-sach-kinh-te-cho-nguoi-moi.svg
 output_path: tu-sach-nen-tang/doc-sach-kinh-te-cho-nguoi-moi/index.html

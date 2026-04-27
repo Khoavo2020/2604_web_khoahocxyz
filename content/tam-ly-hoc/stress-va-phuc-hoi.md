@@ -3,7 +3,8 @@ title: Stress và khả năng phục hồi
 description: 
 section_title: Tâm lý học
 section_link: tam-ly-hoc/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/tam-ly-hoc/stress-va-phuc-hoi.svg
 output_path: tam-ly-hoc/stress-va-phuc-hoi/index.html

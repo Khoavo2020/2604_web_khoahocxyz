@@ -3,7 +3,8 @@ title: Lợi thế so sánh giúp hợp tác hiệu quả hơn
 description: 
 section_title: Kinh tế học
 section_link: kinh-te-hoc/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/kinh-te-hoc/loi-the-so-sanh.svg
 output_path: kinh-te-hoc/loi-the-so-sanh/index.html

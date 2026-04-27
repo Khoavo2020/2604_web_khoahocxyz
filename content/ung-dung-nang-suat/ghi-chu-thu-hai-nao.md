@@ -3,7 +3,8 @@ title: Ghi chú như một bộ não thứ hai
 description: 
 section_title: Ứng dụng - năng suất
 section_link: ung-dung-nang-suat/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/ung-dung-nang-suat/ghi-chu-thu-hai-nao.svg
 output_path: ung-dung-nang-suat/ghi-chu-thu-hai-nao/index.html

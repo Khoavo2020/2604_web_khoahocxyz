@@ -3,7 +3,9 @@ title: Chủ nghĩa Khắc kỷ nhìn nghịch cảnh thế nào
 description: 
 section_title: Triết học
 section_link: triet-hoc/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026õ
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/triet-hoc/chu-nghia-khac-ky.svg
 output_path: triet-hoc/chu-nghia-khac-ky/index.html

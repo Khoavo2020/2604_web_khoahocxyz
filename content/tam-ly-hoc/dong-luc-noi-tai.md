@@ -3,7 +3,8 @@ title: Động lực nội tại và cách học bền vững
 description: 
 section_title: Tâm lý học
 section_link: tam-ly-hoc/index.html
-header_subline: 
+author: Hữu Bách
+update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/tam-ly-hoc/dong-luc-noi-tai.svg
 output_path: tam-ly-hoc/dong-luc-noi-tai/index.html
