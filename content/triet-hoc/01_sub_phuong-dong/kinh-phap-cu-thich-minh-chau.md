@@ -2,13 +2,13 @@
 title: Bắt đầu tìm hiểu kinh phật nguyên thủy - Kinh Pháp Cú
 title_sub: (Thích Minh Châu)
 description: 
-section_title: Góc nhìn
-section_link: goc-nhin/index.html
+section_title: Triết học
+section_link: triet-hoc/01_sub_phuong-dong/index.html
 author: Minh Niệm
 update_date: 27/04/2026
 back_link_label: 🔙
-hero_image: content/goc-nhin/01_images/kinh-phap-cu-thich-minh-chau.jpg
-output_path: goc-nhin/kinh-phap-cu-thich-minh-chau/index.html
+hero_image: content/triet-hoc/01_sub_phuong-dong/01_images/kinh-phap-cu-thich-minh-chau.jpg
+output_path: triet-hoc/01_sub_phuong-dong/kinh-phap-cu-thich-minh-chau/index.html
 ---
 
 Quyển kinh Dhammapada (thuộc Tiểu bộ kinh) được xem như quyển Thánh kinh trong Phật giáo và trở thành một trong những tập sách được dịch ra nhiều thứ tiếng nhất trong kinh sách Phật giáo. 

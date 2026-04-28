@@ -2,13 +2,13 @@
 title: Bắt đầu tìm hiểu kinh phật nguyên thủy - Kinh Trường Bộ
 title_sub: (Thích Minh Châu)
 description: 
-section_title: Góc nhìn
-section_link: goc-nhin/index.html
+section_title: Triết học
+section_link: triet-hoc/01_sub_phuong-dong/index.html
 author: Minh Niệm
 update_date: 27/04/2026
 back_link_label: 🔙
-hero_image: content/goc-nhin/01_images/kinh-truong-bo-thich-minh-chau.jpg
-output_path: goc-nhin/kinh-truong-bo-thich-minh-chau/index.html
+hero_image: content/triet-hoc/01_sub_phuong-dong/01_images/kinh-truong-bo-thich-minh-chau.jpg
+output_path: triet-hoc/01_sub_phuong-dong/kinh-truong-bo-thich-minh-chau/index.html
 ---
 
 
@@ -59,4 +59,5 @@ Chúng tôi đặt nhiều tin tưởng vào sự trung thành của bản dịc
 32. Kinh A-sá-nang-chi (Atānātiya sutta)
 33. Kinh Phúng Tụng (Sangīti sutta)
 34. Kinh Thập Thượng (Dasuttara sutta)
+
 ```

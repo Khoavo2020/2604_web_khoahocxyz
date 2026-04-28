@@ -4,7 +4,7 @@ title_sub:
 description: 
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/index.html
-author: Hữu Bách
+author: Hữu Định
 update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/tu-sach-nen-tang/sach-tam-ly-nen-doc.svg

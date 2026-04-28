@@ -4,7 +4,7 @@ title_sub:
 description: 
 section_title: Tinh hoa - nhân loại
 section_link: tinh-hoa-nhan-loai/index.html
-author: Hữu Bách
+author: Hữu Định
 update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/tinh-hoa-nhan-loai/tinh-than-hoc-suot-doi.svg

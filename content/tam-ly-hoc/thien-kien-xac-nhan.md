@@ -4,7 +4,7 @@ title_sub:
 description: 
 section_title: Tâm lý học
 section_link: tam-ly-hoc/index.html
-author: Hữu Bách
+author: Hữu Định
 update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/tam-ly-hoc/thien-kien-xac-nhan.svg

@@ -4,10 +4,10 @@ title_sub:
 description: 
 section_title: Góc nhìn
 section_link: goc-nhin/index.html
-author: Hữu Bách
+author: Hữu Định
 update_date: 27/04/2026
 back_link_label: 🔙
-hero_image: content/goc-nhin/01_images/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac.jpg
+hero_image: 
 output_path: goc-nhin/tam-ly-hoc-dam-dong-voi-than-tuong-am-nhac/index.html
 ---
 **Tâm lý học đám đông: Từ sân khấu âm nhạc đến những “chim mồi” vô hình**

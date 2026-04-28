@@ -4,7 +4,7 @@ title_sub:
 description: 
 section_title: Triết học
 section_link: triet-hoc/01_sub_phuong-tay/index.html
-author: Hữu Bách
+author: Hữu Định
 update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: -

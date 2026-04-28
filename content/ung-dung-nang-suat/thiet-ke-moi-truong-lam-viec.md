@@ -4,7 +4,7 @@ title_sub:
 description: 
 section_title: Ứng dụng - năng suất
 section_link: ung-dung-nang-suat/index.html
-author: Hữu Bách
+author: Hữu Định
 update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/ung-dung-nang-suat/thiet-ke-moi-truong-lam-viec.svg
