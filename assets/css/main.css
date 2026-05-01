@@ -2199,7 +2199,11 @@ body.article-page #main > .inner > section.article-content > .markdown-paragraph
 
 body.article-page #main > .inner > section.article-content > .image.main {
   /* khoa: --> article image width */
-  max-width: 52em; }
+  width: min(100%, 35em);
+  max-width: none; }
+
+body.article-page #main > .inner > section.article-content > .image.main img {
+  width: 100% !important; }
 
 /* Sidebar */
 #search form {

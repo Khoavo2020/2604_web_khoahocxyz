@@ -376,6 +376,9 @@ def collect_article_data(source_path: Path, sections: dict[str, dict[str, str]])
 
     output_rel = metadata.get("output_path")
     if output_rel:
+        # Replace <default> placeholder with the file's slug (filename without extension)
+        file_slug = source_path.stem
+        output_rel = output_rel.replace("<default>", file_slug)
         output_path = ROOT / output_rel
     else:
         output_path = ROOT / source_path.relative_to(CONTENT_ROOT).with_suffix("") / "index.html"
@@ -423,7 +426,7 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
     prefix = root_prefix(output_path)
     hero_src = resolve_asset(hero_image, prefix)
     hero_block = (
-        f'<span class="image main"><img src="{hero_src}" alt="" style="width: 50%;" /></span>'
+        f'<span class="image main"><img src="{hero_src}" alt="" /></span>'
         if hero_src
         else ""
     )

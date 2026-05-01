@@ -94,9 +94,18 @@
 		#main > .inner > section.article-content > ul,
 		#main > .inner > section.article-content > ol,
 		#main > .inner > section.article-content > blockquote,
-		#main > .inner > section.article-content > .image.main,
 		#main > .inner > section.article-content > .markdown-paragraph {
 			/* khoa: --> article content width */
 			max-width: 42em;
+		}
+
+		#main > .inner > section.article-content > .image.main {
+			/* khoa: --> article image width */
+			width: min(100%, 50em);
+			max-width: none;
+		}
+
+		#main > .inner > section.article-content > .image.main img {
+			width: 100% !important;
 		}
 	}

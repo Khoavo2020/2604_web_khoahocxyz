@@ -4,31 +4,25 @@ title_sub:
 description: 
 section_title: Kinh tế học
 section_link: kinh-te-hoc/index.html
-author: Hữu Định
+author: Hữu Học
 update_date: 27/04/2026
 back_link_label: 🔙
-hero_image: assets/generated/covers/kinh-te-hoc/cung-cau-la-gi.svg
-output_path: kinh-te-hoc/cung-cau-la-gi/index.html
+hero_image: -
+output_path: kinh-te-hoc/<default>/index.html
 ---
 
-Khái niệm cơ bản nhất của kinh tế học giúp giải thích giá cả và hành vi thị trường.
+Khái niệm nền tảng giải thích giá cả và hành vi thị trường.
 
-### Góc nhìn chính
+Trong kinh tế học, cung và cầu là hai lực lượng cơ bản quyết định giá cả và số lượng hàng hóa được trao đổi trên thị trường. Dù nghe có vẻ đơn giản, nhưng đây là nền tảng giúp giải thích cách thị trường vận hành trong hầu hết mọi lĩnh vực, từ thực phẩm, nhà ở đến công nghệ.
 
-Cung và cầu là gì gợi ý rằng điều quan trọng không chỉ nằm ở thông tin bề mặt mà còn ở cách ta diễn giải và áp dụng nó vào đời sống.
+“Cầu” (demand) thể hiện lượng hàng hóa hoặc dịch vụ mà người tiêu dùng sẵn sàng và có khả năng mua ở các mức giá khác nhau. Thông thường, khi giá giảm, cầu tăng vì người mua thấy sản phẩm trở nên “đáng giá” hơn. Ngược lại, khi giá tăng, cầu có xu hướng giảm.
 
-### Ba ý nên nhớ
+“Cung” (supply) là lượng hàng hóa hoặc dịch vụ mà người sản xuất sẵn sàng cung cấp ra thị trường ở các mức giá khác nhau. Khi giá tăng, nhà sản xuất có động lực sản xuất nhiều hơn vì lợi nhuận cao hơn. Khi giá giảm, cung thường giảm do lợi nhuận thấp.
 
-- nhìn rõ cái giá của mỗi lựa chọn
-- phân biệt trực giác hấp dẫn với phân tích có cấu trúc
-- áp dụng tư duy kinh tế vào quyết định cá nhân
+Điểm thú vị nằm ở sự tương tác giữa cung và cầu. Khi cung và cầu gặp nhau, thị trường đạt trạng thái cân bằng — nơi giá cả ổn định và lượng hàng hóa mua bán phù hợp. Nếu cầu tăng mạnh (ví dụ một sản phẩm trở nên “hot”), giá sẽ tăng vì nhiều người muốn mua hơn so với lượng hàng có sẵn. Ngược lại, nếu cung vượt cầu, giá sẽ giảm để kích thích người mua.
 
-### Gợi ý áp dụng
+Trong đời sống hằng ngày, quy luật cung – cầu xuất hiện ở khắp nơi. Giá rau có thể tăng khi thời tiết xấu làm giảm nguồn cung. Giá vé máy bay tăng vào dịp lễ do nhu cầu đi lại cao. Những biến động này không phải ngẫu nhiên, mà là kết quả của sự thay đổi trong cung và cầu.
 
-Thay vì cố nhớ mọi chi tiết ngay lập tức, hãy giữ lại một ý chính, một ví dụ gần gũi và một hành động nhỏ có thể thử ngay trong tuần này.
+Hiểu được cung và cầu giúp chúng ta lý giải vì sao giá cả thay đổi và đưa ra quyết định tiêu dùng hợp lý hơn. Đồng thời, doanh nghiệp cũng dựa vào quy luật này để điều chỉnh sản xuất, định giá và dự đoán xu hướng thị trường.
 
-> Học tốt không bắt đầu từ việc biết thật nhiều, mà từ việc hiểu rõ thêm một điều và sống khác đi một chút.
-
-### Kết luận
-
-Khi đọc về chủ đề này, mục tiêu không phải là có ngay câu trả lời cuối cùng mà là nhìn thế giới và chính mình sáng rõ hơn từng chút một.
+Tóm lại, cung và cầu là “ngôn ngữ” của thị trường. Khi nắm được nguyên lý này, chúng ta có thể hiểu rõ hơn cách nền kinh tế vận hành và cách mà các quyết định cá nhân góp phần tạo nên bức tranh kinh tế chung.

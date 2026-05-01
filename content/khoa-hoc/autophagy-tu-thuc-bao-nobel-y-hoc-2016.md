@@ -8,16 +8,15 @@ author: Hữu Định
 update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: 
-output_path: khoa-hoc/autophagy-tu-thuc-bao-nobel-y-hoc-2016/index.html
+output_path: khoa-hoc/<default>/index.html
 ---
 
-Bỏ ăn sáng giúp trẻ hoá, giảm viêm, giảm nguy cơ ung thư ở cấp độ tế bào 
+Bỏ ăn sáng giúp trẻ hoá, giảm viêm, giảm nguy cơ ung thư ở cấp độ tế bào.
 
---> Nobel y học 2016 autophagy (tự thực bào) 🧬. 
+--> Nobel y học 2016 autophagy (tự thực bào) 🧬
 
-Cơ chế: khi nhịn ăn trên 16 tiếng (bỏ bữa sáng, ăn cách bữa..), 
-cơ thể thiếu nguyên liệu mới. Nó buộc phải "tháo dỡ" những phần cũ kỹ, 
-hư hỏng (protein lỗi, vi khuẩn, tế bào già) để tái chế thành năng lượng. 
+Cơ chế: khi nhịn ăn trên 16 tiếng (bỏ bữa sáng, ăn cách bữa..), cơ thể thiếu nguyên liệu mới. 
+Nó buộc phải "tháo dỡ" những phần cũ kỹ, hư hỏng (protein lỗi, vi khuẩn, tế bào già) để tái chế thành năng lượng. 
 
 **Lợi ích :**
 • Trẻ hóa: thay thế linh kiện cũ bằng linh kiện mới

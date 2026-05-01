@@ -8,7 +8,7 @@ author: Hữu Định
 update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: 
-output_path: goc-nhin/sinh-vat-co-nao-la-de-du-doan-tuong-lai/index.html
+output_path: goc-nhin/<default>/index.html
 ---
 
 - Sinh vật có não là để dự đoán tương lai

@@ -2,13 +2,13 @@
 title: Lỡ đâu cả đời này không rực rỡ?
 title_sub: 
 description: 
-section_title: Góc nhìn
-section_link: goc-nhin/index.html
+section_title: Trend
+section_link: trend/index.html
 author: Hữu Định
 update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: -
-output_path: goc-nhin/neu-ca-doi-nay-khong-ruc-ro-thi-sao/index.html
+output_path: trend/<default>/index.html
 ---
 
 ### Lỡ đâu cả đời này không rực rỡ?

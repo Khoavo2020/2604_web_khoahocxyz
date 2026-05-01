@@ -8,7 +8,7 @@ author: Hữu Định
 update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: 
-output_path: goc-nhin/sieu-du-bao/index.html
+output_path: goc-nhin/<default>/index.html
 ---
 
 Tôi đã sửng sốt khi biết rằng sự đo lường có vai trò quan trọng thế nào trong việc cải thiện thể trạng của con người - Bill Gates viết. 
