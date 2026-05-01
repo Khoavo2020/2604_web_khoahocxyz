@@ -2,7 +2,7 @@ import os
 from PIL import Image
 
 # Thư mục gốc cần quét
-root_dir = "path/to/your/folder"
+root_dir = r"E:\ws\2603w3_web\khoahoc.xyz\content"
 
 # Ngưỡng dung lượng (500KB)
 size_limit = 500 * 1024  
