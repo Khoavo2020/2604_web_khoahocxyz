@@ -23,6 +23,7 @@ HOMEPAGE_SECTION_CONFIG = [
     {"slug": "kinh-te-hoc", "link": "kinh-te-hoc/index.html"},
     {"slug": "tam-ly-hoc", "link": "tam-ly-hoc/index.html"},
     {"slug": "triet-hoc", "link": "triet-hoc/index.html"},
+    {"slug": "ung-dung-nang-suat", "link": "ung-dung-nang-suat/index.html"},
 ]
 CATEGORY_CHILD_PAGES = {
     "triet-hoc": [
@@ -50,7 +51,37 @@ CATEGORY_CHILD_PAGES = {
             "description": "",
             "href": "triet-hoc/01_sub_tho-nuoc-ngoai/index.html",
         },
-    ]
+    ],
+    "ung-dung-nang-suat": [
+        {
+            "slug": "01_sub_app-nang-suat",
+            "title": "App năng suất",
+            "description": "simple - effective",
+            "href": "ung-dung-nang-suat/01_sub_app-nang-suat/index.html",
+            "icon": "fa-signal",
+        },
+        {
+            "slug": "01_sub_dau-tu-chung-khoan",
+            "title": "Đầu tư chứng khoán",
+            "description": "tầm nhìn - dài hạn",
+            "href": "ung-dung-nang-suat/01_sub_dau-tu-chung-khoan/index.html",
+            "icon": "fa-paper-plane",
+        },
+        {
+            "slug": "01_sub_giao-duc-steam",
+            "title": "Giáo dục - STEAM",
+            "description": "thực hành - khám phá",
+            "href": "ung-dung-nang-suat/01_sub_giao-duc-steam/index.html",
+            "icon": "fa-rocket",
+        },
+        {
+            "slug": "01_sub_giao-duc-tieng-anh",
+            "title": "Giáo dục - Tiếng Anh",
+            "description": "",
+            "href": "ung-dung-nang-suat/01_sub_giao-duc-tieng-anh/index.html",
+            "icon": "fa-gem",
+        },
+    ],
 }
 
 
@@ -519,10 +550,52 @@ def render_post_card(article: dict[str, str], category_index_path: Path) -> str:
     )
 
 
+def render_empty_post_state(message: str = "Nội dung đang được cập nhật.") -> str:
+    return (
+        "<article>"
+        f"<p>{escape(message)}</p>"
+        "</article>"
+    )
+
+
+def render_productivity_child_page_cards(parent_slug: str, category_index_path: Path) -> str:
+    child_pages = CATEGORY_CHILD_PAGES.get(parent_slug, [])
+    if not child_pages:
+        return ""
+
+    cards: list[str] = []
+    for child in child_pages:
+        href = os.path.relpath(ROOT / child["href"], category_index_path.parent).replace("\\", "/")
+        icon = child.get("icon", "fa-gem")
+        cards.append(
+            "<article>"
+            f'<a href="{href}" class="icon solid {escape(icon)}"><span class="label">{escape(child["title"])}</span></a>'
+            '<div class="content">'
+            f'<h3><a href="{href}">{escape(child["title"])}</a></h3>'
+            f"<p>{escape(child['description'])}</p>"
+            "</div>"
+            "</article>"
+        )
+
+    return (
+        '<div class="category-children-block">'
+        '<div class="features">'
+        + "".join(cards)
+        + "</div>"
+        '<header class="major" style="margin-top: 2em;">'
+        "<h2>Bài viết</h2>"
+        "</header>"
+        "</div>"
+    )
+
+
 def render_child_page_cards(parent_slug: str, category_index_path: Path) -> str:
     child_pages = CATEGORY_CHILD_PAGES.get(parent_slug, [])
     if not child_pages:
         return ""
+
+    if parent_slug == "ung-dung-nang-suat":
+        return render_productivity_child_page_cards(parent_slug, category_index_path)
 
     cards: list[str] = []
     for child in child_pages:
@@ -577,6 +650,8 @@ def build_category_pages(articles: list[dict[str, str]], sections: dict[str, dic
         prefix = root_prefix(category_index_path)
         section_articles = [article for article in articles if article["section_key"] == slug]
         posts_html = "\n".join(render_post_card(article, category_index_path) for article in section_articles)
+        if not posts_html:
+            posts_html = render_empty_post_state()
         children_block = render_child_page_cards(slug, category_index_path)
         header_html = section.get("header_html", "").replace("__ROOT_PREFIX__", prefix)
         if header_html:
@@ -614,12 +689,12 @@ def build_subcategory_pages(articles: list[dict[str, str]], sections: dict[str, 
         for child in child_pages:
             section_key = f"{parent_slug}/{child['slug']}"
             child_articles = [article for article in articles if article["section_key"] == section_key]
-            if not child_articles:
-                continue
 
             category_index_path = ROOT / child["href"]
             prefix = root_prefix(category_index_path)
             posts_html = "\n".join(render_post_card(article, category_index_path) for article in child_articles)
+            if not posts_html:
+                posts_html = render_empty_post_state()
             parent_title = sections.get(parent_slug, {}).get("title", parent_slug.replace("-", " ").title())
             header_block = build_category_header(
                 prefix,

@@ -246,6 +246,9 @@
 
 					if (path.indexOf('tu-sach-nen-tang') !== -1 && (text.indexOf('tủ sách') !== -1 || text.indexOf('tu sach') !== -1))
 						$opener.addClass('active');
+
+					if (path.indexOf('ung-dung-nang-suat') !== -1 && (text.indexOf('ứng dụng') !== -1 || text.indexOf('ung dung') !== -1))
+						$opener.addClass('active');
 				});
 			})();
 
@@ -255,14 +258,15 @@
 				var $this = $(this);
 
 				$this.on('click', function(event) {
+					var isActive = $this.hasClass('active');
 
-					// Toggle.
-						$menu_openers.not($this).removeClass('active');
-						$this.toggleClass('active');
-
-					// If it's a link, navigate.
-						if ($this.is('a')) {
-							window.location.href = $this.attr('href');
+					// First click opens the submenu. Second click follows the link.
+						if (!isActive) {
+							event.preventDefault();
+							$menu_openers.not($this).removeClass('active');
+							$this.addClass('active');
+							$window.triggerHandler('resize.sidebar-lock');
+							return;
 						}
 
 					// Trigger resize (sidebar lock).
