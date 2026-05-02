@@ -8,7 +8,7 @@ author: Hữu Định
 update_date: 27/04/2026
 back_link_label: 🔙
 hero_image:
-output_path: triet-hoc/01_sub_tho-nuoc-ngoai/anh-khong-tin-troi-cao/index.html
+output_path: triet-hoc/01_sub_tho-nuoc-ngoai/<default>/index.html
 ---
 
 Anh không tin trời cao,

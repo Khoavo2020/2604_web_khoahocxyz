@@ -1,5 +1,5 @@
 ---
-title: Bắt đầu tìm hiểu kinh phật nguyên thủy - Kinh Trường Bộ
+title: Bắt đầu tìm hiểu kinh sách phật giáo - Kinh Trường Bộ
 title_sub: (Thích Minh Châu)
 description: 
 section_title: Triết học
@@ -7,8 +7,8 @@ section_link: triet-hoc/01_sub_phuong-dong/index.html
 author: Minh Niệm
 update_date: 27/04/2026
 back_link_label: 🔙
-hero_image: content/triet-hoc/01_sub_phuong-dong/01_images/kinh-truong-bo-thich-minh-chau.jpg
-output_path: triet-hoc/01_sub_phuong-dong/kinh-truong-bo-thich-minh-chau/index.html
+hero_image: -
+output_path: triet-hoc/01_sub_phuong-dong/<default>/index.html
 ---
 
 

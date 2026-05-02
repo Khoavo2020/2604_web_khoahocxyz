@@ -8,7 +8,7 @@ author: Hữu Định
 update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: assets/generated/covers/ung-dung-nang-suat/he-thong-ba-danh-sach.svg
-output_path: ung-dung-nang-suat/he-thong-ba-danh-sach/index.html
+output_path: ung-dung-nang-suat/<default>/index.html
 ---
 
 

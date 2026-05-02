@@ -29,13 +29,13 @@ CATEGORY_CHILD_PAGES = {
         {
             "slug": "01_sub_phuong-dong",
             "title": "Phương Đông",
-            "description": "Đạo, vô vi, tu dưỡng và cách sống hài hòa với tự nhiên.",
+            "description": "thân, tâm - cách con người nên sống",
             "href": "triet-hoc/01_sub_phuong-dong/index.html",
         },
         {
             "slug": "01_sub_phuong-tay",
             "title": "Phương Tây",
-            "description": "Logic, đạo đức học và những câu hỏi về tự do con người.",
+            "description": "logic, lập luận - cách thế giới vận hành",
             "href": "triet-hoc/01_sub_phuong-tay/index.html",
         },
         {
@@ -96,11 +96,20 @@ def render_inline(text: str) -> str:
     text = escape(text)
     # Support explicit <br> or <br/> tags
     text = text.replace("&lt;br&gt;", "<br />").replace("&lt;br/&gt;", "<br />")
+    text = text.replace("__SUB_BULLET_INDENT__", '<span class="markdown-indent" aria-hidden="true"></span>')
     text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
     text = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", text)
     text = re.sub(r"\*([^*]+)\*", r"<em>\1</em>", text)
     text = re.sub(r"\[([^\]]+)\]\s*\(([^)]+)\)", r'<a href="\2">\1</a>', text)
     return text
+
+
+def normalize_markdown_bullet(line: str) -> str:
+    if line.startswith("  * "):
+        return f"__SUB_BULLET_INDENT__◦ {line[4:].strip()}"
+    if line.startswith("* "):
+        return f"• {line[2:].strip()}"
+    return line
 
 
 def indent_block(text: str, level: int) -> str:
@@ -157,6 +166,7 @@ def render_markdown(markdown: str) -> str:
 
     for raw_line in lines:
         line = raw_line.rstrip()
+        line = normalize_markdown_bullet(line)
         stripped = line.strip()
 
         # Handle Code Blocks

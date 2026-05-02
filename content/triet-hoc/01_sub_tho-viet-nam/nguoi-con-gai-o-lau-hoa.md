@@ -1,5 +1,5 @@
 ---
-title: Người con gái ở lầu hoa
+title: Người con gái ở lầu hoa 🌸
 title_sub: 
 description: 
 section_title: Triết học
@@ -8,65 +8,44 @@ author: Bích Hồng
 update_date: 27/04/2026
 back_link_label: 🔙
 hero_image: 
-output_path: triet-hoc/01_sub_tho-viet-nam/nguoi-con-gai-o-lau-hoa/index.html
+output_path: triet-hoc/01_sub_tho-viet-nam/<default>/index.html
 ---
 
 Nhà nàng ở gốc cây mai trắng,
-
 Trên xóm mai vàng dưới đế kinh.
-
 Có một buổi chiều qua lối ấy,
-
 Tôi về dệt mãi mộng ba sinh.
 
-
 Tôi rót hồn tôi xuống mắt nàng.
-
 Hồn tôi là cả một lời van.
-
 Tôi van nàng đấy! Van nàng đấy!
-
 Ai có yêu đương chả vội vàng?
 
-
 Tôi rót hồn tôi xuống đã nhiều,
-
 Hồn tôi còn có được bao nhiêu?
-
 Tôi đi sợ cả lời tôi nói,
-
 Sợ cả gần nàng, sợ cả yêu.
 
 Nàng có bao giờ nghĩ đến không?
-
 Không, nàng đan áo suốt mùa đông,
-
 Mùa xuân qua cửa, tôi qua cửa,
-
 Nàng chả nhìn cho, đến não nùng!
 
 Tôi mỉa mai tôi, oán trách tôi
-
 Làm sao tôi lại cứ câm lời?
-
 Thì trăm con gái, nghìn con gái
-
 Nàng cũng là người con gái thôi.
 
-
 Có một nghìn đêm tôi chiêm bao,
-
 Ba đêm nay khóc với mưa rào,
-
 Đêm nay mắt đỏ rồi, mưa tạnh,
-
 Tôi khóc âm thầm dưới bóng sao.
 
-
 Nàng ở lầu hoa ở đệm bông,
-
 Có đêm nào nghĩ đến tôi không?
-
 Không không, chả có đêm nào cả,
-
 Chả có đêm nào hé cánh song...
+
+---
+
+Thơ » Việt Nam » Hiện đại » Nguyễn Bính » Người con gái lầu hoa (1941)
