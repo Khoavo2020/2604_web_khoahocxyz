@@ -291,6 +291,41 @@ body.article-page #main .article-content blockquote {
   /* khoa: --> article quote text */
   color: #3a3b3c; }
 
+body.site-page .cover-list[data-home-list='tinh-hoa-nhan-loai'] article.quote-card-home {
+  padding-bottom: 0; }
+
+body.site-page .cover-list[data-home-list='tinh-hoa-nhan-loai'] article.quote-card-home:after {
+  display: none; }
+
+body.site-page .cover-list[data-home-list='tinh-hoa-nhan-loai'] .quote-card-shell {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+  display: block;
+  padding: 1rem 1.25rem; }
+
+body.site-page .cover-list[data-home-list='tinh-hoa-nhan-loai'] .quote-card-shell:hover {
+  border-bottom-color: #eeeeee; }
+
+body.site-page .cover-list[data-home-list='tinh-hoa-nhan-loai'] .quote-vi {
+  color: #222222;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 0.35rem 0; }
+
+body.site-page .cover-list[data-home-list='tinh-hoa-nhan-loai'] .quote-en {
+  color: #777777;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0; }
+
+body.site-page .cover-list[data-home-list='tinh-hoa-nhan-loai'] .quote-author {
+  color: #aaaaaa;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  margin: 0.85rem 0 0 0; }
+
 body.site-page #header .logo {
   max-width: 87ch; }
 

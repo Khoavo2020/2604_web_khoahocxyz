@@ -474,7 +474,14 @@
 			}
 
 			function pickDailyArticles(items, count, seedKey) {
-				var shuffled = items.slice();
+				var withImage = (items || []).filter(function(item) {
+					return !!(item && item.image);
+				});
+				var withoutImage = (items || []).filter(function(item) {
+					return !item || !item.image;
+				});
+				var pool = withImage.length >= count ? withImage : withImage.concat(withoutImage);
+				var shuffled = pool.slice();
 				var rand = mulberry32(xmur3(seedKey)());
 				var i, j, temp;
 
@@ -507,6 +514,67 @@
 				].join('');
 			}
 
+			function hasNonAscii(text) {
+				return /[^\x00-\x7F]/.test(text || '');
+			}
+
+			function parseQuoteText(text) {
+				var lines = String(text || '')
+					.split(/\r?\n/)
+					.map(function(line) {
+						return line.trim();
+					})
+					.filter(Boolean)
+					.slice(0, 3);
+				var line1;
+				var line2;
+				var author;
+				var vietnamese;
+				var english;
+
+				if (lines.length < 2)
+					return null;
+
+				line1 = lines[0] || '';
+				line2 = lines[1] || '';
+				author = lines[2] || '';
+				vietnamese = line1;
+				english = line2;
+
+				if (!hasNonAscii(line1) && hasNonAscii(line2)) {
+					vietnamese = line2;
+					english = line1;
+				}
+				else if (hasNonAscii(line1) && !hasNonAscii(line2)) {
+					vietnamese = line1;
+					english = line2;
+				}
+
+				return {
+					vietnamese: vietnamese,
+					english: english,
+					author: author
+				};
+			}
+
+			function renderQuoteCard(quote, href) {
+				var vietnamese = escapeHtml(quote.vietnamese);
+				var english = escapeHtml(quote.english);
+				var author = escapeHtml(quote.author || '');
+				var link = escapeHtml(href);
+				var authorHtml = author ? '<div class="quote-author">' + author + '</div>' : '';
+
+				return [
+					'<article class="quote-card-home">',
+					'<a href="' + link + '" class="quote-card-shell">',
+					'<div class="quote-vi">' + vietnamese + '</div>',
+					'<div class="quote-en">' + english + '</div>',
+					authorHtml,
+					'</a>',
+					'</article>'
+				].join('');
+			}
+
 			try {
 				var payload = JSON.parse(dataNode.textContent || '{}');
 				var sections = payload.sections || [];
@@ -519,6 +587,9 @@
 					if (!container)
 						return;
 
+					if (section.slug === 'tinh-hoa-nhan-loai')
+						return;
+
 					selectedArticles = pickDailyArticles(section.articles || [], 2, section.slug + '|' + dateKey);
 					container.innerHTML = selectedArticles.map(renderArticle).join('');
 
@@ -527,6 +598,54 @@
 					else
 						container.classList.remove('keep-divider');
 				});
+
+				(function() {
+					var quotesRoot = 'data/tinh-hoa-nhan-loai/quotes';
+					var quotePage = 'tinh-hoa-nhan-loai/index.html';
+					var quoteContainer = document.querySelector('[data-home-list="tinh-hoa-nhan-loai"]');
+
+					if (!quoteContainer)
+						return;
+
+					fetch(quotesRoot + '/manifest.json')
+						.then(function(res) {
+							if (!res.ok)
+								throw new Error('Manifest not found');
+
+							return res.json();
+						})
+						.then(function(files) {
+							var selectedFiles = pickDailyArticles(files || [], 2, 'tinh-hoa-nhan-loai|quotes|' + dateKey);
+
+							return Promise.all(selectedFiles.map(function(file) {
+								return fetch(quotesRoot + '/' + encodeURIComponent(file))
+									.then(function(res) {
+										if (!res.ok)
+											throw new Error('Quote file not found');
+
+										return res.text();
+									})
+									.then(function(text) {
+										return parseQuoteText(text);
+									});
+							}));
+						})
+						.then(function(quotes) {
+							var validQuotes = (quotes || []).filter(Boolean);
+
+							quoteContainer.innerHTML = validQuotes.map(function(quote) {
+								return renderQuoteCard(quote, quotePage);
+							}).join('');
+
+							if (validQuotes.length === 1)
+								quoteContainer.classList.add('keep-divider');
+							else
+								quoteContainer.classList.remove('keep-divider');
+						})
+						.catch(function() {
+							quoteContainer.innerHTML = '';
+						});
+				})();
 			}
 			catch (error) {
 				console.error('Unable to render homepage sections', error);
