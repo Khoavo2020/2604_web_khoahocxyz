@@ -1,36 +1,94 @@
 ---
-title: Hệ thống ba danh sách để giảm quá tải
+title: Ba danh sách để giảm tải - không gom mọi thứ vào một danh sách duy nhất
 title_sub: 
 description: 
 section_title: Ứng dụng - năng suất
 section_link: ung-dung-nang-suat/index.html
 author: Hữu Định
-update_date: 27/04/2026
+update_date: 03/05/2026
 back_link_label: 🔙
-hero_image: assets/generated/covers/ung-dung-nang-suat/he-thong-ba-danh-sach.svg
+hero_image: -
 output_path: ung-dung-nang-suat/<default>/index.html
 ---
 
+Khi tất cả việc lớn nhỏ nằm chung một chỗ, não bạn phải liên tục chuyển ngữ cảnh — đó là nguồn gây quá tải.
 
+## Ba danh sách cốt lõi
 
-Tách việc phải làm thành ba lớp giúp đầu óc bớt hỗn loạn hơn rất nhiều.
+### 1. 🎯 Danh sách ưu tiên chính
 
-### Góc nhìn chính
+Chỉ gồm **1–3 việc quan trọng nhất** của ngày hoặc tuần.
 
-Hệ thống ba danh sách để giảm quá tải gợi ý rằng điều quan trọng không chỉ nằm ở thông tin bề mặt mà còn ở cách ta diễn giải và áp dụng nó vào đời sống.
+Đây là các việc:
 
-### Ba ý nên nhớ
+* tạo ra tiến triển thực sự
+* gắn với mục tiêu dài hạn
+* nếu hoàn thành, ngày hôm đó coi như có giá trị
 
-- thiết kế môi trường làm việc tốt hơn
-- giảm ma sát khi bắt đầu việc quan trọng
-- đưa việc xem lại và điều chỉnh vào hệ thống hằng tuần
+**Ví dụ:** hoàn thành bản proposal, học xong một chương, viết xong bài.
 
-### Gợi ý áp dụng
+---
 
-Thay vì cố nhớ mọi chi tiết ngay lập tức, hãy giữ lại một ý chính, một ví dụ gần gũi và một hành động nhỏ có thể thử ngay trong tuần này.
+### 2. 🧩 Danh sách việc phụ / việc vặt
 
-> Học tốt không bắt đầu từ việc biết thật nhiều, mà từ việc hiểu rõ thêm một điều và sống khác đi một chút.
+Những việc cần làm nhưng **không phải đòn bẩy chính**.
 
-### Kết luận
+Ví dụ:
 
-Khi đọc về chủ đề này, mục tiêu không phải là có ngay câu trả lời cuối cùng mà là nhìn thế giới và chính mình sáng rõ hơn từng chút một.
+* trả lời email
+* đặt lịch
+* mua đồ
+* xử lý giấy tờ
+
+Danh sách này giúp bạn **không để việc vặt chen lên thành việc quan trọng**.
+
+---
+
+### 3. 📝 Danh sách “không phải bây giờ”
+
+Nơi chứa:
+
+* ý tưởng mới
+* việc phát sinh
+* thứ bạn muốn làm nhưng chưa tới lúc
+
+Danh sách này cực quan trọng vì nó ngăn phản xạ:
+
+> “Nghĩ ra là phải làm ngay.”
+
+Thực tế, nhiều thứ chỉ cần **được ghi lại**, không cần **được xử lý ngay**.
+
+---
+
+## Vì sao nó giảm quá tải?
+
+Vì mỗi khi nhìn vào kế hoạch, bạn không còn phải tự hỏi:
+
+* “Việc nào quan trọng?”
+* “Việc nào chỉ là việc vặt?”
+* “Có nên làm cái mới này ngay không?”
+
+Bạn **đã quyết định từ trước**.
+
+Đó là thứ tiết kiệm năng lượng tinh thần nhiều nhất.
+
+---
+
+## Mẫu cực ngắn
+
+```text
+Ưu tiên chính
+1.
+2.
+3.
+
+Việc phụ
+-
+-
+-
+
+Không phải bây giờ
+-
+-
+-
+```

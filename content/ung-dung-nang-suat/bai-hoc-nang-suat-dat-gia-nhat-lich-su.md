@@ -3,12 +3,12 @@ title: Phương pháp Ivy Lee — lời khuyên năng suất 100 năm vẫn còn
 title_sub: 
 description: 
 section_title: Ứng dụng - năng suất
-section_link: ung-dung-nang-suat/01_sub_app-nang-suat/index.html
+section_link: ung-dung-nang-suat/index.html
 author: Mạnh Tuấn
 update_date: 03/05/2026
 back_link_label: 🔙
 hero_image: -
-output_path: ung-dung-nang-suat/01_sub_app-nang-suat/<default>/index.html
+output_path: ung-dung-nang-suat/<default>/index.html
 ---
 
 Năm 1918, nhà công nghiệp Charles M' Schwab muốn tìm cách nâng cao hiệu suất làm việc cho đội ngũ của mình, Ông mời chuyên gia tư vấn năng suất Ivy Lee đến và nói:
