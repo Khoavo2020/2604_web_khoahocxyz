@@ -58,7 +58,7 @@ CATEGORY_CHILD_PAGES = {
             "title": "App năng suất",
             "description": "simple - effective",
             "href": "ung-dung-nang-suat/01_sub_app-nang-suat/index.html",
-            "icon": "fa-signal",
+            "icon": "fa-th-large",
         },
         {
             "slug": "01_sub_dau-tu-chung-khoan",
@@ -69,17 +69,17 @@ CATEGORY_CHILD_PAGES = {
         },
         {
             "slug": "01_sub_giao-duc-steam",
-            "title": "Giáo dục - STEAM",
+            "title": "Học - STEAM",
             "description": "thực hành - khám phá",
             "href": "ung-dung-nang-suat/01_sub_giao-duc-steam/index.html",
             "icon": "fa-rocket",
         },
         {
             "slug": "01_sub_giao-duc-tieng-anh",
-            "title": "Giáo dục - Tiếng Anh",
+            "title": "Học - Tiếng Anh",
             "description": "",
             "href": "ung-dung-nang-suat/01_sub_giao-duc-tieng-anh/index.html",
-            "icon": "fa-gem",
+            "icon": "fa-language",
         },
     ],
 }
@@ -566,7 +566,7 @@ def render_productivity_child_page_cards(parent_slug: str, category_index_path: 
     cards: list[str] = []
     for child in child_pages:
         href = os.path.relpath(ROOT / child["href"], category_index_path.parent).replace("\\", "/")
-        icon = child.get("icon", "fa-gem")
+        icon = child.get("icon", "fa-language")
         cards.append(
             "<article>"
             f'<a href="{href}" class="icon solid {escape(icon)}"><span class="label">{escape(child["title"])}</span></a>'

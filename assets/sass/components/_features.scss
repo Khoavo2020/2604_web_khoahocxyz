@@ -150,3 +150,77 @@
 			}
 		}
 	}
+
+	body.site-page #main .category-children-block .features article .content h3,
+	body.site-page #main .category-children-block .features article .content h3 a {
+		color: #1b5e20;
+	}
+
+	/* khoa: -->  Adjust these two spacing values if you want the title/description stack tighter or looser. */
+	body.site-page #main .category-children-block .features article .content h3 {
+		margin: 0 0 0.1em 0;
+	}
+
+	body.site-page #main .category-children-block .features article .content p {
+		margin: 0;
+	}
+
+	body.site-page #main .category-children-block .features article .content h3 a:hover {
+		color: _palette(accent) !important;
+	}
+
+	/* khoa: -->  Desktop/tablet spacing between icon and text block for the 4 productivity sub-pages. */
+	body.site-page #main .category-children-block .features article .icon {
+		margin: 0 0.85em 0 0;
+	}
+
+	@include breakpoint('<=medium') {
+		.category-child-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		body.site-page #main .category-children-block .features {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 1.25em;
+			margin: 0 0 2em 0;
+			width: 100%;
+
+			article {
+				display: block;
+				margin: 0;
+				width: auto;
+				text-align: center;
+				max-width: 12.5em;
+				justify-self: center;
+
+				&:nth-child(2n - 1),
+				&:nth-child(2n) {
+					margin: 0;
+				}
+
+				.icon {
+					height: 6.5em;
+					line-height: 6.5em;
+					margin: 0 auto 0.55em auto; // Mobile spacing between icon and text block.
+					width: 6.5em;
+
+					&:before {
+						font-size: 2rem;
+					}
+
+					&:after {
+						height: 4.75em;
+						margin: -2.375em 0 0 -2.375em;
+						width: 4.75em;
+					}
+				}
+
+				.content {
+					margin: 0 auto;
+					max-width: 11.5em;
+					text-align: left; // Keep title + description aligned together.
+				}
+			}
+		}
+	}

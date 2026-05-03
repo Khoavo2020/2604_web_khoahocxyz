@@ -2469,6 +2469,24 @@ body.article-page #main > .inner > section.article-content > .image.main img {
 .category-children-block {
   margin: 0 0 1.25em 0; }
 
+body.site-page #main .category-children-block .features article .content h3,
+body.site-page #main .category-children-block .features article .content h3 a {
+  color: #1b5e20; }
+
+/* khoa: -->  Adjust these two spacing values if you want the title/description stack tighter or looser. */
+body.site-page #main .category-children-block .features article .content h3 {
+  margin: 0 0 0.1em 0; }
+
+body.site-page #main .category-children-block .features article .content p {
+  margin: 0; }
+
+body.site-page #main .category-children-block .features article .content h3 a:hover {
+  color: #078fef !important; }
+
+/* khoa: --> Desktop/tablet spacing between icon and text block for the 4 productivity sub-pages. */
+body.site-page #main .category-children-block .features article .icon {
+  margin: 0 0.85em 0 0; }
+
 .category-child-grid {
   display: grid;
   gap: 0.75em;
@@ -2495,9 +2513,39 @@ body.site-page #main .category-child-grid .category-child-card a:hover {
   border-color: rgba(0, 0, 0, 0.14);
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 980px) {
   .category-child-grid {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body.site-page #main .category-children-block .features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25em;
+    margin: 0 0 2em 0;
+    width: 100%; }
+    body.site-page #main .category-children-block .features article {
+      display: block;
+      margin: 0;
+      width: auto;
+      text-align: center;
+      max-width: 10.5em;
+      justify-self: center; }
+      body.site-page #main .category-children-block .features article:nth-child(2n - 1), body.site-page #main .category-children-block .features article:nth-child(2n) {
+        margin: 0; }
+      body.site-page #main .category-children-block .features article .icon {
+        height: 6.5em;
+        line-height: 6.5em;
+        margin: 0 auto 0.5em auto;
+        width: 6.5em; }
+        body.site-page #main .category-children-block .features article .icon:before {
+          font-size: 2rem; }
+        body.site-page #main .category-children-block .features article .icon:after {
+          height: 4.75em;
+          margin: -2.375em 0 0 -2.375em;
+          width: 4.75em; }
+      body.site-page #main .category-children-block .features article .content {
+        margin: 0 auto;
+        max-width: 10.5em;
+        text-align: left; } }
 
 /* Banner */
 #banner {
