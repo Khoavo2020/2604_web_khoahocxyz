@@ -1,11 +1,11 @@
 ---
 title: Hải đảo tự thân 🏝️
-title_sub: 
+title_sub: Thơ » Việt Nam » Làng Mai » Tàng kinh các » Thơ Nhất Hạnh
 description: 
 section_title: Triết học
 section_link: triet-hoc/01_sub_tho-viet-nam/index.html
-author: Minh Niệm
-update_date: 27/04/2026
+author: 
+update_date: 
 back_link_label: 🔙
 hero_image: 
 output_path: triet-hoc/01_sub_tho-viet-nam/<default>/index.html
@@ -30,6 +30,3 @@ Lặng chiếu
 Không gian
 Thênh thang..
 
----
-
-Làng Mai > Tàng kinh các > Thơ Nhất Hạnh

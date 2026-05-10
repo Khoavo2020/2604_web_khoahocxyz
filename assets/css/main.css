@@ -2042,6 +2042,9 @@ body.site-page .cover-list {
   body.site-page .cover-list .cover-item-body {
     gap: 0.39em;
     grid-template-columns: 9.75em minmax(0, 1fr); }
+  body.site-page .cover-list .cover-item-body > :only-child {
+    grid-column: 1 / -1;
+    max-width: calc(9.75em + 0.39em + 33ch); }
   body.site-page .cover-list article .image,
   body.site-page .cover-list article .image img {
     border-radius: 0; }

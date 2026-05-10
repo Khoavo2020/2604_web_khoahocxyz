@@ -23,6 +23,7 @@ HOMEPAGE_SECTION_CONFIG = [
     {"slug": "kinh-te-hoc", "link": "kinh-te-hoc/index.html"},
     {"slug": "tam-ly-hoc", "link": "tam-ly-hoc/index.html"},
     {"slug": "triet-hoc", "link": "triet-hoc/index.html"},
+    {"slug": "tu-sach-nen-tang", "link": "tu-sach-nen-tang/index.html"},
     {"slug": "ung-dung-nang-suat", "link": "ung-dung-nang-suat/index.html"},
 ]
 CATEGORY_CHILD_PAGES = {
@@ -80,6 +81,38 @@ CATEGORY_CHILD_PAGES = {
             "description": "",
             "href": "ung-dung-nang-suat/01_sub_giao-duc-tieng-anh/index.html",
             "icon": "fa-language",
+        },
+    ],
+    "tu-sach-nen-tang": [
+        {
+            "slug": "01_sub_sach-khoa-hoc",
+            "title": "sách Khoa học",
+            "description": "",
+            "href": "tu-sach-nen-tang/sach-khoa-hoc/index.html",
+        },
+        {
+            "slug": "01_sub_sach-kinh-te-hoc",
+            "title": "sách Kinh tế học",
+            "description": "",
+            "href": "tu-sach-nen-tang/sach-kinh-te-hoc/index.html",
+        },
+        {
+            "slug": "01_sub_sach-tam-ly-hoc",
+            "title": "sách Tâm lý học",
+            "description": "",
+            "href": "tu-sach-nen-tang/sach-tam-ly-hoc/index.html",
+        },
+        {
+            "slug": "01_sub_sach-triet-hoc",
+            "title": "sách Triết học",
+            "description": "",
+            "href": "tu-sach-nen-tang/sach-triet-hoc/index.html",
+        },
+        {
+            "slug": "01_sub_sach-xyz",
+            "title": "sách xyz",
+            "description": "",
+            "href": "tu-sach-nen-tang/sach-xyz/index.html",
         },
     ],
 }
@@ -535,7 +568,7 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
 
 def render_post_card(article: dict[str, str], category_index_path: Path) -> str:
     output_path = ROOT / article["output_path"]
-    href = output_path.relative_to(category_index_path.parent).as_posix()
+    href = os.path.relpath(output_path, category_index_path.parent).replace("\\", "/")
     prefix = root_prefix(category_index_path)
     image_src = resolve_asset(article["hero_image"], prefix)
     image_block = f'<a href="{href}" class="image"><img src="{image_src}" alt=""></a>' if image_src else ""
@@ -550,7 +583,7 @@ def render_post_card(article: dict[str, str], category_index_path: Path) -> str:
     )
 
 
-def render_empty_post_state(message: str = "Nội dung đang được cập nhật.") -> str:
+def render_empty_post_state(message: str = "-") -> str:
     return (
         "<article>"
         f"<p>{escape(message)}</p>"

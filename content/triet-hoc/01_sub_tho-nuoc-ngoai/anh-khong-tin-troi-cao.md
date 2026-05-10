@@ -1,36 +1,27 @@
 ---
 title: Anh không tin trời cao
-title_sub: 
+title_sub: Thơ » Đức » Heinrich Heine
 description: 
 section_title: Triết học
 section_link: triet-hoc/01_sub_tho-nuoc-ngoai/index.html
-author: Hữu Định
-update_date: 27/04/2026
+author: Bản dịch của Thái Bá Tân
+update_date: 
 back_link_label: 🔙
 hero_image:
 output_path: triet-hoc/01_sub_tho-nuoc-ngoai/<default>/index.html
 ---
 
 Anh không tin trời cao,
-
 Cả thánh kinh cũng vậy.
-
 Anh chỉ tin mắt em,
-
 Có bầu trời trong đấy.
 
 Anh không tin Chúa Trời,
-
 Cũng không tin kinh thánh.
-
 Anh chỉ tim tim em,
-
 Dù tim em giá lạnh.
 
 Anh không tin quỷ thần,
-
 Không sợ trời bắt tội.
-
 Anh chỉ tin mắt em,
-
 Dù mắt em giả dối.

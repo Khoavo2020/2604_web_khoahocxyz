@@ -11,7 +11,6 @@ hero_image: -
 output_path: triet-hoc/01_sub_phuong-tay/<default>/index.html
 ---
 
-
 Triết học phương Tây lấy logic và duy lý làm nền tảng, đề cao lý trí, lập luận hệ thống và tư duy phản biện để tìm kiếm tri thức. 
 
 Từ thời Cổ đại (Plato, Aristotle) đến Cận đại (Descartes), chủ nghĩa duy lý nhấn mạnh tri thức đến từ trí tuệ và suy luận logic hơn là cảm giác. 
@@ -20,16 +19,115 @@ Phương pháp này thúc đẩy khoa học, phân tích ngôn ngữ và cấu t
 
 ---
 
-Triết học phương Tây là một trong những truyền thống tư tưởng có ảnh hưởng sâu rộng nhất trong lịch sử nhân loại. Nó hình thành từ khoảng thế kỷ VI trước Công nguyên ở Hy Lạp cổ đại, khi các nhà tư tưởng bắt đầu tìm cách giải thích thế giới bằng lý trí thay vì chỉ dựa vào thần thoại hay tín ngưỡng. Từ đó, triết học phương Tây phát triển thành một hệ thống tư duy rộng lớn, đặt nền móng cho nhiều lĩnh vực như khoa học, chính trị, đạo đức, logic và nhận thức luận.
+## Cốt lõi của triết học phương Tây
 
-Những triết gia đầu tiên của phương Tây thường được gọi là các nhà triết học tiền Socrates. Họ quan tâm đến câu hỏi về bản chất của vũ trụ: thế giới được cấu thành từ gì, sự vật vận động như thế nào, và đâu là nguyên lý đầu tiên của mọi tồn tại. Trong số đó có Thales, người cho rằng nước là yếu tố cơ bản của vạn vật, hay Heraclitus, người nhấn mạnh rằng mọi sự vật đều không ngừng biến đổi.
+* 🧠 **Lý trí** — tin rằng con người có thể hiểu thế giới bằng tư duy.
+* 📐 **Logic** — một kết luận phải đi từ lập luận chặt chẽ.
+* ❓ **Phản biện** — mọi ý tưởng đều có thể bị chất vấn.
+* 🎯 **Tìm chân lý** — không chỉ tin, mà phải giải thích được *vì sao đúng*.
 
-Đến thời kỳ cổ điển, triết học phương Tây đạt tới bước phát triển quan trọng với ba tên tuổi lớn là Socrates, Plato và Aristotle. Socrates đặt trọng tâm vào đạo đức và đời sống con người, nổi tiếng với phương pháp đối thoại nhằm truy tìm chân lý. Plato phát triển học thuyết về thế giới ý niệm, cho rằng đằng sau thế giới cảm tính luôn tồn tại một thế giới lý tưởng bất biến. Aristotle lại quan tâm đến logic, tự nhiên học và chính trị học, đồng thời xây dựng nhiều nền tảng phương pháp luận có ảnh hưởng lâu dài đến khoa học châu Âu.
+=> triết học phương Tây thường hỏi: “Điều đó đúng bằng lập luận nào?”
 
-Trong thời kỳ trung đại, triết học phương Tây gắn chặt với tôn giáo, đặc biệt là Giáo hội Công giáo. Các triết gia cố gắng dung hòa lý trí với đức tin. Tiêu biểu là Thomas Aquinas, người đã kết hợp tư tưởng của Aristotle với thần học Kitô giáo, góp phần tạo nên nền triết học kinh viện.
+---
 
-Bước sang thời cận đại, triết học phương Tây chuyển mạnh sang việc nghiên cứu nhận thức và con người. René Descartes được xem là cha đẻ của triết học hiện đại với mệnh đề nổi tiếng “Tôi tư duy, nên tôi tồn tại”. Sau ông, nhiều triết gia như John Locke, Immanuel Kant hay Georg Wilhelm Friedrich Hegel tiếp tục phát triển các học thuyết về nhận thức, tự do, lịch sử và lý tính.
+## Khởi nguồn
+Khoảng *thế kỷ VI TCN tại Ancient Greece*
 
-Đến thời hiện đại và đương đại, triết học phương Tây ngày càng đa dạng. Một số trường phái nổi bật gồm chủ nghĩa hiện sinh với Jean-Paul Sartre, hiện tượng học với Edmund Husserl, hay triết học phân tích gắn với các nhà tư tưởng như Bertrand Russell. Những trào lưu này không chỉ bàn về bản chất của thế giới mà còn tập trung vào ngôn ngữ, ý thức, tự do cá nhân và ý nghĩa của sự tồn tại.
+Trước đó, con người thường giải thích thế giới bằng *thần thoại*
+Các triết gia đầu tiên bắt đầu đặt câu hỏi khác:
 
-Có thể nói, triết học phương Tây là hành trình lâu dài của con người trong việc đặt câu hỏi về thế giới và chính bản thân mình. Từ việc truy tìm bản nguyên của vũ trụ đến việc suy ngẫm về đạo đức, chân lý, tự do và ý nghĩa cuộc sống, triết học phương Tây đã góp phần hình thành nền văn minh hiện đại. Dù trải qua nhiều giai đoạn biến đổi, điểm cốt lõi của nó vẫn là tinh thần hoài nghi, lý trí và khát vọng tìm kiếm chân lý.
+* **Vũ trụ được cấu thành từ gì?**
+* **Vì sao sự vật thay đổi?**
+* **Có quy luật nào chi phối mọi thứ không?**
+
+---
+
+## Các giai đoạn lớn
+
+###  1. Tiền Socrates — truy tìm bản nguyên vũ trụ
+Giai đoạn còn tập trung vào **tự nhiên**
+
+* 💧 Thales — cho rằng **nước** là nền tảng của vạn vật
+* 🔥 Heraclitus — cho rằng **mọi thứ luôn vận động và biến đổi**
+
+Từ khóa: bản nguyên, tự nhiên, vũ trụ
+
+---
+
+###  2. Thời cổ điển — nền móng của triết học phương Tây
+Ba cái tên gần như định hình toàn bộ truyền thống phương Tây:
+
+* 🗣 Socrates
+  * Đặt trọng tâm vào *đạo đức và đời sống con người*
+  * Nổi tiếng với *phương pháp đối thoại chất vấn*
+
+* 💡 Plato
+  * Cho rằng phía sau thế giới cảm nhận được còn có *thế giới ý niệm*
+
+* 📚 Aristotle
+  * Xây nền cho *logic, khoa học, chính trị học và phương pháp luận*
+
+Từ khóa: **lập luận có hệ thống**
+
+---
+
+###  3. Trung đại — lý trí gặp tôn giáo
+Giai đoạn này gắn với thần học
+
+* ⛪ Mục tiêu lớn là: lý trí có thể giải thích đức tin đến mức nào?
+* ✝️ Thomas Aquinas: kết hợp tư tưởng của Aristotle với thần học Kitô giáo
+
+Từ khóa: đức tin, lý trí, thần học
+
+---
+
+### 4. Cận đại — con người biết bằng cách nào?
+Triết học chuyển mạnh sang *nhận thức luận*
+
+Câu hỏi trung tâm:
+*  *Con người biết điều gì?*
+*  *Biết bằng cách nào?*
+
+Nhân vật nổi bật:
+* 🧠 **René Descartes** — “Tôi tư duy, nên tôi tồn tại”, điểm xuất phát của tri thức là *ý thức về chính mình*
+
+* 📘 **John Locke** — con người sinh ra như *“tờ giấy trắng”*, tri thức đến từ *kinh nghiệm*
+
+* ⚖️ **Immanuel Kant** — tri thức không chỉ đến từ thế giới bên ngoài, mà còn do *cách bộ não con người tổ chức trải nghiệm*
+
+
+Từ khóa: nhận thức, lý tính, tự do
+
+---
+
+###  5. Hiện đại — khủng hoảng giá trị và bản ngã
+Từ thế kỷ 19, triết học đi sâu vào *con người hiện đại*
+
+* ⚡ **Friedrich Nietzsche** — chỉ ra cuộc *khủng hoảng giá trị*
+  Câu *“God is dead”* nghĩa là: *những hệ giá trị cũ đang mất sức mạnh, con người phải tự tạo ý nghĩa sống cho mình.*
+
+* 🌌 **Carl Jung** — mở rộng triết học sang chiều sâu tâm lý dưới ý thức cá nhân còn có **vô thức tập thể**, ảnh hưởng đến suy nghĩ và hành vi
+
+=> Nietzsche hỏi về giá trị. Jung hỏi về bản ngã.
+
+---
+
+### 6. Đương đại — triết học bước vào thời đại AI
+
+Ngày nay, triết học phương Tây đang đối diện những câu hỏi mới:
+
+*  **AI có thật sự hiểu hay chỉ mô phỏng hiểu biết?**
+*  **Máy có thể có ý thức không?**
+*  **Nếu AI vượt trí tuệ con người thì điều gì xảy ra?**
+*  **Con người nên đặt giới hạn đạo đức nào cho AI?**
+
+Hai cái tên nổi bật:
+* 🚨 **Nick Bostrom** — nổi tiếng với khái niệm *siêu trí tuệ* và bài toán *AI alignment*
+
+* 🤖  **Max Tegmark** — đặt câu hỏi về *ý thức máy móc* và tương lai con người trong kỷ nguyên AI
+
+---
+
+**Câu hỏi lớn nhất hiện nay:**
+=> Nếu con người tạo ra một trí tuệ mới, liệu định nghĩa về “con người” có phải viết lại?
+

@@ -1,11 +1,11 @@
 ---
 title: Người con gái ở lầu hoa 🌸
-title_sub: 
+title_sub: Thơ » Việt Nam » Hiện đại » Nguyễn Bính » Người con gái lầu hoa (1941)
 description: 
 section_title: Triết học
 section_link: triet-hoc/01_sub_tho-viet-nam/index.html
-author: Bích Hồng
-update_date: 27/04/2026
+author: 
+update_date: 
 back_link_label: 🔙
 hero_image: 
 output_path: triet-hoc/01_sub_tho-viet-nam/<default>/index.html
@@ -46,6 +46,3 @@ Có đêm nào nghĩ đến tôi không?
 Không không, chả có đêm nào cả,
 Chả có đêm nào hé cánh song...
 
----
-
-Thơ » Việt Nam » Hiện đại » Nguyễn Bính » Người con gái lầu hoa (1941)
