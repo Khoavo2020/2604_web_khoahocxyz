@@ -18,7 +18,8 @@ Tải trình duyệt web Opera trên điện thoại
 bấm vào biểu tượng VPN 🌎
 
 các trang web phim full HD đủ thể loại
-- pornhub
-- xnxx
-- xvideos
+- pornhub (.) com
+- xnxx (.) com
+- xvideos (.) com
+- megaxh (.) com
 

@@ -4,7 +4,7 @@ title_sub:
 description: 
 section_title: Ứng dụng - năng suất
 section_link: ung-dung-nang-suat/01_sub_dau-tu-chung-khoan/index.html
-author: Duy Tuệ
+author: Tuệ Lâm
 update_date: 03/05/2026
 back_link_label: 🔙
 hero_image: -
