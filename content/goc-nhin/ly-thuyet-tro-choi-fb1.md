@@ -20,24 +20,24 @@ Dưới đây là giải thích chi tiết về cách hoạt động và lý do 
 
 **1. Cách thức hoạt động**
 Chiến lược này có quy tắc cực kỳ đơn giản:
-Bắt đầu bằng sự hợp tác: Ở lượt chơi đầu tiên, nó luôn chọn hợp tác
-Sao chép đối thủ: Ở các lượt tiếp theo, nó sẽ sao chép chính xác động thái mà đối thủ đã làm ở lượt ngay trước đó.
+* Bắt đầu bằng sự hợp tác: Ở lượt chơi đầu tiên, nó luôn chọn hợp tác
+* Sao chép đối thủ: Ở các lượt tiếp theo, nó sẽ sao chép chính xác động thái mà đối thủ đã làm ở lượt ngay trước đó.
 
-Nếu đối thủ hợp tác, nó sẽ tiếp tục hợp tác
-Nếu đối thủ phản bội, nó sẽ phản bội lại ngay ở lượt sau để đáp trả
-Nếu đối thủ quay lại hợp tác, nó cũng sẽ tha thứ và hợp tác trở lại.
+○ Nếu đối thủ hợp tác, nó sẽ tiếp tục hợp tác
+○ Nếu đối thủ phản bội, nó sẽ phản bội lại ngay ở lượt sau để đáp trả
+○ Nếu đối thủ quay lại hợp tác, nó cũng sẽ tha thứ và hợp tác trở lại.
 
 **2. Bốn đặc điểm giúp Tit for Tat chiến thắng**
 Theo nghiên cứu của Robert Axelrod, những chiến lược thành công nhất (dẫn đầu là Tit for Tat) thường hội đủ 4 yếu tố sau:
-Tử tế (Nice): Nó không bao giờ là bên phản bội trước
+○ Tử tế (Nice): Nó không bao giờ là bên phản bội trước
 Điều này giúp duy trì sự hợp tác lâu dài để cả hai bên cùng có lợi
-Biết đáp trả (Retaliatory): Nó không phải là một "kẻ nhu nhược"
+○ Biết đáp trả (Retaliatory): Nó không phải là một "kẻ nhu nhược"
 Nếu bị đối thủ lợi dụng, nó sẽ đánh trả ngay lập tức để bảo vệ quyền lợi của mình
 
-Vị tha (Forgiving): Nó không giữ hận thù lâu dài
+○ Vị tha (Forgiving): Nó không giữ hận thù lâu dài
 Chỉ cần đối thủ ngừng phản bội, nó sẽ sẵn lòng hợp tác lại ngay lập tức thay vì rơi vào vòng lặp trừng phạt mãi mãi
 
-Rõ ràng (Clear): Đây là một chiến lược cực kỳ dễ hiểu
+○ Rõ ràng (Clear): Đây là một chiến lược cực kỳ dễ hiểu
 Sự đơn giản này giúp đối thủ nhanh chóng nắm bắt được quy luật, từ đó dễ dàng thiết lập niềm tin và sự hợp tác ổn định
 
 **3. Hạn chế và Biến thể**

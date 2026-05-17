@@ -11,7 +11,7 @@ hero_image:
 output_path: tu-sach-nen-tang/01_sub_sach-kinh-te-hoc/<default>/index.html
 ---
 
-Thinking Strategically của Avinash K. Dixit và Barry J. Nalebuff là một trong những cuốn nhập môn thực dụng nhất về **lý thuyết trò chơi**.
+Thinking Strategically của Avinash Dixit và Barry Nalebuff là một trong những cuốn nhập môn thực dụng nhất về **lý thuyết trò chơi**.
 
 Ý chính của sách khá rõ:
 

@@ -11,8 +11,6 @@ hero_image: -
 output_path: ung-dung-nang-suat/01_sub_dau-tu-chung-khoan/<default>/index.html
 ---
 
-
-
 ### Vì sao nhóm cổ phiếu cảng biển đáng chú ý lúc này?
 
 **1- Cảng biển là ngành có dòng tiền phòng thủ**

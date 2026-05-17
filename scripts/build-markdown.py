@@ -508,7 +508,7 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
     title_sub_block = f'<p class="article-title-sub"><i>{escape(title_sub)}</i></p>' if title_sub else ""
     section_href = resolve_link(article["section_link"], prefix)
     parent_href = resolve_link(parent_link, prefix) if parent_link else ""
-    breadcrumb_parts = [f'<a href="{prefix}index.html"><strong>&#x1F3E0;</strong></a>']
+    breadcrumb_parts = [f'<a href="{prefix}index.html"><strong>&#x1F3E0; xyz</strong></a>']
 
     if parent_title and parent_href:
         breadcrumb_parts.append(f'<a href="{parent_href}"><strong>{escape(parent_title)}</strong></a>')
@@ -656,7 +656,7 @@ def build_category_header(
     parent_title: str = "",
     parent_link_href: str = "",
 ) -> str:
-    breadcrumb_parts = [f'<a href="{prefix}index.html"><strong>&#x1F3E0;</strong></a>']
+    breadcrumb_parts = [f'<a href="{prefix}index.html"><strong>&#x1F3E0; xyz</strong></a>']
 
     if parent_title and parent_link_href:
         breadcrumb_parts.append(f'<a href="{parent_link_href}"><strong>{escape(parent_title)}</strong></a>')
