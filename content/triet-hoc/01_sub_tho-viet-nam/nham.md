@@ -11,16 +11,16 @@ hero_image:
 output_path: triet-hoc/01_sub_tho-viet-nam/<default>/index.html
 ---
 
-*Tặng A.T.*
-
 Nhà tôi có một vườn dâu,
 Có giàn đỗ ván, có ao cấy cần.
 Hoa đỗ ván giữa mùa xuân,
 Lứa dâu tháng tháng, lứa cần năm năm.
+
 Em tôi là gái mười lăm,
 Quét sân, chạy chợ, chăn tằm sớm trưa.
 Thầy tôi dạy học chữ nho,
 Dạy dăm ba đứa học trò loanh quanh.
+
 Có gì! tiếng cả nhà thanh,
 Cơm ăn đủ bữa, áo lành đủ thay,
 Còn tôi, sống sót là may,

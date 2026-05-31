@@ -46,7 +46,8 @@ Ta viết thơ này gửi cố nhân.
 Năm mới tháng giêng mồng một tết,
 Còn nguyên vẹn cả một mùa xuân.
 
-   - Huyền Trân ơi!
+Huyền Trân ơi!
+
 Mùa xuân, mùa xuân, mùa xuân rồi.
 Giờ đây chín vạn bông trời nở,
 Riêng có tình ta khép lại thôi!

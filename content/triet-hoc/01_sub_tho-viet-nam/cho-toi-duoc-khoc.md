@@ -12,7 +12,7 @@ output_path: triet-hoc/01_sub_tho-viet-nam/<default>/index.html
 ---
 
 Chả trách Mai Thơ bảo mãi mình:
-- Anh đừng phụ kẻ rất yêu anh.
+"Anh đừng phụ kẻ rất yêu anh.
 Thì ra họ tưởng mình như họ,
 Họ tưởng rằng ai cũng bạc tình.
 

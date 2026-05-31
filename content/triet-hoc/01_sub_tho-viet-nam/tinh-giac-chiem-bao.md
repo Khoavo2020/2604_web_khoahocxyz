@@ -37,10 +37,12 @@ Xếp thư đến rách chưa lành vết thương.
 Chân anh đương bước giữa đường phố đây
 Nẻo hồ, song cửa, lá bay
 Sáng trưng bóng dáng bao ngày yêu xưa
+
 Trăm năm đã lỡ hẹn hò
 Cây đa bến cũ con đò còn không?
 Tình cờ gặp giữa phố đông
 Em đi ríu rít tay chồng tay con
+
 Nét cười âu yếm môi son
 Áo bay nhắc buổi trăng tròn sánh vai…
 
@@ -48,12 +50,15 @@ Chín năm bão tối mưa ngây
 Nước non để có hôm nay sáng trời
 Em đi, hạnh phúc hồng tươi
 Anh nhìn tận mắt cuộc đời đẹp sao!
+
 Sắc hương muôn nẻo tuôn trào
 Tiếc mà chi giấc chiêm bao một mình
 Anh về viết lại thơ anh
 Để cho bến mát cây xanh đôi bờ
+
 Cho sông cho nước tự giờ
 Chẳng còn lỡ chuyện con đò sang ngang
+
 Lứa đôi những bức thư vàng
 Chẳng còn chữ chữ hàng hàng lệ rơi
 Chim hồng chim nhạn, Em ơi!
