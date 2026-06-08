@@ -1,192 +1,357 @@
 <!DOCTYPE HTML>
 
 <html>
-	<head>
-		<title>Khoahoc.xyz</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="khoa học xyz » sống khoa học - làm việc năng suất - học tập suốt đời" />
-		<meta property="og:title" content="🏠 xyz » sống khoa học - làm việc năng suất - học tập suốt đời" />
-		<meta property="og:description" content="sống khoa học - làm việc năng suất - học tập suốt đời" />
-		<meta property="og:url" content="https://khoahoc.xyz" />
-		<meta property="og:type" content="website" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload site-page">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+  <title>Khoahoc.xyz</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="khoa học xyz » sống khoa học - làm việc năng suất - học tập suốt đời" />
+  <meta property="og:title" content="🏠 xyz » sống khoa học - làm việc năng suất - học tập suốt đời" />
+  <meta property="og:description" content="sống khoa học - làm việc năng suất - học tập suốt đời" />
+  <meta property="og:url" content="https://khoahoc.xyz" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    /* ===== Mini Lịch âm dương sidebar ===== */
+    #mini-cal-wrap {
+      background: #fff;
+      border: 1px solid #d8dde3;
+      border-radius: 0.85rem;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.07);
+      margin: 1rem 0 1rem 0;
+      overflow: hidden;
+      font-size: 0.8rem;
+    }
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+    #mini-cal-header {
+      align-items: center;
+      background: #e0e0e0;
+      border-bottom: 1px solid #d8dde3;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.15rem 0.5rem;
+    }
 
-							<!-- Header -->
-								<header id="header">
-									<div class="logo">
-										<a href="index.html" ><strong>🏠 xyz</strong>:</a> » sống khoa học - làm việc năng suất - học tập suốt đời
-									</div>
-									<ul class="icons">
-										<li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="lich-am-duong/index.html" class="icon solid fa-calendar-alt"> » lịch âm<span class="label">Lịch âm dương</span></a></li>
-									</ul>
-								</header>
+    #mini-cal-title {
+      color: #5b6470;
+      font-weight: 400;
+      font-size: 0.82rem;
+      letter-spacing: 0.03em;
+    }
 
-                <!-- Section -->
-								<section>
-                  <!-- Góc nhìn -->
-									<div class="cover-list" data-home-list="goc-nhin"></div>
-									<ul class="actions" style="justify-content: flex-end;">
-										<li><a href="goc-nhin/index.html">Góc nhìn..</a></li>
-									</ul>
-								</section>
+    #mini-cal-prev,
+    #mini-cal-next {
+      background: none !important;
+      border: none !important;
+      box-shadow: none !important;
+      outline: none !important;
+      appearance: none;
+      border-radius: 0.4rem;
+      color: #7a8590 !important;
+      cursor: pointer;
+      font-size: 0.82rem !important;
+      font-weight: 400 !important;
+      font-family: inherit !important;
+      height: auto !important;
+      line-height: 1 !important;
+      padding: 0.15rem 0.4rem !important;
+      text-transform: none !important;
+    }
 
-							<!-- Section -->
-								<section>
-									<!-- Khoa học -->
-									<div class="cover-list" data-home-list="khoa-hoc"></div>
-									<ul class="actions" style="justify-content: flex-end;">
-										<li><a href="khoa-hoc/index.html">Khoa học..</a></li>
-									</ul>
-								</section>
+    #mini-cal-prev:hover,
+    #mini-cal-next:hover {
+      background: #e2e4e6;
+      color: #607861;
+    }
 
-							<!-- Section -->
-								<section>
-									<!-- Kinh tế học -->
-									<div class="cover-list" data-home-list="kinh-te-hoc"></div>
-									<ul class="actions" style="justify-content: flex-end;">
-										<li><a href="kinh-te-hoc/index.html">Kinh tế học..</a></li>
-									</ul>
-								</section>
+    #mini-cal-weekdays,
+    #mini-cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
 
-							<!-- Section -->
-								<section>
-									<!-- Tâm lý học -->
-									<div class="cover-list" data-home-list="tam-ly-hoc"></div>
-									<ul class="actions" style="justify-content: flex-end;">
-										<li><a href="tam-ly-hoc/index.html">Tâm lý học..</a></li>
-									</ul>
-								</section>
+    #mini-cal-weekdays {
+      border-top: 1px solid #e8ecf0;
+    }
 
-							<!-- Section -->
-								<section>
-									<!-- Triết học -->
-									<div class="cover-list" data-home-list="triet-hoc"></div>
-									<ul class="actions" style="justify-content: flex-end;">
-										<li><a href="triet-hoc/index.html">Triết học..</a></li>
-									</ul>
-								</section>
+    .mcal-wday {
+      border-right: 1px solid #e8ecf0;
+      color: #5b6470;
+      font-size: 0.64rem;
+      letter-spacing: 0.01em;
+      padding: 0.3rem 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
 
-							<!-- Section -->
-								<section>
-									<!-- Tinh hoa - Nhân loại -->
-									<div class="cover-list" data-home-list="tinh-hoa-nhan-loai"></div>
-									<ul class="actions" style="justify-content: flex-end;">
-										<li><a href="tinh-hoa-nhan-loai/index.html">Tinh hoa - Nhân loại..</a></li>
-									</ul>
-								</section>
+    .mcal-wday:last-child {
+      border-right: 0;
+    }
 
-							<!-- Section -->
-								<section>
-									<!-- Tủ sách - nền tảng -->
-									<div class="cover-list" data-home-list="tu-sach-nen-tang"></div>
-									<ul class="actions" style="justify-content: flex-end;">
-										<li><a href="tu-sach-nen-tang/index.html">Tủ sách - nền tảng..</a></li>
-									</ul>
-								</section>
+    .mcal-wday.is-sun {
+      color: #d05058;
+    }
 
-                <!-- Section -->
-								<section>
-									<!-- Trend -->
-									<div class="cover-list" data-home-list="trend"></div>
-									<ul class="actions" style="justify-content: flex-end;">
-										<li><a href="trend/index.html">Trend..</a></li>
-									</ul>
-								</section>
+    .mcal-day {
+      background: #fff;
+      border-right: 1px solid #e8ecf0;
+      border-top: 1px solid #e8ecf0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.05rem;
+      min-height: 2rem;
+      padding: 0.25rem 0.1rem;
+    }
 
-							<!-- Section -->
-								<section>
-									<!-- Ứng dụng - năng suất -->
-									<h3>Ứng dụng - năng suất</h3>
-									<div class="cover-list" data-home-list="ung-dung-nang-suat"></div>
-									<ul class="actions" style="justify-content: flex-end;">
-										<li><a href="ung-dung-nang-suat/index.html">Xem thêm..</a></li>
-									</ul>
+    .mcal-day:nth-child(7n) {
+      border-right: 0;
+    }
 
-								</section>
+    .mcal-day.is-other {
+      opacity: 0.3;
+    }
 
-						</div>
-					</div>
+    .mcal-day.is-sun .mcal-solar,
+    .mcal-day.is-sun .mcal-lunar {
+      color: #d05058;
+    }
 
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
+    .mcal-day.is-today {
+      background: #607861;
+    }
 
-							<!-- Search -->
-								<section id="sidebar-quote" class="alt" data-quotes-root="data/tinh-hoa-nhan-loai/quotes" data-quotes-page="tinh-hoa-nhan-loai/index.html">
-									<div class="sidebar-quote-shell">
-										<div class="sidebar-quote-body">
-											<p class="sidebar-quote-status"></p>
-										</div>
-									</div>
-								</section>
+    .mcal-day.is-today .mcal-solar,
+    .mcal-day.is-today .mcal-lunar {
+      color: #fff;
+    }
 
-							<!-- Menu -->
-								<nav id="menu">
-	<header class="major">
-		<h2>Menu</h2>
-	</header>
-	<ul>
-		<li><a href="index.html">🏠 xyz</a></li>
-		<li><a href="khoa-hoc/index.html">🔭 Khoa học</a></li>
-		<li><a href="kinh-te-hoc/index.html">💰 Kinh tế học</a></li>
-		<li><a href="tam-ly-hoc/index.html">🧠 Tâm lý học</a></li>
-		<li>
-			<a href="triet-hoc/index.html" class="opener">🏛 Triết học</a>
-			<ul>
-				<li><a href="triet-hoc/01_sub_phuong-dong/index.html">Phương Đông</a></li>
-				<li><a href="triet-hoc/01_sub_phuong-tay/index.html">Phương Tây</a></li>
-				<li><a href="triet-hoc/01_sub_tho-viet-nam/index.html">Thơ việt nam</a></li>
-				<li><a href="triet-hoc/01_sub_tho-nuoc-ngoai/index.html">Thơ nước ngoài</a></li>
-			</ul>
-		</li>
-		<li><a href="tinh-hoa-nhan-loai/index.html">🧭 Tinh hoa - nhân loại</a></li>
-		<li>
-			<a href="tu-sach-nen-tang/index.html" class="opener">📚 Tủ sách - nền tảng</a>
-			<ul>
-				<li><a href="tu-sach-nen-tang/sach-khoa-hoc/index.html">sách Khoa học</a></li>
-				<li><a href="tu-sach-nen-tang/sach-kinh-te-hoc/index.html">sách Kinh tế học</a></li>
-				<li><a href="tu-sach-nen-tang/sach-tam-ly-hoc/index.html">sách Tâm lý học</a></li>
-				<li><a href="tu-sach-nen-tang/sach-triet-hoc/index.html">sách Triết học</a></li>
-				<li><a href="tu-sach-nen-tang/sach-xyz/index.html">sách xyz</a></li>
-			</ul>
-		</li>
-		<li>
-			<a href="ung-dung-nang-suat/index.html" class="opener">📱 Ứng dụng - năng suất</a>
-			<ul>
-				<li><a href="ung-dung-nang-suat/01_sub_app-nang-suat/index.html">App năng suất</a></li>
-				<li><a href="ung-dung-nang-suat/01_sub_dau-tu-chung-khoan/index.html">Đầu tư chứng khoán</a></li>
-				<li><a href="ung-dung-nang-suat/01_sub_giao-duc-steam/index.html">Học - STEAM</a></li>
-				<li><a href="ung-dung-nang-suat/01_sub_giao-duc-tieng-anh/index.html">Học - Tiếng Anh</a></li>
-			</ul>
-		</li>
+    .mcal-solar {
+      color: #1f2a37;
+      font-size: 0.9rem;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .mcal-lunar {
+      color: #5b6470;
+      font-size: 0.6rem;
+      line-height: 1;
+    }
+
+    #mini-cal-footer {
+      border-top: 1px solid #e8ecf0;
+      padding: 0.38rem 0.75rem;
+      text-align: right;
+    }
+
+    #mini-cal-footer a {
+      color: #7a8590;
+      font-size: 0.75rem;
+      font-weight: 400;
+      text-decoration: none;
+    }
+
+    #mini-cal-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body class="is-preload site-page">
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+      <div class="inner">
+
+        <!-- Header -->
+        <header id="header">
+          <div class="logo">
+            <a href="index.html"><strong>🏠 xyz</strong>:</a> » sống khoa học - làm việc năng suất - học tập suốt đời
+          </div>
+          <ul class="icons">
+            <li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span
+                  class="label">Facebook</span></a></li>
+            <li><a href="lich-am-duong/index.html" class="icon solid fa-calendar-alt"> » lịch âm<span class="label">Lịch
+                  âm dương</span></a></li>
+          </ul>
+        </header>
+
+        <!-- Section -->
+        <section>
+          <!-- Trend -->
+          <div class="cover-list" data-home-list="trend"></div>
+          <ul class="actions" style="justify-content: flex-end;">
+            <li><a href="trend/index.html">Trend..</a></li>
+          </ul>
+        </section>
+
+        <!-- Section -->
+        <section>
+          <!-- Khoa học -->
+          <div class="cover-list" data-home-list="khoa-hoc"></div>
+          <ul class="actions" style="justify-content: flex-end;">
+            <li><a href="khoa-hoc/index.html">Khoa học..</a></li>
+          </ul>
+        </section>
+
+        <!-- Section -->
+        <section>
+          <!-- Kinh tế học -->
+          <div class="cover-list" data-home-list="kinh-te-hoc"></div>
+          <ul class="actions" style="justify-content: flex-end;">
+            <li><a href="kinh-te-hoc/index.html">Kinh tế học..</a></li>
+          </ul>
+        </section>
+
+        <!-- Section -->
+        <section>
+          <!-- Tâm lý học -->
+          <div class="cover-list" data-home-list="tam-ly-hoc"></div>
+          <ul class="actions" style="justify-content: flex-end;">
+            <li><a href="tam-ly-hoc/index.html">Tâm lý học..</a></li>
+          </ul>
+        </section>
+
+        <!-- Section -->
+        <section>
+          <!-- Triết học -->
+          <div class="cover-list" data-home-list="triet-hoc"></div>
+          <ul class="actions" style="justify-content: flex-end;">
+            <li><a href="triet-hoc/index.html">Triết học..</a></li>
+          </ul>
+        </section>
+
+        <!-- Section -->
+        <section>
+          <!-- Tinh hoa - Nhân loại -->
+          <div class="cover-list" data-home-list="tinh-hoa-nhan-loai"></div>
+          <ul class="actions" style="justify-content: flex-end;">
+            <li><a href="tinh-hoa-nhan-loai/index.html">Tinh hoa - Nhân loại..</a></li>
+          </ul>
+        </section>
+
+        <!-- Section -->
+        <section>
+          <!-- Tủ sách - nền tảng -->
+          <div class="cover-list" data-home-list="tu-sach-nen-tang"></div>
+          <ul class="actions" style="justify-content: flex-end;">
+            <li><a href="tu-sach-nen-tang/index.html">Tủ sách - nền tảng..</a></li>
+          </ul>
+        </section>
+
+        <!-- Section -->
+        <section>
+          <!-- Góc nhìn -->
+          <div class="cover-list" data-home-list="goc-nhin"></div>
+          <ul class="actions" style="justify-content: flex-end;">
+            <li><a href="goc-nhin/index.html">Góc nhìn..</a></li>
+          </ul>
+        </section>
+
+        <!-- Section -->
+        <section>
+          <!-- Ứng dụng - năng suất -->
+          <h3>Ứng dụng - năng suất</h3>
+          <div class="cover-list" data-home-list="ung-dung-nang-suat"></div>
+          <ul class="actions" style="justify-content: flex-end;">
+            <li><a href="ung-dung-nang-suat/index.html">Xem thêm..</a></li>
+          </ul>
+
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <div class="inner">
+
+        <!-- Search -->
+        <section id="sidebar-quote" class="alt" data-quotes-root="data/tinh-hoa-nhan-loai/quotes"
+          data-quotes-page="tinh-hoa-nhan-loai/index.html">
+          <div class="sidebar-quote-shell">
+            <div class="sidebar-quote-body">
+              <p class="sidebar-quote-status"></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="menu">
+          <header class="major">
+            <h2>Menu</h2>
+          </header>
+          <ul>
+            <li><a href="index.html">🏠 xyz</a></li>
+            <li><a href="khoa-hoc/index.html">🔭 Khoa học</a></li>
+            <li><a href="kinh-te-hoc/index.html">💰 Kinh tế học</a></li>
+            <li><a href="tam-ly-hoc/index.html">🧠 Tâm lý học</a></li>
+            <li>
+              <a href="triet-hoc/index.html" class="opener">🏛 Triết học</a>
+              <ul>
+                <li><a href="triet-hoc/01_sub_phuong-dong/index.html">Phương Đông</a></li>
+                <li><a href="triet-hoc/01_sub_phuong-tay/index.html">Phương Tây</a></li>
+                <li><a href="triet-hoc/01_sub_tho-viet-nam/index.html">Thơ việt nam</a></li>
+                <li><a href="triet-hoc/01_sub_tho-nuoc-ngoai/index.html">Thơ nước ngoài</a></li>
+              </ul>
+            </li>
+            <li><a href="tinh-hoa-nhan-loai/index.html">🧭 Tinh hoa - nhân loại</a></li>
+            <li>
+              <a href="tu-sach-nen-tang/index.html" class="opener">📚 Tủ sách - nền tảng</a>
+              <ul>
+                <li><a href="tu-sach-nen-tang/sach-khoa-hoc/index.html">sách Khoa học</a></li>
+                <li><a href="tu-sach-nen-tang/sach-kinh-te-hoc/index.html">sách Kinh tế học</a></li>
+                <li><a href="tu-sach-nen-tang/sach-tam-ly-hoc/index.html">sách Tâm lý học</a></li>
+                <li><a href="tu-sach-nen-tang/sach-triet-hoc/index.html">sách Triết học</a></li>
+                <li><a href="tu-sach-nen-tang/sach-xyz/index.html">sách xyz</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="ung-dung-nang-suat/index.html" class="opener">📱 Ứng dụng - năng suất</a>
+              <ul>
+                <li><a href="ung-dung-nang-suat/01_sub_app-nang-suat/index.html">App năng suất</a></li>
+                <li><a href="ung-dung-nang-suat/01_sub_dau-tu-chung-khoan/index.html">Đầu tư chứng khoán</a></li>
+                <li><a href="ung-dung-nang-suat/01_sub_giao-duc-steam/index.html">Học - STEAM</a></li>
+                <li><a href="ung-dung-nang-suat/01_sub_giao-duc-tieng-anh/index.html">Học - Tiếng Anh</a></li>
+              </ul>
+            </li>
 
 
-	</ul>
-</nav>
+          </ul>
+        </nav>
 
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">Copyright &copy; <a href="https://facebook.com/KhoaHoc.xyz">Khoahoc.xyz</a></p>
-								</footer>
+        <!-- Mini Lịch âm dương -->
+        <section id="mini-cal-section">
+          <div id="mini-cal-wrap">
+            <div id="mini-cal-header">
+              <button id="mini-cal-prev" type="button" aria-label="Tháng trước">&#8592;</button>
+              <span id="mini-cal-title"></span>
+              <button id="mini-cal-next" type="button" aria-label="Tháng sau">&#8594;</button>
+            </div>
+            <div id="mini-cal-weekdays"></div>
+            <div id="mini-cal-grid"></div>
+            <div id="mini-cal-footer"><a href="lich-am-duong/index.html">🔜</a></div>
+          </div>
+        </section>
 
-						</div>
-					</div>
+        <!-- Footer -->
+        <footer id="footer">
+          <p class="copyright">Copyright &copy; <a href="https://facebook.com/KhoaHoc.xyz">Khoahoc.xyz</a></p>
+        </footer>
 
-			</div>
+      </div>
+    </div>
 
-		<!-- Scripts -->
-			<script id="homepage-sections-data" type="application/json">
+  </div>
+
+  <!-- Scripts -->
+  <script id="homepage-sections-data" type="application/json">
 {
   "sections": [
     {
@@ -752,11 +917,73 @@
   ]
 }
 			</script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      var WDAYS = ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'];
+      var today = new Date();
+      var vY = today.getFullYear();
+      var vM = today.getMonth();
+      var lunarFmt;
+      try {
+        lunarFmt = new Intl.DateTimeFormat('en-u-ca-chinese', { day: 'numeric', month: 'numeric' });
+      } catch (e) { lunarFmt = null; }
 
-	</body>
+      function getLunar(date) {
+        if (!lunarFmt) return '';
+        var parts = lunarFmt.formatToParts(date);
+        var d = parts.find(function (p) { return p.type === 'day'; });
+        var m = parts.find(function (p) { return p.type === 'month'; });
+        if (!d || !m) return '';
+        return Number(d.value) === 1 ? d.value + '/' + m.value : d.value;
+      }
+
+      function sameDate(a, b) {
+        return a.getFullYear() === b.getFullYear()
+          && a.getMonth() === b.getMonth()
+          && a.getDate() === b.getDate();
+      }
+
+      function render(year, month) {
+        document.getElementById('mini-cal-title').textContent = 'Tháng ' + (month + 1) + ' · ' + year;
+
+        document.getElementById('mini-cal-weekdays').innerHTML = WDAYS.map(function (l, i) {
+          return '<div class="mcal-wday' + (i === 6 ? ' is-sun' : '') + '">' + l + '</div>';
+        }).join('');
+
+        var firstDay = new Date(year, month, 1);
+        var offset = (firstDay.getDay() + 6) % 7;
+        var gridStart = new Date(year, month, 1 - offset);
+        var html = '';
+        for (var i = 0; i < 42; i++) {
+          var cur = new Date(gridStart.getFullYear(), gridStart.getMonth(), gridStart.getDate() + i);
+          var cls = 'mcal-day';
+          if (cur.getMonth() !== month) cls += ' is-other';
+          if (cur.getDay() === 0) cls += ' is-sun';
+          if (sameDate(cur, today)) cls += ' is-today';
+          html += '<div class="' + cls + '">'
+            + '<div class="mcal-solar">' + cur.getDate() + '</div>'
+            + '<div class="mcal-lunar">' + getLunar(cur) + '</div>'
+            + '</div>';
+        }
+        document.getElementById('mini-cal-grid').innerHTML = html;
+      }
+
+      render(vY, vM);
+
+      document.getElementById('mini-cal-prev').addEventListener('click', function () {
+        vM--; if (vM < 0) { vM = 11; vY--; } render(vY, vM);
+      });
+      document.getElementById('mini-cal-next').addEventListener('click', function () {
+        vM++; if (vM > 11) { vM = 0; vY++; } render(vY, vM);
+      });
+    })();
+  </script>
+
+</body>
+
 </html>
