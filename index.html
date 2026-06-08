@@ -11,7 +11,139 @@
 		<meta property="og:url" content="https://khoahoc.xyz" />
 		<meta property="og:type" content="website" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* ===== Mini Lịch âm dương widget ===== */
+			#mini-cal-wrap {
+				background: #fff;
+				border: 1px solid #d8dde3;
+				border-radius: 0.85rem;
+				box-shadow: 0 4px 16px rgba(15,23,42,0.07);
+				margin: 0.6rem 0 1.4rem 0;
+				overflow: hidden;
+				font-size: 0.85rem;
+			}
+
+			#mini-cal-header {
+				align-items: center;
+				background: linear-gradient(180deg, #f7faf7 0%, #edf7ec 100%);
+				border-bottom: 1px solid #d8dde3;
+				display: flex;
+				justify-content: space-between;
+				padding: 0.5rem 0.85rem;
+			}
+
+			#mini-cal-title {
+				color: #1f2a37;
+				font-weight: 700;
+				font-size: 0.92rem;
+				letter-spacing: 0.03em;
+			}
+
+			#mini-cal-prev,
+			#mini-cal-next {
+				background: none;
+				border: 1px solid #c6cdd5;
+				border-radius: 0.5rem;
+				color: #34c13a;
+				cursor: pointer;
+				font-size: 0.9rem;
+				font-weight: bold;
+				line-height: 1;
+				padding: 0.28rem 0.6rem;
+			}
+
+			#mini-cal-prev:hover,
+			#mini-cal-next:hover {
+				background: #edf7ec;
+				border-color: #34c13a;
+			}
+
+			#mini-cal-weekdays,
+			#mini-cal-grid {
+				display: grid;
+				grid-template-columns: repeat(7, minmax(0, 1fr));
+			}
+
+			#mini-cal-weekdays {
+				border-top: 1px solid #e8ecf0;
+			}
+
+			.mcal-wday {
+				border-right: 1px solid #e8ecf0;
+				color: #5b6470;
+				font-size: 0.72rem;
+				letter-spacing: 0.02em;
+				padding: 0.35rem 0.1rem;
+				text-align: center;
+				text-transform: uppercase;
+			}
+
+			.mcal-wday:last-child { border-right: 0; }
+			.mcal-wday.is-sun { color: #d05058; }
+
+			.mcal-day {
+				background: #fff;
+				border-right: 1px solid #e8ecf0;
+				border-top: 1px solid #e8ecf0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 0.1rem;
+				min-height: 3.1rem;
+				padding: 0.3rem 0.15rem;
+			}
+
+			.mcal-day:nth-child(7n) { border-right: 0; }
+			.mcal-day.is-other { opacity: 0.32; }
+
+			.mcal-day.is-sun .mcal-solar,
+			.mcal-day.is-sun .mcal-lunar { color: #d05058; }
+
+			.mcal-day.is-today {
+				background: #34c13a;
+			}
+
+			.mcal-day.is-today .mcal-solar,
+			.mcal-day.is-today .mcal-lunar { color: #fff; }
+
+			.mcal-solar {
+				color: #1f2a37;
+				font-size: 1.05rem;
+				font-weight: 700;
+				line-height: 1;
+			}
+
+			.mcal-lunar {
+				color: #5b6470;
+				font-size: 0.68rem;
+				line-height: 1;
+			}
+
+			#mini-cal-footer {
+				border-top: 1px solid #e8ecf0;
+				padding: 0.42rem 0.85rem;
+				text-align: right;
+			}
+
+			#mini-cal-footer a {
+				color: #34c13a;
+				font-size: 0.8rem;
+				font-weight: 600;
+				text-decoration: none;
+			}
+
+			#mini-cal-footer a:hover { text-decoration: underline; }
+
+			@media screen and (max-width: 736px) {
+				.mcal-wday { font-size: 0.62rem; padding: 0.25rem 0; }
+				.mcal-day { min-height: 2.5rem; }
+				.mcal-solar { font-size: 0.88rem; }
+				.mcal-lunar { font-size: 0.6rem; }
+			}
+		</style>
 	</head>
+
 	<body class="is-preload site-page">
 
 		<!-- Wrapper -->
@@ -32,7 +164,20 @@
 									</ul>
 								</header>
 
+				<!-- Mini Lịch âm dương -->
+				<div id="mini-cal-wrap">
+					<div id="mini-cal-header">
+						<button id="mini-cal-prev" type="button" aria-label="Tháng trước">&#8592;</button>
+						<span id="mini-cal-title"></span>
+						<button id="mini-cal-next" type="button" aria-label="Tháng sau">&#8594;</button>
+					</div>
+					<div id="mini-cal-weekdays"></div>
+					<div id="mini-cal-grid"></div>
+					<div id="mini-cal-footer"><a href="lich-am-duong/index.html">&#128197; Xem lịch đầy đủ</a></div>
+				</div>
+
                 <!-- Section -->
+
 								<section>
                   <!-- Góc nhìn -->
 									<div class="cover-list" data-home-list="goc-nhin"></div>
@@ -758,5 +903,82 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+		<script>
+		(function () {
+			var WDAY_LABELS = ['T2','T3','T4','T5','T6','T7','CN'];
+			var today = new Date();
+			var vYear = today.getFullYear();
+			var vMonth = today.getMonth();
+
+			var lunarFmt;
+			try {
+				lunarFmt = new Intl.DateTimeFormat('en-u-ca-chinese', { day: 'numeric', month: 'numeric' });
+			} catch (e) { lunarFmt = null; }
+
+			function getLunar(date) {
+				if (!lunarFmt) return '';
+				var parts = lunarFmt.formatToParts(date);
+				var d = parts.find(function(p){ return p.type === 'day'; });
+				var m = parts.find(function(p){ return p.type === 'month'; });
+				if (!d || !m) return '';
+				return Number(d.value) === 1 ? d.value + '/' + m.value : d.value;
+			}
+
+			function normMon1st(dow) { return (dow + 6) % 7; }
+
+			function sameDate(a, b) {
+				return a.getFullYear() === b.getFullYear()
+					&& a.getMonth() === b.getMonth()
+					&& a.getDate() === b.getDate();
+			}
+
+			function render(year, month) {
+				document.getElementById('mini-cal-title').textContent =
+					'Tháng ' + (month + 1) + ' · ' + year;
+
+				// Weekdays row
+				var wdHtml = WDAY_LABELS.map(function(l, i) {
+					return '<div class="mcal-wday' + (i === 6 ? ' is-sun' : '') + '">' + l + '</div>';
+				}).join('');
+				document.getElementById('mini-cal-weekdays').innerHTML = wdHtml;
+
+				// Grid
+				var firstDay = new Date(year, month, 1);
+				var offset = normMon1st(firstDay.getDay());
+				var gridStart = new Date(year, month, 1 - offset);
+				var html = '';
+				for (var i = 0; i < 42; i++) {
+					var cur = new Date(gridStart.getFullYear(), gridStart.getMonth(), gridStart.getDate() + i);
+					var inMonth = cur.getMonth() === month;
+					var isSun = cur.getDay() === 0;
+					var isToday = sameDate(cur, today);
+					var cls = 'mcal-day';
+					if (!inMonth) cls += ' is-other';
+					if (isSun)    cls += ' is-sun';
+					if (isToday)  cls += ' is-today';
+					html += '<div class="' + cls + '">'
+						+ '<div class="mcal-solar">' + cur.getDate() + '</div>'
+						+ '<div class="mcal-lunar">' + getLunar(cur) + '</div>'
+						+ '</div>';
+				}
+				document.getElementById('mini-cal-grid').innerHTML = html;
+			}
+
+			render(vYear, vMonth);
+
+			document.getElementById('mini-cal-prev').addEventListener('click', function() {
+				vMonth -= 1;
+				if (vMonth < 0) { vMonth = 11; vYear -= 1; }
+				render(vYear, vMonth);
+			});
+			document.getElementById('mini-cal-next').addEventListener('click', function() {
+				vMonth += 1;
+				if (vMonth > 11) { vMonth = 0; vYear += 1; }
+				render(vYear, vMonth);
+			});
+		})();
+		</script>
+
 	</body>
+
 </html>
