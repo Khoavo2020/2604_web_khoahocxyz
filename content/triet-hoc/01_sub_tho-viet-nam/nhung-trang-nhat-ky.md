@@ -36,4 +36,3 @@ Mà cũng không chừa chép lại thơ.
 Người ạ, lòng tôi sao khổ quá,
 Vẫn còn mơ ước chuyện tương tư.
 
-*Gửi Ngân Giang nữ sĩ*

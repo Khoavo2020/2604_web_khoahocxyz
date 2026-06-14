@@ -1,6 +1,6 @@
 ---
-title: sách hay
-title_sub: 
+title: Lược Sử Loài Người
+title_sub: Yuval Noah Harari
 description: 
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/01_sub_sach-xyz/index.html

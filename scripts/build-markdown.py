@@ -17,14 +17,15 @@ SECTIONS_PATH = ROOT / "data" / "site-sections.json"
 HOME_PAGE_PATH = ROOT / "index.html"
 IMAGE_EXTENSIONS = {".svg", ".jpg", ".jpeg", ".png", ".webp", ".gif"}
 HOMEPAGE_SECTION_CONFIG = [
-    {"slug": "goc-nhin", "title": "Góc nhìn", "link": "goc-nhin/index.html"},
-    {"slug": "trend", "title": "Trend", "link": "trend/index.html"},
+    {"slug": "ung-dung-nang-suat", "title": "Ứng dụng - năng suất", "link": "ung-dung-nang-suat/index.html"},
     {"slug": "khoa-hoc", "link": "khoa-hoc/index.html"},
     {"slug": "kinh-te-hoc", "link": "kinh-te-hoc/index.html"},
     {"slug": "tam-ly-hoc", "link": "tam-ly-hoc/index.html"},
     {"slug": "triet-hoc", "link": "triet-hoc/index.html"},
+    {"slug": "tinh-hoa-nhan-loai", "link": "tinh-hoa-nhan-loai/index.html"},
     {"slug": "tu-sach-nen-tang", "link": "tu-sach-nen-tang/index.html"},
-    {"slug": "ung-dung-nang-suat", "link": "ung-dung-nang-suat/index.html"},
+    {"slug": "goc-nhin", "title": "Góc nhìn", "link": "goc-nhin/index.html"},
+    {"slug": "trend", "title": "Trend", "link": "trend/index.html"},
 ]
 CATEGORY_CHILD_PAGES = {
     "triet-hoc": [
@@ -616,7 +617,7 @@ def render_productivity_child_page_cards(parent_slug: str, category_index_path: 
         + "".join(cards)
         + "</div>"
         '<header class="major" style="margin-top: 2em;">'
-        "<h2>Bài viết</h2>"
+        # "<h2>Bài viết</h2>"
         "</header>"
         "</div>"
     )

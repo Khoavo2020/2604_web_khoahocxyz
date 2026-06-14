@@ -1,6 +1,6 @@
 ---
-title: sách Khoa học nền tảng
-title_sub: 
+title: Siêu Trí Tuệ
+title_sub: Nick Bostrom 
 description: 
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/01_sub_sach-khoa-hoc/index.html

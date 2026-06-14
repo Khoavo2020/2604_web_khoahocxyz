@@ -4,7 +4,7 @@ title_sub:
 description: 
 section_title: Ứng dụng - năng suất
 section_link: ung-dung-nang-suat/index.html
-author: Hữu Định
+author: Mạnh Tuấn
 update_date: 03/05/2026
 back_link_label: 🔙
 hero_image: 

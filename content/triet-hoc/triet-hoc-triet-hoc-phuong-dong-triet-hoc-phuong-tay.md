@@ -25,7 +25,6 @@ output_path: triet-hoc/<default>/index.html
 
 ### 🏛️ Triết học phương Tây
 
-* Khởi nguồn từ Ancient Greece.
 * Gắn với các triết gia như Socrates, Plato, Aristotle.
 * Đặc điểm nổi bật:
 
@@ -34,7 +33,6 @@ output_path: triet-hoc/<default>/index.html
   * xây dựng lập luận
   * truy tìm chân lý bằng lý trí
 
-**Tóm gọn:**
 👉 *Phương Tây thường hỏi:* **“Điều này đúng vì sao?”**
 
 ---
@@ -42,14 +40,13 @@ output_path: triet-hoc/<default>/index.html
 ### ☯️ Triết học phương Đông
 
 * Phát triển mạnh ở China, India và nhiều khu vực châu Á.
-* Gắn với các tư tưởng của Confucius, Laozi, Buddha.
+* Gắn với các tư tưởng của Confucius(Khổng Tử), Laozi(Lão Tử), Buddha(Phật Thích Ca).
 * Đặc điểm nổi bật:
 
   * chú trọng **tu dưỡng bản thân**
   * hài hòa với xã hội và tự nhiên
   * quan tâm đến cách sống
 
-**Tóm gọn:**
 👉 *Phương Đông thường hỏi:* **“Sống thế nào cho đúng?”**
 
 ---
