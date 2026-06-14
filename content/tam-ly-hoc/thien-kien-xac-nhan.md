@@ -7,7 +7,7 @@ section_link: tam-ly-hoc/index.html
 author: Hữu Định
 update_date: 27/04/2026
 back_link_label: 🔙
-hero_image: -
+hero_image: 
 output_path: tam-ly-hoc/<default>/index.html
 ---
 

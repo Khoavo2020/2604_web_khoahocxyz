@@ -7,7 +7,7 @@ section_link: ung-dung-nang-suat/01_sub_giao-duc-steam/index.html
 author: Ai Viet - fb
 update_date: 03/05/2026
 back_link_label: 🔙
-hero_image: -
+hero_image: 
 output_path: ung-dung-nang-suat/01_sub_giao-duc-steam/<default>/index.html
 ---
 

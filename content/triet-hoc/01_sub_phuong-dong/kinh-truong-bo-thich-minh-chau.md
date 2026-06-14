@@ -12,10 +12,7 @@ output_path: triet-hoc/01_sub_phuong-dong/<default>/index.html
 ---
 
 
-Bộ Kinh Trường Bộ do Hòa Thượng Thích Minh Châu, Tiến sĩ Phật học tại Viện Phật học Nalandà, Ấn 
-Ðộ, nguyên Phó Chủ tịch kiêm Tổng Thư ký Hội đồng Trị sự Trung ương Giáo hội Phật giáo Việt Nam, 
-Viện trưởng Viện Nghiên cứu Phật học Việt Nam, Chủ tịch Hội đồng Chỉ đạo Phiên dịch và Ấn hành 
-Ðại Tạng Kinh Việt Nam, dịch. 
+Bộ Kinh Trường Bộ do Hòa Thượng Thích Minh Châu, Tiến sĩ Phật học tại Viện Phật học Nalandà, Ấn Ðộ, nguyên Phó Chủ tịch kiêm Tổng Thư ký Hội đồng Trị sự Trung ương Giáo hội Phật giáo Việt Nam, Viện trưởng Viện Nghiên cứu Phật học Việt Nam, Chủ tịch Hội đồng Chỉ đạo Phiên dịch và Ấn hành Ðại Tạng Kinh Việt Nam, dịch. 
 
 Năm 1991, Hòa Thượng thân hành hiệu đính bản dịch trước khi đưa ra ấn hành. 
 

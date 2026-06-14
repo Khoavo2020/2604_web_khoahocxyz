@@ -7,7 +7,7 @@ section_link: kinh-te-hoc/index.html
 author: Hữu Học
 update_date: 27/04/2026
 back_link_label: 🔙
-hero_image: -
+hero_image: 
 output_path: kinh-te-hoc/<default>/index.html
 ---
 

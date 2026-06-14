@@ -1,5 +1,5 @@
 ---
-title: phần mềm văn phòng mã nguồn mở
+title: Phần mềm văn phòng mã nguồn mở
 title_sub: 
 description: 
 section_title: Trend
@@ -11,7 +11,7 @@ hero_image: -
 output_path: trend/<default>/index.html
 ---
 
-Phần mềm (miễn phí) thay thế **word excel** tốt 05-2026 : **LibreOffice**
+Phần mềm (miễn phí) thay thế **word excel** tốt nhất 05-2026 : **LibreOffice**
 
 Công ty lớn như FPT software cũng đang dùng
 

@@ -15,6 +15,7 @@ Tráng sĩ bạch đầu bi hướng thiên,
 Hùng tâm sinh kế lưỡng mang nhiên.
 Xuân lan thu cúc thành hư sự,
 Hạ thử đông hàn đoạt thiếu niên.
+
 Hoàng khuyển truy hoan Hồng Lĩnh hạ,
 Bạch vân ngoạ bệnh Quế Giang biên.
 Thôn cư bất yếm tần cô tửu,
@@ -26,6 +27,7 @@ Trai tài đầu bạc ngóng trời than,
 Dựng nghiệp mưu sinh luống lỡ làng.
 Thu cúc xuân lan thành chuyện hão,
 Hạ nồng, đông rét giục ngày tàn.
+
 Chó vàng thủ mãi quanh Hồng Lĩnh,
 Mây trắng đau nằm cạnh Quế Giang.
 Vẫn thích ở quê luôn có rượu,

@@ -19,7 +19,7 @@ Tôi về dệt mãi mộng ba sinh.
 Tôi rót hồn tôi xuống mắt nàng.
 Hồn tôi là cả một lời van.
 Tôi van nàng đấy! Van nàng đấy!
-Ai có yêu đương chả vội vàng?
+Ai có yêu đương chả vội vàng..
 
 Tôi rót hồn tôi xuống đã nhiều,
 Hồn tôi còn có được bao nhiêu?
@@ -44,5 +44,5 @@ Tôi khóc âm thầm dưới bóng sao.
 Nàng ở lầu hoa ở đệm bông,
 Có đêm nào nghĩ đến tôi không?
 Không không, chả có đêm nào cả,
-Chả có đêm nào hé cánh song...
+Chả có đêm nào hé cánh song..
 
