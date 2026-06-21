@@ -4,7 +4,7 @@ title_sub: (Trung Bộ Kinh)
 description: 
 section_title: Triết học
 section_link: triet-hoc/01_sub_phuong-dong/index.html
-author: -
+author: Minh Niệm
 update_date: 17/05/2026
 back_link_label: 🔙
 hero_image:

@@ -520,7 +520,7 @@ def build_article(source_path: Path, sections: dict[str, dict[str, str]]) -> dic
         f'<div class="logo">{" &raquo; ".join(breadcrumb_parts)}</div>'
         '<ul class="icons">'
         '<li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>'
-        '<li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>'
+        f'<li><a href="{prefix}lich-am-duong/index.html" class="icon solid fa-calendar-alt"> » lịch âm<span class="label">Lịch âm dương</span></a></li>'
         '</ul>'
         '</header>'
     )
@@ -669,7 +669,7 @@ def build_category_header(
         f'<div class="logo">{" &raquo; ".join(breadcrumb_parts)} &raquo; {escape(tagline)}</div>'
         '<ul class="icons">'
         '<li><a href="https://facebook.com/KhoaHoc.xyz" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>'
-        '<li><a href="https://www.youtube.com/@chieusangmoi5363" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>'
+        f'<li><a href="{prefix}lich-am-duong/index.html" class="icon solid fa-calendar-alt"> » lịch âm<span class="label">Lịch âm dương</span></a></li>'
         "</ul>"
         "</header>"
     )

@@ -354,6 +354,12 @@ body.site-page #header .icons a:hover,
 body.site-page #header .icons .icon:hover {
   color: #078fef !important; }
 
+body.site-page #header .icons a[href*="lich-am"] {
+  color: #4c8725 !important; }
+
+body.site-page #header .icons a[href*="lich-am"]:hover {
+  color: #1d7a1d !important; }
+
 body.site-page .header-subline {
   color: #5f6870;
   font-size: 0.95em;
@@ -2664,6 +2670,23 @@ body.site-page #main .category-child-grid .category-child-card a:hover {
       max-height: 35vh; } }
 
 /* Footer */
+.sidebar-donate {
+  margin: 0 0 2em 0;
+  text-align: left; }
+  #sidebar-donate-title {
+    margin-bottom: .3em;
+    text-align: left; }
+  .sidebar-donate a {
+    border-bottom: 0;
+    display: inline-block; }
+  .sidebar-donate img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 12em;
+    width: 100%; }
+
+#sidebar-donate-title,
 #footer .copyright {
   color: #9fa3a6;
   font-size: 0.9em; }
@@ -2816,3 +2839,29 @@ body.site-page .cover-list article h3 a {
 
 body.site-page .cover-list article h3 a:hover {
   color: #078fef !important; }
+
+/* Stronger selector for lịch âm to override earlier !important rules */
+body.site-page #header .icons a[href*="lich-am"],
+body.site-page #header .icons a[href*="lich-am"]:link,
+body.site-page #header .icons a[href*="lich-am"]:visited,
+body.site-page #header .icons a[href*="lich-am"] .icon,
+body.site-page #header .icons a[href*="lich-am"]:before,
+body.site-page #header .icons a[href*="lich-am"] .icon:before {
+  color: #4c8725 !important;
+}
+
+/* Keep default dark-green, but restore blue on hover/focus/active for both text and icon */
+body.site-page #header .icons a[href*="lich-am"]:hover,
+body.site-page #header .icons a[href*="lich-am"]:focus,
+body.site-page #header .icons a[href*="lich-am"]:active,
+body.site-page #header .icons a[href*="lich-am"]:hover:before,
+body.site-page #header .icons a[href*="lich-am"]:focus:before,
+body.site-page #header .icons a[href*="lich-am"]:active:before,
+body.site-page #header .icons a[href*="lich-am"]:hover .icon,
+body.site-page #header .icons a[href*="lich-am"]:focus .icon,
+body.site-page #header .icons a[href*="lich-am"]:active .icon,
+body.site-page #header .icons a[href*="lich-am"]:hover .icon:before,
+body.site-page #header .icons a[href*="lich-am"]:focus .icon:before,
+body.site-page #header .icons a[href*="lich-am"]:active .icon:before {
+  color: #078fef !important;
+}

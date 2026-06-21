@@ -19,30 +19,30 @@ Tech direction hiện tại:
 
 - `_templates/`: template dùng để build page/article
 - `assets/`    : CSS, JS, font, giao diện chung, image dùng chung
-- `content/`            : nguồn bài viết Markdown
+- `content/`   : nguồn bài viết Markdown
 - `data/`      : dữ liệu tĩnh, manifest, nguồn nội dung phụ trợ
-- `docs/`               : tài liệu định hướng dự án
+- `docs/`      : tài liệu định hướng dự án
 
 - `index.html` : trang chủ
-
+- `lich-am-duong/`: lịch âm dương
 - `goc-nhin/`  : chuyên mục góc nhìn, xu hướng
-- `khoa-hoc/`: chuyên mục Khoa học
-- `kinh-te-hoc/`        : chuyên mục kinh tế học
-
-- `tam-ly-hoc/`         : chuyên mục tâm lý học
+- `khoa-hoc/`  : chuyên mục Khoa học
+- `kinh-te-hoc/`: chuyên mục kinh tế học
+- `tam-ly-hoc/` : chuyên mục tâm lý học
 - `tinh-hoa-nhan-loai/` : câu cách ngôn, trích dẫn, cảm hứng
+- `trend/`              : chuyên mục trend, xu hướng  
 - `triet-hoc/`          : chuyên mục triết học và các nhánh con
 - `tu-sach-nen-tang/`   : thư mục tủ sách và phân loại sách
 - `ung-dung-nang-suat/` : app, công cụ, năng suất
 
 ### Tài liệu nên đọc trước khi làm tiếp
 
-- [docs/PROJECT_BRIEF.md](/c:/Users/me/Downloads/2603w3_web/khoahoc.xyz/docs/PROJECT_BRIEF.md)
-- [docs/ROADMAP.md](/c:/Users/me/Downloads/2603w3_web/khoahoc.xyz/docs/ROADMAP.md)
-- [docs/CODEX_WORKFLOW.md](/c:/Users/me/Downloads/2603w3_web/khoahoc.xyz/docs/CODEX_WORKFLOW.md)
-- [docs/MARKDOWN_WORKFLOW.md](/c:/Users/me/Downloads/2603w3_web/khoahoc.xyz/docs/MARKDOWN_WORKFLOW.md)
-- [docs/CONTENT_STYLE_GUIDE.md](/c:/Users/me/Downloads/2603w3_web/khoahoc.xyz/docs/CONTENT_STYLE_GUIDE.md)
-- [AGENTS.md](/c:/Users/me/Downloads/2603w3_web/khoahoc.xyz/AGENTS.md)
+- [docs/PROJECT_BRIEF.md](/docs/PROJECT_BRIEF.md)
+- [docs/ROADMAP.md](/docs/ROADMAP.md)
+- [docs/CODEX_WORKFLOW.md](/docs/CODEX_WORKFLOW.md)
+- [docs/MARKDOWN_WORKFLOW.md](/docs/MARKDOWN_WORKFLOW.md)
+- [docs/CONTENT_STYLE_GUIDE.md](/docs/CONTENT_STYLE_GUIDE.md)
+- [AGENTS.md](/AGENTS.md)
 
 ### Cách làm việc đề xuất
 
