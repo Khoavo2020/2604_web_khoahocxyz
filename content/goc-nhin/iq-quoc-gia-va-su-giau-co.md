@@ -2,13 +2,13 @@
 title: IQ trung bình và sự giàu có
 title_sub: 
 description: 
-section_title: Khoa học
-section_link: khoa-hoc/index.html
+section_title: Góc nhìn
+section_link: goc-nhin/index.html
 author: Tai Tran - fb 
 update_date: 15/10/2022
 back_link_label: 🔙
 hero_image: 
-output_path: khoa-hoc/<default>/index.html
+output_path: goc-nhin/<default>/index.html
 ---
 
 Trả lời câu: Mày học giỏi sao không giàu?

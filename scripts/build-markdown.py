@@ -27,6 +27,9 @@ HOMEPAGE_SECTION_CONFIG = [
     {"slug": "goc-nhin", "title": "Góc nhìn", "link": "goc-nhin/index.html"},
     {"slug": "trend", "title": "Trend", "link": "trend/index.html"},
 ]
+
+# Top-level directories to preserve (static pages or non-markdown sections)
+PRESERVE_DIRS = {Path("tinh-hoa-nhan-loai"), Path("lich-am-duong")}
 CATEGORY_CHILD_PAGES = {
     "triet-hoc": [
         {
@@ -807,6 +810,49 @@ def iter_markdown_files() -> list[Path]:
     return sorted(path for path in CONTENT_ROOT.rglob("*.md") if path.name.lower() != "readme.md")
 
 
+def cleanup_orphan_article_outputs(valid_paths: set[Path]) -> list[Path]:
+    """Remove generated article index.html files that are not in `valid_paths`.
+
+    This scans the workspace for `index.html` files under `ROOT` (excluding the
+    homepage) and deletes those that were not produced in the current build.
+    After removing the file, it will attempt to remove the parent folder if
+    it becomes empty (walking up until ROOT or a non-empty directory).
+    Returns a list of removed file paths.
+    """
+    removed: list[Path] = []
+    for path in ROOT.rglob("**/index.html"):
+        try:
+            # Always keep the homepage
+            if path == HOME_PAGE_PATH:
+                continue
+
+            # Keep preserved top-level directories (static pages)
+            try:
+                rel = path.relative_to(ROOT)
+            except Exception:
+                rel = path
+            if rel.parts and Path(rel.parts[0]) in PRESERVE_DIRS:
+                continue
+
+            # Keep paths that are known-valid from the current build
+            if path in valid_paths:
+                continue
+
+            # Remove the orphan index.html
+            path.unlink()
+            removed.append(path)
+
+            # Remove empty parent directories up to ROOT
+            parent = path.parent
+            while parent != ROOT and not any(parent.iterdir()):
+                parent.rmdir()
+                parent = parent.parent
+        except Exception as exc:  # pragma: no cover - best-effort cleanup
+            print(f"Warning: could not remove {path}: {exc}", file=sys.stderr)
+
+    return removed
+
+
 def main() -> None:
     sections = load_sections()
     target = sys.argv[1] if len(sys.argv) > 1 else "all"
@@ -837,6 +883,19 @@ def main() -> None:
     for path in subcategory_paths:
         print(f"Built: {path.relative_to(ROOT)}")
     print(f"Built: {HOME_PAGE_PATH.relative_to(ROOT)}")
+
+    # Cleanup orphaned article outputs that are not present in `all_articles`.
+    valid_paths: set[Path] = set(ROOT / article["output_path"] for article in all_articles)
+    valid_paths.update(category_paths)
+    valid_paths.update(subcategory_paths)
+    valid_paths.add(HOME_PAGE_PATH)
+
+    removed = cleanup_orphan_article_outputs(valid_paths)
+    for path in removed:
+        try:
+            print(f"Removed orphan: {path.relative_to(ROOT)}")
+        except Exception:
+            print(f"Removed orphan: {path}")
 
 
 if __name__ == "__main__":
