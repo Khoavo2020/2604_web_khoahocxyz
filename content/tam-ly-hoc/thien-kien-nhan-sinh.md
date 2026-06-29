@@ -11,7 +11,7 @@ hero_image: -
 output_path: tam-ly-hoc/<default>/index.html
 ---
 
-Chúng không phải là lỗi ngẫu nhiên, mà là “shortcut” của não để xử lý thông tin nhanh — nhưng thường dẫn đến sai lầm.
+Chúng không phải là lỗi ngẫu nhiên, mà là “shortcut” (đường tắt) của não để xử lý thông tin nhanh — nhưng thường dẫn đến sai lầm.
 
 ---
 

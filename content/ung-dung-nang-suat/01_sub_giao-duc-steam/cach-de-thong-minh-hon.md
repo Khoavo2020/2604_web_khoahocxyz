@@ -11,8 +11,6 @@ hero_image:
 output_path: ung-dung-nang-suat/01_sub_giao-duc-steam/<default>/index.html
 ---
 
-“Thông minh hơn” thường không phải là tăng IQ, Thực tế hơn là **nâng chất lượng tư duy, tốc độ học, và khả năng ra quyết định**.
-
 Nếu muốn hiệu quả rõ rệt, tập trung vào vài đòn bẩy sau:
 
 ## 1. Học theo nguyên lý, không chỉ theo kết luận
@@ -67,9 +65,9 @@ Thường xuyên hỏi:
 
 ---
 
-## 5. Bảo vệ “băng thông nhận thức”
+## 5. Bảo vệ sự tập trung
 
-Khả năng suy nghĩ không chỉ do kiến thức, mà còn do tài nguyên tinh thần.
+Khả năng suy nghĩ còn do tài nguyên tinh thần.
 
 Thứ phá hỏng tư duy sâu nhiều nhất thường là:
 

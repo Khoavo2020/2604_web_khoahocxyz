@@ -2517,7 +2517,7 @@ body.site-page #main .category-children-block .features article .content h3,
 body.site-page #main .category-children-block .features article .content h3 a {
   color: #1b5e20; }
 
-/* khoa: -->  Adjust these two spacing values if you want the title/description stack tighter or looser. */
+/* // Khoa: Adjust these two spacing values if you want the title/description stack tighter or looser. */
 body.site-page #main .category-children-block .features article .content h3 {
   margin: 0 0 0.1em 0; }
 
@@ -2527,9 +2527,38 @@ body.site-page #main .category-children-block .features article .content p {
 body.site-page #main .category-children-block .features article .content h3 a:hover {
   color: #078fef !important; }
 
-/* khoa: --> Desktop/tablet spacing between icon and text block for the 4 productivity sub-pages. */
+/* // Khoa: Main controls for the 4 productivity child icons and their grid spacing. */
+body.site-page #main .category-children-block .features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1em 1.25em;
+  margin: 0 0 1.25em 0;
+  width: 100%; }
+
+body.site-page #main .category-children-block .features article {
+  margin: 0;
+  width: auto; }
+
+body.site-page #main .category-children-block .features article:nth-child(2n - 1),
+body.site-page #main .category-children-block .features article:nth-child(2n),
+body.site-page #main .category-children-block .features article:nth-last-child(1),
+body.site-page #main .category-children-block .features article:nth-last-child(2) {
+  margin: 0; }
+
+/* // Khoa: Desktop/tablet icon size and spacing between icon and text block. */
 body.site-page #main .category-children-block .features article .icon {
-  margin: 0 0.85em 0 0; }
+  height: 5em;
+  line-height: 5em;
+  margin: 0 0.75em 0 0;
+  width: 5em; }
+
+body.site-page #main .category-children-block .features article .icon:before {
+  font-size: 1.55rem; }
+
+body.site-page #main .category-children-block .features article .icon:after {
+  height: 3.6em;
+  margin: -1.8em 0 0 -1.8em;
+  width: 3.6em; }
 
 .category-child-grid {
   display: grid;
@@ -2561,11 +2590,9 @@ body.site-page #main .category-child-grid .category-child-card a:hover {
   .category-child-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)); }
   body.site-page #main .category-children-block .features {
-    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.25em;
-    margin: 0 0 2em 0;
-    width: 100%; }
+    gap: 0.85em 1em;
+    margin: 0 0 1.25em 0; }
     body.site-page #main .category-children-block .features article {
       display: block;
       margin: 0;
@@ -2576,16 +2603,16 @@ body.site-page #main .category-child-grid .category-child-card a:hover {
       body.site-page #main .category-children-block .features article:nth-child(2n - 1), body.site-page #main .category-children-block .features article:nth-child(2n) {
         margin: 0; }
       body.site-page #main .category-children-block .features article .icon {
-        height: 6.5em;
-        line-height: 6.5em;
-        margin: 0 auto 0.5em auto;
-        width: 6.5em; }
+        height: 4.5em;
+        line-height: 4.5em;
+        margin: 0 auto 0.35em auto;
+        width: 4.5em; }
         body.site-page #main .category-children-block .features article .icon:before {
-          font-size: 2rem; }
+          font-size: 1.4rem; }
         body.site-page #main .category-children-block .features article .icon:after {
-          height: 4.75em;
-          margin: -2.375em 0 0 -2.375em;
-          width: 4.75em; }
+          height: 3.25em;
+          margin: -1.625em 0 0 -1.625em;
+          width: 3.25em; }
       body.site-page #main .category-children-block .features article .content {
         margin: 0 auto;
         max-width: 10.5em;
