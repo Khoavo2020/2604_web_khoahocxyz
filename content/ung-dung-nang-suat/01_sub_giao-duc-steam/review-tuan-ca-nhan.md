@@ -38,7 +38,7 @@ Một buổi review 20–30 phút/tuần giúp bạn:
 
 ### 🧭 Cấu trúc review (5 bước)
 
-#### 1. 📊 Nhìn lại tuần qua (Facts only)
+### 1. 📊 Nhìn lại tuần qua (Facts only)
 
 * Làm được gì? (kết quả cụ thể)
 * Không làm được gì?
@@ -48,7 +48,7 @@ Một buổi review 20–30 phút/tuần giúp bạn:
 
 ---
 
-#### 2. 🎯 So với mục tiêu dài hạn
+### 2. 🎯 So với mục tiêu dài hạn
 
 * Việc bạn làm tuần này có:
 
@@ -59,7 +59,7 @@ Một buổi review 20–30 phút/tuần giúp bạn:
 
 ---
 
-#### 3. ⚠️ Nhận diện vấn đề
+### 3. ⚠️ Nhận diện vấn đề
 
 * 1–2 thứ lớn nhất làm bạn chậm lại là gì?
 
@@ -71,7 +71,7 @@ Một buổi review 20–30 phút/tuần giúp bạn:
 
 ---
 
-#### 4. 🔧 Điều chỉnh chiến lược
+### 4. 🔧 Điều chỉnh chiến lược
 
 * Tuần sau sẽ:
 
@@ -83,7 +83,7 @@ Một buổi review 20–30 phút/tuần giúp bạn:
 
 ---
 
-#### 5. 📌 Chốt 3 ưu tiên tuần tới
+### 5. 📌 Chốt 3 ưu tiên tuần tới
 
 * Chỉ chọn **3 việc quan trọng nhất**
 * Viết rõ:
@@ -95,17 +95,12 @@ Một buổi review 20–30 phút/tuần giúp bạn:
 
 ### 🧠 Nguyên tắc quan trọng
 
-* ❌ Đừng review để “cảm thấy tốt”
-
-* ✅ Review để **ra quyết định thay đổi**
-
-* ❌ Đừng ghi dài
-
-* ✅ Càng ngắn càng dễ duy trì
-
-* ❌ Đừng cầu hoàn hảo
-
-* ✅ Làm đều mỗi tuần mới quan trọng
+• Đừng review để “cảm thấy tốt”
+• Review để **ra quyết định thay đổi**
+• Đừng ghi dài
+• Càng ngắn càng dễ duy trì
+• Đừng cầu hoàn hảo
+• Làm đều mỗi tuần mới quan trọng
 
 ---
 

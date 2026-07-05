@@ -1,5 +1,5 @@
 ---
-title: Siêu dự báo - cổ phiếu cảng biển PHP (cảng Hải Phòng) - tầm nhìn đầu tư
+title: Siêu dự báo - cổ phiếu cảng biển PHP (cảng Hải Phòng) - tầm nhìn đầu tư 🛳️
 title_sub: 10-05-2026: giá cổ phiêu PHP đang ở vốn hóa 12 000 tỷ vnđ
 description: 
 section_title: Ứng dụng - năng suất
@@ -11,7 +11,7 @@ hero_image: -
 output_path: ung-dung-nang-suat/01_sub_dau-tu-chung-khoan/<default>/index.html
 ---
 
-PHP một tài sản hạ tầng chiến lược có khả năng tạo dòng tiền trong nhiều thập kỷ.
+⚓ PHP một tài sản hạ tầng chiến lược có khả năng tạo dòng tiền trong nhiều thập kỷ.
 
 ### 1. Mô hình kinh doanh cực kỳ hấp dẫn
 Cảng biển có một đặc điểm mà rất ít ngành có được:
