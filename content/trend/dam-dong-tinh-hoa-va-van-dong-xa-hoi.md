@@ -1,5 +1,5 @@
 ---
-title: Truyện Với Thanh - Tác giả Nguyễn Thành Nam
+title: Đám đông, tinh hoa và vận động xã hội
 title_sub: 
 description: 
 section_title: Trend
@@ -7,7 +7,7 @@ section_link: trend/index.html
 author: Ai Viet - fb
 update_date: 08/06/2026
 back_link_label: 🔙
-hero_image: -
+hero_image: 
 output_path: trend/<default>/index.html
 ---
 

@@ -19,9 +19,9 @@ Bình minh nở để hoàng hôn mà tàn.
 Lòng tôi rối những tơ đàn,
 Cao vời những ước, đầy tràn những mơ.
 Lòng cô chẳng có dây tơ,
-Ước sao đến thấp mà mơ đến nghèo!
+Ước sao đến thấp mà mơ đến nghèo..
 
-Hồn tôi: giếng ngọt trong veo,
+Hồn tôi giếng ngọt trong veo,
 Giăng thu trong vắt, biển chiều trong xanh.
 Hồn cô cát bụi kinh thành,
 Đa đoan vó ngựa, chung tình bánh xe.

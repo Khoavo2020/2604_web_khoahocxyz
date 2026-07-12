@@ -180,6 +180,95 @@ def normalize_markdown_bullet(line: str) -> str:
     return line
 
 
+def split_markdown_table_row(line: str) -> list[str]:
+    line = line.strip()
+    if line.startswith("|"):
+        line = line[1:]
+    if line.endswith("|"):
+        line = line[:-1]
+
+    cells: list[str] = []
+    current: list[str] = []
+    escaped = False
+
+    for char in line:
+        if escaped:
+            current.append(char)
+            escaped = False
+            continue
+        if char == "\\":
+            escaped = True
+            continue
+        if char == "|":
+            cells.append("".join(current).strip())
+            current = []
+            continue
+        current.append(char)
+
+    if escaped:
+        current.append("\\")
+    cells.append("".join(current).strip())
+    return cells
+
+
+def is_markdown_table_row(line: str) -> bool:
+    return "|" in line and len(split_markdown_table_row(line)) >= 2
+
+
+def parse_markdown_table_alignment(line: str) -> list[str] | None:
+    cells = split_markdown_table_row(line)
+    alignments: list[str] = []
+
+    for cell in cells:
+        marker = re.sub(r"\s+", "", cell)
+        if not re.fullmatch(r":?-{3,}:?", marker):
+            return None
+        if marker.startswith(":") and marker.endswith(":"):
+            alignments.append("center")
+        elif marker.endswith(":"):
+            alignments.append("right")
+        elif marker.startswith(":"):
+            alignments.append("left")
+        else:
+            alignments.append("")
+
+    return alignments
+
+
+def render_table_cell(tag: str, value: str, alignment: str = "") -> str:
+    align_attr = f' class="align-{alignment}"' if alignment else ""
+    return f"<{tag}{align_attr}>{render_inline(value)}</{tag}>"
+
+
+def render_markdown_table(header: list[str], alignments: list[str], rows: list[list[str]]) -> str:
+    column_count = len(header)
+
+    def normalize_row(row: list[str]) -> list[str]:
+        return (row + [""] * column_count)[:column_count]
+
+    header_html = "".join(
+        render_table_cell("th", cell, alignments[index] if index < len(alignments) else "")
+        for index, cell in enumerate(normalize_row(header))
+    )
+    body_rows = []
+    for row in rows:
+        cells = "".join(
+            render_table_cell("td", cell, alignments[index] if index < len(alignments) else "")
+            for index, cell in enumerate(normalize_row(row))
+        )
+        body_rows.append(f"<tr>{cells}</tr>")
+
+    body_html = "".join(body_rows)
+    return (
+        '<div class="markdown-table-wrap">'
+        '<table class="markdown-table">'
+        f"<thead><tr>{header_html}</tr></thead>"
+        f"<tbody>{body_html}</tbody>"
+        "</table>"
+        "</div>"
+    )
+
+
 def indent_block(text: str, level: int) -> str:
     prefix = "\t" * level
     lines = text.splitlines()
@@ -232,7 +321,9 @@ def render_markdown(markdown: str) -> str:
             html_parts.append(f"<blockquote><p>{text}</p></blockquote>")
             quote_lines.clear()
 
-    for raw_line in lines:
+    index = 0
+    while index < len(lines):
+        raw_line = lines[index]
         line = raw_line.rstrip()
         line = normalize_markdown_bullet(line)
         stripped = line.strip()
@@ -253,16 +344,43 @@ def render_markdown(markdown: str) -> str:
                 flush_quote()
                 in_code_block = True
                 code_lang = stripped[3:].strip()
+            index += 1
             continue
 
         if in_code_block:
             code_lines.append(raw_line)
+            index += 1
             continue
 
         if not stripped:
             flush_paragraph()
             flush_list()
             flush_quote()
+            index += 1
+            continue
+
+        if (
+            is_markdown_table_row(stripped)
+            and index + 1 < len(lines)
+            and (alignments := parse_markdown_table_alignment(lines[index + 1].strip())) is not None
+        ):
+            flush_paragraph()
+            flush_list()
+            flush_quote()
+
+            header = split_markdown_table_row(stripped)
+            table_rows: list[list[str]] = []
+            index += 2
+
+            while index < len(lines):
+                table_line = lines[index].rstrip()
+                table_stripped = table_line.strip()
+                if not table_stripped or not is_markdown_table_row(table_stripped):
+                    break
+                table_rows.append(split_markdown_table_row(table_stripped))
+                index += 1
+
+            html_parts.append(render_markdown_table(header, alignments, table_rows))
             continue
 
         if stripped.startswith("# "):
@@ -270,6 +388,7 @@ def render_markdown(markdown: str) -> str:
             flush_list()
             flush_quote()
             html_parts.append(f"<h2>{render_inline(stripped[2:])}</h2>")
+            index += 1
             continue
 
         if stripped.startswith("## "):
@@ -277,6 +396,7 @@ def render_markdown(markdown: str) -> str:
             flush_list()
             flush_quote()
             html_parts.append(f"<h3>{render_inline(stripped[3:])}</h3>")
+            index += 1
             continue
 
         if stripped.startswith("### "):
@@ -284,18 +404,21 @@ def render_markdown(markdown: str) -> str:
             flush_list()
             flush_quote()
             html_parts.append(f"<h4>{render_inline(stripped[4:])}</h4>")
+            index += 1
             continue
 
         if stripped.startswith("- "):
             flush_paragraph()
             flush_quote()
             list_items.append(stripped[2:].strip())
+            index += 1
             continue
 
         if stripped.startswith("> "):
             flush_paragraph()
             flush_list()
             quote_lines.append(stripped[2:].strip())
+            index += 1
             continue
 
         if stripped == "---":
@@ -303,9 +426,11 @@ def render_markdown(markdown: str) -> str:
             flush_list()
             flush_quote()
             html_parts.append("<hr />")
+            index += 1
             continue
 
         paragraph_lines.append(stripped)
+        index += 1
 
     flush_paragraph()
     flush_list()
