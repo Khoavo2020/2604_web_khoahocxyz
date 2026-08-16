@@ -25,6 +25,7 @@ HOMEPAGE_SECTION_CONFIG = [
     {"slug": "tinh-hoa-nhan-loai", "link": "tinh-hoa-nhan-loai/index.html"},
     {"slug": "tu-sach-nen-tang", "link": "tu-sach-nen-tang/index.html"},
     {"slug": "goc-nhin", "title": "Góc nhìn", "link": "goc-nhin/index.html"},
+    {"slug": "lich-su", "title": "Lịch sử", "link": "lich-su/index.html"},
     {"slug": "trend", "title": "Trend", "link": "trend/index.html"},
 ]
 
