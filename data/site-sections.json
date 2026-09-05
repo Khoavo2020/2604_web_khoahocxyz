@@ -1,4 +1,10 @@
-[
+[{
+    "slug": "home-xyz",
+    "title": "xyz",
+    "tagline": "knowledge hub + sản phẩm",
+    "description": "Nội dung, góc nhìn và tài nguyên học tập.",
+    "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong> 🏠 xyz</strong></a> » Dòng thời gian</div><ul class=\"icons\"><li><a href=\"https://facebook.com/KhoaHoc.xyz\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"https://www.youtube.com/@vutru1phut/shorts\" class=\"icon brands fa-youtube\"><span class=\"label\">YouTube</span></a></li></ul></header>"
+  },
   {
     "slug": "goc-nhin",
     "title": "Góc nhìn",

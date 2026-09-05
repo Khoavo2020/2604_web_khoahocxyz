@@ -1,0 +1,18 @@
+---
+title: Sinh vật có não là để dự đoán tương lai
+title_sub: 
+description: 
+section_title: Góc nhìn
+section_link: home-xyz/01_sub_goc-nhin/index.html
+author: Hữu Định
+update_date: 27/04/2026
+back_link_label: 🔙
+hero_image: 
+output_path: home-xyz/01_sub_goc-nhin/<default>/index.html
+---
+
+- Sinh vật có não là để dự đoán tương lai
+- Sự hợp tác linh động đã đưa homo sapiens từ đồng cỏ châu phi lên đứng đầu thế giới..
+- Con người thiết kế AI, AI tự cải tiến đệ qui, AI trở thành thực thể siêu trí tuệ (superintelligence)
+- Doanh nghiệp là một dạng thực thể biểu thị của siêu trí tuệ..
+- Mục đích cuối cùng của doanh nghiệp là chiếm lĩnh thị phần..

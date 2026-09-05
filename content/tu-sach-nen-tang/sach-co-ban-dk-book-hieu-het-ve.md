@@ -4,8 +4,8 @@ title_sub: DK - book
 description: 
 section_title: Tủ sách - nền tảng
 section_link: tu-sach-nen-tang/index.html
-author: -
-update_date: 12/007/2026
+author: Văn Vân
+update_date: 12/07/2026
 back_link_label: 🔙
 hero_image: 
 output_path: tu-sach-nen-tang/<default>/index.html
@@ -74,8 +74,6 @@ Tại Việt Nam, nhiều đầu sách trong bộ đã được dịch và phát
 * *Hiểu hết về Văn học* (*Literature*)
 * *Hiểu hết về Nghệ thuật* (*Art*)
 
-Ngoài ra, DK còn mở rộng dòng *How... Works* sang nhiều lĩnh vực khác như khoa học, không gian, cơ thể người, công nghệ... với cùng phong cách trình bày trực quan đặc trưng.
-
 ---
 
 ### Phù hợp với ai?
@@ -84,13 +82,10 @@ Bộ sách này đặc biệt phù hợp nếu bạn:
 
 ```
 • Muốn xây dựng nền tảng kiến thức đa lĩnh vực.
-• Muốn hiểu bản chất thay vì học thuộc lòng.
-• Muốn đọc những chủ đề khó nhưng không quá hàn lâm.
-• Là sinh viên hoặc người mới bắt đầu tìm hiểu một lĩnh vực.
-• Muốn có tài liệu tra cứu nhanh khi cần.
-```
+• Muốn hiểu bản chất.
+• Người mới bắt đầu tìm hiểu một lĩnh vực.
 
-Ngay cả những người đã có nền tảng cũng thường dùng bộ sách như một cách *ôn tập và hệ thống hóa kiến thức*.
+```
 
 ---
 
@@ -111,6 +106,5 @@ Sách đặc biệt phù hợp để xây dựng kiến thức nền và khơi g
 ---
 
 ### Tóm lại 🔎
-Thay vì cung cấp những mẩu kiến thức rời rạc, bộ sách giúp người đọc nhìn thấy cách các hệ thống vận hành, từ tiền tệ, doanh nghiệp, kinh tế, tâm lý cho đến triết học và nghệ thuật.
 
-Nếu phải giới thiệu một bộ sách để xây dựng *nền tảng tri thức phổ quát*, đây chắc chắn là một trong những lựa chọn đáng đọc nhất.
+Nếu phải giới thiệu một bộ sách để xây dựng *nền tảng tri thức phổ quát*, đây chắc chắn là một trong những lựa chọn đáng đọc.

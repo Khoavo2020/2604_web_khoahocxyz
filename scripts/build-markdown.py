@@ -24,14 +24,61 @@ HOMEPAGE_SECTION_CONFIG = [
     {"slug": "triet-hoc", "link": "triet-hoc/index.html"},
     {"slug": "tinh-hoa-nhan-loai", "link": "tinh-hoa-nhan-loai/index.html"},
     {"slug": "tu-sach-nen-tang", "link": "tu-sach-nen-tang/index.html"},
-    {"slug": "goc-nhin", "title": "Góc nhìn", "link": "goc-nhin/index.html"},
-    {"slug": "lich-su", "title": "Lịch sử", "link": "lich-su/index.html"},
-    {"slug": "trend", "title": "Trend", "link": "trend/index.html"},
+    {
+        "slug": "goc-nhin",
+        "section_key": "home-xyz/01_sub_goc-nhin",
+        "title": "Góc nhìn",
+        "link": "home-xyz/01_sub_goc-nhin/index.html",
+    },
+    {
+        "slug": "lich-su",
+        "section_key": "home-xyz/01_sub_lich-su",
+        "title": "Lịch sử",
+        "link": "home-xyz/01_sub_lich-su/index.html",
+    },
+    {
+        "slug": "trend",
+        "section_key": "home-xyz/01_sub_trend",
+        "title": "Trend",
+        "link": "home-xyz/01_sub_trend/index.html",
+    },
+    {
+        "slug": "y-hoc-suc-khoe",
+        "section_key": "home-xyz/01_sub_y-hoc-suc-khoe",
+        "title": "Y học - sức khỏe",
+        "link": "home-xyz/01_sub_y-hoc-suc-khoe/index.html",
+    },
 ]
 
 # Top-level directories to preserve (static pages or non-markdown sections)
 PRESERVE_DIRS = {Path("tinh-hoa-nhan-loai"), Path("lich-am-duong")}
 CATEGORY_CHILD_PAGES = {
+    "home-xyz": [
+        {
+            "slug": "01_sub_goc-nhin",
+            "title": "Góc nhìn",
+            "description": "quan sát, suy ngẫm và những cách nhìn khác về đời sống",
+            "href": "home-xyz/01_sub_goc-nhin/index.html",
+        },
+        {
+            "slug": "01_sub_lich-su",
+            "title": "Lịch sử",
+            "description": "nhìn lại quá khứ để hiểu hiện tại",
+            "href": "home-xyz/01_sub_lich-su/index.html",
+        },
+        {
+            "slug": "01_sub_trend",
+            "title": "Trend",
+            "description": "những chủ đề và chuyển động đáng chú ý",
+            "href": "home-xyz/01_sub_trend/index.html",
+        },
+        {
+            "slug": "01_sub_y-hoc-suc-khoe",
+            "title": "Y học - sức khỏe",
+            "description": "kiến thức nền tảng về cơ thể và sức khỏe",
+            "href": "home-xyz/01_sub_y-hoc-suc-khoe/index.html",
+        },
+    ],
     "triet-hoc": [
         {
             "slug": "01_sub_phuong-dong",
@@ -93,31 +140,31 @@ CATEGORY_CHILD_PAGES = {
             "slug": "01_sub_sach-khoa-hoc",
             "title": "sách Khoa học",
             "description": "",
-            "href": "tu-sach-nen-tang/sach-khoa-hoc/index.html",
+            "href": "tu-sach-nen-tang/01_sub_sach-khoa-hoc/index.html",
         },
         {
             "slug": "01_sub_sach-kinh-te-hoc",
             "title": "sách Kinh tế học",
             "description": "",
-            "href": "tu-sach-nen-tang/sach-kinh-te-hoc/index.html",
+            "href": "tu-sach-nen-tang/01_sub_sach-kinh-te-hoc/index.html",
         },
         {
             "slug": "01_sub_sach-tam-ly-hoc",
             "title": "sách Tâm lý học",
             "description": "",
-            "href": "tu-sach-nen-tang/sach-tam-ly-hoc/index.html",
+            "href": "tu-sach-nen-tang/01_sub_sach-tam-ly-hoc/index.html",
         },
         {
             "slug": "01_sub_sach-triet-hoc",
             "title": "sách Triết học",
             "description": "",
-            "href": "tu-sach-nen-tang/sach-triet-hoc/index.html",
+            "href": "tu-sach-nen-tang/01_sub_sach-triet-hoc/index.html",
         },
         {
             "slug": "01_sub_sach-xyz",
             "title": "sách xyz",
             "description": "",
-            "href": "tu-sach-nen-tang/sach-xyz/index.html",
+            "href": "tu-sach-nen-tang/01_sub_sach-xyz/index.html",
         },
     ],
 }
@@ -137,13 +184,24 @@ def load_sections() -> dict[str, dict[str, str]]:
     return {item["slug"]: item for item in items}
 
 
-def parse_front_matter(raw: str) -> tuple[dict[str, str], str]:
+def parse_front_matter(raw: str, source_path: Path) -> tuple[dict[str, str], str]:
+    """Parse article metadata and report front matter errors with their source file."""
+    raw = raw.removeprefix("\ufeff")
+    raw = raw.replace("\r\n", "\n")
+    source_label = source_path.relative_to(ROOT).as_posix()
+
     if not raw.startswith("---\n"):
-        raise ValueError("Markdown file must start with front matter delimited by ---")
+        first_line = raw.split("\n", 1)[0].strip() or "(empty file)"
+        raise ValueError(
+            f"Invalid front matter in {source_label}: expected the first line to be --- "
+            f"(found: {first_line!r})"
+        )
 
     parts = raw.split("---\n", 2)
     if len(parts) < 3:
-        raise ValueError("Invalid front matter block")
+        raise ValueError(
+            f"Invalid front matter in {source_label}: missing the closing --- delimiter"
+        )
 
     front_matter = parts[1]
     body = parts[2].lstrip("\n")
@@ -154,7 +212,9 @@ def parse_front_matter(raw: str) -> tuple[dict[str, str], str]:
         if not line or line.startswith("#"):
             continue
         if ":" not in line:
-            raise ValueError(f"Invalid front matter line: {line}")
+            raise ValueError(
+                f"Invalid front matter in {source_label}: malformed metadata line {line!r}"
+            )
         key, value = line.split(":", 1)
         metadata[key.strip()] = value.strip()
 
@@ -483,6 +543,18 @@ def get_child_page(section_key: str) -> tuple[str, dict[str, str]] | None:
     return None
 
 
+def parent_section_href(parent_slug: str, prefix: str) -> str:
+    if parent_slug == "home-xyz":
+        return f"{prefix}index.html"
+    return f"{prefix}{parent_slug}/index.html"
+
+
+def parent_section_title(parent_slug: str, sections: dict[str, dict[str, str]]) -> str:
+    if parent_slug == "home-xyz":
+        return "xyz"
+    return sections.get(parent_slug, {}).get("title", parent_slug.replace("-", " ").title())
+
+
 def find_content_image(source_path: Path) -> str:
     images_dir = article_image_dir(source_path)
     if not images_dir.exists():
@@ -545,7 +617,7 @@ def derive_description(markdown_body: str) -> str:
 
 
 def collect_article_data(source_path: Path, sections: dict[str, dict[str, str]]) -> dict[str, str]:
-    metadata, markdown_body = parse_front_matter(read_text(source_path))
+    metadata, markdown_body = parse_front_matter(read_text(source_path), source_path)
     category_slug = source_path.relative_to(CONTENT_ROOT).parts[0]
     section_key = article_section_key(source_path)
     section = sections.get(
@@ -571,8 +643,8 @@ def collect_article_data(source_path: Path, sections: dict[str, dict[str, str]])
     if child_page:
         parent_slug, child = child_page
         parent_section = sections.get(parent_slug, {})
-        parent_title = parent_section.get("title", parent_slug.replace("-", " ").title())
-        parent_link = f"{parent_slug}/index.html"
+        parent_title = parent_section_title(parent_slug, sections)
+        parent_link = parent_section_href(parent_slug, "")
         section_title = child["title"]
         section_link = child["href"]
         if not metadata.get("header_subline"):
@@ -858,14 +930,14 @@ def build_subcategory_pages(articles: list[dict[str, str]], sections: dict[str, 
             posts_html = "\n".join(render_post_card(article, category_index_path) for article in child_articles)
             if not posts_html:
                 posts_html = render_empty_post_state()
-            parent_title = sections.get(parent_slug, {}).get("title", parent_slug.replace("-", " ").title())
+            parent_title = parent_section_title(parent_slug, sections)
             header_block = build_category_header(
                 prefix,
                 child["title"],
                 child["description"],
                 "./index.html",
                 parent_title=parent_title,
-                parent_link_href=f"{prefix}{parent_slug}/index.html",
+                parent_link_href=parent_section_href(parent_slug, prefix),
             )
             values = {
                 "CATEGORY_TITLE": child["title"],
@@ -902,7 +974,7 @@ def build_homepage_payload(articles: list[dict[str, str]], sections: dict[str, d
                 "image": article["hero_image"],
             }
             for article in articles
-            if article["category_slug"] == slug
+            if article["section_key"] == config.get("section_key", slug)
         ]
         section_articles.sort(key=lambda item: item["href"])
 
@@ -933,7 +1005,17 @@ def write_homepage_payload(articles: list[dict[str, str]], sections: dict[str, d
 
 
 def iter_markdown_files() -> list[Path]:
-    return sorted(path for path in CONTENT_ROOT.rglob("*.md") if path.name.lower() != "readme.md")
+    return sorted(
+        path
+        for path in CONTENT_ROOT.rglob("*.md")
+        # Files directly in content/ document the content workflow; articles
+        # always belong to a category directory and require front matter.
+        if (
+            path.parent != CONTENT_ROOT
+            and "01_images" not in path.relative_to(CONTENT_ROOT).parts
+            and path.name.lower() != "readme.md"
+        )
+    )
 
 
 def cleanup_orphan_article_outputs(valid_paths: set[Path]) -> list[Path]:

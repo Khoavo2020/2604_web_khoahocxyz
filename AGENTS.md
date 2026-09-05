@@ -25,7 +25,6 @@
 - Không tự ý đổi cấu trúc URL hoặc đổi tên thư mục nếu chưa thật cần thiết.
 - Giữ giao diện đơn giản, đọc tốt trên mobile, phù hợp site tri thức.
 - Khi thêm trang mới, cần giữ consistency với menu, header, footer và style chung.
-- `goc-nhin` là một chuyên mục hợp lệ trong cấu trúc site, nhưng để giữ menu tối giản thì không thêm `goc-nhin` vào sidebar/menu chung; chỉ hiển thị nó như một section trên trang chủ, trừ khi user yêu cầu khác.
 - Khi sửa nội dung tiếng Việt, ưu tiên UTF-8 chuẩn và tránh lỗi encoding.
 - Nếu có nhiều hướng triển khai, ưu tiên hướng ít phức tạp nhất và dễ bảo trì trên GitHub Pages.
 
@@ -40,15 +39,15 @@
 
 ### Content architecture
 
-Các nhóm trang chính hiện tại:
-- Home xyz
-- Khoa học
-- Kinh tế học
-- Tâm lý học
-- Triết học
-- Tinh hoa - nhân loại
-- Tủ sách - nền tảng
-- Ứng dụng năng suất
+Các nhóm trang chính hiện tại: category
+- home-xyz : Home xyz
+- khoa-hoc : Khoa học
+- kinh-te-hoc : Kinh tế học
+- tam-ly-hoc : Tâm lý học
+- triet-hoc : Triết học
+- tinh-hoa-nhan-loai : Tinh hoa - nhân loại
+- tu-sach-nen-tang : Tủ sách - nền tảng
+- ung-dung-nang-suat : Ứng dụng năng suất
 
 Các trang con có thể mở rộng:
 - `goc-nhin`
@@ -56,12 +55,12 @@ Các trang con có thể mở rộng:
 - `triet-hoc/01_sub_phuong-tay`
 - `triet-hoc/01_sub_tho-viet-nam`
 - `triet-hoc/01_sub_tho-nuoc-ngoai`
-- `tu-sach-nen-tang/sach-khoa-hoc`
-- `tu-sach-nen-tang/sach-kinh-te-hoc`
-- `tu-sach-nen-tang/sach-tam-ly-hoc`
-- `tu-sach-nen-tang/sach-triet-hoc`
-- `tu-sach-nen-tang/sach-xyz`
-
+- `tu-sach-nen-tang/01_sub_sach-khoa-hoc`
+- `tu-sach-nen-tang/01_sub_sach-kinh-te-hoc`
+- `tu-sach-nen-tang/01_sub_sach-tam-ly-hoc`
+- `tu-sach-nen-tang/01_sub_sach-triet-hoc`
+- `tu-sach-nen-tang/01_sub_sach-xyz`
+- ung-dung-nang-suat/01_sub_app-nang-suat
 ### Cấu trúc hình ảnh
 
 - `assets/images/` - Chỉ chứa hình ảnh dùng chung (category thumbnails, banners, etc.)
@@ -84,3 +83,9 @@ Khi làm việc trong repo này, ưu tiên các đầu ra sau:
 - script build nhỏ, dễ đọc, ít phụ thuộc
 - cấu trúc thư mục nhất quán
 - checklist hoặc roadmap ngắn cho bước tiếp theo
+
+### Documentation language
+
+- Write technical documentation in English by default, targeting approximately 95% English.
+- Use Vietnamese only when it makes a complex concept, local context, or editorial nuance substantially clearer.
+- Keep code identifiers, filenames, commands, and technical terms unchanged.
