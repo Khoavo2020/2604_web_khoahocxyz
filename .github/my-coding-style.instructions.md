@@ -71,3 +71,6 @@ If the extension is not installed, use the repository JAR:
 ```powershell
  java -jar "z.Doc\xx.Misc\.puml\Tool\plantuml.jar" -tsvg "z.Doc/**/.puml/*.puml"
  ```
+
+ ### Documentation style
+Prefer a diagram-first documentation style. Use PlantUML + rendered SVG when relationships or flows matter. Keep Markdown prose minimal; omit checklists, long explanations, and repeated guidance unless explicitly requested.

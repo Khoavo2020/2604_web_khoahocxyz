@@ -1,5 +1,5 @@
 ---
-title: Tóm tắt lịch sử Việt Nam thời kỳ phong kiến
+title: Tóm tắt lịch sử Việt Nam thời kỳ phong kiến 👑
 title_sub:
 description: 
 section_title: Lịch sử

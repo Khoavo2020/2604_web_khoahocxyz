@@ -1,0 +1,37 @@
+@startuml
+left to right direction
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam rectangle {
+  RoundCorner 12
+  BorderColor #5F6870
+  BackgroundColor #FFFFFF
+}
+skinparam component {
+  BackgroundColor #EAF4FF
+  BorderColor #078FEF
+}
+
+rectangle "Reader opens a page" as reader
+component "assets/js/main.js\nsubmenu initializer" as main
+rectangle "Sidebar\nmatching opener gets active" as sidebar
+
+rectangle "home-xyz/*" as xyz #EAF6EA
+rectangle "triet-hoc/*" as philosophy #EAF6EA
+rectangle "tu-sach-nen-tang/*" as library #EAF6EA
+rectangle "ung-dung-nang-suat/*" as productivity #EAF6EA
+
+xyz --> main : pathname contains home-xyz
+philosophy --> main : pathname contains triet-hoc
+library --> main : pathname contains tu-sach-nen-tang
+productivity --> main : pathname contains ung-dung-nang-suat
+reader --> main : page load
+main --> sidebar : addClass(active)
+
+note bottom of sidebar
+🏠 xyz
+🏛 Triết học
+📚 Tủ sách - nền tảng
+📱 Ứng dụng - năng suất
+end note
+@enduml

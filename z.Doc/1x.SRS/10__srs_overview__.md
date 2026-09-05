@@ -27,6 +27,7 @@
 | FR-05 | Render content and metadata | Titles, descriptions, images, links, tables, and supported Markdown formatting render correctly |
 | FR-06 | Reuse presentation templates | Generated HTML uses templates from `_templates/` and shared assets from `assets/` |
 | FR-07 | Publish as a static site | The website runs on GitHub Pages without an application server |
+| FR-08 | Expand the active sidebar submenu after navigation | A page load opens the sidebar submenu matching the current section URL, including xyz, philosophy, library, and productivity |
 
 ## 4. Non-functional Requirements
 

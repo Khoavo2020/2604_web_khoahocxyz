@@ -233,13 +233,16 @@
 		var $menu = $('#menu'),
 			$menu_openers = $menu.children('ul').find('.opener');
 
-		// Keep "Triết học" submenu open when visiting triết học pages.
+		// Keep the active section submenu open after navigation.
 			(function() {
 				var path = (window.location.pathname || '').toLowerCase();
 
 				$menu_openers.each(function() {
 					var $opener = $(this);
 					var text = $opener.text().toLowerCase();
+
+					if (path.indexOf('home-xyz') !== -1 && text.indexOf('xyz') !== -1)
+						$opener.addClass('active');
 
 					if (path.indexOf('triet-hoc') !== -1 && text.indexOf('triết học') !== -1)
 						$opener.addClass('active');

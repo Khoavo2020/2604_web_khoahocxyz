@@ -1,4 +1,5 @@
 # Documentation Style Guide
+Prefer a diagram-first documentation style. Use PlantUML + rendered SVG when relationships or flows matter. Keep Markdown prose minimal; omit checklists, long explanations, and repeated guidance unless explicitly requested.
 
 ## Context and Role
 

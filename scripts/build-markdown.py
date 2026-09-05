@@ -57,7 +57,7 @@ CATEGORY_CHILD_PAGES = {
         {
             "slug": "01_sub_goc-nhin",
             "title": "Góc nhìn",
-            "description": "quan sát, suy ngẫm và những cách nhìn khác về đời sống",
+            "description": "dòng thời gian",
             "href": "home-xyz/01_sub_goc-nhin/index.html",
         },
         {
@@ -69,13 +69,13 @@ CATEGORY_CHILD_PAGES = {
         {
             "slug": "01_sub_trend",
             "title": "Trend",
-            "description": "những chủ đề và chuyển động đáng chú ý",
+            "description": "dòng chảy",
             "href": "home-xyz/01_sub_trend/index.html",
         },
         {
             "slug": "01_sub_y-hoc-suc-khoe",
             "title": "Y học - sức khỏe",
-            "description": "kiến thức nền tảng về cơ thể và sức khỏe",
+            "description": "đãn nguyện nhân trường cửu",
             "href": "home-xyz/01_sub_y-hoc-suc-khoe/index.html",
         },
     ],
@@ -551,7 +551,7 @@ def parent_section_href(parent_slug: str, prefix: str) -> str:
 
 def parent_section_title(parent_slug: str, sections: dict[str, dict[str, str]]) -> str:
     if parent_slug == "home-xyz":
-        return "xyz"
+        return ""
     return sections.get(parent_slug, {}).get("title", parent_slug.replace("-", " ").title())
 
 
@@ -642,7 +642,6 @@ def collect_article_data(source_path: Path, sections: dict[str, dict[str, str]])
 
     if child_page:
         parent_slug, child = child_page
-        parent_section = sections.get(parent_slug, {})
         parent_title = parent_section_title(parent_slug, sections)
         parent_link = parent_section_href(parent_slug, "")
         section_title = child["title"]

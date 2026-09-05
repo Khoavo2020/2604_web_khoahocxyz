@@ -89,3 +89,6 @@ Khi làm việc trong repo này, ưu tiên các đầu ra sau:
 - Write technical documentation in English by default, targeting approximately 95% English.
 - Use Vietnamese only when it makes a complex concept, local context, or editorial nuance substantially clearer.
 - Keep code identifiers, filenames, commands, and technical terms unchanged.
+
+### Documentation style
+Prefer a diagram-first documentation style. Use PlantUML + rendered SVG when relationships or flows matter. Keep Markdown prose minimal; omit checklists, long explanations, and repeated guidance unless explicitly requested.

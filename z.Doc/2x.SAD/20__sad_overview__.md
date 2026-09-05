@@ -48,6 +48,7 @@ The category taxonomy, source-to-output convention, and repository tree are defi
 - **Presentation boundary:** templates define the HTML frame; `assets/` provides browser styling and behavior.
 - **Configuration boundary:** section metadata is centralized in `data/site-sections.json`; some build mappings remain in the script (**Partially confirmed**).
 - **Persistence:** there is no runtime persistence; repository files are the versioned data store.
+- **Sidebar state:** shared JavaScript derives the active submenu from the current URL. On page load it expands the matching xyz, philosophy, library, or productivity submenu.
 
 ## 5. Risks and Follow-up Needs
 
