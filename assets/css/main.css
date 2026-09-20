@@ -2574,7 +2574,7 @@ body.site-page #main .category-children-block .features article .icon:after {
 
 body.site-page #main .category-child-grid .category-child-card a {
   display: inline-block;
-  padding: 0.1em 0.8em;
+  padding: 0.1em 0.5em;
   color: #1b5e20;
   text-decoration: none;
   border: 1px solid rgba(0, 0, 0, 0.08);
