@@ -1,12 +1,41 @@
 # Repository Map - khoahoc.xyz
 
 ## 1. Category Structure
+```Category
+home-xyz
 
-The public content taxonomy is organized into main categories and optional subcategories.
+khoa-hoc
+kinh-te-hoc
+tam-ly-hoc
+triet-hoc
+
+tinh-hoa-nhan-loai
+tu-sach-nen-tang
+ung-dung-nang-suat
+
+goc-nhin
+lich-su
+trend
+y-hoc-suc-khoe
+```
+
+``` Subcategories
+sach-khoa-hoc
+sach-kinh-te-hoc
+sach-tam-ly-hoc
+sach-triet-hoc
+sach-xyz
+
+app-nang-suat
+dau-tu-chung-khoan
+giao-duc-steam
+giao-duc-tieng-anh
+```
+
 
 | Main category | Public path | Subcategories or related pages |
 | --- | --- | --- |
-| Home | `home-xyz/` | `01_sub_goc-nhin`, `01_sub_lich-su`, `01_sub_trend`, `01_sub_y-hoc-suc-khoe` |
+| Home | `home-xyz/` | all |
 | Science | `khoa-hoc/` | Article pages |
 | Economics | `kinh-te-hoc/` | Article pages |
 | Psychology | `tam-ly-hoc/` | Article pages |
@@ -14,15 +43,15 @@ The public content taxonomy is organized into main categories and optional subca
 | Inspiration | `tinh-hoa-nhan-loai/` | Quotes and human knowledge |
 | Foundation Library | `tu-sach-nen-tang/` | `01_sub_sach-khoa-hoc`, `01_sub_sach-kinh-te-hoc`, `01_sub_sach-tam-ly-hoc`, `01_sub_sach-triet-hoc`, `01_sub_sach-xyz` |
 | Productivity and Applications | `ung-dung-nang-suat/` | `01_sub_app-nang-suat`, `01_sub_dau-tu-chung-khoan`, `01_sub_giao-duc-steam`, `01_sub_giao-duc-tieng-anh` |
+| - | `goc-nhin/` |
+| - | `lich-su/` | 
+| - | `trend/` | 
+| - | `y-hoc-suc-khoe/` |
 
 ### Subcategory paths
 
 ```text
 home-xyz/
-├── 01_sub_goc-nhin/
-├── 01_sub_lich-su/
-├── 01_sub_trend/
-└── 01_sub_y-hoc-suc-khoe/
 
 triet-hoc/
 ├── 01_sub_phuong-dong/

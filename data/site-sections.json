@@ -46,5 +46,33 @@
     "tagline": "tagline-tbd",
     "description": "category-tbd",
     "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong> 🏠 xyz</strong></a> » <a href=\"./index.html\"><strong>Ứng dụng - năng suất</strong></a> » thời gian là thứ duy nhất bạn thật sự sở hữu</div><ul class=\"icons\"><li><a href=\"https://facebook.com/KhoaHoc.xyz\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"https://www.youtube.com/@vutru1phut/shorts\" class=\"icon brands fa-youtube\"><span class=\"label\">YouTube</span></a></li></ul></header>"
+  },
+  {
+    "slug": "goc-nhin",
+    "title": "Góc nhìn",
+    "tagline": "dòng thời gian",
+    "description": "",
+    "header_html": ""
+  },
+  {
+    "slug": "lich-su",
+    "title": "Lịch sử",
+    "tagline": "nhìn lại quá khứ để hiểu hiện tại",
+    "description": "",
+    "header_html": ""
+  },
+  {
+    "slug": "trend",
+    "title": "Trend",
+    "tagline": "dòng chảy",
+    "description": "",
+    "header_html": ""
+  },
+  {
+    "slug": "y-hoc-suc-khoe",
+    "title": "Y học - sức khỏe",
+    "tagline": "đãn nguyện nhân trường cửu",
+    "description": "",
+    "header_html": ""
   }
 ]

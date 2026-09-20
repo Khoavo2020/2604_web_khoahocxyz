@@ -16,6 +16,12 @@ CATEGORY_TEMPLATE_PATH = ROOT / "_templates" / "markdown-category.html"
 SECTIONS_PATH = ROOT / "data" / "site-sections.json"
 HOME_PAGE_PATH = ROOT / "index.html"
 IMAGE_EXTENSIONS = {".svg", ".jpg", ".jpeg", ".png", ".webp", ".gif"}
+PROMOTED_CATEGORY_ALIASES = {
+    "home-xyz/01_sub_goc-nhin": "goc-nhin",
+    "home-xyz/01_sub_lich-su": "lich-su",
+    "home-xyz/01_sub_trend": "trend",
+    "home-xyz/01_sub_y-hoc-suc-khoe": "y-hoc-suc-khoe",
+}
 HOMEPAGE_SECTION_CONFIG = [
     {"slug": "ung-dung-nang-suat", "title": "Ứng dụng - năng suất", "link": "ung-dung-nang-suat/index.html"},
     {"slug": "khoa-hoc", "link": "khoa-hoc/index.html"},
@@ -26,59 +32,33 @@ HOMEPAGE_SECTION_CONFIG = [
     {"slug": "tu-sach-nen-tang", "link": "tu-sach-nen-tang/index.html"},
     {
         "slug": "goc-nhin",
-        "section_key": "home-xyz/01_sub_goc-nhin",
+        "section_key": "goc-nhin",
         "title": "Góc nhìn",
-        "link": "home-xyz/01_sub_goc-nhin/index.html",
+        "link": "goc-nhin/index.html",
     },
     {
         "slug": "lich-su",
-        "section_key": "home-xyz/01_sub_lich-su",
+        "section_key": "lich-su",
         "title": "Lịch sử",
-        "link": "home-xyz/01_sub_lich-su/index.html",
+        "link": "lich-su/index.html",
     },
     {
         "slug": "trend",
-        "section_key": "home-xyz/01_sub_trend",
+        "section_key": "trend",
         "title": "Trend",
-        "link": "home-xyz/01_sub_trend/index.html",
+        "link": "trend/index.html",
     },
     {
         "slug": "y-hoc-suc-khoe",
-        "section_key": "home-xyz/01_sub_y-hoc-suc-khoe",
+        "section_key": "y-hoc-suc-khoe",
         "title": "Y học - sức khỏe",
-        "link": "home-xyz/01_sub_y-hoc-suc-khoe/index.html",
+        "link": "y-hoc-suc-khoe/index.html",
     },
 ]
 
 # Top-level directories to preserve (static pages or non-markdown sections)
 PRESERVE_DIRS = {Path("tinh-hoa-nhan-loai"), Path("lich-am-duong")}
 CATEGORY_CHILD_PAGES = {
-    "home-xyz": [
-        {
-            "slug": "01_sub_goc-nhin",
-            "title": "Góc nhìn",
-            "description": "dòng thời gian",
-            "href": "home-xyz/01_sub_goc-nhin/index.html",
-        },
-        {
-            "slug": "01_sub_lich-su",
-            "title": "Lịch sử",
-            "description": "nhìn lại quá khứ để hiểu hiện tại",
-            "href": "home-xyz/01_sub_lich-su/index.html",
-        },
-        {
-            "slug": "01_sub_trend",
-            "title": "Trend",
-            "description": "dòng chảy",
-            "href": "home-xyz/01_sub_trend/index.html",
-        },
-        {
-            "slug": "01_sub_y-hoc-suc-khoe",
-            "title": "Y học - sức khỏe",
-            "description": "đãn nguyện nhân trường cửu",
-            "href": "home-xyz/01_sub_y-hoc-suc-khoe/index.html",
-        },
-    ],
     "triet-hoc": [
         {
             "slug": "01_sub_phuong-dong",
@@ -518,6 +498,9 @@ def resolve_link(path_value: str, prefix: str) -> str:
 
 def article_section_key(source_path: Path) -> str:
     parts = source_path.relative_to(CONTENT_ROOT).parts
+    legacy_section_key = "/".join(parts[:2]) if len(parts) > 1 else parts[0]
+    if legacy_section_key in PROMOTED_CATEGORY_ALIASES:
+        return PROMOTED_CATEGORY_ALIASES[legacy_section_key]
     if len(parts) > 2:
         return "/".join(parts[:2])
     return parts[0]
@@ -620,12 +603,18 @@ def collect_article_data(source_path: Path, sections: dict[str, dict[str, str]])
     metadata, markdown_body = parse_front_matter(read_text(source_path), source_path)
     category_slug = source_path.relative_to(CONTENT_ROOT).parts[0]
     section_key = article_section_key(source_path)
+    linked_section = metadata.get("section_link", "").split("/", 1)[0]
+    if linked_section in PROMOTED_CATEGORY_ALIASES.values():
+        section_key = linked_section
     section = sections.get(
-        category_slug,
-        {
-            "title": metadata.get("section_title", category_slug.replace("-", " ").title()),
-            "tagline": metadata.get("header_subline", ""),
-        },
+        section_key,
+        sections.get(
+            category_slug,
+            {
+                "title": metadata.get("section_title", category_slug.replace("-", " ").title()),
+                "tagline": metadata.get("header_subline", ""),
+            },
+        ),
     )
 
     title = metadata["title"]
@@ -890,10 +879,8 @@ def build_category_pages(articles: list[dict[str, str]], sections: dict[str, dic
         header_html = section.get("header_html", "").replace("__ROOT_PREFIX__", prefix)
         if header_html:
             header_block = header_html
-            header_subline_block = ""
         else:
             header_block = build_category_header(prefix, section["title"], section["tagline"], "./index.html")
-            header_subline_block = f'<p class="header-subline">{section["tagline"]}</p>'
         values = {
             "CATEGORY_TITLE": section["title"],
             "CATEGORY_TAGLINE": section["tagline"],
@@ -902,7 +889,6 @@ def build_category_pages(articles: list[dict[str, str]], sections: dict[str, dic
             "CATEGORY_CHILDREN_BLOCK": children_block,
             "ROOT_PREFIX": prefix,
             "HEADER_BLOCK": header_block,
-            "HEADER_SUBLINE_BLOCK": header_subline_block,
         }
 
         html = template
@@ -946,7 +932,6 @@ def build_subcategory_pages(articles: list[dict[str, str]], sections: dict[str, 
                 "CATEGORY_CHILDREN_BLOCK": "",
                 "ROOT_PREFIX": prefix,
                 "HEADER_BLOCK": header_block,
-                "HEADER_SUBLINE_BLOCK": "",
             }
 
             html = template
@@ -1013,6 +998,10 @@ def iter_markdown_files() -> list[Path]:
             path.parent != CONTENT_ROOT
             and "01_images" not in path.relative_to(CONTENT_ROOT).parts
             and path.name.lower() != "readme.md"
+            and not (
+                path.parent.name in PROMOTED_CATEGORY_ALIASES.values()
+                and path.stem == path.parent.name
+            )
         )
     )
 
