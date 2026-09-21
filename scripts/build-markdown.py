@@ -114,6 +114,14 @@ CATEGORY_CHILD_PAGES = {
             "href": "ung-dung-nang-suat/01_sub_giao-duc-tieng-anh/index.html",
             "icon": "fa-language",
         },
+        {
+            "slug": "01_sub_iq-test",
+            "title": "Test IQ",
+            "description": "lý luận - khám phá",
+            "href": "ung-dung-nang-suat/01_sub_iq-test/index.html",
+            "icon": "fa-brain",
+            "static": True,
+        },
     ],
     "tu-sach-nen-tang": [
         {
@@ -907,6 +915,8 @@ def build_subcategory_pages(articles: list[dict[str, str]], sections: dict[str, 
 
     for parent_slug, child_pages in CATEGORY_CHILD_PAGES.items():
         for child in child_pages:
+            if child.get("static"):
+                continue
             section_key = f"{parent_slug}/{child['slug']}"
             child_articles = [article for article in articles if article["section_key"] == section_key]
 
@@ -1084,6 +1094,12 @@ def main() -> None:
     valid_paths: set[Path] = set(ROOT / article["output_path"] for article in all_articles)
     valid_paths.update(category_paths)
     valid_paths.update(subcategory_paths)
+    valid_paths.update(
+        ROOT / child["href"]
+        for child_pages in CATEGORY_CHILD_PAGES.values()
+        for child in child_pages
+        if child.get("static")
+    )
     valid_paths.add(HOME_PAGE_PATH)
 
     removed = cleanup_orphan_article_outputs(valid_paths)
