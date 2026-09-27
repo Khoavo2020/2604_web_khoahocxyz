@@ -30,6 +30,7 @@ HOMEPAGE_SECTION_CONFIG = [
     {"slug": "triet-hoc", "link": "triet-hoc/index.html"},
     {"slug": "tinh-hoa-nhan-loai", "link": "tinh-hoa-nhan-loai/index.html"},
     {"slug": "tu-sach-nen-tang", "link": "tu-sach-nen-tang/index.html"},
+    {"slug": "giao-duc", "link": "giao-duc/index.html"},
     {
         "slug": "goc-nhin",
         "section_key": "goc-nhin",
@@ -85,6 +86,16 @@ CATEGORY_CHILD_PAGES = {
             "href": "triet-hoc/01_sub_tho-nuoc-ngoai/index.html",
         },
     ],
+    "giao-duc": [
+        {
+            "slug": "01_sub_iq-test",
+            "title": "Test IQ",
+            "description": "lý luận - khám phá",
+            "href": "giao-duc/01_sub_iq-test/index.html",
+            "icon": "fa-brain",
+            "static": True,
+        },
+    ],
     "ung-dung-nang-suat": [
         {
             "slug": "01_sub_app-nang-suat",
@@ -113,14 +124,6 @@ CATEGORY_CHILD_PAGES = {
             "description": "",
             "href": "ung-dung-nang-suat/01_sub_giao-duc-tieng-anh/index.html",
             "icon": "fa-language",
-        },
-        {
-            "slug": "01_sub_iq-test",
-            "title": "Test IQ",
-            "description": "lý luận - khám phá",
-            "href": "ung-dung-nang-suat/01_sub_iq-test/index.html",
-            "icon": "fa-brain",
-            "static": True,
         },
     ],
     "tu-sach-nen-tang": [

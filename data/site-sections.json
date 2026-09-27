@@ -41,6 +41,13 @@
     "header_html": "<header id=\"header\"><div class=\"logo\"><a href=\"__ROOT_PREFIX__index.html\"><strong> 🏠 xyz</strong></a> » <a href=\"./index.html\"><strong>Tủ sách - nền tảng</strong></a> » lựa chọn đúng quan trọng hơn nỗ lực</div><ul class=\"icons\"><li><a href=\"https://facebook.com/KhoaHoc.xyz\" class=\"icon brands fa-facebook-f\"><span class=\"label\">Facebook</span></a></li><li><a href=\"https://www.youtube.com/@vutru1phut/shorts\" class=\"icon brands fa-youtube\"><span class=\"label\">YouTube</span></a></li></ul></header>"
   },
   {
+    "slug": "giao-duc",
+    "title": "Giáo dục",
+    "tagline": "sự tò mò",
+    "description": "Bài viết về giáo dục, học tập và nuôi dạy trẻ.",
+    "header_html": ""
+  },
+  {
     "slug": "ung-dung-nang-suat",
     "title": "Ứng dụng - năng suất",
     "tagline": "tagline-tbd",

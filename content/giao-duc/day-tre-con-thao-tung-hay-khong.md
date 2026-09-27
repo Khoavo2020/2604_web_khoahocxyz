@@ -2,13 +2,13 @@
 title: Dạy trẻ con - thao túng hay không?
 title_sub: 
 description: 
-section_title: Ứng dụng - năng suất
-section_link: ung-dung-nang-suat/index.html
+section_title: Giáo dục
+section_link: giao-duc/index.html
 author: Phan Phuong Dat - fb
 update_date: 30/06/2026
 back_link_label: 🔙
 hero_image: - 
-output_path: ung-dung-nang-suat/<default>/index.html
+output_path: giao-duc/<default>/index.html
 ---
 
 Hai tuần trước, nhà văn Akunin đăng một post trên FB cá nhân và hỏi ý kiến mọi người về những cách thao túng trẻ con khôn khéo, buồn cười và hiệu quả. Có hơn 1300 comment, cơ bản có thể chia làm 2 phe: một phe đồng tình với việc thao túng ở mức độ nào đó, phe kia thì cương quyết phản đối.
