@@ -95,6 +95,24 @@ CATEGORY_CHILD_PAGES = {
             "icon": "fa-brain",
             "static": True,
         },
+        {
+            "slug": "01_sub_truyen-co-tich",
+            "title": "Truyện cổ tích",
+            "description": "những câu chuyện về lòng kiêu hãnh và sự thật",
+            "href": "giao-duc/01_sub_truyen-co-tich/index.html",
+        },
+        {
+            "slug": "01_sub_truyen-ngu-ngon",
+            "title": "Truyện ngụ ngôn",
+            "description": "câu chuyện ngắn, bài học dài",
+            "href": "giao-duc/01_sub_truyen-ngu-ngon/index.html",
+        },
+        {
+            "slug": "01_sub_truyen-cuoi",
+            "title": "Truyện cười",
+            "description": "tiếng cười dân gian Việt Nam",
+            "href": "giao-duc/01_sub_truyen-cuoi/index.html",
+        },
     ],
     "ung-dung-nang-suat": [
         {
