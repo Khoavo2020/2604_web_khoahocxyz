@@ -1,10 +1,10 @@
 ---
 title: Ăn mầm đá
 title_sub:
-description: Trạng Quỳnh dùng một món ăn tưởng tượng để dạy nhà vua một bài học vui về cái đói và sự chờ đợi.
+description: 
 section_title: Giáo dục
 section_link: giao-duc/index.html
-author: Truyện dân gian Việt Nam (phỏng kể)
+author: Truyện dân gian Việt Nam
 update_date: 30/09/2026
 back_link_label: 🔙 Truyện cười
 hero_image:
@@ -19,6 +19,4 @@ Quỳnh thưa rằng đá vẫn chưa mềm, rồi tiếp tục để nồi sôi
 
 Quỳnh lúc ấy mới tâu: “Mầm đá đã chín rồi ạ!” Nhà vua nhìn chiếc nồi chỉ có đá, hiểu mình vừa bị Trạng Quỳnh trêu. Nhưng sau cơn đói, bữa cơm bình thường cũng trở nên ngon miệng khác thường.
 
-## Cười mà nghĩ
 
-Câu chuyện dân gian thường được kể với nhiều dị bản. Cái tài của Trạng Quỳnh nằm ở chỗ biến món ăn không có thật thành một trò đùa, đồng thời cho thấy cơn đói có thể làm ta đổi cách nhìn về điều bình thường.

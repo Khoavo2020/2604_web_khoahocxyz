@@ -5,8 +5,9 @@
 	var mixedPicker = document.getElementById('mixed-picker');
 	var picker = visualPicker;
 	var stage = document.getElementById('test-stage');
-	var activeMode = 'visual';
+	var activeMode = 'mixed';
 	var activeTests = [];
+	var iqTest;
 	var currentTest;
 	var currentIndex = 0;
 	var answers = [];
@@ -90,8 +91,10 @@
 		var selected = answers[currentIndex];
 		stage.innerHTML = '<div class="test-topline"><p class="test-label">' + escapeHtml(currentTest.title) + ' · Câu ' + (currentIndex + 1) + '/' + currentTest.questions.length + '</p><div class="timer" id="iq-timer">' + formatTime(secondsLeft) + '</div></div>' +
 			'<div class="progress-track"><div class="progress-bar" style="width:' + (((currentIndex + 1) / currentTest.questions.length) * 100) + '%"></div></div>' +
-			'<div class="question-panel"><div class="question-category">' + escapeHtml(categoryNames[question.category] || question.category) + '</div><h2>' + escapeHtml(question.question || question.prompt) + '</h2>' + (question.visual ? visualMarkup(question.visual) : '') + '<div class="options ' + (question.visual ? 'visual-options' : '') + '">' + (question.visual ? question.visual.options : question.options).map(function (option, index) {
-				return '<button class="option-button' + (selected === index ? ' selected' : '') + '" data-option="' + index + '">' + (question.visual ? symbolSvg(option, 88) : String.fromCharCode(65 + index) + '. ' + escapeHtml(option)) + '</button>';
+			'<div class="question-panel">' + (question.image ? '' : '<div class="question-category">' + escapeHtml(categoryNames[question.category] || question.category || 'Tổng hợp') + '</div>') + '<h2>' + escapeHtml(question.question || question.prompt) + '</h2>' + (question.visual ? visualMarkup(question.visual) : '') + (question.image ? '<div class="reference-question-image"><img src="' + escapeHtml(question.image) + '" alt="Hình câu hỏi"></div>' : '') + '<div class="options ' + (question.visual ? 'visual-options' : question.image ? 'image-options' : '') + '">' + (question.visual ? question.visual.options : question.options).map(function (option, index) {
+				var optionLabel = String.fromCharCode(65 + index);
+				var optionContent = question.visual ? symbolSvg(option, 88) : question.image ? '<span class="image-option-label">' + optionLabel + '</span><img src="' + escapeHtml(option) + '" alt="Đáp án ' + optionLabel + '">' : optionLabel + '. ' + escapeHtml(option);
+				return '<button class="option-button' + (selected === index ? ' selected' : '') + '" data-option="' + index + '"' + (question.image ? ' aria-label="Đáp án ' + optionLabel + '"' : '') + '>' + optionContent + '</button>';
 			}).join('') + '</div><div class="question-actions"><button class="iq-button secondary-button" id="previous-button"' + (currentIndex === 0 ? ' disabled' : '') + '>Câu trước</button><button class="iq-button" id="next-button">' + (currentIndex === currentTest.questions.length - 1 ? 'Nộp bài' : 'Câu tiếp theo') + '</button></div></div>';
 		stage.querySelectorAll('.option-button').forEach(function (button) {
 			button.addEventListener('click', function () {
@@ -112,12 +115,13 @@
 		var score = currentTest.questions.reduce(function (total, question, index) { return total + (answers[index] === question.answer ? 1 : 0); }, 0);
 		var percent = Math.round((score / currentTest.questions.length) * 100);
 		var message = percent >= 80 ? 'Bạn có khả năng nhận diện quy luật và xử lý thông tin rất tốt.' : percent >= 60 ? 'Bạn có nền tảng tư duy tốt; hãy luyện thêm các nhóm câu còn khó.' : 'Đây là một ảnh chụp nhanh. Bạn có thể thử lại để quan sát cách mình tiến bộ.';
-		stage.innerHTML = '<div class="result-panel"><div class="eyebrow">KẾT QUẢ THAM KHẢO</div><h2>' + escapeHtml(currentTest.title) + '</h2><div class="score">' + score + '/' + currentTest.questions.length + '</div><p class="result-copy">' + message + '</p><button class="iq-button" id="retry-button">Làm lại bài này</button> <button class="iq-button secondary-button" id="choose-button">Chọn nhóm khác</button></div>';
+		stage.innerHTML = '<div class="result-panel"><div class="eyebrow">KẾT QUẢ THAM KHẢO</div><h2>' + escapeHtml(currentTest.title) + '</h2><div class="score">' + score + '/' + currentTest.questions.length + '</div><p class="result-copy">' + message + '</p><button class="iq-button" id="retry-button">Làm lại bài này</button> <button class="iq-button secondary-button" id="choose-button">Chọn Level</button></div>';
 		document.getElementById('retry-button').addEventListener('click', function () { startTest(currentTest); });
-		document.getElementById('choose-button').addEventListener('click', function () { stage.hidden = true; picker.hidden = false; picker.scrollIntoView({ behavior: 'smooth' }); });
+		document.getElementById('choose-button').addEventListener('click', function () { document.getElementById('visual-tab').click(); });
 	}
 
-	document.getElementById('visual-tab').addEventListener('click', function () { activeMode = 'visual'; visualPicker.hidden = false; mixedPicker.hidden = true; picker = visualPicker; document.getElementById('visual-tab').classList.add('is-active'); document.getElementById('mixed-tab').classList.remove('is-active'); document.getElementById('visual-tab').setAttribute('aria-selected', 'true'); document.getElementById('mixed-tab').setAttribute('aria-selected', 'false'); });
-	document.getElementById('mixed-tab').addEventListener('click', function () { activeMode = 'mixed'; visualPicker.hidden = true; mixedPicker.hidden = false; picker = mixedPicker; document.getElementById('visual-tab').classList.remove('is-active'); document.getElementById('mixed-tab').classList.add('is-active'); document.getElementById('visual-tab').setAttribute('aria-selected', 'false'); document.getElementById('mixed-tab').setAttribute('aria-selected', 'true'); });
-	fetch('data/tests.json').then(function (response) { if (!response.ok) throw new Error('Không thể tải dữ liệu bài test.'); return response.json(); }).then(function (data) { activeTests = data.visualTests || []; renderPicker(activeTests, visualPicker, 'visual'); renderPicker(data.tests || [], mixedPicker, 'mixed'); }).catch(function (error) { visualPicker.innerHTML = '<p class="error">' + escapeHtml(error.message) + '</p>'; });
+	document.getElementById('visual-tab').addEventListener('click', function () { activeMode = 'visual'; visualPicker.hidden = false; mixedPicker.hidden = true; stage.hidden = true; picker = visualPicker; document.getElementById('visual-tab').classList.add('is-active'); document.getElementById('mixed-tab').classList.remove('is-active'); document.getElementById('visual-tab').setAttribute('aria-selected', 'true'); document.getElementById('mixed-tab').setAttribute('aria-selected', 'false'); });
+	document.getElementById('mixed-tab').addEventListener('click', function () { activeMode = 'mixed'; visualPicker.hidden = true; mixedPicker.hidden = true; picker = mixedPicker; document.getElementById('visual-tab').classList.remove('is-active'); document.getElementById('mixed-tab').classList.add('is-active'); document.getElementById('visual-tab').setAttribute('aria-selected', 'false'); document.getElementById('mixed-tab').setAttribute('aria-selected', 'true'); if (iqTest && (!currentTest || currentTest.id !== iqTest.id)) startTest(iqTest); else stage.hidden = false; });
+	fetch('data/tests.json').then(function (response) { if (!response.ok) throw new Error('Không thể tải dữ liệu Level.'); return response.json(); }).then(function (data) { activeTests = data.visualTests || []; renderPicker(activeTests, visualPicker, 'visual'); }).catch(function (error) { visualPicker.innerHTML = '<p class="error">' + escapeHtml(error.message) + '</p>'; });
+	fetch('data/iq-test.json').then(function (response) { if (!response.ok) throw new Error('Không thể tải dữ liệu Test IQ.'); return response.json(); }).then(function (test) { iqTest = test; if (activeMode === 'mixed') { picker = mixedPicker; startTest(test); } }).catch(function (error) { stage.innerHTML = '<p class="error">' + escapeHtml(error.message) + '</p>'; });
 }());

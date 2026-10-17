@@ -1,0 +1,333 @@
+{
+    "id":  "khoahoc-xyz-iq-01",
+    "title":  "Test IQ hình ảnh",
+    "description":  "25 câu hỏi suy luận hình ảnh. Kết quả chỉ mang tính tham khảo, không thay thế bài đánh giá IQ chuyên môn.",
+    "timeLimit":  1200,
+    "questions":  [
+                      {
+                          "prompt":  "Hình nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_1_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_1___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_1___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_1___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_1___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_1___Option_2__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_1___Option_1_svg.svg"
+                                      ],
+                          "answer":  4
+                      },
+                      {
+                          "prompt":  "Hình nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_2_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_2___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_2___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_2___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_2___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_2___Option_2__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_2___Option_1_svg.svg"
+                                      ],
+                          "answer":  4
+                      },
+                      {
+                          "prompt":  "Có bao nhiêu hình tam giác trong bức hình?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_3_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_3___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_3___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_3___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_3___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_3___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_3___Option_1__Correct__svg.svg"
+                                      ],
+                          "answer":  5
+                      },
+                      {
+                          "prompt":  "Hình nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_4_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_4___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_4___Option_5__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_4___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_4___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_4___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_4___Option_1_svg.svg"
+                                      ],
+                          "answer":  1
+                      },
+                      {
+                          "prompt":  "Số nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_5_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_5___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_5___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_5___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_5___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_5___Option_2__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_5___Option_1_svg.svg"
+                                      ],
+                          "answer":  4
+                      },
+                      {
+                          "prompt":  "Hình nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_6_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_6___Option_6__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_6___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_6___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_6___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_6___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_6___Option_1_svg.svg"
+                                      ],
+                          "answer":  0
+                      },
+                      {
+                          "prompt":  "Hình nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_7_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_7___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_7___Option_5__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_7___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_7___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_7___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_7___Option_1_svg.svg"
+                                      ],
+                          "answer":  1
+                      },
+                      {
+                          "prompt":  "Hình nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_8_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_8___Option_6__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_8___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_8___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_8___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_8___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_8___Option_1_svg.svg"
+                                      ],
+                          "answer":  0
+                      },
+                      {
+                          "prompt":  "Hình nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_9_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_9___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_9___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_9___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_9___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_9___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_9___Option_1__Correct__svg.svg"
+                                      ],
+                          "answer":  5
+                      },
+                      {
+                          "prompt":  "Số nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_10_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_10___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_10___Option_5__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_10___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_10___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_10___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_10___Option_1_svg.svg"
+                                      ],
+                          "answer":  1
+                      },
+                      {
+                          "prompt":  "Hình nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_11_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_11___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_11___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_11___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_11___Option_3__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_11___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_11___Option_1_svg.svg"
+                                      ],
+                          "answer":  3
+                      },
+                      {
+                          "prompt":  "Có bao nhiêu hình vuông trong bức hình?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_12_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_12___Option_6__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_12___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_12___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_12___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_12___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_12___Option_1_svg.svg"
+                                      ],
+                          "answer":  0
+                      },
+                      {
+                          "prompt":  "Hình nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_13_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_13___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_13___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_13___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_13___Option_3__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_13___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_13___Option_1_svg.svg"
+                                      ],
+                          "answer":  3
+                      },
+                      {
+                          "prompt":  "Hình nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_14_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_14___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_14___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_14___Option_4__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_14___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_14___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_14___Option_1_svg.svg"
+                                      ],
+                          "answer":  2
+                      },
+                      {
+                          "prompt":  "Số nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_15_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_15___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_15___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_15___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_15___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_15___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_15___Option_1__Correct__svg.svg"
+                                      ],
+                          "answer":  5
+                      },
+                      {
+                          "prompt":  "Hình nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_16_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_16___Option_6__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_16___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_16___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_16___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_16___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_16___Option_1_svg.svg"
+                                      ],
+                          "answer":  0
+                      },
+                      {
+                          "prompt":  "Số nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_17_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_17___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_17___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_17___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_17___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_17___Option_2__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_17___Option_1_svg.svg"
+                                      ],
+                          "answer":  4
+                      },
+                      {
+                          "prompt":  "Có bao nhiêu hình vuông trong bức hình?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_18_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_18___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_18___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_18___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_18___Option_3__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_18___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_18___Option_1_svg.svg"
+                                      ],
+                          "answer":  3
+                      },
+                      {
+                          "prompt":  "Hình nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_19_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_19___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_19___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_19___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_19___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_19___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_19___Option_1__Correct__svg.svg"
+                                      ],
+                          "answer":  5
+                      },
+                      {
+                          "prompt":  "Số nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_20_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_20___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_20___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_20___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_20___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_20___Option_2__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_20___Option_1_svg.svg"
+                                      ],
+                          "answer":  4
+                      },
+                      {
+                          "prompt":  "Hình nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_21_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_21___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_21___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_21___Option_4__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_21___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_21___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_21___Option_1_svg.svg"
+                                      ],
+                          "answer":  2
+                      },
+                      {
+                          "prompt":  "Số nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_22_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_22___Option_1_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_22___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_22___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_22___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_22___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_22___Option_6_svg.svg"
+                                      ],
+                          "answer":  2
+                      },
+                      {
+                          "prompt":  "Hình nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_23_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_23___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_23___Option_5__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_23___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_23___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_23___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_23___Option_1_svg.svg"
+                                      ],
+                          "answer":  1
+                      },
+                      {
+                          "prompt":  "Số nào còn thiếu?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_24_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_24___Option_1_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_24___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_24___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_24___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_24___Option_5_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_24___Option_6_svg.svg"
+                                      ],
+                          "answer":  3
+                      },
+                      {
+                          "prompt":  "Có bao nhiêu hình tam giác trong bức hình?",
+                          "image":  "data/khoahoc_xyz/khoahoc_xyz_Question_25_svg.svg",
+                          "options":  [
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_25___Option_6_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_25___Option_5__Correct__svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_25___Option_4_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_25___Option_3_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_25___Option_2_svg.svg",
+                                          "data/khoahoc_xyz/khoahoc_xyz_Question_25___Option_1_svg.svg"
+                                      ],
+                          "answer":  1
+                      }
+                  ]
+}

@@ -1,7 +1,7 @@
 {
   "visualTests": [
     {
-      "id": "child-visual-01", "title": "IQ hình ảnh - Trẻ em", "ageGroup": "child", "ageRange": "<12", "category": "pattern", "questionCount": 10, "timeLimit": 600,
+      "id": "child-visual-01", "title": "", "ageGroup": "child", "ageRange": "<12", "category": "pattern", "questionCount": 10, "timeLimit": 600,
       "description": "Bài test chỉ dùng hình ảnh, tập trung vào chuỗi hình và quy luật đơn giản.",
       "questions": [
         {"category":"pattern","prompt":"Chọn hình tiếp theo trong chuỗi.","visual":{"kind":"sequence","items":["circle","square","circle","square","circle"],"options":["square","triangle","circle","diamond"]},"answer":0},
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "id": "teen-visual-01", "title": "IQ hình ảnh - Thiếu niên", "ageGroup": "teen", "ageRange": "13-17", "category": "pattern", "questionCount": 10, "timeLimit": 750,
+      "id": "teen-visual-01", "title": "", "ageGroup": "teen", "ageRange": "13-17", "category": "pattern", "questionCount": 10, "timeLimit": 750,
       "description": "Bài test hình ảnh với chuỗi, ma trận và phép xoay ở mức độ nâng cao.",
       "questions": [
         {"category":"pattern","prompt":"Chọn ô còn thiếu trong ma trận.","visual":{"kind":"grid","items":["circle","square","triangle","square","triangle","diamond","triangle","diamond","missing"],"options":["circle","square","triangle","diamond"]},"answer":0},
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "id": "adult-visual-01", "title": "IQ hình ảnh - Người lớn", "ageGroup": "adult", "ageRange": "18+", "category": "abstract", "questionCount": 10, "timeLimit": 900,
+      "id": "adult-visual-01", "title": "", "ageGroup": "adult", "ageRange": "18+", "category": "abstract", "questionCount": 10, "timeLimit": 900,
       "description": "Bài test hình ảnh trừu tượng với ma trận và biến đổi không gian.",
       "questions": [
         {"category":"pattern","prompt":"Chọn ô còn thiếu trong ma trận.","visual":{"kind":"grid","items":["circle","square","triangle","square","triangle","diamond","triangle","diamond","missing"],"options":["circle","square","triangle","diamond"]},"answer":0},

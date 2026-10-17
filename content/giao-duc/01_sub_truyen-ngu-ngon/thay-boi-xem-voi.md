@@ -1,10 +1,10 @@
 ---
 title: Thầy bói xem voi
 title_sub:
-description: Năm thầy bói mù mỗi người sờ một phần con voi rồi cãi nhau vì tưởng mình đã biết toàn bộ.
+description:
 section_title: Giáo dục
 section_link: giao-duc/index.html
-author: Truyện dân gian Việt Nam (phỏng kể)
+author: Truyện dân gian Việt Nam
 update_date: 30/09/2026
 back_link_label: 🔙 Truyện ngụ ngôn
 hero_image:
@@ -19,8 +19,3 @@ Ai cũng tin phần mình sờ được là toàn bộ con voi. Họ cãi nhau m
 
 Mỗi người chỉ biết một phần, nhưng lại vội cho rằng mình biết tất cả. Nếu chịu ghép những điều đã nghe và cùng tìm hiểu thêm, họ đã có thể hình dung con voi đầy đủ hơn.
 
-## Nghĩ thêm
-
-- Mỗi thầy bói biết điều gì đúng, và điều gì họ đã kết luận quá vội?
-- Khi nhiều người có trải nghiệm khác nhau, làm sao ghép chúng thành bức tranh chung?
-- Có thể áp dụng bài học này khi đọc tin tức hoặc tranh luận trên mạng ra sao?

@@ -1,10 +1,10 @@
 ---
 title: Bộ quần áo mới của Hoàng đế
 title_sub:
-description: Một câu chuyện về thói hám danh, nỗi sợ bị chê dốt và lòng can đảm nói điều ai cũng nhìn thấy.
+description:
 section_title: Giáo dục
 section_link: giao-duc/index.html
-author: Hans Christian Andersen (phỏng kể)
+author: Andersen
 update_date: 30/09/2026
 back_link_label: 🔙 Truyện cổ tích
 hero_image:
@@ -22,9 +22,3 @@ Quan đại thần được cử đến xem trước. Ông chẳng nhìn thấy 
 > “Hoàng đế chẳng mặc gì cả!”
 
 Lời nói ấy lan khắp đám đông. Mọi người nhận ra đứa trẻ nói đúng. Hoàng đế hiểu rằng dân chúng đã nhìn thấu sự thật, nhưng vẫn tiếp tục cuộc diễu hành, kiêu hãnh bước đi cùng đoàn tùy tùng.
-
-## Nghĩ thêm
-
-- Vì sao những người trưởng thành đều ngại nói điều họ nhìn thấy?
-- Đám đông có thể khiến một người nghi ngờ điều mắt mình chứng kiến như thế nào?
-- Khi nào cần can đảm lên tiếng, và làm sao để nói thật một cách tử tế?
