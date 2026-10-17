@@ -30,6 +30,8 @@
 .iq-reference-card { grid-column: 1 / -1; max-width: 520px; width: 100%; }
 .iq-button, .option-button { border: 0; border-radius: 5px; cursor: pointer; font: inherit; transition: transform .18s ease, background .18s ease; }
 .iq-button { background: var(--iq-teal); color: #fff; padding: .7rem 1rem; font-weight: 700; }
+#next-button { background: #e5f9ce; color: var(--iq-ink); }
+#next-button:hover { background: #bfd85a; }
 .iq-button:hover, .option-button:hover { transform: translateY(-2px); }
 .test-stage { max-width: 760px; }
 .test-topline { align-items: center; display: flex; justify-content: space-between; gap: 1rem; margin-bottom: .27rem; }
